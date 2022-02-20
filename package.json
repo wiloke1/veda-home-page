@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sass": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.0",
+    "gatsby-plugin-typescript": "^4.7.0",
     "gatsby-remark-copy-linked-files": "^5.0.0",
     "gatsby-remark-images": "^6.0.0",
     "gatsby-remark-relative-images": "^0.3.0",
@@ -46,7 +47,25 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "@types/react-helmet": "^6.1.5",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@typescript-eslint/typescript-estree": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "gatsby-plugin-eslint": "^4.0.2",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   },
   "engines": {
     "node": ">= 14.15.0"
