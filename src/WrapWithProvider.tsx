@@ -12,15 +12,15 @@ const CSSGlobal: FC = ({ children }) => {
   return <View css={styles.cssGlobalWithTheme}>{children}</View>;
 };
 
-const App: FC<{ element: ReactNode }> = ({ element }) => {
+const WrapWithProvider: FC<{ element?: ReactNode }> = ({ element, children }) => {
   // Instantiating store in `wrapRootElement` handler ensures:
   //  - there is fresh store for each SSR page
   //  - it will be called only once in browser, when React mounts
   return (
     <ThemeProvider themeOverrides={{ ...themeOverrides, direction: 'ltr' }}>
-      <CSSGlobal>{element}</CSSGlobal>
+      <CSSGlobal>{element ?? children}</CSSGlobal>
     </ThemeProvider>
   );
 };
 
-export default App;
+export default WrapWithProvider;

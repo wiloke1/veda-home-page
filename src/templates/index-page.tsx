@@ -9,8 +9,6 @@ import { View } from 'wiloke-react-core';
 export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
   // const heroImage = getImage(image) || image;
 
-  console.log(123, themes);
-
   return (
     <>
       <View>
