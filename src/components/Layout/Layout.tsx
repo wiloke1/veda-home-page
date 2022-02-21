@@ -1,16 +1,17 @@
-// @ts-nocheck
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Header from 'components/Header';
 import { withPrefix } from 'gatsby';
-import Footer from './Footer';
-import Navbar from './Navbar';
-import './all.sass';
-import useSiteMetadata from './SiteMetadata';
+import { FC } from 'react';
+import { Helmet } from 'react-helmet';
+import { View } from 'wiloke-react-core';
+import Footer from '../Footer';
+import useSiteMetadata from './useSiteMetadata';
 
-const TemplateWrapper = ({ children }) => {
+export interface LayoutProps {}
+
+const Layout: FC<LayoutProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <View>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -28,11 +29,11 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+      <Header />
+      <View tagName="main">{children}</View>
       <Footer />
-    </div>
+    </View>
   );
 };
 
-export default TemplateWrapper;
+export default Layout;

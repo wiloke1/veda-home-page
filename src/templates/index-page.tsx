@@ -1,15 +1,16 @@
 /* eslint-disable */
 // @ts-nocheck
-import React from 'react';
+import React, { FC } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 
-import Layout from 'components/Layout';
+import Layout from 'components/Layout/Layout';
 import Features from 'components/Features';
 import BlogRoll from 'components/BlogRoll';
 import FullWidthImage from 'components/FullWidthImage';
 import Title from 'components/Title';
+import { HomePage } from 'types/Home';
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,8 +21,11 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  features,
 }) => {
   const heroImage = getImage(image) || image;
+
+  console.log(heading, features)
 
   return (
     <div>
@@ -86,7 +90,7 @@ IndexPageTemplate.propTypes = {
   }),
 };
 
-const IndexPage = ({ data }) => {
+const IndexPage: FC<HomePage> = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
@@ -104,14 +108,6 @@ const IndexPage = ({ data }) => {
   );
 };
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-};
-
 export default IndexPage;
 
 export const pageQuery = graphql`
@@ -125,6 +121,15 @@ export const pageQuery = graphql`
           }
         }
         heading
+        features {
+          heading
+          description
+          content {
+            icon
+            title
+            description
+          }
+        }
         subheading
         mainpitch {
           title

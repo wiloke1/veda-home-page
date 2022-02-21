@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BlogPostTemplate } from '../../templates/blog-post';
+import { BlogPostTemplate } from 'templates/blog-post';
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags']);

@@ -15,7 +15,7 @@ public_folder: /img
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/data/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -36,7 +36,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/data/index.md"
         label: "Landing Page"
         name: "index"
         fields:
@@ -50,6 +50,25 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
+          - {
+            label: Features,
+            name: features,
+            widget: object,
+            fields: [
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text },
+              {
+                label: Content,
+                name: content,
+                widget: object,
+                fields: [
+                  { label: Icon, name: icon, widget: string },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: string },
+                ]
+              }
+            ]
+          }
           - {
               label: Mainpitch,
               name: mainpitch,
@@ -121,7 +140,7 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/about/index.md"
+      - file: "src/data/about/index.md"
         label: "About"
         name: "about"
         fields:
@@ -133,7 +152,7 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/products/index.md"
+      - file: "src/data/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
