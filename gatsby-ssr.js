@@ -4,7 +4,7 @@ import { RendererProvider } from 'react-fela';
 import { renderToSheetList } from 'fela-dom';
 import WrapWithProvider from './src/WrapWithProvider';
 
-exports const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
+export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
   // let config = {
   //   plugins: [kebabCase(), embedded(), multipleSelectors(), felaPlugin({ pixelToRem: false, rootFontSizePercent: -1, removeHoverOnMobile: true })],
   //   enhancers: [],
