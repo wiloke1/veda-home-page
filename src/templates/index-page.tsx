@@ -4,26 +4,25 @@ import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { FC } from 'react';
 import { HomePage, HomePageData } from 'types/Home';
-import { View } from 'wiloke-react-core';
 
 export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
   return (
     <>
-      <View>
+      <div>
         <Title title={features.heading} text={features.description} />
         {JSON.stringify(features)}
-      </View>
-      <View>
+      </div>
+      <div>
         <Title title={themes.heading} text={themes.description} />
         {themes.body.map(item => {
           return (
-            <View key={item.title}>
+            <div key={item.title}>
               {typeof item.image === 'string' ? <img src={item.image} /> : <GatsbyImage image={item.image.childImageSharp.gatsbyImageData} alt="" />}
               {item.title}
-            </View>
+            </div>
           );
         })}
-      </View>
+      </div>
     </>
   );
 };
