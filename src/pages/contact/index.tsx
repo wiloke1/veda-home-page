@@ -2,30 +2,22 @@
 // @ts-nocheck
 import * as React from 'react';
 import { navigate } from 'gatsby-link';
-import Layout from '../../components/Layout';
+import Layout from 'components/Layout';
 
 function encode(data) {
-  const formData = new FormData();
-
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key]);
-  }
-
-  return formData;
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 }
 
-export default class Contact extends React.Component {
+export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { isValidated: false };
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  };
-
-  handleAttachment = e => {
-    this.setState({ [e.target.name]: e.target.files[0] });
   };
 
   handleSubmit = e => {
@@ -33,6 +25,7 @@ export default class Contact extends React.Component {
     const form = e.target;
     fetch('/', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
         ...this.state,
@@ -48,9 +41,9 @@ export default class Contact extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>File Upload</h1>
+              <h1>Contact</h1>
               <form
-                name="file-upload"
+                name="contact"
                 method="post"
                 action="/contact/thanks/"
                 data-netlify="true"
@@ -58,7 +51,7 @@ export default class Contact extends React.Component {
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="file-upload" />
+                <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
                     Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
@@ -73,13 +66,19 @@ export default class Contact extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <div className="file">
-                    <label className="file-label">
-                      <input className="file-input" type="file" name="attachment" onChange={this.handleAttachment} />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
-                      </span>
-                    </label>
+                  <label className="label" htmlFor={'email'}>
+                    Email
+                  </label>
+                  <div className="control">
+                    <input className="input" type={'email'} name={'email'} onChange={this.handleChange} id={'email'} required={true} />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'message'}>
+                    Message
+                  </label>
+                  <div className="control">
+                    <textarea className="textarea" name={'message'} onChange={this.handleChange} id={'message'} required={true} />
                   </div>
                 </div>
                 <div className="field">

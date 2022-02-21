@@ -1,93 +1,36 @@
-/* eslint-disable */
-// @ts-nocheck
-import React, { FC } from 'react';
-import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import { getImage } from 'gatsby-plugin-image';
-
-import Layout from 'components/Layout/Layout';
-import Features from 'components/Features';
-import BlogRoll from 'components/BlogRoll';
-import FullWidthImage from 'components/FullWidthImage';
+import Layout from 'components/Layout';
 import Title from 'components/Title';
-import { HomePage } from 'types/Home';
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { FC } from 'react';
+import { HomePage, HomePageData } from 'types/Home';
+import { View } from 'wiloke-react-core';
 
-// eslint-disable-next-line
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-  features,
-}) => {
-  const heroImage = getImage(image) || image;
+export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
+  // const heroImage = getImage(image) || image;
 
-  console.log(heading, features)
+  console.log(123, themes);
 
   return (
-    <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
-      <Title title='abc' />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <>
+      <View>
+        <Title title={features.heading} text={features.description} />
+        {JSON.stringify(features)}
+      </View>
+      <View>
+        <Title title={themes.heading} text={themes.description} />
+        {themes.body.map(item => {
+          const image = getImage(item.image) as IGatsbyImageData;
+          return (
+            <View key={item.title}>
+              <GatsbyImage image={image} alt="" />
+              {item.title}
+            </View>
+          );
+        })}
+      </View>
+    </>
   );
-};
-
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage: FC<HomePage> = ({ data }) => {
@@ -95,15 +38,7 @@ const IndexPage: FC<HomePage> = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
+      <IndexPageTemplate features={frontmatter.features} themes={frontmatter.themes} />
     </Layout>
   );
 };
@@ -124,10 +59,22 @@ export const pageQuery = graphql`
         features {
           heading
           description
-          content {
+          body {
             icon
             title
             description
+          }
+        }
+        themes {
+          heading
+          description
+          body {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            title
           }
         }
         subheading
