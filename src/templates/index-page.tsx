@@ -1,14 +1,12 @@
 import Layout from 'components/Layout';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { FC } from 'react';
 import { HomePage, HomePageData } from 'types/Home';
 import { View } from 'wiloke-react-core';
 
 export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
-  // const heroImage = getImage(image) || image;
-
   return (
     <>
       <View>
@@ -18,10 +16,9 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
       <View>
         <Title title={themes.heading} text={themes.description} />
         {themes.body.map(item => {
-          const image = getImage(item.image) as IGatsbyImageData;
           return (
             <View key={item.title}>
-              <GatsbyImage image={image} alt="" />
+              {typeof item.image === 'string' ? <img src={item.image} /> : <GatsbyImage image={item.image.childImageSharp.gatsbyImageData} alt="" />}
               {item.title}
             </View>
           );
@@ -47,13 +44,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading
         features {
           heading
           description
@@ -74,24 +64,6 @@ export const pageQuery = graphql`
             }
             title
           }
-        }
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }

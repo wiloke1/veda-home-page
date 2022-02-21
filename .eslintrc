@@ -154,6 +154,7 @@
         "allowTemplateLiterals": true
       }
     ],
+    "@typescript-eslint/no-unnecessary-type-assertion": "off",
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/operator-linebreak": "off",
     "@typescript-eslint/no-underscore-dangle": "off",
