@@ -2,7 +2,6 @@ import Header from 'components/Header';
 import { withPrefix } from 'gatsby';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { View } from 'wiloke-react-core';
 import Footer from '../Footer';
 import useSiteMetadata from './useSiteMetadata';
 
@@ -11,7 +10,7 @@ export interface LayoutProps {}
 const Layout: FC<LayoutProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <View>
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -30,9 +29,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
       </Helmet>
       <Header />
-      <View tagName="main">{children}</View>
+      <div>{children}</div>
       <Footer />
-    </View>
+    </div>
   );
 };
 
