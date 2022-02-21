@@ -1,6 +1,6 @@
-const embedded = require('fela-plugin-embedded');
-const kebabCase = require('fela-plugin-kebab-case');
-const multipleSelectors = require('fela-plugin-multiple-selectors');
+const embedded = require('fela-plugin-embedded').default;
+const kebabCase = require('fela-plugin-kebab-case').default;
+const multipleSelectors = require('fela-plugin-multiple-selectors').default;
 const felaPlugin = require('wiloke-react-core/dist/utils/felaPlugin').default;
 
 module.exports = {
