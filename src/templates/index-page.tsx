@@ -1,15 +1,17 @@
 import Layout from 'components/Layout';
+import Title from 'components/Title';
 import { graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { FC } from 'react';
 import { HomePage, HomePageData } from 'types/Home';
+import { View } from 'wiloke-react-core';
 
 export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
   return (
     <>
-      {JSON.stringify(features)}
-      {JSON.stringify(themes)}
-      {/* <View>
+      <View>
         <Title title={features.heading} text={features.description} />
+        {JSON.stringify(features)}
       </View>
       <View>
         <Title title={themes.heading} text={themes.description} />
@@ -21,7 +23,7 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
             </View>
           );
         })}
-      </View> */}
+      </View>
     </>
   );
 };
