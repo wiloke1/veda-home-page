@@ -58,6 +58,7 @@ export const pageQuery = graphql`
       frontmatter {
         sectionsSortable {
           key
+          enable
         }
         features {
           heading
