@@ -1,7 +1,7 @@
+import { Image } from 'components/Image';
 import Layout from 'components/Layout';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageData, SectionKeys } from 'types/Home';
 
@@ -19,7 +19,7 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes, sections
         {themes.body.map(item => {
           return (
             <div key={item.title}>
-              {typeof item.image === 'string' ? <img src={item.image} /> : <GatsbyImage image={item.image.childImageSharp.gatsbyImageData} alt="" />}
+              <Image src={item.image} alt="" />
               {item.title}
             </div>
           );

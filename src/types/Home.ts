@@ -1,12 +1,4 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-
-export interface Image {
-  childImageSharp: {
-    gatsbyImageData: IGatsbyImageData;
-  };
-}
-
-export type NetlifyImage = string;
+import { GatsbyImage } from 'components/Image';
 
 export type SectionKeys = 'features' | 'themes';
 
@@ -22,7 +14,7 @@ export interface Feature {
 }
 
 export interface Theme {
-  image: Image | NetlifyImage;
+  image: GatsbyImage;
   title: string;
 }
 
