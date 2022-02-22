@@ -1,14 +1,13 @@
-// @ts-nocheck
-import React from 'react';
-import PropTypes from 'prop-types';
 import { BlogPostTemplate } from 'templates/blog-post';
 import App from 'App';
+import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
-const BlogPostPreview = ({ entry, widgetFor }) => {
+const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   const tags = entry.getIn(['data', 'tags']);
   return (
     <App>
       <BlogPostTemplate
+        // @ts-ignore
         content={widgetFor('body')}
         description={entry.getIn(['data', 'description'])}
         tags={tags && tags.toJS()}
@@ -16,13 +15,6 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
       />
     </App>
   );
-};
-
-BlogPostPreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
 };
 
 export default BlogPostPreview;

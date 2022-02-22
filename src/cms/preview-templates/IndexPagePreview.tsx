@@ -1,14 +1,15 @@
 import { IndexPageTemplate } from 'templates/index-page';
 import { HomePageData } from 'types/Home';
 import App from 'App';
+import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
-const IndexPagePreview = ({ entry }: any) => {
+const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as HomePageData;
 
   if (data) {
     return (
       <App>
-        <IndexPageTemplate features={data.features} themes={data.themes} sectionsSortable={data.sectionsSortable} />
+        <IndexPageTemplate {...data} />
       </App>
     );
   } else {

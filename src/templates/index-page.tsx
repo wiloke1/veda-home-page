@@ -16,9 +16,9 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes, sections
     themes: (
       <div>
         <Title title={themes.heading} text={themes.description} />
-        {themes.body.map(item => {
+        {themes.body.map((item, index) => {
           return (
-            <div key={item.title}>
+            <div key={index}>
               <Image src={item.image} alt="" />
               {item.title}
             </div>
@@ -45,7 +45,7 @@ const IndexPage: FC<HomePage> = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate features={frontmatter.features} themes={frontmatter.themes} sectionsSortable={frontmatter.sectionsSortable} />
+      <IndexPageTemplate {...frontmatter} />
     </Layout>
   );
 };

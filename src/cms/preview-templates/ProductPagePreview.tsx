@@ -1,10 +1,8 @@
-// @ts-nocheck
-import React from 'react';
-import PropTypes from 'prop-types';
 import { ProductPageTemplate } from 'templates/product-page';
 import App from 'App';
+import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
-const ProductPagePreview = ({ entry, getAsset }) => {
+const ProductPagePreview = ({ entry, getAsset }: PreviewTemplateComponentProps) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
@@ -48,13 +46,6 @@ const ProductPagePreview = ({ entry, getAsset }) => {
       />
     </App>
   );
-};
-
-ProductPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  getAsset: PropTypes.func,
 };
 
 export default ProductPagePreview;
