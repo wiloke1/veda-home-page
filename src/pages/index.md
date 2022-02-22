@@ -1,5 +1,8 @@
 ---
 templateKey: index-page
+sectionsSortable:
+  - key: features
+  - key: themes
 features:
   heading: Feature heading
   description: Feature description
