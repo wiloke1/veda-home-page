@@ -2,16 +2,18 @@ import Layout from 'components/Layout';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { FC } from 'react';
-import { HomePage, HomePageData } from 'types/Home';
+import { FC, Fragment, ReactNode } from 'react';
+import { HomePage, HomePageData, SectionKeys } from 'types/Home';
 
-export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
-  return (
-    <>
+export const IndexPageTemplate: FC<HomePageData> = ({ features, themes, sectionsSortable }) => {
+  const contentMapping: Record<SectionKeys, ReactNode> = {
+    features: (
       <div>
         <Title title={features.heading} text={features.description} />
         {JSON.stringify(features)}
       </div>
+    ),
+    themes: (
       <div>
         <Title title={themes.heading} text={themes.description} />
         {themes.body.map(item => {
@@ -23,6 +25,14 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes }) => {
           );
         })}
       </div>
+    ),
+  };
+
+  return (
+    <>
+      {sectionsSortable.map(item => {
+        return <Fragment key={item.key}>{contentMapping[item.key]}</Fragment>;
+      })}
     </>
   );
 };
@@ -32,7 +42,7 @@ const IndexPage: FC<HomePage> = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate features={frontmatter.features} themes={frontmatter.themes} />
+      <IndexPageTemplate features={frontmatter.features} themes={frontmatter.themes} sectionsSortable={frontmatter.sectionsSortable} />
     </Layout>
   );
 };
@@ -43,6 +53,9 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        sectionsSortable {
+          key
+        }
         features {
           heading
           description

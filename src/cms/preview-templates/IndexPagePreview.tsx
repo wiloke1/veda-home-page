@@ -8,7 +8,7 @@ const IndexPagePreview = ({ entry }: any) => {
   if (data) {
     return (
       <App>
-        <IndexPageTemplate features={data.features} themes={data.themes} />
+        <IndexPageTemplate features={data.features} themes={data.themes} sectionsSortable={data.sectionsSortable} />
       </App>
     );
   } else {

@@ -8,6 +8,8 @@ export interface Image {
 
 export type NetlifyImage = string;
 
+export type SectionKeys = 'features' | 'themes';
+
 export interface Section {
   heading: string;
   description: string;
@@ -32,7 +34,12 @@ export interface Themes extends Section {
   body: Theme[];
 }
 
+export interface SectionsSortable {
+  key: SectionKeys;
+}
+
 export interface HomePageData {
+  sectionsSortable: SectionsSortable[];
   features: Features;
   themes: Themes;
 }
