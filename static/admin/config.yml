@@ -88,8 +88,8 @@ collections:
             name: sectionsSortable,
             widget: list,
             fields: [
-              { label: Enable, name: enable, widget: boolean },
-              { label: Section Key, name: key, widget: string }
+              { label: Section Key, name: key, widget: string },
+              { label: Enable, name: enable, widget: boolean }
             ]
           }
       - file: "src/pages/about/index.md"
