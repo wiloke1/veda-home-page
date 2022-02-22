@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import * as styles from './Title.module.scss';
 
 export interface TitleProps {
   title: string;
@@ -9,7 +10,7 @@ export interface TitleProps {
 
 const Title: FC<TitleProps> = ({ title, text, Right, Left }) => {
   return (
-    <div>
+    <div className={styles.title}>
       <div>
         <div>{Left}</div>
         <div>

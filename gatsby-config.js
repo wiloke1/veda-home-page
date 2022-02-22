@@ -36,8 +36,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        sassOptions: {
-          indentedSyntax: true,
+        useResolveUrlLoader: {
+          options: {
+            sourceMap: true, //default is false
+          },
         },
       },
     },
