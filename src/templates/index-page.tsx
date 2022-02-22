@@ -31,6 +31,9 @@ export const IndexPageTemplate: FC<HomePageData> = ({ features, themes, sections
   return (
     <>
       {sectionsSortable.map(item => {
+        if (!item.enable) {
+          return null;
+        }
         return <Fragment key={item.key}>{contentMapping[item.key]}</Fragment>;
       })}
     </>

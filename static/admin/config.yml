@@ -47,14 +47,6 @@ collections:
               default: "index-page",
             }
           - {
-            label: Sections sortable,
-            name: sectionsSortable,
-            widget: list,
-            fields: [
-              { label: Section Key, name: key, widget: string }
-            ]
-          }
-          - {
             label: Features,
             name: features,
             widget: object,
@@ -89,6 +81,15 @@ collections:
                   { label: Title, name: title, widget: string },
                 ]
               }
+            ]
+          }
+          - {
+            label: Sections sortable,
+            name: sectionsSortable,
+            widget: list,
+            fields: [
+              { label: Section Key, name: key, widget: string }
+              { label: Enable, name: enable, widget: boolean }
             ]
           }
       - file: "src/pages/about/index.md"

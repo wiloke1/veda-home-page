@@ -36,6 +36,7 @@ export interface Themes extends Section {
 
 export interface SectionsSortable {
   key: SectionKeys;
+  enable: boolean;
 }
 
 export interface HomePageData {

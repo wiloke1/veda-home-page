@@ -2,7 +2,9 @@
 templateKey: index-page
 sectionsSortable:
   - key: features
+    enable: true
   - key: themes
+    enable: true
 features:
   heading: Feature heading
   description: Feature description
