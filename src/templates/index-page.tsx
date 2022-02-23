@@ -3,9 +3,9 @@ import Layout from 'components/Layout';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
-import { HomePage, HomePageData, SectionKeys } from 'types/Home';
+import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
 
-export const IndexPageTemplate: FC<HomePageData> = ({ features, themes, sectionsSortable }) => {
+export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ features, themes, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
     features: (
       <div>

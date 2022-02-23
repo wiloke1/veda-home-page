@@ -1,4 +1,5 @@
 import { GatsbyImage } from 'components/Image';
+import { PageProps } from 'gatsby';
 
 export type SectionKeys = 'features' | 'themes';
 
@@ -31,16 +32,16 @@ export interface SectionsSortable {
   enable: boolean;
 }
 
-export interface HomePageData {
+export interface HomePageFrontMaster {
   sectionsSortable: SectionsSortable[];
   features: Features;
   themes: Themes;
 }
 
-export interface HomePage {
-  data: {
-    markdownRemark: {
-      frontmatter: HomePageData;
-    };
+export interface HomePageData {
+  markdownRemark: {
+    frontmatter: HomePageFrontMaster;
   };
 }
+
+export interface HomePage extends PageProps<HomePageData> {}
