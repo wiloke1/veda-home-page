@@ -66,7 +66,7 @@ const Header = class extends Component {
               <Link className="navbar-item" to="/themes">
                 Theme
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item" to="/blog/1">
                 Blog
               </Link>
               <Link className="navbar-item" to="/contact">

@@ -3,6 +3,8 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
+const POST_PER_PAGE = 10;
+
 exports.onCreateBabelConfig = ({ actions }) => {
   actions.setBabelPreset({
     name: 'babel-preset-gatsby',
@@ -73,6 +75,23 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/tags.tsx`),
         context: {
           tag,
+        },
+      });
+    });
+
+    // Create Blog List Pages
+    const numPages = Math.ceil(posts.length / POST_PER_PAGE);
+
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: `/blog/${index + 1}`,
+        component: path.resolve(`src/templates/blog-list.tsx`),
+        context: {
+          limit: POST_PER_PAGE,
+          skip: index * POST_PER_PAGE,
+          numPages,
+          currentPage: index + 1,
+          hasNext: index + 1 < numPages,
         },
       });
     });
