@@ -1,5 +1,6 @@
 import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
+import { MarkdownRemark } from './general';
 
 export type SectionKeys = 'features' | 'themes';
 
@@ -39,9 +40,7 @@ export interface HomePageFrontMaster {
 }
 
 export interface HomePageData {
-  markdownRemark: {
-    frontmatter: HomePageFrontMaster;
-  };
+  markdownRemark: MarkdownRemark<HomePageFrontMaster>;
 }
 
 export interface HomePage extends PageProps<HomePageData> {}

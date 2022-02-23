@@ -1,39 +1,58 @@
-// @ts-nocheck
-import * as React from 'react';
-
+import { FC } from 'react';
+import { graphql, Link } from 'gatsby';
 import Layout from 'components/Layout';
-import BlogRoll from '../components/BlogRoll';
+import { BlogList, Post } from 'types/Blog';
+import { MarkdownRemarkEdges } from 'types/general';
 
-export default class BlogIndexPage extends React.Component {
-  render() {
+const BlogIndexPage: FC<BlogList> = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges;
+  console.log(posts);
+
+  const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
     return (
-      <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
-            }}
-          >
-            Latest Stories
-          </h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
-            </div>
-          </div>
-        </section>
-      </Layout>
+      <div key={post.id}>
+        <h3>
+          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+        </h3>
+        <p>{post.frontmatter.date}</p>
+        <p>{post.excerpt}</p>
+      </div>
     );
+  };
+
+  return <Layout>{posts.map(renderPost)}</Layout>;
+};
+
+export default BlogIndexPage;
+
+export const pageQuery = graphql`
+  query BlogListQuery($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+              }
+            }
+          }
+        }
+      }
+    }
   }
-}
+`;
