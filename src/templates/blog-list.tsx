@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import { BlogList, Post } from 'types/Blog';
 import { MarkdownRemarkEdges } from 'types/general';
 

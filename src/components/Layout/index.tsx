@@ -1,4 +1,4 @@
-import Header from 'components/Header';
+import { Header } from 'components/Header';
 import { withPrefix } from 'gatsby';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
@@ -7,7 +7,7 @@ import useSiteMetadata from './useSiteMetadata';
 
 export interface LayoutProps {}
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+export const Layout: FC<LayoutProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
@@ -28,6 +28,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        />
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
       </Helmet>
       <Header />
@@ -36,5 +40,3 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     </div>
   );
 };
-
-export default Layout;

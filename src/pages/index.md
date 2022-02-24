@@ -1,10 +1,24 @@
 ---
 templateKey: index-page
 sectionsSortable:
+  - key: hero
+    enable: true
   - key: features
     enable: true
   - key: themes
     enable: true
+hero:
+  heading: The Store Design Solution
+  description: Campaign-ready, fully-optimized Shopify stores built with half the time and zero the code.
+  form: {
+    action: /auth,
+    placeholder: Enter your Shopify Domain,
+    buttonText: Try for free
+  }
+  images:
+    - /img/theme1.jpg
+    - /img/theme2.jpg
+    - /img/theme3.jpg
 features:
   heading: Feature heading
   description: Feature description

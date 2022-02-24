@@ -1,12 +1,14 @@
 import { Image } from 'components/Image';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
+import { Hero } from './IndexPage/Hero';
 
-export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ features, themes, sectionsSortable }) => {
+export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, themes, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
+    hero: <Hero {...hero} />,
     features: (
       <div>
         <Title title={features.heading} text={features.description} />
@@ -59,6 +61,20 @@ export const pageQuery = graphql`
         sectionsSortable {
           key
           enable
+        }
+        hero {
+          heading
+          description
+          form {
+            action
+            placeholder
+            buttonText
+          }
+          images {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+            }
+          }
         }
         features {
           heading

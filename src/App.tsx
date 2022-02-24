@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import 'styles/styles.scss';
 
 const App: FC<{ element?: ReactNode }> = ({ element, children }) => {
   // Instantiating store in `wrapRootElement` handler ensures:

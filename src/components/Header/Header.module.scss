@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light);
+  height: 80px;
+  padding: 0 40px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  position: relative;
+}
+
+.navItem {
+  margin-right: 40px;
+  color: var(--color-gray8);
+  font-size: 14px;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  &[aria-current="page"] {
+    color: var(--color-primary);
+  }
+}

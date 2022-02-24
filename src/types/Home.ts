@@ -2,7 +2,7 @@ import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
 import { MarkdownRemark } from './general';
 
-export type SectionKeys = 'features' | 'themes';
+export type SectionKeys = keyof Omit<HomePageFrontMaster, 'sectionsSortable'>;
 
 export interface Section {
   heading: string;
@@ -33,8 +33,18 @@ export interface SectionsSortable {
   enable: boolean;
 }
 
+export interface SectionHero extends Section {
+  form: {
+    action: string;
+    placeholder: string;
+    buttonText: string;
+  };
+  images: GatsbyImage[];
+}
+
 export interface HomePageFrontMaster {
   sectionsSortable: SectionsSortable[];
+  hero: SectionHero;
   features: Features;
   themes: Themes;
 }
