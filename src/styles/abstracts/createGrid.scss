@@ -1,0 +1,96 @@
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+@function extend($map, $maps.../*, $deep */) {
+	$last: nth($maps, -1);
+	$deep: $last == true;
+	$max: if($deep, length($maps) - 1, length($maps));
+  	@for $i from 1 through $max {
+    	$current: nth($maps, $i);
+
+    	@if not $deep {
+      		$map: map-merge($map, $current);
+    	} @else {
+      		@each $key, $value in $current {
+
+	        	@if type-of($value) == "map" and type-of(map-get($map, $key)) == "map" {
+	          		$value: extend(map-get($map, $key), $value, true);
+	        	}
+
+	        	$map: map-merge($map, ($key: $value));
+	      	}
+    	}
+  	}
+  	@return $map;
+}
+
+@mixin setColumn($nameCol, $colMax) {
+  @for $i from 1 through $colMax {
+    .col-#{$nameCol}-#{$i} {
+      width: (100 * $i) / $colMax * 1%;
+    }
+  }
+}
+
+@mixin createGrid($option: ()) {
+  $defaultOptions: (
+    container: (
+      width: 1170,
+      gap: 15
+    ),
+    columns: (
+      max: 12,
+      gap: 30
+    ),
+    breakpoints: (
+      default: xs,
+      sm: 768,
+      md: 992,
+      lg: 1170
+    )
+  );
+
+	$options: extend($defaultOptions, $option, true);
+  $containerWidth: map-deep-get($options, 'container', 'width');
+  $containerGap: map-deep-get($options, 'container', 'gap');
+  $colMax: map-deep-get($options, 'columns', 'max');
+  $colGap: map-deep-get($options, 'columns', 'gap');
+
+  .container {
+    max-width: $containerWidth * 1px;
+    margin: auto;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+  .container,
+  .container-fluid {
+    padding-left: $containerGap * 1px;
+    padding-right: $containerGap * 1px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($colGap / 2) * 1px;
+    margin-right: -($colGap / 2) * 1px;
+  }
+  [class^="col-"] {
+    padding-left: ($colGap / 2) * 1px;
+    padding-right: ($colGap / 2) * 1px;
+  }
+
+  @each $key, $val in map-get($options, 'breakpoints') {
+    @if ($key == 'default') {
+      $colDefault: map-deep-get($options, 'breakpoints', 'default');
+      @include setColumn($colDefault, $colMax);
+    } @else {
+      @media (min-width: #{$val * 1}px) {
+        @include setColumn($key, $colMax);
+      }
+    }
+  }
+}

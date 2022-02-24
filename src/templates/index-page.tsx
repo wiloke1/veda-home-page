@@ -10,13 +10,13 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
   const contentMapping: Record<SectionKeys, ReactNode> = {
     hero: <Hero {...hero} />,
     features: (
-      <div>
+      <section className="section">
         <Title title={features.heading} text={features.description} />
         {JSON.stringify(features)}
-      </div>
+      </section>
     ),
     themes: (
-      <div>
+      <section className="section">
         <Title title={themes.heading} text={themes.description} />
         {themes.body.map((item, index) => {
           return (
@@ -26,7 +26,7 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
             </div>
           );
         })}
-      </div>
+      </section>
     ),
   };
 
@@ -72,7 +72,7 @@ export const pageQuery = graphql`
           }
           images {
             childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              gatsbyImageData(width: 400, quality: 100, layout: CONSTRAINED)
             }
           }
         }

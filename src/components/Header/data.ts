@@ -16,7 +16,7 @@ export const data = [
     name: 'Theme',
   },
   {
-    path: '/blog',
+    path: '/blog/1',
     name: 'Blog',
   },
   {
