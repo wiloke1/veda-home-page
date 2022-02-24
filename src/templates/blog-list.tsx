@@ -6,7 +6,6 @@ import { MarkdownRemarkEdges } from 'types/general';
 
 const BlogIndexPage: FC<BlogList> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  console.log(posts);
 
   const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
     return (
@@ -29,7 +28,7 @@ export const pageQuery = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      # filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
       limit: $limit
       skip: $skip
     ) {
