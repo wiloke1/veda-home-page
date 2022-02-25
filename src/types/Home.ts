@@ -1,13 +1,8 @@
 import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
-import { MarkdownRemark } from './general';
+import { MarkdownRemark, Section } from './general';
 
 export type SectionKeys = keyof Omit<HomePageFrontMaster, 'sectionsSortable' | 'isNetlify'>;
-
-export interface Section {
-  heading: string;
-  description: string;
-}
 
 export interface Feature {
   icon: string;
@@ -55,7 +50,6 @@ export interface HomePageFrontMaster {
 
 export interface HomePageData {
   markdownRemark: MarkdownRemark<HomePageFrontMaster>;
-  allMarkdownRemark: any;
 }
 
 export interface HomePage extends PageProps<HomePageData> {}

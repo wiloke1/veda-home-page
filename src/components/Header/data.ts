@@ -7,6 +7,10 @@ export const data = [
     path: '/about',
     name: 'About',
   },
+  {
+    path: '/pricing',
+    name: 'Pricing',
+  },
   // {
   //   path: '/products',
   //   name: 'Products',

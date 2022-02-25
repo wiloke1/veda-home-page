@@ -9,3 +9,8 @@ export interface AllMarkdownRemark<T = any> {
 export interface MarkdownRemark<T = any> {
   frontmatter: T;
 }
+
+export interface Section {
+  heading: string;
+  description: string;
+}

@@ -128,6 +128,46 @@ collections:
               { label: Enable, name: enable, widget: boolean }
             ]
           }
+      - file: src/pages/pricing/index.md
+        label: Pricing
+        name: pricing
+        fields:
+          - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "pricing-page",
+          }
+          - {
+            label: Plans,
+            name: plans,
+            widget: object,
+            fields: [
+              { label: Sub Heading, name: subHeading, widget: string },
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text },
+              {
+                label: Body,
+                name: body,
+                widget: list,
+                fields: [
+                  { label: Image, name: image, widget: image },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Price, name: price, widget: price },
+                  { label: Highlight, name: highlight, widget: boolean },
+                  {
+                    label: Features,
+                    name: features,
+                    widget: list,
+                    fields: [
+                      { label: Item, name: item, widget: string },
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
