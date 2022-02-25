@@ -13,12 +13,11 @@ export type GatsbyImage = IImage | NetlifyImage;
 
 export interface ImageProps extends Omit<GatsbyImageProps, 'image'> {
   src: GatsbyImage;
-  className?: string;
 }
 
-export const Image: FC<ImageProps> = ({ src, alt, className, ...rest }) => {
+export const Image: FC<ImageProps> = ({ src, alt, ...rest }) => {
   if (typeof src === 'string') {
-    return <img src={src} alt={alt} className={className} />;
+    return <img src={src} alt={alt} className={rest.className} style={rest.imgStyle} />;
   }
   return <GatsbyImage {...rest} image={src.childImageSharp.gatsbyImageData} alt={alt} />;
 };
