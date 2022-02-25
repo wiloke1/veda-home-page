@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Link } from 'gatsby';
 import { Button } from 'components/Button';
 import classNames from 'classnames';
+import { isBrowser } from 'utils/isBrowser';
 import * as styles from './Header.module.scss';
 import { data } from './data';
 
@@ -16,10 +17,11 @@ export const Header: FC = () => {
       <div className={styles.center}>
         <nav className={styles.nav}>
           {data.map(item => {
-            const active =
-              item.path === '/'
+            const active = isBrowser
+              ? item.path === '/'
                 ? window.location.pathname === item.path
-                : new RegExp(`^/${item.path.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname);
+                : new RegExp(`^/${item.path.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
+              : false;
             return (
               <Link
                 key={item.name}
