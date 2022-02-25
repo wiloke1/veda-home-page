@@ -7,10 +7,10 @@ export const data = [
     path: '/about',
     name: 'About',
   },
-  {
-    path: '/products',
-    name: 'Products',
-  },
+  // {
+  //   path: '/products',
+  //   name: 'Products',
+  // },
   {
     path: '/themes',
     name: 'Theme',
@@ -23,8 +23,8 @@ export const data = [
     path: '/contact',
     name: 'Contact',
   },
-  {
-    path: '/contact/examples',
-    name: 'Form Examples',
-  },
+  // {
+  //   path: '/contact/examples',
+  //   name: 'Form Examples',
+  // },
 ];

@@ -77,12 +77,6 @@ const Theme = ({ data }) => {
   );
 };
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-};
-
 export default Theme;
 
 export const pageQuery = graphql`
