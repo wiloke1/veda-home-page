@@ -11,8 +11,6 @@ export interface ThemeProps {
 export const Theme: FC<ThemeProps> = ({ heading, description }) => {
   const themes = useThemeQuery();
 
-  console.log(123, themes);
-
   return (
     <Section>
       <Title title={heading} text={description} />
