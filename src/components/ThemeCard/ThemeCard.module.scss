@@ -1,0 +1,19 @@
+.container {
+  border-radius: 6px;
+  border: 1px solid var(--color-gray3);
+  overflow: hidden;
+}
+
+.content {
+  padding: 10px 15px;
+}
+
+.title {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.category {
+  font-size: 13px;
+  color: var(--color-gray6);
+}

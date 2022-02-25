@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import * as styles from './Header.module.scss';
 import { data } from './data';
 
+/* It's a simple component that renders a header with a logo, a navigation and a button. */
 export const Header: FC = () => {
   return (
     <header className={styles.container}>

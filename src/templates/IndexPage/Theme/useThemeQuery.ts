@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { ThemeData } from 'types/Theme';
 
 export const useThemeQuery = () => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<ThemeData>(graphql`
     query ThemeQuery {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
@@ -11,7 +12,6 @@ export const useThemeQuery = () => {
       ) {
         edges {
           node {
-            excerpt(pruneLength: 400)
             id
             fields {
               slug
@@ -20,10 +20,10 @@ export const useThemeQuery = () => {
               title
               templateKey
               date(formatString: "MMMM DD, YYYY")
-              featuredpost
-              featuredimage {
+              category
+              image {
                 childImageSharp {
-                  gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+                  gatsbyImageData(width: 300, quality: 100, layout: CONSTRAINED)
                 }
               }
             }

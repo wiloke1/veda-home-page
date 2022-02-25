@@ -1,6 +1,6 @@
 import { Layout } from 'components/Layout';
 import { Section } from 'components/Section';
-import Title from 'components/Title';
+import { Title } from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
@@ -12,11 +12,11 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
     hero: <Hero {...hero} />,
     features: (
       <Section>
-        <Title title={features.heading} text={features.description} />
+        <Title subTitle={features.subHeading} title={features.heading} text={features.description} />
         {JSON.stringify(features)}
       </Section>
     ),
-    themes: <Theme heading={themes.heading} description={themes.description} />,
+    themes: <Theme subHeading={themes.subHeading} heading={themes.heading} description={themes.description} />,
   };
 
   return (
@@ -68,6 +68,7 @@ export const pageQuery = graphql`
           }
         }
         features {
+          subHeading
           heading
           description
           body {
@@ -77,6 +78,7 @@ export const pageQuery = graphql`
           }
         }
         themes {
+          subHeading
           heading
           description
         }

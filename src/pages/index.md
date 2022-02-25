@@ -20,8 +20,9 @@ hero:
     - image: /img/theme2.jpg
     - image: /img/theme3.jpg
 features:
+  subHeading: Sub heading
   heading: Feature heading
-  description: Feature description
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
   body:
     - icon: Icon1
       title: Title1
@@ -30,6 +31,7 @@ features:
       title: Title2
       description: Description2
 themes:
+  subHeading: Sub heading
   heading: Theme heading
-  description: Theme description
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
 ---

@@ -21,10 +21,13 @@ export interface Theme {
 }
 
 export interface Features extends Section {
+  subHeading: string;
   body: Feature[];
 }
 
-export interface Themes extends Section {}
+export interface Themes extends Section {
+  subHeading: string;
+}
 
 export interface SectionsSortable {
   key: SectionKeys;

@@ -1,3 +1,31 @@
+.container {
+  max-width: 600px;
+  margin-bottom: 30px !important;
+}
+
+.subTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .title {
-  color: red;
+  font-size: 50px;
+}
+
+.text {
+  font-size: 15px;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.right {
+  text-align: right;
+  margin-right: 0;
 }
