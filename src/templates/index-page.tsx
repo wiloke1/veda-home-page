@@ -1,5 +1,6 @@
 import { Image } from 'components/Image';
 import { Layout } from 'components/Layout';
+import { Section } from 'components/Section';
 import Title from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
@@ -10,13 +11,13 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
   const contentMapping: Record<SectionKeys, ReactNode> = {
     hero: <Hero {...hero} />,
     features: (
-      <section className="section">
+      <Section>
         <Title title={features.heading} text={features.description} />
         {JSON.stringify(features)}
-      </section>
+      </Section>
     ),
     themes: (
-      <section className="section">
+      <Section>
         <Title title={themes.heading} text={themes.description} />
         {themes.body.map((item, index) => {
           return (
@@ -26,7 +27,7 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
             </div>
           );
         })}
-      </section>
+      </Section>
     ),
   };
 
