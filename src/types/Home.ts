@@ -2,7 +2,7 @@ import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
 import { MarkdownRemark } from './general';
 
-export type SectionKeys = keyof Omit<HomePageFrontMaster, 'sectionsSortable'>;
+export type SectionKeys = keyof Omit<HomePageFrontMaster, 'sectionsSortable' | 'isNetlify'>;
 
 export interface Section {
   heading: string;
@@ -46,6 +46,7 @@ export interface SectionHero extends Section {
 }
 
 export interface HomePageFrontMaster {
+  isNetlify: boolean;
   sectionsSortable: SectionsSortable[];
   hero: SectionHero;
   features: Features;

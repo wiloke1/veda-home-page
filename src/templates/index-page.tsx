@@ -7,7 +7,7 @@ import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
 import { Hero } from './IndexPage/Hero';
 import { Theme } from './IndexPage/Theme';
 
-export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, themes, sectionsSortable }) => {
+export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ isNetlify, hero, features, themes, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
     hero: <Hero {...hero} />,
     features: (
@@ -16,7 +16,7 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
         {JSON.stringify(features)}
       </Section>
     ),
-    themes: <Theme subHeading={themes.subHeading} heading={themes.heading} description={themes.description} />,
+    themes: <Theme isNetlify={isNetlify} subHeading={themes.subHeading} heading={themes.heading} description={themes.description} />,
   };
 
   return (

@@ -13,7 +13,7 @@ export const Title: FC<TitleProps> = ({ subTitle, title, text, align = 'center' 
   return (
     <div className={classNames(styles.container, styles[align])}>
       <h4 className={styles.subTitle}>{subTitle}</h4>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
       {!!text && <div className={styles.text}>{text}</div>}
     </div>
   );
