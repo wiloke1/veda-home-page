@@ -1,5 +1,7 @@
+import { Button } from 'components/Button';
 import { Section } from 'components/Section';
 import Title from 'components/Title';
+import { Link } from 'gatsby';
 import { FC } from 'react';
 import { useThemeQuery } from './useThemeQuery';
 
@@ -15,6 +17,9 @@ export const Theme: FC<ThemeProps> = ({ heading, description }) => {
     <Section>
       <Title title={heading} text={description} />
       {JSON.stringify(themes)}
+      <Link to="/themes">
+        <Button>View All</Button>
+      </Link>
     </Section>
   );
 };

@@ -18,7 +18,7 @@ export const Header: FC = () => {
             const active =
               item.path === '/'
                 ? window.location.pathname === item.path
-                : window.location.pathname.includes(item.path.replace(/^\//g, '').replace(/\/.*/g, ''));
+                : new RegExp(`^/${item.path.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname);
             return (
               <Link
                 key={item.name}

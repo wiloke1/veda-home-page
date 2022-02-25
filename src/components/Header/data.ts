@@ -11,10 +11,10 @@ export const data = [
   //   path: '/products',
   //   name: 'Products',
   // },
-  {
-    path: '/themes',
-    name: 'Theme',
-  },
+  // {
+  //   path: '/themes',
+  //   name: 'Theme',
+  // },
   {
     path: '/blog/1',
     name: 'Blog',
