@@ -118,15 +118,6 @@ collections:
             fields: [
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
-              {
-                label: Body,
-                name: body,
-                widget: list,
-                fields: [
-                  { label: Image, name: image, widget: image },
-                  { label: Title, name: title, widget: string },
-                ]
-              }
             ]
           }
           - {

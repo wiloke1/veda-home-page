@@ -24,9 +24,7 @@ export interface Features extends Section {
   body: Feature[];
 }
 
-export interface Themes extends Section {
-  body: Theme[];
-}
+export interface Themes extends Section {}
 
 export interface SectionsSortable {
   key: SectionKeys;
@@ -53,6 +51,7 @@ export interface HomePageFrontMaster {
 
 export interface HomePageData {
   markdownRemark: MarkdownRemark<HomePageFrontMaster>;
+  allMarkdownRemark: any;
 }
 
 export interface HomePage extends PageProps<HomePageData> {}

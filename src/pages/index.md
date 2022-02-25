@@ -32,9 +32,4 @@ features:
 themes:
   heading: Theme heading
   description: Theme description
-  body:
-    - image: /img/coffee.png
-      title: Title1
-    - image: /img/coffee-gear.png
-      title: Title2
 ---

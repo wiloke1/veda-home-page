@@ -1,4 +1,3 @@
-import { Image } from 'components/Image';
 import { Layout } from 'components/Layout';
 import { Section } from 'components/Section';
 import Title from 'components/Title';
@@ -6,6 +5,7 @@ import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
 import { Hero } from './IndexPage/Hero';
+import { Theme } from './IndexPage/Theme';
 
 export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, themes, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
@@ -16,19 +16,7 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ hero, features, the
         {JSON.stringify(features)}
       </Section>
     ),
-    themes: (
-      <Section>
-        <Title title={themes.heading} text={themes.description} />
-        {themes.body.map((item, index) => {
-          return (
-            <div key={index}>
-              <Image src={item.image} alt="" />
-              {item.title}
-            </div>
-          );
-        })}
-      </Section>
-    ),
+    themes: <Theme heading={themes.heading} description={themes.description} />,
   };
 
   return (
@@ -91,14 +79,6 @@ export const pageQuery = graphql`
         themes {
           heading
           description
-          body {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            title
-          }
         }
       }
     }
