@@ -2,6 +2,7 @@ import logo from 'img/logo.svg';
 import { FC } from 'react';
 import { Link } from 'gatsby';
 import { Button } from 'components/Button';
+import classNames from 'classnames';
 import * as styles from './Header.module.scss';
 import { data } from './data';
 
@@ -14,8 +15,21 @@ export const Header: FC = () => {
       <div className={styles.center}>
         <nav className={styles.nav}>
           {data.map(item => {
+            const active =
+              item.path === '/'
+                ? window.location.pathname === item.path
+                : window.location.pathname.includes(item.path.replace(/^\//g, '').replace(/\/.*/g, ''));
             return (
-              <Link key={item.name} to={item.path} className={styles.navItem}>
+              <Link
+                key={item.name}
+                to={item.path}
+                className={classNames(
+                  {
+                    [styles.navItemActive]: active,
+                  },
+                  styles.navItem,
+                )}
+              >
                 {item.name}
               </Link>
             );

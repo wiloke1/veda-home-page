@@ -29,7 +29,8 @@
   font-family: var(--font-secondary);
   text-decoration: none;
   cursor: pointer;
-  &[aria-current="page"] {
-    color: var(--color-primary);
-  }
+}
+
+.navItemActive {
+  color: var(--color-primary);
 }
