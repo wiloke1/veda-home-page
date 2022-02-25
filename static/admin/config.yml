@@ -81,12 +81,14 @@ collections:
                   { label: Placeholder, name: placeholder, widget: string },
                   { label: Button Text, name: buttonText, widget: string },
                 ]
-              }
+              },
               {
                 label: Images,
                 name: images,
                 widget: list,
-                fields: [image]
+                fields: [
+                  { label: Image, name: image, widget: image }
+                ]
               }
             ]
           }

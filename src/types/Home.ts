@@ -39,7 +39,9 @@ export interface SectionHero extends Section {
     placeholder: string;
     buttonText: string;
   };
-  images: GatsbyImage[];
+  images: {
+    image: GatsbyImage;
+  }[];
 }
 
 export interface HomePageFrontMaster {

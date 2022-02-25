@@ -16,9 +16,9 @@ hero:
     buttonText: Try for free
   }
   images:
-    - /img/theme1.jpg
-    - /img/theme2.jpg
-    - /img/theme3.jpg
+    - image: /img/theme1.jpg
+    - image: /img/theme2.jpg
+    - image: /img/theme3.jpg
 features:
   heading: Feature heading
   description: Feature description

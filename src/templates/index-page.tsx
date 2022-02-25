@@ -71,8 +71,10 @@ export const pageQuery = graphql`
             buttonText
           }
           images {
-            childImageSharp {
-              gatsbyImageData(width: 400, quality: 100, layout: CONSTRAINED)
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 400, quality: 100, layout: CONSTRAINED)
+              }
             }
           }
         }

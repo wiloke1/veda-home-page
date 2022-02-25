@@ -22,7 +22,7 @@ export const Hero: FC<HeroProps> = ({ heading, description, form, images }) => {
       <div className={styles.images}>
         <div className="container">
           <div className="row">
-            {images.map((image, index) => {
+            {images.map(({ image }, index) => {
               return (
                 <div key={index} className="col-md-4 col-sm-6 col-xs-12">
                   <Image src={image} alt="" imgStyle={{ borderRadius: '20px' }} />

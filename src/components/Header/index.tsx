@@ -11,7 +11,7 @@ export const Header: FC = () => {
       <Link to="/" title="Logo">
         <img src={logo} alt="Veda" style={{ width: '133px' }} />
       </Link>
-      <div className={styles.right}>
+      <div className={styles.center}>
         <nav className={styles.nav}>
           {data.map(item => {
             return (
@@ -21,6 +21,8 @@ export const Header: FC = () => {
             );
           })}
         </nav>
+      </div>
+      <div className={styles.right}>
         <Button>Get started</Button>
       </div>
     </header>
