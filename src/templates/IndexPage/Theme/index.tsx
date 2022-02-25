@@ -15,7 +15,7 @@ export const Theme: FC<ThemeProps> = ({ subHeading, heading, description, isNetl
   return (
     <Section>
       <Title subTitle={subHeading} title={heading} text={description} />
-      {isNetlify ? <NetlifyWarning link="/themes" buttonText="Go to theme page" /> : <Content />}
+      {isNetlify ? <NetlifyWarning pageName="theme" /> : <Content />}
     </Section>
   );
 };

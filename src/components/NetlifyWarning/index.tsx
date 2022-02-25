@@ -1,22 +1,14 @@
-import { Button } from 'components/Button';
-import { Link } from 'gatsby';
 import { FC } from 'react';
 import * as styles from './NetlifyWarning.module.scss';
 
 export interface NetlifyWarningProps {
-  buttonText?: string;
-  link: string;
+  pageName: string;
 }
 
-export const NetlifyWarning: FC<NetlifyWarningProps> = ({ buttonText, link }) => {
+export const NetlifyWarning: FC<NetlifyWarningProps> = ({ pageName }) => {
   return (
     <div className={styles.container}>
-      <p style={{ marginBottom: 20 }}>Không thể hiển thị nội dung này tại trang Admin. Muốn xem thông tin này vui lòng bấm vào link dưới đây</p>
-      <div>
-        <Link to={link}>
-          <Button>{buttonText ?? link}</Button>
-        </Link>
-      </div>
+      <p>Không thể hiển thị nội dung này tại trang Admin. Hãy chuyển sang trang {pageName}</p>
     </div>
   );
 };
