@@ -16,28 +16,39 @@ export interface Theme {
 }
 
 export interface Features extends Section {
-  subHeading: string;
   body: Feature[];
 }
 
-export interface Themes extends Section {
-  subHeading: string;
-}
+export interface Themes extends Section {}
 
 export interface SectionsSortable {
   key: SectionKeys;
   enable: boolean;
 }
 
+export interface IGetStartedForm {
+  action: string;
+  placeholder: string;
+  buttonText: string;
+}
+
 export interface SectionHero extends Section {
-  form: {
-    action: string;
-    placeholder: string;
-    buttonText: string;
-  };
+  form: IGetStartedForm;
   images: {
     image: GatsbyImage;
   }[];
+}
+
+export interface ISupports {
+  title: string;
+  description: string;
+  image: GatsbyImage;
+  buttonText: string;
+  link: string;
+}
+
+export interface SectionSupports extends Section {
+  body: ISupports[];
 }
 
 export interface HomePageFrontMaster {
@@ -46,6 +57,7 @@ export interface HomePageFrontMaster {
   hero: SectionHero;
   features: Features;
   themes: Themes;
+  supports: SectionSupports;
 }
 
 export interface HomePageData {

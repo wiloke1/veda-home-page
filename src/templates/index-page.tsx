@@ -5,18 +5,20 @@ import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
 import { Hero } from './IndexPage/Hero';
+import { Supports } from './IndexPage/Supports';
 import { Theme } from './IndexPage/Theme';
 
-export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ isNetlify, hero, features, themes, sectionsSortable }) => {
+export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ isNetlify, hero, features, themes, supports, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
     hero: <Hero {...hero} />,
     features: (
       <Section>
-        <Title subTitle={features.subHeading} title={features.heading} text={features.description} />
+        <Title title={features.heading} text={features.description} />
         {JSON.stringify(features)}
       </Section>
     ),
-    themes: <Theme isNetlify={isNetlify} subHeading={themes.subHeading} heading={themes.heading} description={themes.description} />,
+    themes: <Theme isNetlify={isNetlify} heading={themes.heading} description={themes.description} />,
+    supports: <Supports {...supports} />,
   };
 
   return (
@@ -59,16 +61,8 @@ export const pageQuery = graphql`
             placeholder
             buttonText
           }
-          images {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 400, quality: 100, layout: CONSTRAINED)
-              }
-            }
-          }
         }
         features {
-          subHeading
           heading
           description
           body {
@@ -78,9 +72,23 @@ export const pageQuery = graphql`
           }
         }
         themes {
-          subHeading
           heading
           description
+        }
+        supports {
+          heading
+          description
+          body {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 180, quality: 100, layout: CONSTRAINED)
+              }
+            }
+            title
+            description
+            buttonText
+            link
+          }
         }
       }
     }

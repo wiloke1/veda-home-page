@@ -78,14 +78,6 @@ collections:
                   { label: Placeholder, name: placeholder, widget: string },
                   { label: Button Text, name: buttonText, widget: string },
                 ]
-              },
-              {
-                label: Images,
-                name: images,
-                widget: list,
-                fields: [
-                  { label: Image, name: image, widget: image }
-                ]
               }
             ]
           }
@@ -94,7 +86,6 @@ collections:
             name: features,
             widget: object,
             fields: [
-              { label: Sub Heading, name: subHeading, widget: string },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
               {
@@ -114,9 +105,29 @@ collections:
             name: themes,
             widget: object,
             fields: [
-              { label: Sub Heading, name: subHeading, widget: string },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
+            ]
+          }
+          - {
+            label: Supports,
+            name: supports,
+            widget: object,
+            fields: [
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text },
+              {
+                label: Body,
+                name: body,
+                widget: list,
+                fields: [
+                  { label: Image, name: image, widget: image },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: string },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Link, name: link, widget: string },
+                ]
+              }
             ]
           }
           - {
@@ -143,7 +154,6 @@ collections:
             name: plans,
             widget: object,
             fields: [
-              { label: Sub Heading, name: subHeading, widget: string },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
               {

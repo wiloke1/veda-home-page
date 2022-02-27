@@ -1,5 +1,7 @@
+@import 'styles/abstracts/pfs.scss';
+
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin-bottom: 30px !important;
 }
 
@@ -9,7 +11,10 @@
 }
 
 .title {
-  font-size: 50px;
+  @include pfs('font-size', 40px, 50px);
+  span {
+    color: var(--color-primary);
+  }
 }
 
 .text {
