@@ -30,6 +30,11 @@ plans:
 
         * 5 theme
         * 15 pages
+        * 6 Theme Templates
+        * Pro Addons
+        * Custom Code Editor
+        * Page Settings
+        * Save & Transfer Content
     - title: Professional
       description: Professional description
       price: $40<span>/mo</span>
@@ -40,4 +45,7 @@ plans:
 
         * 10 theme
         * 30 pages
+        * Advanced Page Settings
+        * Design Services
+        * Priority Support
 ---
