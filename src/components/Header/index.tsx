@@ -1,11 +1,11 @@
 import logo from 'img/logo.svg';
-import { FC } from 'react';
-import { Link } from 'gatsby';
-import { Button } from 'components/Button';
 import classNames from 'classnames';
+import { GetStartedPopup } from 'components/GetStartedPopup';
+import { Link } from 'gatsby';
+import { FC } from 'react';
 import { isBrowser } from 'utils/isBrowser';
-import * as styles from './Header.module.scss';
 import { data } from './data';
+import * as styles from './Header.module.scss';
 
 /* It's a simple component that renders a header with a logo, a navigation and a button. */
 export const Header: FC = () => {
@@ -40,7 +40,7 @@ export const Header: FC = () => {
         </nav>
       </div>
       <div className={styles.right}>
-        <Button>Get started</Button>
+        <GetStartedPopup buttonHighlight buttonText="Get started" />
       </div>
     </header>
   );

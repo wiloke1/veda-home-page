@@ -1,5 +1,5 @@
 import { CSSProperties, FC, useState } from 'react';
-import { Button } from 'components/Button';
+import { Button, ButtonProps } from 'components/Button';
 import { GetStartedForm } from 'components/GetStartedForm';
 import { ModalBase } from 'components/ModalBase';
 import { Title } from 'components/Title';
@@ -9,9 +9,10 @@ export interface GetStartedPopupProps {
   buttonHighlight: boolean;
   buttonText: string;
   buttonStyle?: CSSProperties;
+  buttonSize?: ButtonProps['size'];
 }
 
-export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, buttonText, buttonStyle }) => {
+export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, buttonText, buttonStyle, buttonSize }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
@@ -27,7 +28,7 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, but
         </div>
       </ModalBase>
       <Button
-        size="large"
+        size={buttonSize}
         border={!buttonHighlight}
         style={buttonStyle}
         onClick={() => {

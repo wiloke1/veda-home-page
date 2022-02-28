@@ -25,7 +25,7 @@ export const PlanCard: FC<PlanCardProps> = ({ description, body, buttonText, hig
         <div>{description}</div>
         <div className={styles.divider} />
         <div className={styles.btn}>
-          <GetStartedPopup buttonHighlight={highlight} buttonText={buttonText} buttonStyle={{ width: '100%', maxWidth: 246 }} />
+          <GetStartedPopup buttonSize="large" buttonHighlight={highlight} buttonText={buttonText} buttonStyle={{ width: '100%', maxWidth: 246 }} />
         </div>
         <div className={styles.body}>
           <ReactMarkdown children={body} />
