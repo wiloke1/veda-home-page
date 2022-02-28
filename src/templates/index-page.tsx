@@ -56,11 +56,6 @@ export const pageQuery = graphql`
         hero {
           heading
           description
-          form {
-            action
-            placeholder
-            buttonText
-          }
         }
         features {
           heading

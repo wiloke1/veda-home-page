@@ -12,11 +12,6 @@ sectionsSortable:
 hero:
   heading: <span>The All In One</span>Store Design Solution
   description: Campaign-ready, fully-optimized Shopify stores built with half the time and zero the code.
-  form: {
-    action: /auth,
-    placeholder: Enter your Shopify Domain,
-    buttonText: Try for free
-  }
 features:
   heading: Feature heading
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.

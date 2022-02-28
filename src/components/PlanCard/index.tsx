@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Button } from 'components/Button';
+import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
 import { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -25,9 +25,7 @@ export const PlanCard: FC<PlanCardProps> = ({ description, body, buttonText, hig
         <div>{description}</div>
         <div className={styles.divider} />
         <div className={styles.btn}>
-          <Button size="large" border={!highlight} style={{ width: '100%', maxWidth: 246 }}>
-            {buttonText}
-          </Button>
+          <GetStartedPopup buttonHighlight={highlight} buttonText={buttonText} buttonStyle={{ width: '100%', maxWidth: 246 }} />
         </div>
         <div className={styles.body}>
           <ReactMarkdown children={body} />

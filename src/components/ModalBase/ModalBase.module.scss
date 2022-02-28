@@ -1,0 +1,75 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-gray9);
+  opacity: 0.4;
+}
+
+.zoomEnter {
+  .body {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.zoomEnterActive {
+  .body {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoomExit {
+  .body {
+    opacity: 1;
+  }
+}
+
+.zoomExitActive {
+  .body {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+
+.fadeUpEnter {
+  .body {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+.fadeUpEnterActive {
+  .body {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUpExit {
+  .body {
+    opacity: 1;
+  }
+}
+
+.fadeUpExitActive {
+  .body {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}

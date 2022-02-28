@@ -1,18 +1,17 @@
 import { Button } from 'components/Button';
 import { FC } from 'react';
-import { IGetStartedForm } from 'types/Home';
 import * as styles from './GetStartedForm.module.scss';
 
-export interface GetStartedFormProps extends IGetStartedForm {
+export interface GetStartedFormProps {
   containerClassName?: string;
 }
 
-export const GetStartedForm: FC<GetStartedFormProps> = ({ action, placeholder, buttonText, containerClassName }) => {
+export const GetStartedForm: FC<GetStartedFormProps> = ({ containerClassName }) => {
   return (
-    <form action={action} className={containerClassName}>
-      <input className={styles.input} type="text" placeholder={placeholder} />
+    <form action="/auth" className={containerClassName}>
+      <input className={styles.input} type="text" placeholder="Enter your Shopify Domain" />
       <Button className={styles.button} type="submit">
-        {buttonText}
+        Try for free
       </Button>
     </form>
   );

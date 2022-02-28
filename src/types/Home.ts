@@ -26,14 +26,7 @@ export interface SectionsSortable {
   enable: boolean;
 }
 
-export interface IGetStartedForm {
-  action: string;
-  placeholder: string;
-  buttonText: string;
-}
-
 export interface SectionHero extends Section {
-  form: IGetStartedForm;
   images: {
     image: GatsbyImage;
   }[];

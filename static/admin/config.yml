@@ -69,16 +69,6 @@ collections:
             fields: [
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
-              {
-                label: Form,
-                name: form,
-                widget: object,
-                fields: [
-                  { label: Action, name: action, widget: string },
-                  { label: Placeholder, name: placeholder, widget: string },
-                  { label: Button Text, name: buttonText, widget: string },
-                ]
-              }
             ]
           }
           - {
