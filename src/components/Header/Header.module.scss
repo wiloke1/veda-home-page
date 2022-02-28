@@ -29,7 +29,7 @@
   text-decoration: none;
   cursor: pointer;
   padding: 20px;
-  [data-active="true"] {
+  [aria-current="page"] {
     color: var(--color-primary);
   }
 }
