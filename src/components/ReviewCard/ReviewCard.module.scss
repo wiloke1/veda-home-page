@@ -1,0 +1,28 @@
+@import "styles/abstracts/pfs.scss";
+
+.container {
+  border-radius: 20px;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-gray3);
+  padding: pfs(20px, 40px) pfs(20px, 50px);
+}
+
+.highlight {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.name {
+  font-size: pfs(20px, 30px);
+  font-family: var(--font-secondary);
+}
+
+.date {
+  font-size: 12px;
+  font-family: var(--font-secondary);
+  color: var(--color-gray6);
+}
+
+.nameHighlight, .dateHighlight {
+  color: var(--color-light);
+}

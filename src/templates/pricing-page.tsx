@@ -1,4 +1,5 @@
 import { Layout } from 'components/Layout';
+import { PlanCard } from 'components/PlanCard';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { graphql } from 'gatsby';
@@ -8,8 +9,18 @@ import { IPricingPage, PricingPageFrontMaster } from 'types/Pricing';
 export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans }) => {
   return (
     <Section>
-      <Title subTitle={plans.subHeading} title={plans.heading} text={plans.description} />
-      {JSON.stringify(plans.body)}
+      <div className="container">
+        <Title title={plans.heading} text={plans.description} />
+        <div className="row">
+          {plans.body.map((item, index) => {
+            return (
+              <div key={index} className="col-xs-12 col-sm-6 col-md-4">
+                <PlanCard {...item} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </Section>
   );
 };
@@ -39,13 +50,11 @@ export const pageQuery = graphql`
             price
             image {
               childImageSharp {
-                gatsbyImageData(width: 100, quality: 100, layout: CONSTRAINED)
+                gatsbyImageData(width: 68, quality: 100, layout: CONSTRAINED, aspectRatio: 1)
               }
             }
             highlight
-            features {
-              text
-            }
+            featuresTitle
           }
         }
       }

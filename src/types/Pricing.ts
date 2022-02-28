@@ -8,11 +8,11 @@ export interface Plans {
   price: string;
   image: GatsbyImage;
   highlight: boolean;
-  features: { text: string }[];
+  featuresTitle: string;
+  body: string;
 }
 
 export interface SectionPlans extends Section {
-  subHeading: string;
   body: Plans[];
 }
 

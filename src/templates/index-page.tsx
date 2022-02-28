@@ -1,4 +1,5 @@
 import { Layout } from 'components/Layout';
+import { ReviewCard } from 'components/ReviewCard';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { graphql } from 'gatsby';
@@ -38,6 +39,37 @@ const IndexPage: FC<HomePage> = ({ data }) => {
 
   return (
     <Layout>
+      <Section>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <ReviewCard
+                name="Salt Fly Pro"
+                date="February 23, 2022"
+                rate={4}
+                text="I tried it out and adding product badges does not always work. It looks nice when it does work. The major problem here is that it adds the badge to EVERY SINGLE PICTURE in each product page rather than just the main one. Easy to use.And the customer support is really helpful and efficient. The app solved my problems and meets my requirements very well. Thank you your team!"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <ReviewCard
+                hightlight
+                name="Salt Fly Pro"
+                date="February 23, 2022"
+                rate={3}
+                text="I tried it out and adding product badges does not always work. It looks nice when it does work. The major problem here is that it adds the badge to EVERY SINGLE PICTURE in each product page rather than just the main one. Easy to use.And the customer support is really helpful and efficient. The app solved my problems and meets my requirements very well. Thank you your team!"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <ReviewCard
+                name="Salt Fly Pro"
+                date="February 23, 2022"
+                rate={5}
+                text="I tried it out and adding product badges does not always work. It looks nice when it does work. The major problem here is that it adds the badge to EVERY SINGLE PICTURE in each product page rather than just the main one. Easy to use.And the customer support is really helpful and efficient. The app solved my problems and meets my requirements very well. Thank you your team!"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
       <IndexPageTemplate {...frontmatter} />
     </Layout>
   );

@@ -166,14 +166,8 @@ collections:
                   { label: Description, name: description, widget: text },
                   { label: Price, name: price, widget: price },
                   { label: Highlight, name: highlight, widget: boolean },
-                  {
-                    label: Features,
-                    name: features,
-                    widget: list,
-                    fields: [
-                      { label: Item, name: item, widget: string },
-                    ]
-                  }
+                  { label: Features title, name: featuresTitle, widget: string },
+                  { label: List, name: body, widget: markdown },
                 ]
               }
             ]
