@@ -35,8 +35,8 @@ plans:
         * Custom Code Editor
         * Page Settings
         * Save & Transfer Content
-    - title: Professional
-      description: Professional description
+    - title: Advanced
+      description: Advanced description
       price: $40<span>/mo</span>
       highlight: false
       buttonText: Start advancing
