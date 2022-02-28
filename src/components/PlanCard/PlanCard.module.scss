@@ -94,18 +94,18 @@
 
 .highlight {
   background-color: var(--color-gray9);
-  color: var(--color-gray3);
+  color: var(--color-gray1);
   h1, h2, h3, h4, h5, h6,
   .title,
   .price,
   .featuresTitle,
   .learnMore {
-    color: var(--color-gray3);
+    color: var(--color-gray1);
   }
   .divider {
     background-color: var(--color-gray7);
   }
   li {
-    color: var(--color-gray4);
+    color: var(--color-gray3);
   }
 }
