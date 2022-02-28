@@ -1,7 +1,9 @@
+@import "styles/abstracts/pfs.scss";
+
 .container {
   padding: 30px;
   border: 1px solid var(--color-gray3);
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 16px;
   margin-bottom: 30px;
   background-color: var(--color-light);
@@ -19,7 +21,7 @@
 }
 
 .title {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.1;
 }
 
@@ -32,10 +34,12 @@
 .price {
   font-family: var(--font-secondary);
   font-size: 35px;
+  font-weight: 500;
   color: var(--color-gray8);
   line-height: 1.1;
   span {
     font-size: 20px;
+    font-weight: 400;
     opacity: 0.8;
     vertical-align: middle;
   }
@@ -82,19 +86,26 @@
   margin-bottom: 30px;
 }
 
+.learnMore {
+  margin-top: pfs(30px, 40px);
+  display: block;
+  text-align: center;
+}
+
 .highlight {
   background-color: var(--color-gray9);
-  color: var(--color-light);
+  color: var(--color-gray3);
   h1, h2, h3, h4, h5, h6,
   .title,
   .price,
-  .featuresTitle {
-    color: var(--color-light);
+  .featuresTitle,
+  .learnMore {
+    color: var(--color-gray3);
   }
   .divider {
     background-color: var(--color-gray7);
   }
   li {
-    color: var(--color-gray3);
+    color: var(--color-gray4);
   }
 }

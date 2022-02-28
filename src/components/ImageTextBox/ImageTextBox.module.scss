@@ -17,24 +17,5 @@
 }
 
 .button {
-  display: inline-block;
-  font-size: 16px;
-  font-family: var(--font-primary);
-  font-weight: 500;
-  color: var(--color-primary);
   margin-top: pfs(10px, 20px);
-  padding: 10px;
-  cursor: pointer;
-  &:hover {
-    .icon {
-      transform: translateX(4px);
-    }
-  }
-}
-
-.icon {
-  display: inline-block;
-  font-size: 12px;
-  margin-left: 8px;
-  transition: 300ms ease;
 }

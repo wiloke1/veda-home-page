@@ -54,7 +54,7 @@ export const pageQuery = graphql`
               }
             }
             highlight
-            featuresTitle
+            buttonText
             body
           }
         }

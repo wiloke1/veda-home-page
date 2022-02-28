@@ -8,7 +8,7 @@ export interface Plans {
   price: string;
   image: GatsbyImage;
   highlight: boolean;
-  featuresTitle: string;
+  buttonText: string;
   body: string;
 }
 

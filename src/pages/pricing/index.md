@@ -10,6 +10,7 @@ plans:
       description: Starter description
       price: Free
       highlight: false
+      buttonText: Get started
       body: |-
         * 1 theme
         * 5 pages
@@ -26,7 +27,7 @@ plans:
       description: Bussiness description
       price: $20<span>/mo</span>
       highlight: true
-      featuresTitle: "Everything in Starter, plus:"
+      buttonText: Try for free
       body: |-
         #### Everything in Starter, plus:
 
@@ -37,7 +38,7 @@ plans:
       description: Professional description
       price: $40<span>/mo</span>
       highlight: false
-      featuresTitle: "Everything in Bussiness, plus:"
+      buttonText: Start advancing
       body: |-
         #### Everything in Business, plus:
 

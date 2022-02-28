@@ -12,6 +12,7 @@ export interface ButtonProps {
   radius?: number;
   size?: 'small' | 'medium' | 'large';
   style?: CSSProperties;
+  border?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -25,6 +26,7 @@ export const Button: FC<ButtonProps> = ({
   children,
   size = 'medium',
   style,
+  border = false,
 }) => {
   const styleVariables = {
     '--btn-radius': radius,
@@ -33,16 +35,18 @@ export const Button: FC<ButtonProps> = ({
     ...style,
   } as CSSProperties;
 
+  const classes = classNames(styles.container, styles[size], { [styles.border]: border }, className);
+
   if (!!href || type === 'link') {
     return (
-      <a href={href} className={classNames(styles.container, styles[size], className)} onClick={onClick} style={styleVariables}>
+      <a href={href} className={classes} onClick={onClick} style={styleVariables}>
         {children}
       </a>
     );
   }
 
   return (
-    <button type={type} className={classNames(styles.container, styles[size], className)} onClick={onClick} style={styleVariables}>
+    <button type={type} className={classes} onClick={onClick} style={styleVariables}>
       {children}
     </button>
   );
