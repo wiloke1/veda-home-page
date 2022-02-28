@@ -5,8 +5,7 @@ plans:
   description: Campaign-ready, fully-optimized Shopify stores built with half the
     time and zero the code.
   body:
-    - image: /img/theme1.jpg
-      title: Starter
+    - title: Starter
       description: Starter description
       price: Free
       highlight: false
@@ -22,8 +21,7 @@ plans:
         * Responsive Design
         * SEO Controls
         * Email & Live Chat
-    - image: /img/theme2.jpg
-      title: Bussiness
+    - title: Bussiness
       description: Bussiness description
       price: $20<span>/mo</span>
       highlight: true
@@ -33,8 +31,7 @@ plans:
 
         * 5 theme
         * 15 pages
-    - image: /img/theme3.jpg
-      title: Professional
+    - title: Professional
       description: Professional description
       price: $40<span>/mo</span>
       highlight: false

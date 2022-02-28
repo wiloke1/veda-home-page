@@ -8,11 +8,12 @@
   margin-bottom: 30px;
   background-color: var(--color-light);
   min-height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
-  display: flex;
-  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -33,10 +34,9 @@
 
 .price {
   font-family: var(--font-secondary);
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 500;
   color: var(--color-gray8);
-  line-height: 1.1;
   span {
     font-size: 20px;
     font-weight: 400;

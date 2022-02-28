@@ -48,11 +48,6 @@ export const pageQuery = graphql`
             title
             description
             price
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 68, quality: 100, layout: CONSTRAINED, aspectRatio: 1)
-              }
-            }
             highlight
             buttonText
             body
