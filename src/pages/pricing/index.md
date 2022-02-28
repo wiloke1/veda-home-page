@@ -13,7 +13,6 @@ plans:
       body: |-
         * 1 theme
         * 5 pages
-        * Features include:
         * All Page Types
         * 150+ Layouts
         * Basic Addons
