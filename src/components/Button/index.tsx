@@ -10,6 +10,8 @@ export interface ButtonProps {
   backgroundColor?: string;
   color?: string;
   radius?: number;
+  size?: 'small' | 'medium' | 'large';
+  style?: CSSProperties;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -21,23 +23,26 @@ export const Button: FC<ButtonProps> = ({
   color = 'var(--color-light)',
   radius = 6,
   children,
+  size = 'medium',
+  style,
 }) => {
   const styleVariables = {
     '--btn-radius': radius,
     '--btn-background-color': backgroundColor,
     '--btn-color': color,
+    ...style,
   } as CSSProperties;
 
   if (!!href || type === 'link') {
     return (
-      <a href={href} className={classNames(styles.button, className)} onClick={onClick} style={styleVariables}>
+      <a href={href} className={classNames(styles.container, styles[size], className)} onClick={onClick} style={styleVariables}>
         {children}
       </a>
     );
   }
 
   return (
-    <button type={type} className={classNames(styles.button, className)} onClick={onClick} style={styleVariables}>
+    <button type={type} className={classNames(styles.container, styles[size], className)} onClick={onClick} style={styleVariables}>
       {children}
     </button>
   );

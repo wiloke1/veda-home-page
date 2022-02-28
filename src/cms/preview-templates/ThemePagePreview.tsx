@@ -2,7 +2,7 @@ import { BlogPostTemplate } from 'templates/blog-post';
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
-const ThemePreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
+const ThemePagePreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   const tags = entry.getIn(['data', 'tags']);
   return (
     <App>
@@ -17,4 +17,4 @@ const ThemePreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   );
 };
 
-export default ThemePreview;
+export default ThemePagePreview;

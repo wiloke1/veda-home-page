@@ -5,6 +5,7 @@
   font-size: 16px;
   margin-bottom: 30px;
   background-color: var(--color-light);
+  min-height: 100%;
 }
 
 .header {
@@ -19,7 +20,7 @@
 
 .title {
   font-size: 25px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .divider {
@@ -32,6 +33,7 @@
   font-family: var(--font-secondary);
   font-size: 35px;
   color: var(--color-gray8);
+  line-height: 1.1;
   span {
     font-size: 20px;
     opacity: 0.8;
@@ -39,9 +41,25 @@
   }
 }
 
-.featuresTitle {
-  font-size: 20px;
-  margin-bottom: 10px;
+.body {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin-bottom: 12px;
+    &:before {
+      content: '\f00c';
+      font-family: "Font Awesome 5 Pro";
+      font-size: 16px;
+      margin-right: 10px;
+      color: var(--color-secondary);
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+  }
 }
 
 .featureItem {
@@ -62,8 +80,9 @@
 }
 
 .highlight {
-  background-color: var(--color-gray8);
+  background-color: var(--color-gray9);
   color: var(--color-light);
+  h1, h2, h3, h4, h5, h6,
   .title,
   .price,
   .featuresTitle {
@@ -71,5 +90,8 @@
   }
   .divider {
     background-color: var(--color-gray7);
+  }
+  li {
+    color: var(--color-gray3);
   }
 }

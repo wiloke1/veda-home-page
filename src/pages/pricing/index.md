@@ -24,23 +24,23 @@ plans:
     - image: /img/theme2.jpg
       title: Bussiness
       description: Bussiness description
-      price: $20 <span>/mo</span>
+      price: $20<span>/mo</span>
       highlight: true
       featuresTitle: "Everything in Starter, plus:"
       body: |-
-        ## Everything in Starter, plus:
+        #### Everything in Starter, plus:
 
         * 5 theme
         * 15 pages
     - image: /img/theme3.jpg
       title: Professional
       description: Professional description
-      price: $40 <span>/mo</span>
+      price: $40<span>/mo</span>
       highlight: false
       featuresTitle: "Everything in Bussiness, plus:"
       body: |-
-        ## Everything in Business, plus:
+        #### Everything in Business, plus:
 
-        * 5 theme
-        * 15 pages
+        * 10 theme
+        * 30 pages
 ---
