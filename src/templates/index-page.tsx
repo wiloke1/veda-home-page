@@ -1,9 +1,8 @@
 import { Layout } from 'components/Layout';
-import { Section } from 'components/Section';
-import { Title } from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC, Fragment, ReactNode } from 'react';
 import { HomePage, HomePageFrontMaster, SectionKeys } from 'types/Home';
+import { Features } from './IndexPage/Features';
 import { Hero } from './IndexPage/Hero';
 import { Supports } from './IndexPage/Supports';
 import { Theme } from './IndexPage/Theme';
@@ -11,12 +10,7 @@ import { Theme } from './IndexPage/Theme';
 export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ isNetlify, hero, features, themes, supports, sectionsSortable }) => {
   const contentMapping: Record<SectionKeys, ReactNode> = {
     hero: <Hero {...hero} />,
-    features: (
-      <Section>
-        <Title title={features.heading} text={features.description} decorate={features.decorate} />
-        {JSON.stringify(features)}
-      </Section>
-    ),
+    features: <Features {...features} />,
     themes: <Theme isNetlify={isNetlify} heading={themes.heading} description={themes.description} decorate={themes.decorate} />,
     supports: <Supports {...supports} />,
   };
@@ -62,7 +56,11 @@ export const pageQuery = graphql`
           description
           decorate
           body {
-            icon
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+              }
+            }
             title
             description
           }

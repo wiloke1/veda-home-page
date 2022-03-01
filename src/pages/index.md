@@ -13,16 +13,28 @@ hero:
   heading: <span>The All In One</span>Store Design Solution
   description: Campaign-ready, fully-optimized Shopify stores built with half the time and zero the code.
 features:
-  heading: Feature heading
+  heading: Here's <span>How We Do It!</span>
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
-  decorate: ""
+  decorate: "type1"
   body:
-    - icon: Icon1
-      title: Title1
-      description: Description1
-    - icon: Icon2
-      title: Title2
-      description: Description2
+    - image: /img/meeting-space.png
+      title: All Theme Essentials
+      description: Set up the whole store with just one click - select a gorgeous template of your own!
+    - image: /img/coffee.png
+      title: Native Page Builder
+      description: Build up store values with pages of any purpose, using our all-theme compatible page builder.
+    - image: /img/coffee-gear.png
+      title: Designed For Conversions
+      description: Mix & match sales-boosting add-ons and integrations for the most optimized journey to conversion.
+    - image: /img/coffee.png
+      title: Born For Mobile
+      description: Make shopping easy no matter which device with our mobile-first responsive design system.
+    - image: /img/coffee-gear.png
+      title: Intuitive Visual Editor
+      description: Capture your brand’s look and feel with 100+ custom content blocks and layout variants.
+    - image: /img/meeting-space.png
+      title: Lightning Page Speed
+      description: Load your store in under 0.55s and never lose a customer.
 themes:
   heading: Theme heading
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.

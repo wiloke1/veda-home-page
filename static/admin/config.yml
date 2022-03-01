@@ -93,7 +93,7 @@ collections:
                 name: body,
                 widget: list,
                 fields: [
-                  { label: Icon, name: icon, widget: string },
+                  { label: Image, name: image, widget: image },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: string },
                 ]

@@ -5,7 +5,7 @@ import { MarkdownRemark, Section } from './general';
 export type SectionKeys = keyof Omit<HomePageFrontMaster, 'sectionsSortable' | 'isNetlify'>;
 
 export interface Feature {
-  icon: string;
+  image: GatsbyImage;
   title: string;
   description: string;
 }
@@ -15,11 +15,11 @@ export interface Theme {
   title: string;
 }
 
-export interface Features extends Section {
+export interface SectionFeatures extends Section {
   body: Feature[];
 }
 
-export interface Themes extends Section {}
+export interface SectionThemes extends Section {}
 
 export interface SectionsSortable {
   key: SectionKeys;
@@ -48,8 +48,8 @@ export interface HomePageFrontMaster {
   isNetlify: boolean;
   sectionsSortable: SectionsSortable[];
   hero: SectionHero;
-  features: Features;
-  themes: Themes;
+  features: SectionFeatures;
+  themes: SectionThemes;
   supports: SectionSupports;
 }
 

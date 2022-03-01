@@ -5,11 +5,11 @@ import { navigate } from 'gatsby';
 import { FC } from 'react';
 import { SectionSupports } from 'types/Home';
 
-export const Supports: FC<SectionSupports> = ({ heading, description, body }) => {
+export const Supports: FC<SectionSupports> = ({ heading, description, decorate, body }) => {
   return (
     <Section>
       <div className="container">
-        <Title title={heading} text={description} />
+        <Title title={heading} text={description} decorate={decorate} />
         <div className="row">
           {body.map((item, index) => {
             return (
