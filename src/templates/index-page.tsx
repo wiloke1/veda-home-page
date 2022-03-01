@@ -13,11 +13,11 @@ export const IndexPageTemplate: FC<HomePageFrontMaster> = ({ isNetlify, hero, fe
     hero: <Hero {...hero} />,
     features: (
       <Section>
-        <Title title={features.heading} text={features.description} />
+        <Title title={features.heading} text={features.description} decorate={features.decorate} />
         {JSON.stringify(features)}
       </Section>
     ),
-    themes: <Theme isNetlify={isNetlify} heading={themes.heading} description={themes.description} />,
+    themes: <Theme isNetlify={isNetlify} heading={themes.heading} description={themes.description} decorate={themes.decorate} />,
     supports: <Supports {...supports} />,
   };
 

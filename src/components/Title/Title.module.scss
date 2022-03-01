@@ -11,7 +11,7 @@
 }
 
 .title {
-  @include pfs('font-size', 40px, 50px);
+  @include pfs('font-size', 40px, 60px);
   span {
     position: relative;
     display: inline-block;
