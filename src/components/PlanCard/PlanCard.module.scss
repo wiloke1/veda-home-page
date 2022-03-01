@@ -36,11 +36,11 @@
   font-family: var(--font-secondary);
   font-size: 40px;
   font-weight: 500;
-  color: var(--color-gray8);
+  color: var(--color-primary);
   span {
     font-size: 20px;
     font-weight: 400;
-    opacity: 0.8;
+    color: var(--color-gray7);
     vertical-align: middle;
   }
 }
@@ -104,6 +104,9 @@
   }
   .divider {
     background-color: var(--color-gray7);
+  }
+  span {
+    color: var(--color-gray5);
   }
   li {
     color: var(--color-gray3);

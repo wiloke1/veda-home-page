@@ -13,7 +13,15 @@
 .title {
   @include pfs('font-size', 40px, 50px);
   span {
+    position: relative;
+    display: inline-block;
     color: var(--color-primary);
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
   }
 }
 

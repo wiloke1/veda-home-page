@@ -4,6 +4,7 @@ plans:
   heading: Plan for every <span>creator.</span>
   description: Campaign-ready, fully-optimized Shopify stores built with half the
     time and zero the code.
+  decorate: type2
   body:
     - title: Starter
       description: Starter description

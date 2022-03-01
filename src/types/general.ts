@@ -13,4 +13,5 @@ export interface MarkdownRemark<T = any> {
 export interface Section {
   heading: string;
   description: string;
+  decorate?: 'type1' | 'type2' | '';
 }

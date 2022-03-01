@@ -15,6 +15,7 @@ hero:
 features:
   heading: Feature heading
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
+  decorate: ""
   body:
     - icon: Icon1
       title: Title1
@@ -25,9 +26,11 @@ features:
 themes:
   heading: Theme heading
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
+  decorate: ""
 supports:
   heading: Get <span>help</span> whenever you need it
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
+  decorate: ""
   body:
     - image: /img/support1.png
       title: Professional Support

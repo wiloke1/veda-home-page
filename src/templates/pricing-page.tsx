@@ -10,7 +10,7 @@ export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans }) => {
   return (
     <Section>
       <div className="container">
-        <Title title={plans.heading} text={plans.description} />
+        <Title title={plans.heading} text={plans.description} decorate={plans.decorate} />
         <div className="row">
           {plans.body.map((item, index) => {
             return (
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         plans {
           heading
           description
+          decorate
           body {
             title
             description

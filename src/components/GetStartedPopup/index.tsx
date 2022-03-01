@@ -6,7 +6,7 @@ import { Title } from 'components/Title';
 import * as styles from './GetStartedPopup.module.scss';
 
 export interface GetStartedPopupProps {
-  buttonHighlight: boolean;
+  buttonHighlight?: boolean;
   buttonText: string;
   buttonStyle?: CSSProperties;
   buttonSize?: ButtonProps['size'];

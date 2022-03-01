@@ -60,6 +60,7 @@ export const pageQuery = graphql`
         features {
           heading
           description
+          decorate
           body {
             icon
             title
@@ -69,10 +70,12 @@ export const pageQuery = graphql`
         themes {
           heading
           description
+          decorate
         }
         supports {
           heading
           description
+          decorate
           body {
             image {
               childImageSharp {

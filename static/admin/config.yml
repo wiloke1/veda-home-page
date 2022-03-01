@@ -79,6 +79,16 @@ collections:
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
               {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
                 label: Body,
                 name: body,
                 widget: list,
@@ -97,6 +107,16 @@ collections:
             fields: [
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
             ]
           }
           - {
@@ -106,6 +126,16 @@ collections:
             fields: [
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
               {
                 label: Body,
                 name: body,
@@ -146,6 +176,16 @@ collections:
             fields: [
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
               {
                 label: Body,
                 name: body,

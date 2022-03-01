@@ -40,7 +40,7 @@ export const Header: FC = () => {
         </nav>
       </div>
       <div className={styles.right}>
-        <GetStartedPopup buttonHighlight buttonText="Get started" />
+        <GetStartedPopup buttonText="Get started" />
       </div>
     </header>
   );
