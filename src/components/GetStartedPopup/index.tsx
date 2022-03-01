@@ -29,8 +29,9 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, but
       </ModalBase>
       <Button
         size={buttonSize}
-        border={!buttonHighlight}
         style={buttonStyle}
+        backgroundColor={buttonHighlight ? 'var(--color-quinary)' : 'var(--color-primary)'}
+        color={buttonHighlight ? 'var(--color-gray9)' : 'var(--color-light)'}
         onClick={() => {
           setIsModalVisible(true);
         }}
