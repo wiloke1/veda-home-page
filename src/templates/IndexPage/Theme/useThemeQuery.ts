@@ -7,7 +7,7 @@ export const useThemeQuery = () => {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { frontmatter: { templateKey: { eq: "theme" } } }
-        limit: 4
+        limit: 8
         skip: 0
       ) {
         edges {
