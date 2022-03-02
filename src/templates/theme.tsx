@@ -21,7 +21,7 @@ export const ThemeTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
+      {/* {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -42,17 +42,9 @@ export const ThemeTemplate = ({
             ) : null}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
-};
-
-ThemeTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
 };
 
 const Theme = ({ data }) => {
@@ -60,19 +52,7 @@ const Theme = ({ data }) => {
 
   return (
     <Layout>
-      <ThemeTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
+      test
     </Layout>
   );
 };
@@ -85,10 +65,16 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
-        description
-        tags
+        templateKey
+        date(formatString: "MMMM DD, YYYY")
+        category
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 300, quality: 100, layout: CONSTRAINED)
+          }
+        }
+        previewHref
       }
     }
   }

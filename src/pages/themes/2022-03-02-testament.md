@@ -1,5 +1,5 @@
 ---
-templateKey: themes
+templateKey: theme
 image: /img/theme4.jpg
 title: Testament
 category: Food and drink

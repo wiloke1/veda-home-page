@@ -42,7 +42,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "themes",
+          default: "theme",
         }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
