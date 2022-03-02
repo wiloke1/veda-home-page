@@ -135,6 +135,6 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
     templateKey: 'theme',
     path: '/themes/',
     component: 'src/templates/theme-list.tsx',
-    postsPerPage: 4,
+    postsPerPage: 12,
   });
 };
