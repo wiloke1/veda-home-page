@@ -3,7 +3,7 @@
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "mrmlnc.vscode-scss",
-    "jpoissonnier.vscode-styled-components",
+    "styled-components.vscode-styled-components",
     "wayou.vscode-todo-highlight"
   ]
 }
