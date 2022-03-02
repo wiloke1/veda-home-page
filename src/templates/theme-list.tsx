@@ -1,13 +1,16 @@
-import { FC } from 'react';
-import { graphql } from 'gatsby';
 import { Layout } from 'components/Layout';
+import { Pagination } from 'components/Pagination';
+import { Section } from 'components/Section';
+import { ThemeCard } from 'components/ThemeCard';
+import { graphql, navigate } from 'gatsby';
+import { FC } from 'react';
 import { MarkdownRemarkEdges } from 'types/general';
 import { ThemeItem, ThemeList } from 'types/Theme';
-import { ThemeCard } from 'components/ThemeCard';
-import { Section } from 'components/Section';
 
-const ThemeListIndexPage: FC<ThemeList> = ({ data }) => {
+const ThemeListIndexPage: FC<ThemeList> = ({ data, pageContext, location }) => {
   const themes = data.allMarkdownRemark.edges;
+
+  console.log(pageContext, location.pathname);
 
   const renderTheme = ({ node: theme }: MarkdownRemarkEdges<ThemeItem>) => {
     return (
@@ -24,10 +27,18 @@ const ThemeListIndexPage: FC<ThemeList> = ({ data }) => {
 
   return (
     <Layout>
-      <Section>
+      <Section backgroundColor="var(--color-gray1)">
         <div className="container">
           <div className="row">{themes.map(renderTheme)}</div>
         </div>
+        <Pagination
+          initialPage={pageContext.currentPage - 1}
+          onPageChange={({ selected }) => {
+            navigate(selected === 0 ? '/themes' : `/themes/${selected + 1}`);
+          }}
+          pageRangeDisplayed={5}
+          pageCount={pageContext.numPages}
+        />
       </Section>
     </Layout>
   );

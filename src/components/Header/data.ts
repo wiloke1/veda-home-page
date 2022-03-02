@@ -16,11 +16,11 @@ export const data = [
   //   name: 'Products',
   // },
   {
-    path: '/themes/1',
+    path: '/themes',
     name: 'Themes',
   },
   {
-    path: '/blog/1',
+    path: '/blog',
     name: 'Blog',
   },
   {

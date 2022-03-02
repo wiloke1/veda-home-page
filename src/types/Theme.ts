@@ -1,6 +1,6 @@
 import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
-import { AllMarkdownRemark } from './general';
+import { AllMarkdownRemark, PaginationContext } from './general';
 
 export interface ThemeItem {
   id: string;
@@ -20,4 +20,6 @@ export interface ThemeData {
   allMarkdownRemark: AllMarkdownRemark<ThemeItem>;
 }
 
-export interface ThemeList extends PageProps<ThemeData> {}
+export interface ThemeList extends Omit<PageProps<ThemeData>, 'pageContext'> {
+  pageContext: PaginationContext;
+}

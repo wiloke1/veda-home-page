@@ -22,11 +22,9 @@ interface Query {
 interface CreateListPagesParams {
   templateKey: string;
   path: string;
-  componentFileName: string;
+  component: string;
   postsPerPage: number;
 }
-
-const POST_PER_PAGE = 10;
 
 export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promise<void> => {
   const { createPage } = actions;
@@ -99,9 +97,22 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
     const numPages = Math.ceil(listPosts.length / value.postsPerPage);
 
     Array.from({ length: numPages }).forEach((_, index) => {
+      if (index === 0) {
+        createPage({
+          path: path.resolve(value.path),
+          component: path.resolve(value.component),
+          context: {
+            limit: value.postsPerPage,
+            skip: index * value.postsPerPage,
+            numPages,
+            currentPage: index + 1,
+            hasNext: index + 1 < numPages,
+          },
+        });
+      }
       createPage({
         path: path.resolve(value.path, `${index + 1}`),
-        component: path.resolve(value.componentFileName),
+        component: path.resolve(value.component),
         context: {
           limit: value.postsPerPage,
           skip: index * value.postsPerPage,
@@ -116,14 +127,14 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
   createListPages({
     templateKey: 'blog-post',
     path: '/blog/',
-    componentFileName: 'src/templates/blog-list.tsx',
-    postsPerPage: POST_PER_PAGE,
+    component: 'src/templates/blog-list.tsx',
+    postsPerPage: 9,
   });
 
   createListPages({
     templateKey: 'theme',
     path: '/themes/',
-    componentFileName: 'src/templates/theme-list.tsx',
-    postsPerPage: POST_PER_PAGE,
+    component: 'src/templates/theme-list.tsx',
+    postsPerPage: 4,
   });
 };

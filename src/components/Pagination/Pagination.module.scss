@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font-secondary);
+    color: var(--color-gray8);
+    margin: 5px;
+    &:global(.disabled) {
+      opacity: 0.3;
+    }
+    &:global(.selected) {
+      background-color: var(--color-primary);
+      color: var(--color-light);
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    i {
+      font-size: 18px;
+    }
+  }
+}

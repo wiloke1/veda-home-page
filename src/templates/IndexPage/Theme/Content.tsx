@@ -26,7 +26,7 @@ export const Content: FC<ContentProps> = () => {
         })}
       </div>
       <div style={{ textAlign: 'center', marginTop: 40 }}>
-        <Link to="/themes/1">
+        <Link to="/themes">
           <Button>View All</Button>
         </Link>
       </div>

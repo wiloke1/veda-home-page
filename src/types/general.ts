@@ -15,3 +15,11 @@ export interface Section {
   description: string;
   decorate?: 'type1' | 'type2' | '';
 }
+
+export interface PaginationContext {
+  limit: number;
+  skip: number;
+  numPages: number;
+  currentPage: number;
+  hasNext: boolean;
+}
