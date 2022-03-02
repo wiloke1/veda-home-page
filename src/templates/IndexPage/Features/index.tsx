@@ -13,7 +13,13 @@ export const Features: FC<SectionFeatures> = ({ heading, description, decorate, 
           {body.map((item, index) => {
             return (
               <div key={index} className="col-xs-12 col-sm-6 col-md-4">
-                <ImageTextBox type="boxed" image={item.image} title={item.title} description={item.description} containerStyle={{ height: '100%' }} />
+                <ImageTextBox
+                  type="boxed"
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  containerStyle={{ height: 'calc(100% - 30px)' }}
+                />
               </div>
             );
           })}

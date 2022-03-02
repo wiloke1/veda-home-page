@@ -1,14 +1,14 @@
 import { GatsbyImage } from 'components/Image';
 import { PageProps } from 'gatsby';
-import { AllMarkdownRemark } from './general';
+import { AllMarkdownRemark, PaginationContext } from './general';
 
 export interface Post {
   id: string;
   excerpt: string;
   frontmatter: {
     title: string;
-    featureimage: GatsbyImage;
-    featurepost: boolean;
+    featuredimage: GatsbyImage;
+    featuredpost: boolean;
     date: string;
     templateKey: string;
   };
@@ -21,4 +21,6 @@ export interface BlogData {
   allMarkdownRemark: AllMarkdownRemark<Post>;
 }
 
-export interface BlogList extends PageProps<BlogData> {}
+export interface BlogList extends Omit<PageProps<BlogData>, 'pageContext'> {
+  pageContext: PaginationContext;
+}

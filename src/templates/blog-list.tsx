@@ -1,25 +1,44 @@
 import { FC } from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, navigate } from 'gatsby';
 import { Layout } from 'components/Layout';
 import { BlogList, Post } from 'types/Blog';
 import { MarkdownRemarkEdges } from 'types/general';
+import { Pagination } from 'components/Pagination';
+import { Section } from 'components/Section';
+import { PostCard } from 'components/PostCard';
 
-const BlogListIndexPage: FC<BlogList> = ({ data }) => {
+const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
 
   const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
     return (
-      <div key={post.id}>
-        <h3>
-          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-        </h3>
-        <p>{post.frontmatter.date}</p>
-        <p>{post.excerpt}</p>
+      <div key={post.id} className="col-xs-12 col-md-6 col-lg-4">
+        <Link to={post.fields.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <PostCard title={post.frontmatter.title} date={post.frontmatter.date} image={post.frontmatter.featuredimage} excerpt={post.excerpt} />
+        </Link>
       </div>
     );
   };
 
-  return <Layout>{posts.map(renderPost)}</Layout>;
+  return (
+    <Layout>
+      <Section>
+        <div className="container">
+          <div className="row">{posts.map(renderPost)}</div>
+          {pageContext.numPages > 1 && (
+            <Pagination
+              initialPage={pageContext.currentPage - 1}
+              onPageChange={({ selected }) => {
+                navigate(selected === 0 ? '/blog' : `/blog/${selected + 1}`);
+              }}
+              pageRangeDisplayed={5}
+              pageCount={pageContext.numPages}
+            />
+          )}
+        </div>
+      </Section>
+    </Layout>
+  );
 };
 
 export default BlogListIndexPage;
@@ -34,7 +53,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
@@ -46,7 +65,7 @@ export const pageQuery = graphql`
             featuredpost
             featuredimage {
               childImageSharp {
-                gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+                gatsbyImageData(width: 450, quality: 100, layout: CONSTRAINED, aspectRatio: 1.5)
               }
             }
           }

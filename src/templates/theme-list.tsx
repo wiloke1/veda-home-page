@@ -7,10 +7,8 @@ import { FC } from 'react';
 import { MarkdownRemarkEdges } from 'types/general';
 import { ThemeItem, ThemeList } from 'types/Theme';
 
-const ThemeListIndexPage: FC<ThemeList> = ({ data, pageContext, location }) => {
+const ThemeListIndexPage: FC<ThemeList> = ({ data, pageContext }) => {
   const themes = data.allMarkdownRemark.edges;
-
-  console.log(pageContext, location.pathname);
 
   const renderTheme = ({ node: theme }: MarkdownRemarkEdges<ThemeItem>) => {
     return (
@@ -31,14 +29,16 @@ const ThemeListIndexPage: FC<ThemeList> = ({ data, pageContext, location }) => {
         <div className="container">
           <div className="row">{themes.map(renderTheme)}</div>
         </div>
-        <Pagination
-          initialPage={pageContext.currentPage - 1}
-          onPageChange={({ selected }) => {
-            navigate(selected === 0 ? '/themes' : `/themes/${selected + 1}`);
-          }}
-          pageRangeDisplayed={5}
-          pageCount={pageContext.numPages}
-        />
+        {pageContext.numPages > 1 && (
+          <Pagination
+            initialPage={pageContext.currentPage - 1}
+            onPageChange={({ selected }) => {
+              navigate(selected === 0 ? '/themes' : `/themes/${selected + 1}`);
+            }}
+            pageRangeDisplayed={5}
+            pageCount={pageContext.numPages}
+          />
+        )}
       </Section>
     </Layout>
   );
