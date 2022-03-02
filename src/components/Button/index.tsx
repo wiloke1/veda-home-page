@@ -4,6 +4,7 @@ import * as styles from './Button.module.scss';
 
 export interface ButtonProps {
   href?: string;
+  target?: 'blank' | 'self' | 'parent' | 'top';
   type?: 'button' | 'submit' | 'reset' | 'link';
   className?: string;
   onClick?: () => void;
@@ -27,6 +28,7 @@ export const Button: FC<ButtonProps> = ({
   size = 'medium',
   style,
   border = false,
+  target = 'self',
 }) => {
   const styleVariables = {
     '--btn-radius': radius,
@@ -39,7 +41,7 @@ export const Button: FC<ButtonProps> = ({
 
   if (!!href || type === 'link') {
     return (
-      <a href={href} className={classes} onClick={onClick} style={styleVariables}>
+      <a href={href} target={`_${target}`} className={classes} onClick={onClick} style={styleVariables}>
         {children}
       </a>
     );

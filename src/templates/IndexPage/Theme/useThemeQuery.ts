@@ -26,6 +26,7 @@ export const useThemeQuery = () => {
                   gatsbyImageData(width: 300, quality: 100, layout: CONSTRAINED)
                 }
               }
+              previewHref
             }
           }
         }

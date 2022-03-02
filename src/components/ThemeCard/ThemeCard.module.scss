@@ -17,3 +17,48 @@
   font-size: 13px;
   color: var(--color-gray6);
 }
+
+.image {
+  position: relative;
+  padding-top: 115%;
+  overflow: hidden;
+  :global(.gatsby-image-wrapper) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 2s cubic-bezier(.59,.2,.69,.4);
+  }
+}
+
+.buttonGroup {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s;
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-dark);
+    opacity: 0.6;
+    z-index: -1;
+  }
+}
+
+.container {
+  &:hover {
+    .buttonGroup {
+      opacity: 1;
+    }
+    :global(.gatsby-image-wrapper) {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+  }
+}

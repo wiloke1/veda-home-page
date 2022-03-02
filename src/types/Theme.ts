@@ -9,6 +9,7 @@ export interface ThemeItem {
     image: GatsbyImage;
     category: string;
     date: string;
+    previewHref?: string;
   };
   fields: {
     slug: string;

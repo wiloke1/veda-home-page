@@ -15,7 +15,12 @@ export const Content: FC<ContentProps> = () => {
         {themes.map(({ node: theme }) => {
           return (
             <div key={theme.id} className="col-xs-12 col-sm-4 col-md-3">
-              <ThemeCard title={theme.frontmatter.title} category={theme.frontmatter.category} image={theme.frontmatter.image} />
+              <ThemeCard
+                title={theme.frontmatter.title}
+                category={theme.frontmatter.category}
+                image={theme.frontmatter.image}
+                previewHref={theme.frontmatter.previewHref}
+              />
             </div>
           );
         })}

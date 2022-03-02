@@ -10,9 +10,10 @@ export interface GetStartedPopupProps {
   buttonText: string;
   buttonStyle?: CSSProperties;
   buttonSize?: ButtonProps['size'];
+  buttonBackground?: ButtonProps['backgroundColor'];
 }
 
-export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, buttonText, buttonStyle, buttonSize }) => {
+export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, buttonText, buttonStyle, buttonSize, buttonBackground }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
@@ -30,7 +31,7 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, but
       <Button
         size={buttonSize}
         style={buttonStyle}
-        backgroundColor={buttonHighlight ? 'var(--color-quinary)' : 'var(--color-primary)'}
+        backgroundColor={!!buttonBackground ? buttonBackground : buttonHighlight ? 'var(--color-quinary)' : 'var(--color-primary)'}
         color={buttonHighlight ? 'var(--color-gray9)' : 'var(--color-light)'}
         onClick={() => {
           setIsModalVisible(true);
