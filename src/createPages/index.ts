@@ -114,7 +114,7 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
   };
 
   createListPages({
-    templateKey: 'blog-list',
+    templateKey: 'blog-post',
     path: '/blog/',
     componentFileName: 'src/templates/blog-list.tsx',
     postsPerPage: POST_PER_PAGE,
