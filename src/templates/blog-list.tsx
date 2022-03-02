@@ -1,11 +1,12 @@
-import { FC } from 'react';
-import { graphql, Link, navigate } from 'gatsby';
 import { Layout } from 'components/Layout';
+import { Pagination } from 'components/Pagination';
+import { PostCard } from 'components/PostCard';
+import { Section } from 'components/Section';
+import { graphql, Link, navigate } from 'gatsby';
+import { FC } from 'react';
 import { BlogList, Post } from 'types/Blog';
 import { MarkdownRemarkEdges } from 'types/general';
-import { Pagination } from 'components/Pagination';
-import { Section } from 'components/Section';
-import { PostCard } from 'components/PostCard';
+import { BlogSearch } from './BlogPage/BlogSearch';
 
 const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -22,7 +23,8 @@ const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Section>
+      <Section style={{ paddingTop: 0 }}>
+        <BlogSearch />
         <div className="container">
           <div className="row">{posts.map(renderPost)}</div>
           {pageContext.numPages > 1 && (
