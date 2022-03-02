@@ -15,10 +15,10 @@ export const data = [
   //   path: '/products',
   //   name: 'Products',
   // },
-  // {
-  //   path: '/themes',
-  //   name: 'Theme',
-  // },
+  {
+    path: '/themes/1',
+    name: 'Themes',
+  },
   {
     path: '/blog/1',
     name: 'Blog',

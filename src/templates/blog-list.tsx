@@ -4,7 +4,7 @@ import { Layout } from 'components/Layout';
 import { BlogList, Post } from 'types/Blog';
 import { MarkdownRemarkEdges } from 'types/general';
 
-const BlogIndexPage: FC<BlogList> = ({ data }) => {
+const BlogListIndexPage: FC<BlogList> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
@@ -22,7 +22,7 @@ const BlogIndexPage: FC<BlogList> = ({ data }) => {
   return <Layout>{posts.map(renderPost)}</Layout>;
 };
 
-export default BlogIndexPage;
+export default BlogListIndexPage;
 
 export const pageQuery = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {

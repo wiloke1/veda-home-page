@@ -25,11 +25,11 @@ export const Content: FC<ContentProps> = () => {
           );
         })}
       </div>
-      {themes.length > 4 && (
-        <Link to="/themes">
+      <div style={{ textAlign: 'center', marginTop: 40 }}>
+        <Link to="/themes/1">
           <Button>View All</Button>
         </Link>
-      )}
+      </div>
     </div>
   );
 };

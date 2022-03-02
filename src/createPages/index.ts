@@ -19,6 +19,13 @@ interface Query {
   };
 }
 
+interface CreateListPagesParams {
+  templateKey: string;
+  path: string;
+  componentFileName: string;
+  postsPerPage: number;
+}
+
 const POST_PER_PAGE = 10;
 
 export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promise<void> => {
@@ -86,21 +93,37 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
     });
   });
 
-  // Create Blog List Pages
-  const blogPosts = posts.filter(item => item.node.frontmatter.templateKey === 'blog-post');
-  const numPages = Math.ceil(blogPosts.length / POST_PER_PAGE);
+  // Create List Pages
+  const createListPages = (value: CreateListPagesParams) => {
+    const listPosts = posts.filter(item => item.node.frontmatter.templateKey === value.templateKey);
+    const numPages = Math.ceil(listPosts.length / value.postsPerPage);
 
-  Array.from({ length: numPages }).forEach((_, index) => {
-    createPage({
-      path: `/blog/${index + 1}`,
-      component: path.resolve(`src/templates/blog-list.tsx`),
-      context: {
-        limit: POST_PER_PAGE,
-        skip: index * POST_PER_PAGE,
-        numPages,
-        currentPage: index + 1,
-        hasNext: index + 1 < numPages,
-      },
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: path.resolve(value.path, `${index + 1}`),
+        component: path.resolve(value.componentFileName),
+        context: {
+          limit: value.postsPerPage,
+          skip: index * value.postsPerPage,
+          numPages,
+          currentPage: index + 1,
+          hasNext: index + 1 < numPages,
+        },
+      });
     });
+  };
+
+  createListPages({
+    templateKey: 'blog-list',
+    path: '/blog/',
+    componentFileName: 'src/templates/blog-list.tsx',
+    postsPerPage: POST_PER_PAGE,
+  });
+
+  createListPages({
+    templateKey: 'theme',
+    path: '/themes/',
+    componentFileName: 'src/templates/theme-list.tsx',
+    postsPerPage: POST_PER_PAGE,
   });
 };
