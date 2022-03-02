@@ -11,10 +11,6 @@ export const data = [
     path: '/pricing',
     name: 'Pricing',
   },
-  // {
-  //   path: '/products',
-  //   name: 'Products',
-  // },
   {
     path: '/themes',
     name: 'Themes',

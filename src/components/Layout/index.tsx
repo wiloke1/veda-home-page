@@ -2,7 +2,8 @@ import { Header } from 'components/Header';
 import { withPrefix } from 'gatsby';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import Footer from '../Footer';
+import Sticky from 'wil-react-sticky';
+import { Footer } from 'components/Footer';
 import useSiteMetadata from './useSiteMetadata';
 
 export interface LayoutProps {}
@@ -10,7 +11,7 @@ export interface LayoutProps {}
 export const Layout: FC<LayoutProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -20,7 +21,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/favicon-32x32.png`} sizes="32x32" />
         <link rel="icon" type="image/png" href={`${withPrefix('/')}img/favicon-16x16.png`} sizes="16x16" />
 
-        <link rel="mask-icon" href={`${withPrefix('/')}img/safari-pinned-tab.svg`} color="#ff4400" />
+        <link rel="mask-icon" href={`${withPrefix('/')}img/safari-pinned-tab.svg`} color="#2C36DC" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -34,9 +35,11 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         />
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
       </Helmet>
-      <Header />
-      <div>{children}</div>
+      <Sticky>
+        <Header />
+      </Sticky>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
