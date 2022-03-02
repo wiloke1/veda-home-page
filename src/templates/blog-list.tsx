@@ -64,7 +64,6 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            featuredpost
             featuredimage {
               childImageSharp {
                 gatsbyImageData(width: 450, quality: 100, layout: CONSTRAINED, aspectRatio: 1.5)

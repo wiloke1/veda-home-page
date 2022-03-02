@@ -1,14 +1,11 @@
 // @ts-nocheck
-import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { Layout } from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
-
+export const AboutPageTemplate = ({ title, content }) => {
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -16,7 +13,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
           <div className="column is-10 is-offset-1">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{title}</h2>
-              <PageContent className="content" content={content} />
+              {typeof content === 'string' ? <div dangerouslySetInnerHTML={{ __html: content }} /> : content}
             </div>
           </div>
         </div>
@@ -36,7 +33,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate contentComponent={HTMLContent} title={post.frontmatter.title} content={post.html} />
+      <AboutPageTemplate title={post.frontmatter.title} content={post.html} />
     </Layout>
   );
 };

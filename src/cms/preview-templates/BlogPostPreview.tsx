@@ -1,17 +1,21 @@
 import { BlogPostTemplate } from 'templates/blog-post';
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
+import { PostDetail } from 'types/Blog';
 
 const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
-  const tags = entry.getIn(['data', 'tags']);
+  const data = entry.getIn(['data']).toJS() as PostDetail['frontmatter'];
   return (
     <App>
       <BlogPostTemplate
-        // @ts-ignore
-        content={widgetFor('body')}
-        description={entry.getIn(['data', 'description'])}
-        tags={tags && tags.toJS()}
-        title={entry.getIn(['data', 'title'])}
+        frontmatter={{
+          title: data.title,
+          date: '',
+          description: data.description,
+          featuredimage: data.featuredimage,
+          tags: data.tags,
+        }}
+        html={widgetFor('body') as any}
       />
     </App>
   );

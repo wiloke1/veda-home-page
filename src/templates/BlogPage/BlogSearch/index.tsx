@@ -8,7 +8,7 @@ export const BlogSearch: FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-            <h3>Blog</h3>
+            <h2>Blog</h2>
             <p>Get the knowledge you need to build a successful eCommerce store</p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-4">
