@@ -92,6 +92,7 @@ input[type="email"],
 input[type="file"],
 select,
 textarea {
+  -webkit-appearance: none;
   appearance: none;
   border: 1px solid var(--color-gray3);
   border-radius: 6px;
