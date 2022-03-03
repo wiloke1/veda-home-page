@@ -3,10 +3,10 @@ export const data = [
     path: '/',
     name: 'Home',
   },
-  {
-    path: '/about',
-    name: 'About',
-  },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  // },
   {
     path: '/pricing',
     name: 'Pricing',
