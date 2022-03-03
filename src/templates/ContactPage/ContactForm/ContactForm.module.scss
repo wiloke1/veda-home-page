@@ -1,0 +1,14 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .select {
+  width: 100%;
+  margin-bottom: 10px;
+}

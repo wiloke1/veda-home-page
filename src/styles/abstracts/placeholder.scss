@@ -1,0 +1,17 @@
+@mixin placeholder($type: "") {
+  @if($type == "default") {
+    :-webkit-input-placeholder {
+      @content;
+    }
+    :placeholder {
+      @content;
+    }
+  } @else {
+    &:-webkit-input-placeholder {
+      @content;
+    }
+    &:placeholder {
+      @content;
+    }
+  }
+}

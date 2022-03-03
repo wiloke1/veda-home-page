@@ -89,18 +89,48 @@ input[type="url"],
 input[type="number"],
 input[type="password"],
 input[type="email"],
-input[type="file"] {
+input[type="file"],
+select,
+textarea {
   appearance: none;
-  border-radius: 0;
+  border: 1px solid var(--color-gray3);
+  border-radius: 6px;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: var(--color-gray8);
 }
+
+select {
+  appearance: auto;
+  padding: 0 12px;
+}
+
 textarea {
   vertical-align: middle;
-  appearance: none;
-  border-radius: 0;
+  height: 100px;
+  padding: 10px 15px;
+  resize: vertical;
 }
+
 a, input, textarea {
   outline: none !important;
 }
+
+input::-webkit-input-placeholder {
+  color: var(--color-gray6);
+}
+input::placeholder {
+  color: var(--color-gray6);
+}
+
+textarea::-webkit-input-placeholder {
+  color: var(--color-gray6);
+}
+textarea::placeholder {
+  color: var(--color-gray7);
+}
+
 img {
   max-width: 100%;
   height: auto;

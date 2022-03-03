@@ -14,6 +14,9 @@ module.exports = {
       'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
+    'gatsby-plugin-remove-trailing-slashes',
+    'gatsby-plugin-root-import',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
@@ -38,8 +41,6 @@ module.exports = {
         id: 'portal',
       },
     },
-    'gatsby-plugin-root-import',
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typescript',
       options: {

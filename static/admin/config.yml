@@ -213,3 +213,45 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - {
+            label: Decorate,
+            name: decorate,
+            widget: select,
+            options: [
+              { label: "None", value: "" },
+              { label: "Decorate 1", value: "type1" },
+              { label: "Decorate 2", value: "type2" }
+            ]
+          },
+          - {
+            label: Form,
+            name: form,
+            widget: object,
+            fields: [
+              { label: Name Placeholder, name: namePlaceholder, widget: string },
+              { label: Email Placeholder, name: emailPlaceholder", widget: string },
+              { label: Website Placeholder, name: websitePlaceholder", widget: string },
+              {
+                label: "Choose an option",
+                name: "options",
+                widget: list,
+                fields: [
+                  { label: Value, name: value", widget: string }
+                ]
+              },
+              { label: Message Placeholder, name: messagePlaceholder", widget: string },
+              { label: Button Text, name: buttonText", widget: string },
+            ]
+          }
