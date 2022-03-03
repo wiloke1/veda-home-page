@@ -8,13 +8,13 @@ import * as styles from './BlogDetailContent.module.scss';
 
 const FACEBOOK_APP_ID = '927671281263475';
 
-export const BlogDetailContent: FC<PostDetail & { origin: string }> = ({
+export const BlogDetailContent: FC<PostDetail & { origin?: string }> = ({
   html,
   frontmatter: { date, featuredimage, tags, title },
   fields: { slug },
   origin,
 }) => {
-  const _origin = origin.includes('localhost') ? 'https://veda-builder.netlify.app' : origin;
+  const _origin = origin?.includes('localhost') ? 'https://veda-builder.netlify.app' : origin;
   return (
     <div className={styles.container}>
       <Image src={featuredimage} alt={title} />
