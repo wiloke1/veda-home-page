@@ -28,14 +28,16 @@ const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
         <div className="container">
           <div className="row">{posts.map(renderPost)}</div>
           {pageContext.numPages > 1 && (
-            <Pagination
-              initialPage={pageContext.currentPage - 1}
-              onPageChange={({ selected }) => {
-                navigate(selected === 0 ? '/blog' : `/blog/${selected + 1}`);
-              }}
-              pageRangeDisplayed={5}
-              pageCount={pageContext.numPages}
-            />
+            <div style={{ marginTop: 50 }}>
+              <Pagination
+                initialPage={pageContext.currentPage - 1}
+                onPageChange={({ selected }) => {
+                  navigate(selected === 0 ? '/blog' : `/blog/${selected + 1}`);
+                }}
+                pageRangeDisplayed={5}
+                pageCount={pageContext.numPages}
+              />
+            </div>
           )}
         </div>
       </Section>
