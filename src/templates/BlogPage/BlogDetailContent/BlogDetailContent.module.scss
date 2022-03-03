@@ -50,14 +50,15 @@
     }
   }
   figure {
+    margin: 0 0 20px;
     img {
       margin-bottom: 5px;
     }
   }
   figcaption {
-    font-size: 14px;
+    font-size: 13px;
     font-style: italic;
-    color: var(--color-gray6);
+    color: var(--color-gray7);
     border-left: 2px solid var(--color-gray3);
     padding-left: 10px;
   }

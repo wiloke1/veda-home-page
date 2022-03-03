@@ -4,7 +4,8 @@
   position: relative;
   overflow: hidden;
   color: var(--color-gray1);
-  padding-top: 12%;
+  background-color: var(--color-gray9);
+  padding-top: 80px;
 }
 
 .bg {
@@ -28,7 +29,7 @@
 
 .name {
   color: var(--color-light);
-  font-size: pfs(30px, 40px);
+  font-size: pfs(40px, 50px);
   margin-bottom: 10px;
 }
 
