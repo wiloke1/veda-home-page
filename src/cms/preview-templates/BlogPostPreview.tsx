@@ -16,6 +16,7 @@ const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) =>
           tags: data.tags,
         }}
         html={widgetFor('body') as any}
+        fields={{ slug: '' }}
       />
     </App>
   );
