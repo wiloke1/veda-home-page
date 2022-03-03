@@ -30,13 +30,11 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
       <Section>
         <Helmet title={`${tag} | ${title}`} />
         <div className="container">
-          <div className="column is-10 is-offset-1" style={{ marginBottom: '6rem' }}>
-            <h3 style={{ marginBottom: 20 }}>{tagHeader}</h3>
-            <Link to="/tags/">
-              <Button>Browse all tags</Button>
-            </Link>
-            <div className="row">{posts.map(renderPost)}</div>
-          </div>
+          <h3 style={{ marginBottom: 20 }}>{tagHeader}</h3>
+          <Link to="/tags/">
+            <Button>Browse all tags</Button>
+          </Link>
+          <div className="row">{posts.map(renderPost)}</div>
         </div>
       </Section>
     </Layout>
