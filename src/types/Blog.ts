@@ -22,7 +22,7 @@ export interface PostDetail {
   frontmatter: {
     date: string;
     description: string;
-    featuredimage: GatsbyImage;
+    featuredimage?: GatsbyImage;
     tags: string[];
     title: string;
   };

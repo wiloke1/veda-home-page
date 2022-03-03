@@ -21,7 +21,7 @@ export const BlogDetailContent: FC<PostDetail & { origin?: string }> = ({
 
   return (
     <div className={styles.container}>
-      <Image src={featuredimage} alt={title} />
+      {!!featuredimage && <Image src={featuredimage} alt={title} />}
       <div className={styles.body}>
         <h1 className={styles.title}>{title}</h1>
         <span className={styles.date}>{date}</span>
