@@ -98,6 +98,7 @@ module.exports = {
         plugins: [
           'gatsby-remark-embed-video',
           'gatsby-remark-responsive-iframe',
+          'gatsby-remark-prismjs',
           'gatsby-remark-hard-breaks',
           {
             resolve: 'gatsby-remark-relative-images',
