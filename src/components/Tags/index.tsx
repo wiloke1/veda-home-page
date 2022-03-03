@@ -12,7 +12,7 @@ export const Tags: FC<TagsProps> = ({ tags }) => {
     <div>
       {tags.map(tag => {
         return (
-          <Link className={styles.item} to={`/tags/${kebabCase(tag)}/`}>
+          <Link key={tag} className={styles.item} to={`/tags/${kebabCase(tag)}/`}>
             {tag}
           </Link>
         );

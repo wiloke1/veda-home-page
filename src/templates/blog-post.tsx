@@ -5,11 +5,10 @@ import { BlogDetail, PostDetail } from 'types/Blog';
 import { Layout } from '../components/Layout';
 import { BlogDetailContent } from './BlogPage/BlogDetailContent';
 
-export const BlogPostTemplate: FC<PostDetail> = props => {
+export const BlogPostTemplate: FC<PostDetail & { origin: string }> = props => {
   const {
     frontmatter: { title, description },
   } = props;
-  console.log(props);
   return (
     <article>
       <Helmet titleTemplate="%s | Blog">
@@ -21,12 +20,14 @@ export const BlogPostTemplate: FC<PostDetail> = props => {
   );
 };
 
-const BlogPost: FC<BlogDetail> = ({ data }) => {
+const BlogPost: FC<BlogDetail> = ({ data, location, pageResources, serverData }) => {
   const { markdownRemark: post } = data;
+
+  console.log(pageResources, serverData);
 
   return (
     <Layout>
-      <BlogPostTemplate {...post} />
+      <BlogPostTemplate {...post} origin={location.origin} />
     </Layout>
   );
 };
@@ -37,6 +38,9 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         featuredimage {
           childImageSharp {

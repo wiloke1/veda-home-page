@@ -26,6 +26,9 @@ export interface PostDetail {
     tags: string[];
     title: string;
   };
+  fields: {
+    slug: string;
+  };
 }
 
 export interface BlogData {

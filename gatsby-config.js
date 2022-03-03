@@ -1,4 +1,7 @@
 const path = require('path');
+require('dotenv').config({
+  path: `.env`,
+});
 // Get paths of Gatsby's required rules, which as of writing is located at:
 // https://github.com/gatsbyjs/gatsby/tree/fbfe3f63dec23d279a27b54b4057dd611dce74bb/packages/
 // gatsby/src/utils/eslint-rules
@@ -6,7 +9,7 @@ const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', '
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Veda builder',
     description:
       'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
@@ -98,7 +101,6 @@ module.exports = {
         plugins: [
           'gatsby-remark-embed-video',
           'gatsby-remark-responsive-iframe',
-          'gatsby-remark-prismjs',
           'gatsby-remark-hard-breaks',
           {
             resolve: 'gatsby-remark-relative-images',
