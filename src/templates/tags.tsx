@@ -45,19 +45,13 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
 export default TagRoute;
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String, $skip: Int!, $limit: Int!) {
+  query TagPage($tag: String) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-      limit: $limit
-      skip: $skip
-    ) {
+    allMarkdownRemark(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {
