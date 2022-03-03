@@ -14,6 +14,7 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title;
   const totalCount = data.allMarkdownRemark.totalCount;
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with “${tag}”`;
+  console.log(123, pageContext);
 
   const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
     return (
@@ -31,7 +32,7 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
         <Helmet title={`${tag} | ${title}`} />
         <div className="container">
           <h3 style={{ marginBottom: 20 }}>{tagHeader}</h3>
-          <Link to="/tags/">
+          <Link to="/tags">
             <Button>Browse all tags</Button>
           </Link>
           <div className="row">{posts.map(renderPost)}</div>
@@ -44,13 +45,19 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
 export default TagRoute;
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String) {
+  query TagPage($tag: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+      limit: $limit
+      skip: $skip
+    ) {
       totalCount
       edges {
         node {
