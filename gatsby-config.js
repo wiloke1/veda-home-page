@@ -99,6 +99,8 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-external-links',
+          'gatsby-remark-figure-caption',
           'gatsby-remark-embed-video',
           'gatsby-remark-responsive-iframe',
           'gatsby-remark-hard-breaks',
