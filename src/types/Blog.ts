@@ -33,6 +33,11 @@ export interface PostDetail {
 
 export interface BlogData {
   allMarkdownRemark: AllMarkdownRemark<Post>;
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
 }
 
 export interface BlogList extends Omit<PageProps<BlogData>, 'pageContext'> {

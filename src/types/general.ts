@@ -4,6 +4,7 @@ export interface MarkdownRemarkEdges<T = any> {
 
 export interface AllMarkdownRemark<T = any> {
   edges: MarkdownRemarkEdges<T>[];
+  totalCount: number;
 }
 
 export interface MarkdownRemark<T = any> {
@@ -22,4 +23,5 @@ export interface PaginationContext {
   numPages: number;
   currentPage: number;
   hasNext: boolean;
+  tag: string;
 }
