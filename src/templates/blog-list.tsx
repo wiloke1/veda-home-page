@@ -23,8 +23,8 @@ const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Section style={{ paddingTop: 0 }}>
-        <BlogSearch />
+      <BlogSearch />
+      <Section style={{ paddingTop: 50 }}>
         <div className="container">
           <div className="row">{posts.map(renderPost)}</div>
           {pageContext.numPages > 1 && (
