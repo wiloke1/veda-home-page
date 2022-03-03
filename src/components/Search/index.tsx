@@ -21,8 +21,8 @@ export const Search: FC<SearchProps> = ({ templateKey }) => {
         Index.load(searchIndex);
   };
 
-  const handleSearch: ChangeEventHandler<HTMLInputElement> = evt => {
-    const query = evt.target.value;
+  const handleSearch: ChangeEventHandler<HTMLInputElement> = event => {
+    const query = event.target.value;
     index.current = getOrCreateIndex();
     setQuery(query);
     setResults(

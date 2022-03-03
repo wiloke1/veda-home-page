@@ -25,7 +25,7 @@ const ThemeListIndexPage: FC<ThemeList> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Section>
+      <Section backgroundColor="var(--color-gray1)">
         <div className="container">
           <div className="row">{themes.map(renderTheme)}</div>
         </div>
