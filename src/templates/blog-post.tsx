@@ -9,6 +9,7 @@ export const BlogPostTemplate: FC<PostDetail> = props => {
   const {
     frontmatter: { title, description },
   } = props;
+  console.log(props);
   return (
     <article>
       <Helmet titleTemplate="%s | Blog">

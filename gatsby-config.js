@@ -96,7 +96,9 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-line-breaks',
+          'gatsby-remark-embed-video',
+          'gatsby-remark-responsive-iframe',
+          'gatsby-remark-hard-breaks',
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
