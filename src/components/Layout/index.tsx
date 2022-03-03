@@ -11,7 +11,7 @@ export interface LayoutProps {}
 export const Layout: FC<LayoutProps> = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <>
+    <div style={{ overflow: 'hidden' }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -40,6 +40,6 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
       </Sticky>
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };

@@ -3,8 +3,12 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-light);
-  height: 80px;
-  padding: 0 40px;
+  height: 70px;
+  padding: 0 15px;
+  @media (min-width: 920px) {
+    height: 80px;
+    padding: 0 40px;
+  }
 }
 
 .center {
@@ -20,6 +24,27 @@
 
 .nav {
   position: relative;
+  @media (max-width: 919px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s;
+    transform: translateX(100%);
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.navActive {
+  transform: translateX(0) !important;
 }
 
 .navItem {
@@ -28,12 +53,84 @@
   font-family: var(--font-secondary);
   text-decoration: none;
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
   &[aria-current="page"] {
     color: var(--color-primary);
+  }
+  @media (min-width: 1000px) {
+    padding: 20px;
+  }
+  @media (max-width: 919px) {
+    display: block;
   }
 }
 
 .navItemActive {
   color: var(--color-primary);
+}
+
+.getStartedInNav {
+  display: none;
+  @media (max-width: 919px) {
+    display: block;
+  }
+}
+
+.getStarted {
+  display: none;
+  @media (min-width: 920px) {
+    display: block;
+  }
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  @media (min-width: 920px) {
+    display: none;
+  }
+}
+
+.hamburgerItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-gray9);
+  transition: all 0.3s;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gray9);
+    transition: all 0.3s;
+  }
+  &:after {
+    top: 8px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 34px;
+  color: var(--color-gray9);
+  @media (min-width: 920px) {
+    display: none;
+  }
 }
