@@ -1,5 +1,10 @@
 .container {
-  margin-bottom: 30px;
+  position: relative;
+  &:hover {
+    .title {
+      color: var(--color-primary);
+    }
+  }
 }
 
 .date {
