@@ -29,7 +29,9 @@ export const Search: FC<SearchProps> = ({ templateKey }) => {
       index.current
         .search(query, { expand: true })
         // Map over each ID and return the full document
-        .map(({ ref }) => index.current?.documentStore.getDoc(ref)),
+        .map(({ ref }) => {
+          return index.current?.documentStore.getDoc(ref);
+        }),
     );
   };
 

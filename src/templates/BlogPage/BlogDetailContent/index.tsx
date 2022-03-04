@@ -4,19 +4,14 @@ import { FC, useRef } from 'react';
 // @ts-ignore
 import { Comments, FacebookProvider } from 'react-facebook';
 import { PostDetail } from 'types/Blog';
+import { FACEBOOK_APP_ID } from 'utils/constants';
+import { getOrigin } from 'utils/getOrigin';
 import * as styles from './BlogDetailContent.module.scss';
 import { useHandleInternalLink } from './useHandleInternalLink';
 
-const FACEBOOK_APP_ID = '927671281263475';
-
-export const BlogDetailContent: FC<PostDetail & { origin?: string }> = ({
-  html,
-  frontmatter: { date, featuredimage, tags, title },
-  fields: { slug },
-  origin,
-}) => {
+export const BlogDetailContent: FC<PostDetail> = ({ html, frontmatter: { date, featuredimage, tags, title }, fields: { slug } }) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const _origin = origin?.includes('localhost') ? 'https://veda-builder.netlify.app' : origin;
+  const origin = getOrigin();
   useHandleInternalLink(contentRef);
 
   return (
@@ -36,7 +31,7 @@ export const BlogDetailContent: FC<PostDetail & { origin?: string }> = ({
         ) : null}
         <div className={styles.facebookComment}>
           <FacebookProvider appId={FACEBOOK_APP_ID}>
-            <Comments href={`${_origin}${slug}`} width={765} mobile />
+            <Comments href={`${origin}${slug}`} width={765} mobile />
           </FacebookProvider>
         </div>
       </div>

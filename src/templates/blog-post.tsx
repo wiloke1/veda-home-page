@@ -5,7 +5,7 @@ import { BlogDetail, PostDetail } from 'types/Blog';
 import { Layout } from '../components/Layout';
 import { BlogDetailContent } from './BlogPage/BlogDetailContent';
 
-export const BlogPostTemplate: FC<PostDetail & { origin?: string }> = props => {
+export const BlogPostTemplate: FC<PostDetail> = props => {
   const {
     frontmatter: { title, description },
   } = props;
@@ -20,12 +20,12 @@ export const BlogPostTemplate: FC<PostDetail & { origin?: string }> = props => {
   );
 };
 
-const BlogPost: FC<BlogDetail> = ({ data, location }) => {
+const BlogPost: FC<BlogDetail> = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <BlogPostTemplate {...post} origin={location.origin} />
+      <BlogPostTemplate {...post} />
     </Layout>
   );
 };

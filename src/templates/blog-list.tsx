@@ -15,7 +15,13 @@ const BlogListIndexPage: FC<BlogList> = ({ data, pageContext }) => {
     return (
       <div key={post.id} className="col-xs-12 col-md-6 col-lg-4">
         <Link to={post.fields.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <PostCard title={post.frontmatter.title} date={post.frontmatter.date} image={post.frontmatter.featuredimage} excerpt={post.excerpt} />
+          <PostCard
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            image={post.frontmatter.featuredimage}
+            excerpt={post.excerpt}
+            slug={post.fields.slug}
+          />
         </Link>
       </div>
     );

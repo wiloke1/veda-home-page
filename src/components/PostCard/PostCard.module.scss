@@ -7,11 +7,27 @@
   }
 }
 
-.date {
-  font-size: 14px;
+.meta {
+  font-size: 13px;
   font-family: var(--font-secondary);
   margin-top: 4px;
+  display: flex;
+  align-items: center;
+  i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
 }
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
 
 .title {
   margin-top: 15px;

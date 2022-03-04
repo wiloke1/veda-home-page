@@ -14,13 +14,18 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
   const title = data.site.siteMetadata.title;
   const totalCount = data.allMarkdownRemark.totalCount;
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with “${tag}”`;
-  console.log(123, pageContext);
 
   const renderPost = ({ node: post }: MarkdownRemarkEdges<Post>) => {
     return (
       <div key={post.id} className="col-xs-12 col-md-6 col-lg-4">
         <Link to={post.fields.slug} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <PostCard title={post.frontmatter.title} date={post.frontmatter.date} image={post.frontmatter.featuredimage} excerpt={post.excerpt} />
+          <PostCard
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            image={post.frontmatter.featuredimage}
+            excerpt={post.excerpt}
+            slug={post.fields.slug}
+          />
         </Link>
       </div>
     );
