@@ -234,7 +234,7 @@ collections:
               { label: "Decorate 1", value: "type1" },
               { label: "Decorate 2", value: "type2" }
             ]
-          },
+          }
           - {
             label: Form,
             name: form,
