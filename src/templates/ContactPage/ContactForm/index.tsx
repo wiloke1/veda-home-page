@@ -37,14 +37,14 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
           {nameLabel} <span>*</span>
         </label>
         <input name="name" value={result.name} className={styles.input} type="text" required onChange={handleInputChange} />
-        <span className={styles.notify} data-invalid="Please enter a valid name" data-valid="Perfect, thanks!" />
+        <span className={styles.notify}>Please enter a valid name</span>
       </div>
       <div className={styles.formItem}>
         <label className={styles.label} htmlFor="email">
           {emailLabel} <span>*</span>
         </label>
         <input name="email" value={result.email} className={styles.input} type="email" required onChange={handleInputChange} />
-        <span className={styles.notify} data-invalid="Please enter a valid email" data-valid="Perfect, thanks!" />
+        <span className={styles.notify}>Please enter a valid email</span>
       </div>
       <div className={styles.formItem}>
         <label className={styles.label} htmlFor="website">
@@ -59,7 +59,7 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
           pattern="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"
           onChange={handleInputChange}
         />
-        <span className={styles.notify} data-invalid="Please enter a valid website" data-valid="Perfect, thanks!" />
+        <span className={styles.notify}>Please enter a valid website</span>
       </div>
       <div className={styles.formItem}>
         <label className={styles.label} htmlFor="options">
@@ -83,7 +83,7 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
           {messageLabel} <span>*</span>
         </label>
         <textarea name="message" value={result.message} className={styles.input} required onChange={handleInputChange} />
-        <span className={styles.notify} data-invalid="Please enter a valid message" data-valid="Perfect, thanks!" />
+        <span className={styles.notify}>Please enter a valid message</span>
       </div>
       <Button>{buttonText}</Button>
     </form>
