@@ -65,8 +65,6 @@ planComparison:
 
   table:
     - title: Starter
-      price: Free
-      buttonText: Get started
       content: |+
         * check
         * minus
@@ -78,7 +76,9 @@ planComparison:
         * 5
         * check
 
-      highlight: true
+      price: Free
+      highlight: false
+      buttonText: Get started
     - title: Business
       content: |+
         * check
@@ -94,7 +94,8 @@ planComparison:
       price: $20<span>/mo</span>
       highlight: true
       buttonText: Try for free
-    - content: |+
+    - title: Advanded
+      content: |+
         * check
         * check
         ###
@@ -104,10 +105,8 @@ planComparison:
         ###
         * 40
         * check
-
-      title: Advanded
       price: $40<span>/mo</span>
+      highlight: false
       buttonText: Start advancing
-      highlight: true
   heading: Plan comparison
 ---
