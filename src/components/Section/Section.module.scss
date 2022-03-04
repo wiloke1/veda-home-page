@@ -1,4 +1,6 @@
 .container {
+  position: relative;
+  z-index: 9;
   padding: 80px 0;
   background-size: cover;
   background-position: center;

@@ -1,9 +1,9 @@
 ---
 templateKey: contact-page
-heading: Still have questions <br/>about Veda?
+heading: Still have questions <br/>about <span>Veda?</span>
 description: Get in touch with us and we’ll put you on the right track towards
   making unique, fully customizable storefronts.
-decorate: ""
+decorate: "type1"
 form:
   nameLabel: Your name
   websiteLabel: Your website
