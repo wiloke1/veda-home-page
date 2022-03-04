@@ -241,17 +241,17 @@ collections:
             widget: object,
             fields: [
               { label: Name Placeholder, name: namePlaceholder, widget: string },
-              { label: Email Placeholder, name: emailPlaceholder", widget: string },
-              { label: Website Placeholder, name: websitePlaceholder", widget: string },
+              { label: Email Placeholder, name: emailPlaceholder, widget: string },
+              { label: Website Placeholder, name: websitePlaceholder, widget: string },
               {
                 label: "Choose an option",
                 name: "options",
                 widget: list,
                 fields: [
-                  { label: Value, name: value", widget: string }
+                  { label: Value, name: value, widget: string }
                 ]
               },
-              { label: Message Placeholder, name: messagePlaceholder", widget: string },
-              { label: Button Text, name: buttonText", widget: string },
+              { label: Message Placeholder, name: messagePlaceholder, widget: string },
+              { label: Button Text, name: buttonText, widget: string },
             ]
           }
