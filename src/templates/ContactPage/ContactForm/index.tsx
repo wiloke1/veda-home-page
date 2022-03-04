@@ -1,5 +1,5 @@
 import { Button } from 'components/Button';
-import { ChangeEventHandler, FC, useState } from 'react';
+import { ChangeEventHandler, FC, FormEventHandler, useState } from 'react';
 import { IContactForm } from 'types/Contact';
 import * as styles from './ContactForm.module.scss';
 
@@ -21,7 +21,16 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
   });
 
   const handleInputChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = event => {
-    setResult(result => ({ ...result, [event.target.name]: event.target.value }));
+    const el = event.target as HTMLInputElement | HTMLTextAreaElement;
+    setResult(result => ({ ...result, [el.name]: el.value }));
+    // Hack ( trở về mặc định khi nhập lại vì nếu không trở về sẽ bị lỗi css :valid )
+    el.setCustomValidity('');
+  };
+
+  const handleInvalid: FormEventHandler<HTMLInputElement | HTMLTextAreaElement> = event => {
+    const el = event.target as HTMLInputElement | HTMLTextAreaElement;
+    // Hack ( Đặt content " " thì sẽ tắt được popover của validation )
+    el.setCustomValidity(' ');
   };
 
   return (
@@ -36,14 +45,22 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
         <label className={styles.label} htmlFor="name">
           {nameLabel} <span>*</span>
         </label>
-        <input name="name" value={result.name} className={styles.input} type="text" required onChange={handleInputChange} />
+        <input name="name" value={result.name} className={styles.input} type="text" required onChange={handleInputChange} onInvalid={handleInvalid} />
         <span className={styles.notify}>Please enter a valid name</span>
       </div>
       <div className={styles.formItem}>
         <label className={styles.label} htmlFor="email">
           {emailLabel} <span>*</span>
         </label>
-        <input name="email" value={result.email} className={styles.input} type="email" required onChange={handleInputChange} />
+        <input
+          name="email"
+          value={result.email}
+          className={styles.input}
+          type="email"
+          required
+          onChange={handleInputChange}
+          onInvalid={handleInvalid}
+        />
         <span className={styles.notify}>Please enter a valid email</span>
       </div>
       <div className={styles.formItem}>
@@ -58,6 +75,7 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
           required
           pattern="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"
           onChange={handleInputChange}
+          onInvalid={handleInvalid}
         />
         <span className={styles.notify}>Please enter a valid website</span>
       </div>
@@ -82,7 +100,7 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
         <label className={styles.label} htmlFor="message">
           {messageLabel} <span>*</span>
         </label>
-        <textarea name="message" value={result.message} className={styles.input} required onChange={handleInputChange} />
+        <textarea name="message" value={result.message} className={styles.input} required onChange={handleInputChange} onInvalid={handleInvalid} />
         <span className={styles.notify}>Please enter a valid message</span>
       </div>
       <Button>{buttonText}</Button>
