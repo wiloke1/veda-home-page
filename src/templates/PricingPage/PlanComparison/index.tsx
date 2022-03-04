@@ -13,7 +13,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
 
   const renderTableItem = (item: TableItem) => {
     return (
-      <div key={item.title} className={styles.plan}>
+      <div key={item.title} className={styles.plan} style={{ width: `${100 / table.length}%` }}>
         <div className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight })}>
           <h3 className={styles.planTitle}>{item.title}</h3>
           <div className={styles.planPrice} dangerouslySetInnerHTML={{ __html: item.price }} />
@@ -26,20 +26,29 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
         </div>
         <div className={styles.planBody}>
           <ReactMarkdown
-            children={item.content}
+            children={`${item.content.trim()}[last]`}
             components={{
               li: ({ node: _, ...props }) => {
-                if (props.children?.[0] === 'minus') {
+                const textLast = props.children?.[0]?.toString()?.includes('[last]');
+                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'minus') {
                   return (
-                    <li>
+                    <li className={textLast ? styles.last : ''}>
                       <i className="far fa-minus" />
                     </li>
                   );
                 }
-                if (props.children?.[0] === 'check') {
+                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'check') {
                   return (
-                    <li>
+                    <li className={textLast ? styles.last : ''}>
                       <i className="far fa-check" />
+                    </li>
+                  );
+                }
+                if (textLast) {
+                  const text = props.children?.[0]?.toString()?.replace('[last]', '');
+                  return (
+                    <li {...props} className={styles.last}>
+                      {text}
                     </li>
                   );
                 }
@@ -63,7 +72,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
             </div>
             <div className={styles.featuresContent}>
               <ReactMarkdown
-                children={_features.content}
+                children={`${_features.content.trim()}[last]`}
                 components={{
                   li: ({ node: _, ...props }) => {
                     if (/\(|\)/.test(props.children?.[0]?.toString() ?? '')) {
@@ -80,6 +89,14 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
                           <Tooltip title={tooltip}>
                             <i className={classNames(styles.tooltip, 'far fa-info-circle')} />
                           </Tooltip>
+                        </li>
+                      );
+                    }
+                    if (props.children?.[0]?.toString()?.includes('[last]')) {
+                      const text = props.children?.[0]?.toString()?.replace('[last]', '');
+                      return (
+                        <li {...props} className={styles.last}>
+                          {text}
                         </li>
                       );
                     }

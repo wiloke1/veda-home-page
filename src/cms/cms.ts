@@ -14,6 +14,9 @@ import ContactPagePreview from './preview-templates/ContactPagePreview';
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
+CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+CMS.registerPreviewStyle('https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css');
+
 CMS.registerPreviewTemplate('index', IndexPagePreview);
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

@@ -2,22 +2,21 @@
   display: flex;
   font-size: 16px;
   border: 1px solid var(--color-gray3);
-  border-bottom: 0;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .features {
+  position: relative;
   width: 30%;
 }
 
 .plans {
+  position: relative;
   display: flex;
   width: 70%;
 }
 
 .plan {
-  width: 33.3333%;
   text-align: center;
 }
 
@@ -59,6 +58,9 @@
 }
 
 .featuresHeader, .planHeader {
+  position: sticky;
+  top: 80px;
+  z-index: 99;
   min-height: 180px;
   display: flex;
   flex-direction: column;
@@ -89,6 +91,10 @@
   }
 }
 
+.last {
+  border-bottom: 0 !important;
+}
+
 .planTitle {
   font-size: 20px;
 }
@@ -98,6 +104,7 @@
   font-size: 35px;
   font-weight: 500;
   color: var(--color-primary);
+  margin-bottom: 10px;
   span {
     font-size: 20px;
     font-weight: 400;

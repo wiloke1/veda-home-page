@@ -18,7 +18,7 @@ const PricingPage: FC<IPricingPage> = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout overflow="visible">
       <PricingPageTemplate {...frontmatter} />
     </Layout>
   );

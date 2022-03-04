@@ -6,7 +6,7 @@ import { SectionPlans } from 'types/Pricing';
 
 export const Plans: FC<SectionPlans> = ({ heading, description, decorate, body }) => {
   return (
-    <Section>
+    <Section style={{ overflow: 'hidden' }}>
       <div className="container">
         <Title title={heading} text={description} decorate={decorate} />
         <div className="row">

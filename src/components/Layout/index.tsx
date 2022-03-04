@@ -1,17 +1,19 @@
 import { Header } from 'components/Header';
 import { withPrefix } from 'gatsby';
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import { Helmet } from 'react-helmet';
 import Sticky from 'wil-react-sticky';
 import { Footer } from 'components/Footer';
 import useSiteMetadata from './useSiteMetadata';
 
-export interface LayoutProps {}
+export interface LayoutProps {
+  overflow?: CSSProperties['overflow'];
+}
 
-export const Layout: FC<LayoutProps> = ({ children }) => {
+export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div style={{ overflow: 'hidden' }}>
+    <div style={{ overflow }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
