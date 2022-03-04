@@ -6,6 +6,11 @@ description: The pandemic also drastically altered our social lives. When bars,
   restaurants, and most other venues shut down, many resorted to catching up
   with friends and family over video calls or by taking socially distant walks.
 featuredimage: /img/0_5v9p6addqccplzqp.jpg
+tags:
+  - designer
+  - code
+  - developer
+  - javascript
 ---
 The coronavirus pandemic gave us a pause to ask ourselves if we really should go back to the old way of doing things.
 
