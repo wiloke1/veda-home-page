@@ -1,12 +1,12 @@
-/* eslint-disable */
-// @ts-nocheck
-import * as React from 'react';
-import { kebabCase } from 'lodash';
-import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
 import { Layout } from 'components/Layout';
+import { Section } from 'components/Section';
+import { TagsGrid } from 'components/TagsGrid';
+import { graphql } from 'gatsby';
+import { FC } from 'react';
+import { Helmet } from 'react-helmet';
+import { ITagsPage } from 'types/Tags';
 
-const TagsPage = ({
+const TagsPage: FC<ITagsPage> = ({
   data: {
     allMarkdownRemark: { group },
     site: {
@@ -15,25 +15,13 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="section">
+    <Section backgroundColor="var(--color-gray1)">
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1" style={{ marginBottom: '6rem' }}>
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className="container">
+        <h3 style={{ marginBottom: 20 }}>Tags</h3>
+        <TagsGrid data={group} />
       </div>
-    </section>
+    </Section>
   </Layout>
 );
 

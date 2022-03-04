@@ -1,11 +1,11 @@
+import { LinkButton } from 'components/LinkButton';
+import { PostCard } from 'components/PostCard';
+import { Section } from 'components/Section';
+import { graphql, Link } from 'gatsby';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
-import { Section } from 'components/Section';
-import { PostCard } from 'components/PostCard';
 import { BlogList, Post } from 'types/Blog';
 import { MarkdownRemarkEdges } from 'types/general';
-import { Button } from 'components/Button';
 import { Layout } from '../components/Layout';
 
 const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
@@ -31,10 +31,12 @@ const TagRoute: FC<BlogList> = ({ data, pageContext }) => {
       <Section>
         <Helmet title={`${tag} | ${title}`} />
         <div className="container">
-          <h3 style={{ marginBottom: 20 }}>{tagHeader}</h3>
-          <Link to="/tags">
-            <Button>Browse all tags</Button>
-          </Link>
+          <div style={{ marginBottom: 20 }}>
+            <h3>{tagHeader}</h3>
+            <Link to="/tags">
+              <LinkButton>Browse all tags</LinkButton>
+            </Link>
+          </div>
           <div className="row">{posts.map(renderPost)}</div>
         </div>
       </Section>
