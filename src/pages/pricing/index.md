@@ -66,45 +66,45 @@ planComparison:
   table:
     - title: Starter
       content: |+
-        * check
-        * minus
+        * yes
+        * no
         ###
         * 1
-        * check
-        * minus
+        * yes
+        * no
         ###
         * 5
-        * check
+        * yes
 
       price: Free
       highlight: false
       buttonText: Get started
     - title: Business
       content: |+
-        * check
-        * check
+        * yes
+        * yes
         ###
         * 6
-        * check
-        * minus
+        * yes
+        * no
         ###
         * 20
-        * check
+        * yes
 
       price: $20<span>/mo</span>
       highlight: true
       buttonText: Try for free
     - title: Advanded
       content: |+
-        * check
-        * check
+        * yes
+        * yes
         ###
         * 20
-        * check
-        * check
+        * yes
+        * yes
         ###
         * 40
-        * check
+        * yes
       price: $40<span>/mo</span>
       highlight: false
       buttonText: Start advancing

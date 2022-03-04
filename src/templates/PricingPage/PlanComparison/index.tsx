@@ -30,14 +30,14 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
             components={{
               li: ({ node: _, ...props }) => {
                 const textLast = props.children?.[0]?.toString()?.includes('[last]');
-                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'minus') {
+                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'no') {
                   return (
                     <li className={textLast ? styles.last : ''}>
                       <i className="far fa-minus" />
                     </li>
                   );
                 }
-                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'check') {
+                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'yes') {
                   return (
                     <li className={textLast ? styles.last : ''}>
                       <i className="far fa-check" />
