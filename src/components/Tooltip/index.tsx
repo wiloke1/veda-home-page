@@ -11,7 +11,7 @@ const DURATION = 200;
 
 export const Tooltip: FC<TooltipProps> = ({ title, children }) => {
   const [visibleState, setVisibleState] = useState(false);
-  const { top, left, width, height, setMeasure } = useMeasure();
+  const { top, left, width, setMeasure } = useMeasure();
 
   const handleMouseEnter: MouseEventHandler<HTMLDivElement> = event => {
     setMeasure(event);
@@ -28,7 +28,7 @@ export const Tooltip: FC<TooltipProps> = ({ title, children }) => {
         <div
           className={styles.tooltip}
           style={{
-            top: top - height - 15,
+            top: top - 5,
             left: left + width / 2,
             transition: `all ${DURATION}ms`,
           }}
