@@ -9,6 +9,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
 import PricingPagePreview from './preview-templates/PricingPagePreview';
+import ContactPagePreview from './preview-templates/ContactPagePreview';
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -18,3 +19,4 @@ CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('themes', ThemePagePreview);
 CMS.registerPreviewTemplate('pricing', PricingPagePreview);
+CMS.registerPreviewTemplate('contact', ContactPagePreview);
