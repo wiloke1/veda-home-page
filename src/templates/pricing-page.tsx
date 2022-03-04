@@ -1,27 +1,16 @@
 import { Layout } from 'components/Layout';
-import { PlanCard } from 'components/PlanCard';
-import { Section } from 'components/Section';
-import { Title } from 'components/Title';
 import { graphql } from 'gatsby';
 import { FC } from 'react';
 import { IPricingPage, PricingPageFrontMaster } from 'types/Pricing';
+import { PlanComparison } from './PricingPage/PlanComparison';
+import { Plans } from './PricingPage/Plans';
 
-export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans }) => {
+export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planComparison }) => {
   return (
-    <Section>
-      <div className="container">
-        <Title title={plans.heading} text={plans.description} decorate={plans.decorate} />
-        <div className="row">
-          {plans.body.map((item, index) => {
-            return (
-              <div key={index} className="col-xs-12 col-sm-6 col-md-4">
-                <PlanCard {...item} />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </Section>
+    <>
+      <Plans {...plans} />
+      <PlanComparison {...planComparison} />
+    </>
   );
 };
 
@@ -52,6 +41,20 @@ export const pageQuery = graphql`
             highlight
             buttonText
             body
+          }
+        }
+        planComparison {
+          heading
+          features {
+            title
+            content
+          }
+          table {
+            title
+            content
+            price
+            highlight
+            buttonText
           }
         }
       }

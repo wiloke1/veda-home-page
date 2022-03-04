@@ -14,8 +14,28 @@ export interface SectionPlans extends Section {
   body: Plans[];
 }
 
+export interface PlanComparisonFeatures {
+  title: string;
+  content: string;
+}
+
+export interface TableItem {
+  title: string;
+  content: string;
+  price: string;
+  highlight?: boolean;
+  buttonText: string;
+}
+
+export interface IPlanComparison {
+  heading: string;
+  features: [PlanComparisonFeatures];
+  table: TableItem[];
+}
+
 export interface PricingPageFrontMaster {
   plans: SectionPlans;
+  planComparison: IPlanComparison;
 }
 
 export interface PricingPageData {

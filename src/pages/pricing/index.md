@@ -53,13 +53,13 @@ planComparison:
   features:
     - title: Features
       content: |+
-        * Visual Editor
+        * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf sd f)
         * White Labelling
-        ### THEME BUILDER
+        ### Theme builder
         * ThemesPage Types
-        * 10 Page Types
+        * 10 Page Types (Lorem ipsum dolor sit amet 2)
         * 6 Templates
-        ### PAGE BUILDER
+        ### Page builder
         * Pages
         * 5 Page Types
 

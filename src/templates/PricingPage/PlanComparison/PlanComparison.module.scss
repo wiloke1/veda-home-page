@@ -1,0 +1,112 @@
+.table {
+  display: flex;
+  font-size: 16px;
+  border: 1px solid var(--color-gray3);
+  border-bottom: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.features {
+  width: 30%;
+}
+
+.plans {
+  display: flex;
+  width: 70%;
+}
+
+.plan {
+  width: 33.3333%;
+  text-align: center;
+}
+
+.planBody {
+  h3 {
+    &:before {
+      content: 'Veda';
+      display: block;
+      opacity: 0;
+    }
+  }
+  li {
+    border-left: 1px solid var(--color-gray3);
+  }
+  :global {
+    .fa-check {
+      font-size: 20px;
+      color: var(--color-success);
+    }
+    .fa-minus {
+      font-size: 20px;
+      color: var(--color-gray5);
+    }
+  }
+}
+
+.planHeader {
+  border-left: 1px solid var(--color-gray3);
+}
+
+.planHeaderHighlight {
+  background-color: var(--color-gray9) !important;
+  color: var(--color-gray1);
+  .planTitle,
+  .planPrice,
+  span {
+    color: var(--color-gray1) !important;
+  }
+}
+
+.featuresHeader, .planHeader {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-gray3);
+  background-color: var(--color-gray1);
+}
+
+.featuresTitle {
+  font-size: 20px;
+}
+
+.planBody, .featuresContent {
+  h3 {
+    font-size: 24px;
+    padding: 23px 30px;
+    border-bottom: 1px solid var(--color-gray3);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 19px 30px;
+    border-bottom: 1px solid var(--color-gray3);
+  }
+}
+
+.planTitle {
+  font-size: 20px;
+}
+
+.planPrice {
+  font-family: var(--font-secondary);
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--color-primary);
+  span {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-gray7);
+    vertical-align: middle;
+  }
+}
+
+.tooltip {
+  padding: 0 10px;
+  color: var(--color-gray5);
+}
