@@ -37,13 +37,14 @@ export const pageQuery = graphql`
         description
         decorate
         form {
-          namePlaceholder
-          emailPlaceholder
-          websitePlaceholder
+          nameLabel
+          emailLabel
+          websiteLabel
+          optionsLabel
           options {
             value
           }
-          messagePlaceholder
+          messageLabel
           buttonText
         }
       }

@@ -6,11 +6,12 @@ export interface IContactOption {
 }
 
 export interface IContactForm {
-  namePlaceholder: string;
-  emailPlaceholder: string;
-  websitePlaceholder: string;
+  nameLabel: string;
+  emailLabel: string;
+  websiteLabel: string;
+  optionsLabel: string;
   options: IContactOption[];
-  messagePlaceholder: string;
+  messageLabel: string;
   buttonText: string;
 }
 

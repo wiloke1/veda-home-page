@@ -240,18 +240,19 @@ collections:
             name: form,
             widget: object,
             fields: [
-              { label: Name Placeholder, name: namePlaceholder, widget: string },
-              { label: Email Placeholder, name: emailPlaceholder, widget: string },
-              { label: Website Placeholder, name: websitePlaceholder, widget: string },
+              { label: Name Label, name: nameLabel, widget: string },
+              { label: Email Label, name: emailLabel, widget: string },
+              { label: Website Label, name: websiteLabel, widget: string },
+              { label: Options Label, name: optionsLabel, widget: string },
               {
-                label: "Choose an option",
+                label: Option,
                 name: "options",
                 widget: list,
                 fields: [
                   { label: Value, name: value, widget: string }
                 ]
               },
-              { label: Message Placeholder, name: messagePlaceholder, widget: string },
+              { label: Message Label, name: messageLabel, widget: string },
               { label: Button Text, name: buttonText, widget: string },
             ]
           }

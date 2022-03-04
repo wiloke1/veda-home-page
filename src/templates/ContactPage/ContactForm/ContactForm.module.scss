@@ -8,7 +8,41 @@
   flex-direction: column;
 }
 
+.formItem {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--color-gray8);
+  span {
+    color: var(--color-quaternary);
+  }
+}
+
 .input, .select {
   width: 100%;
-  margin-bottom: 10px;
+}
+
+.input:invalid:focus {
+  border-color: var(--color-danger);
+}
+
+.input:valid {
+  border-color: var(--color-success);
+}
+
+.input:focus:invalid ~ span:before {
+  content: attr(data-invalid);
+  color: var(--color-danger);
+}
+
+.input:focus:valid ~ span:before {
+  content: attr(data-valid);
+  color: var(--color-success);
+}
+
+.notify {
+  font-size: 12px;
 }
