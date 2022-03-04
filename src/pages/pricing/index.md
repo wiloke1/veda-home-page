@@ -21,7 +21,7 @@ plans:
         * Responsive Design
         * SEO Controls
         * Email & Live Chat
-    - title: Bussiness
+    - title: Business
       description: Bussiness description
       price: $20<span>/mo</span>
       highlight: true
@@ -49,4 +49,65 @@ plans:
         * Advanced Page Settings
         * Design Services
         * Priority Support
+planComparison:
+  features:
+    - title: Features
+      content: |+
+        * Visual Editor
+        * White Labelling
+        ### THEME BUILDER
+        * ThemesPage Types
+        * 10 Page Types
+        * 6 Templates
+        ### PAGE BUILDER
+        * Pages
+        * 5 Page Types
+
+  table:
+    - title: Starter
+      price: Free
+      buttonText: Get started
+      content: |+
+        * check
+        * minus
+        ###
+        * 1
+        * check
+        * minus
+        ###
+        * 5
+        * check
+
+      highlight: true
+    - title: Business
+      content: |+
+        * check
+        * check
+        ###
+        * 6
+        * check
+        * minus
+        ###
+        * 20
+        * check
+
+      price: $20<span>/mo</span>
+      highlight: true
+      buttonText: Try for free
+    - content: |+
+        * check
+        * check
+        ###
+        * 20
+        * check
+        * check
+        ###
+        * 40
+        * check
+
+      title: Advanded
+      price: $40<span>/mo</span>
+      buttonText: Start advancing
+      highlight: true
+  heading: Plan comparison
 ---
