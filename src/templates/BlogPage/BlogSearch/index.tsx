@@ -1,10 +1,11 @@
 import { Search } from 'components/Search';
 import { FC } from 'react';
 import * as styles from './BlogSearch.module.scss';
+import bgSearch from './bg.jpg';
 
 export const BlogSearch: FC = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundImage: `url('${bgSearch}')` }}>
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-8">
