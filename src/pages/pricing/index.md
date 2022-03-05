@@ -52,15 +52,24 @@ plans:
 planComparison:
   features:
     - title: Features
-      content: |+
-        * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf sd f)
+      content: >+
+        * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf sd
+        f)
+
         * White Labelling
+
         ### Theme builder
+
         * ThemesPage Types
+
         * 10 Page Types (Lorem ipsum dolor sit amet 2)
+
         * 6 Templates
+
         ### Page builder
+
         * Pages
+
         * 5 Page Types
 
   table:
@@ -95,7 +104,7 @@ planComparison:
       highlight: true
       buttonText: Try for free
     - title: Advanded
-      content: |+
+      content: |
         * yes
         * yes
         ###
@@ -109,4 +118,33 @@ planComparison:
       highlight: false
       buttonText: Start advancing
   heading: Plan comparison
+faqs:
+  heading: Frequently Asked Questions
+  description: |-
+    Find the answers to powering up your business with Veda.
+    Can't find what you're looking for?
+  decorate: type2
+  collapse:
+    - title: Does Veda work with my theme?
+      content: Veda is compatible with all Shopify themes. Feel free to switch between
+        themes as the VedaEditor can work with any selected theme.
+    - title: What type of support is available for me?
+      content: >-
+        Choose a channel of your favorite:
+
+
+        * [Help Center](https://veda-builder.netlify.com)
+
+        * [Live Chat](https://veda-builder.netlify.com)
+
+        * [Video Tutorials](https://veda-builder.netlify.com)
+
+        * [Support Email](mailto:support@wiloke.com)
+
+
+        In-app walk-through and extra materials can be found in the “Help Center” section of the [Veda dashboard](http://app.veda.com) once you have our app installed!
+    - title: What can I expect in terms of new features and templates?
+      content: Veda is known for frequent updates and improvements. We are working
+        hard every day to deliver new and dynamic features & templates every
+        month.
 ---
