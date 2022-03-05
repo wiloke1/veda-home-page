@@ -94,7 +94,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
           </div>
         )}
         <div className={styles.table}>
-          <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '50%' : '30%' }}>
+          <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '55%' : '30%' }}>
             <div className={styles.featuresHeader}>
               <h3 className={styles.featuresTitle}>{_features.title}</h3>
             </div>
@@ -133,7 +133,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
               >{`${_features.content.trim()}[last]}`}</ReactMarkdown>
             </div>
           </div>
-          <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '50%' : '70%' }}>
+          <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '45%' : '70%' }}>
             {table.map(renderTableItem)}
           </div>
         </div>

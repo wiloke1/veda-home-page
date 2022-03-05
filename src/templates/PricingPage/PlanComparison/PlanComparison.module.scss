@@ -1,6 +1,8 @@
+@import "../../../styles/abstracts/pfs.scss";
+
 .table {
   display: flex;
-  font-size: 16px;
+  font-size: pfs(14px, 16px);
   border: 1px solid var(--color-gray3);
   border-radius: 10px;
 }
@@ -33,11 +35,11 @@
   }
   :global {
     .fa-check {
-      font-size: 20px;
+      font-size: pfs(16px, 20px);
       color: var(--color-success);
     }
     .fa-minus {
-      font-size: 20px;
+      font-size: pfs(16px, 20px);
       color: var(--color-gray5);
     }
   }
@@ -83,7 +85,7 @@
 
 .planBody, .featuresContent {
   h3 {
-    font-size: 24px;
+    font-size: pfs(18px, 24px);
     padding: 23px 30px;
     border-bottom: 1px solid var(--color-gray3);
   }
@@ -103,17 +105,17 @@
 }
 
 .planTitle {
-  font-size: 20px;
+  font-size: pfs(16px, 20px);
 }
 
 .planPrice {
   font-family: var(--font-secondary);
-  font-size: 35px;
+  font-size: pfs(26px, 35px);
   font-weight: 500;
   color: var(--color-primary);
   margin-bottom: 10px;
   span {
-    font-size: 20px;
+    font-size: pfs(16px, 20px);
     font-weight: 400;
     color: var(--color-gray7);
     vertical-align: middle;
@@ -127,11 +129,13 @@
 
 .tab {
   position: sticky;
-  top: 90px;
+  top: 70px;
   z-index: 10;
   text-align: center;
   margin-bottom: 10px;
   button {
     margin: 5px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 }
