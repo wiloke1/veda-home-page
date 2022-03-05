@@ -147,4 +147,15 @@ faqs:
       content: Veda is known for frequent updates and improvements. We are working
         hard every day to deliver new and dynamic features & templates every
         month.
+    - title: Will I be charged when the trial is up?
+      content: Our free trial doesn't require any payment information, so no, you
+        won't be charged.
+    - title: What happens when my Veda trial ends?
+      content: After the trial, you still have access to the dashboard but all page
+        design features will be blocked. But no worries, your published pages
+        stay the same!
+    - title: How does Veda billing work?
+      content: Our monthly subscription is handled by Shopify along with its 30-day
+        invoice. Please refer to Shopify's App Billing Cycles for more
+        information.
 ---
