@@ -1,7 +1,29 @@
+@import "../../../styles/abstracts/pfs.scss";
+
 .container {
+  position: relative;
+  z-index: 1;
   padding: 50px 0;
   background-color: var(--color-gray2);
   background-image: url('https://img.freepik.com/free-photo/design-space-decorated-with-leaves-website-banner-template_53876-129927.jpg?w=1380');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 10%;
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   inset: 0;
+  //   z-index: -1;
+  //   background-color: var(--color-gray9);
+  //   opacity: 0.4;
+  // }
+}
+
+.title {
+  font-size: pfs(24px, 40px);
+  color: var(--color-gray9);
+}
+
+.text {
+  font-size: 16px;
+  color: var(--color-gray7);
 }
