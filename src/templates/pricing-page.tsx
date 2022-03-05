@@ -10,6 +10,21 @@ export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planCom
   return (
     <>
       <Plans {...plans} />
+      <div className="container">
+        <div
+          style={{
+            paddingTop: 120,
+            paddingBottom: 120,
+            borderRadius: 20,
+            backgroundColor: '#ffd3d3',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <h2>Lorem ipsum dolor sit amet</h2>
+        </div>
+      </div>
       <PlanComparison {...planComparison} />
       <Faqs {...faqs} />
     </>
