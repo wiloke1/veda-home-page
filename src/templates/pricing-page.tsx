@@ -6,12 +6,12 @@ import { Faqs } from './PricingPage/Faqs';
 import { PlanComparison } from './PricingPage/PlanComparison';
 import { Plans } from './PricingPage/Plans';
 
-export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planComparison }) => {
+export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planComparison, faqs }) => {
   return (
     <>
       <Plans {...plans} />
       <PlanComparison {...planComparison} />
-      <Faqs />
+      <Faqs {...faqs} />
     </>
   );
 };
@@ -57,6 +57,15 @@ export const pageQuery = graphql`
             price
             highlight
             buttonText
+          }
+        }
+        faqs {
+          heading
+          description
+          decorate
+          collapse {
+            title
+            content
           }
         }
       }

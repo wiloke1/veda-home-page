@@ -131,17 +131,10 @@ faqs:
     - title: What type of support is available for me?
       content: >-
         Choose a channel of your favorite:
-
-
         * [Help Center](https://veda-builder.netlify.com)
-
         * [Live Chat](https://veda-builder.netlify.com)
-
         * [Video Tutorials](https://veda-builder.netlify.com)
-
         * [Support Email](mailto:support@wiloke.com)
-
-
         In-app walk-through and extra materials can be found in the “Help Center” section of the [Veda dashboard](http://app.veda.com) once you have our app installed!
     - title: What can I expect in terms of new features and templates?
       content: Veda is known for frequent updates and improvements. We are working
