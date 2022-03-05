@@ -33,9 +33,19 @@ export interface IPlanComparison {
   table: TableItem[];
 }
 
+export interface FaqsCollapse {
+  title: string;
+  content: string;
+}
+
+export interface IFaqs extends Section {
+  collapse: FaqsCollapse[];
+}
+
 export interface PricingPageFrontMaster {
   plans: SectionPlans;
   planComparison: IPlanComparison;
+  faqs: IFaqs;
 }
 
 export interface PricingPageData {

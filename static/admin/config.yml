@@ -230,6 +230,34 @@ collections:
               }
             ]
           }
+          - {
+            label: FAQs,
+            name: faqs,
+            widget: object,
+            fields: [
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
+                label: Collapse,
+                name: collapse,
+                widget: list,
+                fields: [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown }
+                ]
+              }
+            ]
+          }
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

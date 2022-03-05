@@ -26,7 +26,6 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
         </div>
         <div className={styles.planBody}>
           <ReactMarkdown
-            children={`${item.content.trim()}[last]`}
             components={{
               li: ({ node: _, ...props }) => {
                 const textLast = props.children?.[0]?.toString()?.includes('[last]');
@@ -55,7 +54,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
                 return <li {...props} />;
               },
             }}
-          />
+          >{`${item.content.trim()}[last]`}</ReactMarkdown>
         </div>
       </div>
     );
@@ -72,7 +71,6 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
             </div>
             <div className={styles.featuresContent}>
               <ReactMarkdown
-                children={`${_features.content.trim()}[last]`}
                 components={{
                   li: ({ node: _, ...props }) => {
                     if (/\(|\)/.test(props.children?.[0]?.toString() ?? '')) {
@@ -103,7 +101,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
                     return <li {...props} />;
                   },
                 }}
-              />
+              >{`${_features.content.trim()}[last]}`}</ReactMarkdown>
             </div>
           </div>
           <div className={styles.plans}>{table.map(renderTableItem)}</div>

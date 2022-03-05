@@ -2,6 +2,7 @@ import { Layout } from 'components/Layout';
 import { graphql } from 'gatsby';
 import { FC } from 'react';
 import { IPricingPage, PricingPageFrontMaster } from 'types/Pricing';
+import { Faqs } from './PricingPage/Faqs';
 import { PlanComparison } from './PricingPage/PlanComparison';
 import { Plans } from './PricingPage/Plans';
 
@@ -10,6 +11,7 @@ export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planCom
     <>
       <Plans {...plans} />
       <PlanComparison {...planComparison} />
+      <Faqs />
     </>
   );
 };
