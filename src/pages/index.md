@@ -36,7 +36,7 @@ features:
       title: Lightning Page Speed
       description: Load your store in under 0.55s and never lose a customer.
 themes:
-  heading: Theme heading
+  heading: <span>20+ Veda themes</span> available for your store.
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos dolor, iure quas.
   decorate: ""
 supports:
