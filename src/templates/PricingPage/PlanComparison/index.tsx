@@ -74,7 +74,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
   };
 
   return (
-    <Section>
+    <Section id="plan-comparison">
       <div className="container">
         <Title title={heading} />
         {width <= MAX_WIDTH && (

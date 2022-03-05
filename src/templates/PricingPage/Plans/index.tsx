@@ -13,7 +13,18 @@ export const Plans: FC<SectionPlans> = ({ heading, description, decorate, body }
           {body.map((item, index) => {
             return (
               <div key={index} className="col-xs-12 col-sm-6 col-md-4">
-                <PlanCard {...item} />
+                <PlanCard
+                  {...item}
+                  onMoreClick={() => {
+                    const planComparisonEl = document.getElementById('plan-comparison');
+                    if (planComparisonEl) {
+                      window.scrollTo({
+                        top: planComparisonEl.offsetTop,
+                        behavior: 'smooth',
+                      });
+                    }
+                  }}
+                />
               </div>
             );
           })}
