@@ -1,20 +1,33 @@
 import classNames from 'classnames';
+import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { Tooltip } from 'components/Tooltip';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useWindowSize } from 'react-use';
 import { IPlanComparison, TableItem } from 'types/Pricing';
 import * as styles from './PlanComparison.module.scss';
 
+const MAX_WIDTH = 950;
+
 export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }) => {
   const [_features] = features;
+  const [activeTitle, setActiveTitle] = useState(table[0].title);
+  const { width } = useWindowSize();
 
-  const renderTableItem = (item: TableItem) => {
+  const renderTableItem = (item: TableItem, index: number) => {
+    const itemWidth = width <= MAX_WIDTH && item.title === activeTitle ? '100%' : `${100 / table.length}%`;
+    if (width <= MAX_WIDTH && item.title !== activeTitle) {
+      return null;
+    }
     return (
-      <div key={item.title} className={styles.plan} style={{ width: `${100 / table.length}%` }}>
-        <div className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight })}>
+      <div key={item.title} className={styles.plan} style={{ width: itemWidth }}>
+        <div
+          className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight })}
+          style={table.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
+        >
           <h3 className={styles.planTitle}>{item.title}</h3>
           <div className={styles.planPrice} dangerouslySetInnerHTML={{ __html: item.price }} />
           <GetStartedPopup
@@ -64,8 +77,24 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
     <Section>
       <div className="container">
         <Title title={heading} />
+        {width <= MAX_WIDTH && (
+          <div className={styles.tab}>
+            {table.map(item => {
+              return (
+                <Button
+                  key={item.title}
+                  onClick={() => setActiveTitle(item.title)}
+                  backgroundColor={item.title === activeTitle ? 'var(--color-gray8)' : 'var(--color-gray2)'}
+                  color={item.title === activeTitle ? 'var(--color-light)' : 'var(--color-gray8)'}
+                >
+                  {item.title}
+                </Button>
+              );
+            })}
+          </div>
+        )}
         <div className={styles.table}>
-          <div className={styles.features}>
+          <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '50%' : '30%' }}>
             <div className={styles.featuresHeader}>
               <h3 className={styles.featuresTitle}>{_features.title}</h3>
             </div>
@@ -104,7 +133,9 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
               >{`${_features.content.trim()}[last]}`}</ReactMarkdown>
             </div>
           </div>
-          <div className={styles.plans}>{table.map(renderTableItem)}</div>
+          <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '50%' : '70%' }}>
+            {table.map(renderTableItem)}
+          </div>
         </div>
       </div>
     </Section>

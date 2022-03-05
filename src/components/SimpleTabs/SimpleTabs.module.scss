@@ -1,0 +1,16 @@
+.tab {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}
+
+.active {
+  color: red;
+}
