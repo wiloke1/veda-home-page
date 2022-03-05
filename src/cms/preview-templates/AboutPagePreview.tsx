@@ -4,7 +4,7 @@ import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 
 const AboutPagePreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   return (
-    <App>
+    <App overflow="hidden">
       <AboutPageTemplate title={entry.getIn(['data', 'title'])} content={widgetFor('body') as any} />
     </App>
   );

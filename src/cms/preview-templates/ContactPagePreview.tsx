@@ -8,7 +8,7 @@ const ContactPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
 
   if (data) {
     return (
-      <App>
+      <App overflow="hidden">
         <ContactPageTemplate {...data} />
       </App>
     );

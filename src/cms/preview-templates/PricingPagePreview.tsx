@@ -8,7 +8,7 @@ const PricingPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
 
   if (data) {
     return (
-      <App>
+      <App overflow="hidden">
         <PricingPageTemplate {...data} />
       </App>
     );

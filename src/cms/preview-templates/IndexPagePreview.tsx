@@ -8,7 +8,7 @@ const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
 
   if (data) {
     return (
-      <App>
+      <App overflow="hidden">
         <IndexPageTemplate {...data} isNetlify />
       </App>
     );

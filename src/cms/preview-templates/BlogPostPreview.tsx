@@ -6,7 +6,7 @@ import { PostDetail } from 'types/Blog';
 const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as PostDetail['frontmatter'];
   return (
-    <App>
+    <App overflow="hidden">
       <BlogPostTemplate
         frontmatter={{
           title: data.title,

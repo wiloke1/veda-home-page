@@ -4,7 +4,7 @@ import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 const ThemePagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   const _tags = entry.getIn(['data', 'tags']);
   return (
-    <App>
+    <App overflow="hidden">
       {/* <BlogPostTemplate
         // @ts-ignore
         content={widgetFor('body')}
