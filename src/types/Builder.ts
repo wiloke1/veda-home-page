@@ -37,11 +37,25 @@ export interface SectionSupports extends Section {
   body: ISupports[];
 }
 
+export interface IZigzag {
+  title: string;
+  description: string;
+  image?: GatsbyImage;
+  reverse?: boolean;
+}
+
+export interface SectionZigzag {
+  enable?: boolean;
+  backgroundColor?: string;
+  body: IZigzag;
+}
+
 export interface SmartSection {
   hero?: SectionHero | null;
   features?: SectionFeatures | null;
   themes?: SectionThemes | null;
   supports?: SectionSupports | null;
+  zigzag?: SectionZigzag | null;
 }
 
 export interface BuilderPageFrontMaster {

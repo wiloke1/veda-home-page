@@ -47,7 +47,16 @@ sections:
         asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos
         dolor, iure quas.
       decorate: ""
-    
+  - zigzag:
+      sectionName: Zigzag
+      enable: true
+      backgroundColor: "#fbedff"
+      body: {
+        title: "Drag, drop, done",
+        description: Create pixel-perfect designs for every purpose with more than 80 elements+ and hundreds of pre-made blocks and templates,
+        image: https://ucarecdn.com/2e2454cb-a08c-4ed1-8d89-4949c7908c52/-/format/auto/-/preview/960x960/-/quality/lighter/drag.png,
+        reverse: false
+      }
   - supports:
       sectionName: Supports
       enable: true

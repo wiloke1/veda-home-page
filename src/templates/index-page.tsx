@@ -1,11 +1,13 @@
 import { Layout } from 'components/Layout';
+import { Section } from 'components/Section';
+import { ZigzagCard } from 'components/ZigzagCard';
 import { graphql } from 'gatsby';
 import { FC, Fragment } from 'react';
 import { BuilderPage, BuilderPageFrontMaster } from 'types/Builder';
-import { Features } from './IndexPage/Features';
-import { Hero } from './IndexPage/Hero';
-import { Supports } from './IndexPage/Supports';
-import { Theme } from './IndexPage/Theme';
+import { Features } from './BuilderPage/Features';
+import { Hero } from './BuilderPage/Hero';
+import { Supports } from './BuilderPage/Supports';
+import { Theme } from './BuilderPage/Theme';
 
 export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetlify }) => {
   return (
@@ -24,6 +26,11 @@ export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetl
               />
             )}
             {!!section.supports && section.supports.enable && <Supports {...section.supports} />}
+            {!!section.zigzag && section.zigzag.enable && (
+              <Section backgroundColor={section.zigzag.backgroundColor}>
+                <ZigzagCard {...section.zigzag.body} />
+              </Section>
+            )}
           </Fragment>
         );
       })}
@@ -134,6 +141,16 @@ export const pageQuery = graphql`
               description
               buttonText
               link
+            }
+          }
+          zigzag {
+            enable
+            backgroundColor
+            body {
+              title
+              description
+              image
+              reverse
             }
           }
         }
