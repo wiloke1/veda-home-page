@@ -27,9 +27,9 @@ export interface SectionsSortable {
 }
 
 export interface SectionHero extends Section {
-  images: {
-    image: GatsbyImage;
-  }[];
+  // images: {
+  //   image: GatsbyImage;
+  // }[];
 }
 
 export interface ISupports {

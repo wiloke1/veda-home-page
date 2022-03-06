@@ -2,7 +2,7 @@ import { ImageTextBox } from 'components/ImageTextBox';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { FC } from 'react';
-import { SectionFeatures } from 'types/Home';
+import { SectionFeatures } from 'types/Builder';
 
 export const Features: FC<SectionFeatures> = ({ heading, description, decorate, body }) => {
   return (

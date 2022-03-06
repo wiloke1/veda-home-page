@@ -3,7 +3,7 @@ import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { navigate } from 'gatsby';
 import { FC } from 'react';
-import { SectionSupports } from 'types/Home';
+import { SectionSupports } from 'types/Builder';
 
 export const Supports: FC<SectionSupports> = ({ heading, description, decorate, body }) => {
   return (

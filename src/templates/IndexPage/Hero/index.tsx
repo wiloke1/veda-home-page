@@ -1,6 +1,6 @@
 import { GetStartedForm } from 'components/GetStartedForm';
 import { FC } from 'react';
-import { SectionHero } from 'types/Home';
+import { SectionHero } from 'types/Builder';
 import * as styles from './Hero.module.scss';
 
 export interface HeroProps extends SectionHero {}

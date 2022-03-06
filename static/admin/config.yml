@@ -67,22 +67,20 @@ collections:
             name: sections,
             widget: list,
             collapsed: false,
-            summary: "{{fields.sectionName}}",
+            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}",
             fields: [
-              {
-                label: Section name,
-                name: sectionName,
-                widget: string
-              },
               {
                 label: Hero,
                 name: hero,
                 widget: object,
                 collapsed: true,
-                summary: "{{fields.heading}}",
+                summary: "{{fields.sectionName}}",
+                required: false,
                 fields: [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Section name, name: sectionName, widget: string, required: false },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Heading, name: heading, widget: string, required: false },
+                  { label: Description, name: description, widget: text, required: false },
                 ]
               },
               {
@@ -90,14 +88,18 @@ collections:
                 name: features,
                 widget: object,
                 collapsed: true,
-                summary: "{{fields.heading}}",
+                summary: "{{fields.sectionName}}",
+                required: false,
                 fields: [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Section name, name: sectionName, widget: string, required: false },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Heading, name: heading, widget: string, required: false },
+                  { label: Description, name: description, widget: text, required: false },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -111,7 +113,7 @@ collections:
                     fields: [
                       { label: Image, name: image, widget: image },
                       { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: string },
+                      { label: Description, name: description, widget: text },
                     ]
                   }
                 ]
@@ -138,6 +140,7 @@ collections:
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -167,6 +170,7 @@ collections:
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -186,6 +190,7 @@ collections:
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -236,6 +241,7 @@ collections:
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -298,6 +304,7 @@ collections:
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -343,6 +350,7 @@ collections:
             label: Decorate,
             name: decorate,
             widget: select,
+            required: false,
             options: [
               { label: "None", value: "" },
               { label: "Decorate 1", value: "type1" },

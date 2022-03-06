@@ -20,9 +20,9 @@ export interface SectionFeatures extends Section {
 export interface SectionThemes extends Section {}
 
 export interface SectionHero extends Section {
-  images: {
-    image: GatsbyImage;
-  }[];
+  // images: {
+  //   image: GatsbyImage;
+  // }[];
 }
 
 export interface ISupports {
@@ -38,18 +38,15 @@ export interface SectionSupports extends Section {
 }
 
 export interface SmartSection {
-  hero?: SectionHero;
-  features?: SectionFeatures;
+  hero?: SectionHero | null;
+  features?: SectionFeatures | null;
+  themes?: SectionThemes | null;
+  supports?: SectionSupports | null;
 }
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;
   sections: SmartSection[];
-  // sectionsSortable: SectionsSortable[];
-  // hero: SectionHero;
-  // features: SectionFeatures;
-  // themes: SectionThemes;
-  // supports: SectionSupports;
 }
 
 export interface BuilderPageData {
