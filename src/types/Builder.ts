@@ -19,11 +19,7 @@ export interface SectionFeatures extends Section {
 
 export interface SectionThemes extends Section {}
 
-export interface SectionHero extends Section {
-  // images: {
-  //   image: GatsbyImage;
-  // }[];
-}
+export interface SectionHero extends Section {}
 
 export interface ISupports {
   title: string;

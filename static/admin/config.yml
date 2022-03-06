@@ -67,7 +67,7 @@ collections:
             name: sections,
             widget: list,
             collapsed: true,
-            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}{{fields.themes.sectionName}}{{fields.supports.sectionName}}",
+            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}{{fields.themes.sectionName}}{{fields.supports.sectionName}}{{fields.zigzag.sectionName}}",
             fields: [
               {
                 label: Hero,
@@ -190,7 +190,7 @@ collections:
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
                   { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Background color, name: backgroundColor, widget: color },
+                  { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Body,
                     name: body,
@@ -198,8 +198,8 @@ collections:
                     collapsed: true,
                     fields: [
                       { label: Image, name: image, widget: string, required: false },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
+                      { label: Title, name: title, widget: string, required: false },
+                      { label: Description, name: description, widget: text, required: false },
                       { label: Reverse, name: reverse, widget: boolean, required: false, default: false },
                     ]
                   }

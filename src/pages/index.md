@@ -48,15 +48,31 @@ sections:
         eos dolor, iure quas.
       decorate: ""
   - zigzag:
-      sectionName: Zigzag
+      sectionName: Zigzag 1
       enable: true
-      backgroundColor: "#fbedff"
       body:
-        title: Drag, drop, done1
+        title: Drag, drop, done
         description: Create pixel-perfect designs for every purpose with more than 80
           elements+ and hundreds of pre-made blocks and templates
         image: https://ucarecdn.com/2e2454cb-a08c-4ed1-8d89-4949c7908c52/-/format/auto/-/preview/960x960/-/quality/lighter/drag.png
+        reverse: true
+  - zigzag:
+      sectionName: Zigzag 2
+      enable: true
+      backgroundColor: "#fbedff"
+      body:
+        title: Turn browsers to buyers
+        description: Make your offers irresistible with promotions, upsell & cross-sell techniques, cart modifications, and alerts
+        image: https://ucarecdn.com/39504b18-0c7b-4005-9aad-f1dd0fdb2578/-/format/auto/-/preview/1024x1024/-/quality/lighter/turn.png
         reverse: false
+  - zigzag:
+      sectionName: Zigzag 3
+      enable: true
+      body:
+        title: Integrate with your favs
+        description: Find yours, and find more with our list of 30+ top Shopify apps, seamlessly integrated to best display on your Veda
+        image: https://ucarecdn.com/7b0fdee1-1ac7-407e-9dc0-659118e5670c/-/format/auto/-/preview/1024x1024/-/quality/lighter/integrate.png
+        reverse: true
   - supports:
       sectionName: Supports
       enable: true
