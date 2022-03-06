@@ -78,7 +78,7 @@ collections:
                 required: false,
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Disable, name: disable, widget: boolean, required: false },
                   { label: Heading, name: heading, widget: string, required: false },
                   { label: Description, name: description, widget: text, required: false },
                 ]
@@ -92,7 +92,7 @@ collections:
                 required: false,
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Disable, name: disable, widget: boolean, required: false },
                   { label: Heading, name: heading, widget: string, required: false },
                   { label: Description, name: description, widget: text, required: false },
                   {
@@ -127,7 +127,7 @@ collections:
                 required: false,
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Disable, name: disable, widget: boolean, required: false },
                   { label: Heading, name: heading, widget: string, required: false },
                   { label: Description, name: description, widget: text, required: false },
                   {
@@ -152,7 +152,7 @@ collections:
                 required: false,
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Disable, name: disable, widget: boolean, required: false },
                   { label: Heading, name: heading, widget: string, required: false },
                   { label: Description, name: description, widget: text, required: false },
                   {
@@ -189,18 +189,19 @@ collections:
                 required: false,
                 fields: [
                   { label: Section name, name: sectionName, widget: string, required: false },
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Disable, name: disable, widget: boolean, required: false },
                   { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Body,
                     name: body,
                     widget: object,
                     collapsed: true,
+                    required: false,
                     fields: [
                       { label: Image, name: image, widget: string, required: false },
                       { label: Title, name: title, widget: string, required: false },
                       { label: Description, name: description, widget: text, required: false },
-                      { label: Reverse, name: reverse, widget: boolean, required: false, default: false },
+                      { label: Reverse, name: reverse, widget: boolean, required: false },
                     ]
                   }
                 ]

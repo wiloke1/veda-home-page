@@ -3,13 +3,13 @@ templateKey: index-page
 sections:
   - hero:
       sectionName: Hero
-      enable: true
+      disable: false
       heading: <span>The All In One</span>Store Design Solution
       description: Campaign-ready, fully-optimized Shopify stores built with half the
         time and zero the code.
   - features:
       sectionName: Features
-      enable: true
+      disable: false
       heading: Here's <span>How We Do It!</span>
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
         asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
@@ -41,7 +41,7 @@ sections:
           description: Load your store in under 0.55s and never lose a customer.
   - themes:
       sectionName: Themes
-      enable: true
+      disable: false
       heading: <span>20+ Veda themes</span> available for your store.
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
         asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
@@ -49,7 +49,7 @@ sections:
       decorate: ""
   - zigzag:
       sectionName: Zigzag 1
-      enable: true
+      disable: false
       body:
         title: Drag, drop, done
         description: Create pixel-perfect designs for every purpose with more than 80
@@ -58,7 +58,7 @@ sections:
         reverse: true
   - zigzag:
       sectionName: Zigzag 2
-      enable: true
+      disable: false
       backgroundColor: "#fbedff"
       body:
         title: Turn browsers to buyers
@@ -67,7 +67,7 @@ sections:
         reverse: false
   - zigzag:
       sectionName: Zigzag 3
-      enable: true
+      disable: false
       body:
         title: Integrate with your favs
         description: Find yours, and find more with our list of 30+ top Shopify apps, seamlessly integrated to best display on your Veda
@@ -75,7 +75,7 @@ sections:
         reverse: true
   - supports:
       sectionName: Supports
-      enable: true
+      disable: false
       heading: Get <span>help</span> whenever you need it
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
         asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,

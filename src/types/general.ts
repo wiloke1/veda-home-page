@@ -15,7 +15,7 @@ export interface Section {
   heading: string;
   description: string;
   decorate?: 'type1' | 'type2' | '';
-  enable?: boolean;
+  disable?: boolean;
 }
 
 export interface PaginationContext {

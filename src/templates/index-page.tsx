@@ -15,9 +15,9 @@ export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetl
       {sections.map((section, index) => {
         return (
           <Fragment key={index}>
-            {!!section.hero && section.hero.enable && <Hero {...section.hero} />}
-            {!!section.features && section.features.enable && <Features {...section.features} />}
-            {!!section.themes && section.themes.enable && (
+            {!!section.hero && !section.hero.disable && <Hero {...section.hero} />}
+            {!!section.features && !section.features.disable && <Features {...section.features} />}
+            {!!section.themes && !section.themes.disable && (
               <Theme
                 isNetlify={isNetlify}
                 heading={section.themes.heading}
@@ -25,8 +25,8 @@ export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetl
                 decorate={section.themes.decorate}
               />
             )}
-            {!!section.supports && section.supports.enable && <Supports {...section.supports} />}
-            {!!section.zigzag && section.zigzag.enable && (
+            {!!section.supports && !section.supports.disable && <Supports {...section.supports} />}
+            {!!section.zigzag && !section.zigzag.disable && (
               <Section backgroundColor={section.zigzag.backgroundColor}>
                 <ZigzagCard {...section.zigzag.body} />
               </Section>
@@ -56,12 +56,12 @@ export const pageQuery = graphql`
       frontmatter {
         sections {
           hero {
-            enable
+            disable
             heading
             description
           }
           features {
-            enable
+            disable
             heading
             description
             decorate
@@ -76,13 +76,13 @@ export const pageQuery = graphql`
             }
           }
           themes {
-            enable
+            disable
             heading
             description
             decorate
           }
           supports {
-            enable
+            disable
             heading
             description
             decorate
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
             }
           }
           zigzag {
-            enable
+            disable
             backgroundColor
             body {
               title
