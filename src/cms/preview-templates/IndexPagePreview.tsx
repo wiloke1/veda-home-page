@@ -1,10 +1,10 @@
-import { IndexPageTemplate } from 'templates/index-page';
-import { HomePageFrontMaster } from 'types/Home';
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
+import { IndexPageTemplate } from 'templates/index-page';
+import { BuilderPageFrontMaster } from 'types/Builder';
 
 const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const data = entry.getIn(['data']).toJS() as HomePageFrontMaster;
+  const data = entry.getIn(['data']).toJS() as BuilderPageFrontMaster;
 
   if (data) {
     return (

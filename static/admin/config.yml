@@ -66,8 +66,8 @@ collections:
             label: Sections,
             name: sections,
             widget: list,
-            collapsed: false,
-            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}",
+            collapsed: true,
+            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}{{fields.themes.sectionName}}{{fields.supports.sectionName}}",
             fields: [
               {
                 label: Hero,
@@ -117,107 +117,69 @@ collections:
                     ]
                   }
                 ]
-              }
-            ]
-          }
-          - {
-            label: Hero,
-            name: hero,
-            widget: object,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-            ]
-          }
-          - {
-            label: Features,
-            name: features,
-            widget: object,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Decorate,
-                name: decorate,
-                widget: select,
-                required: false,
-                options: [
-                  { label: "None", value: "" },
-                  { label: "Decorate 1", value: "type1" },
-                  { label: "Decorate 2", value: "type2" }
-                ]
               },
               {
-                label: Body,
-                name: body,
-                widget: list,
+                label: Themes,
+                name: themes,
+                widget: object,
+                collapsed: true,
+                summary: "{{fields.sectionName}}",
+                required: false,
                 fields: [
-                  { label: Image, name: image, widget: image },
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: string },
-                ]
-              }
-            ]
-          }
-          - {
-            label: Themes,
-            name: themes,
-            widget: object,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Decorate,
-                name: decorate,
-                widget: select,
-                required: false,
-                options: [
-                  { label: "None", value: "" },
-                  { label: "Decorate 1", value: "type1" },
-                  { label: "Decorate 2", value: "type2" }
-                ]
-              },
-            ]
-          }
-          - {
-            label: Supports,
-            name: supports,
-            widget: object,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Decorate,
-                name: decorate,
-                widget: select,
-                required: false,
-                options: [
-                  { label: "None", value: "" },
-                  { label: "Decorate 1", value: "type1" },
-                  { label: "Decorate 2", value: "type2" }
+                  { label: Section name, name: sectionName, widget: string, required: false },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Heading, name: heading, widget: string, required: false },
+                  { label: Description, name: description, widget: text, required: false },
+                  {
+                    label: Decorate,
+                    name: decorate,
+                    widget: select,
+                    required: false,
+                    options: [
+                      { label: "None", value: "" },
+                      { label: "Decorate 1", value: "type1" },
+                      { label: "Decorate 2", value: "type2" }
+                    ]
+                  }
                 ]
               },
               {
-                label: Body,
-                name: body,
-                widget: list,
+                label: Supports,
+                name: supports,
+                widget: object,
+                collapsed: true,
+                summary: "{{fields.sectionName}}",
+                required: false,
                 fields: [
-                  { label: Image, name: image, widget: image },
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: string },
-                  { label: Button Text, name: buttonText, widget: string },
-                  { label: Link, name: link, widget: string },
+                  { label: Section name, name: sectionName, widget: string, required: false },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
+                  { label: Heading, name: heading, widget: string, required: false },
+                  { label: Description, name: description, widget: text, required: false },
+                  {
+                    label: Decorate,
+                    name: decorate,
+                    widget: select,
+                    required: false,
+                    options: [
+                      { label: "None", value: "" },
+                      { label: "Decorate 1", value: "type1" },
+                      { label: "Decorate 2", value: "type2" }
+                    ]
+                  },
+                  {
+                    label: Body,
+                    name: body,
+                    widget: list,
+                    fields: [
+                      { label: Image, name: image, widget: image },
+                      { label: Title, name: title, widget: string },
+                      { label: Description, name: description, widget: string },
+                      { label: Button Text, name: buttonText, widget: string },
+                      { label: Link, name: link, widget: string },
+                    ]
+                  }
                 ]
               }
-            ]
-          }
-          - {
-            label: Sections sortable,
-            name: sectionsSortable,
-            widget: list,
-            fields: [
-              { label: Section Key, name: key, widget: string },
-              { label: Enable, name: enable, widget: boolean, required: false }
             ]
           }
       - file: src/pages/pricing/index.md

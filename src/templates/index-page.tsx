@@ -13,9 +13,9 @@ export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetl
       {sections.map((section, index) => {
         return (
           <Fragment key={index}>
-            {!!section.hero && !section.hero.enable && <Hero {...section.hero} />}
-            {!!section.features && !section.features.enable && <Features {...section.features} />}
-            {!!section.themes && !section.themes.enable && (
+            {!!section.hero && section.hero.enable && <Hero {...section.hero} />}
+            {!!section.features && section.features.enable && <Features {...section.features} />}
+            {!!section.themes && section.themes.enable && (
               <Theme
                 isNetlify={isNetlify}
                 heading={section.themes.heading}
@@ -23,7 +23,7 @@ export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetl
                 decorate={section.themes.decorate}
               />
             )}
-            {!!section.supports && !section.supports.enable && <Supports {...section.supports} />}
+            {!!section.supports && section.supports.enable && <Supports {...section.supports} />}
           </Fragment>
         );
       })}
@@ -94,10 +94,12 @@ export const pageQuery = graphql`
       frontmatter {
         sections {
           hero {
+            enable
             heading
             description
           }
           features {
+            enable
             heading
             description
             decorate
@@ -112,11 +114,13 @@ export const pageQuery = graphql`
             }
           }
           themes {
+            enable
             heading
             description
             decorate
           }
           supports {
+            enable
             heading
             description
             decorate
