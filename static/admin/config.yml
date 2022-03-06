@@ -63,6 +63,62 @@ collections:
               default: "index-page",
             }
           - {
+            label: Sections,
+            name: sections,
+            widget: list,
+            collapsed: false,
+            summary: "{{fields.sectionName}}",
+            fields: [
+              {
+                label: Section name,
+                name: sectionName,
+                widget: string
+              },
+              {
+                label: Hero,
+                name: hero,
+                widget: object,
+                collapsed: true,
+                summary: "{{fields.heading}}",
+                fields: [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ]
+              },
+              {
+                label: Features,
+                name: features,
+                widget: object,
+                collapsed: true,
+                summary: "{{fields.heading}}",
+                fields: [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Decorate,
+                    name: decorate,
+                    widget: select,
+                    options: [
+                      { label: "None", value: "" },
+                      { label: "Decorate 1", value: "type1" },
+                      { label: "Decorate 2", value: "type2" }
+                    ]
+                  },
+                  {
+                    label: Body,
+                    name: body,
+                    widget: list,
+                    fields: [
+                      { label: Image, name: image, widget: image },
+                      { label: Title, name: title, widget: string },
+                      { label: Description, name: description, widget: string },
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+          - {
             label: Hero,
             name: hero,
             widget: object,
