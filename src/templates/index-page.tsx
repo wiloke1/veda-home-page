@@ -7,8 +7,6 @@ import { BuilderPageTemplate } from './BuilderPage';
 const IndexPage: FC<BuilderPage> = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
-  console.log(frontmatter);
-
   return <Layout>{<BuilderPageTemplate {...frontmatter} />}</Layout>;
 };
 
@@ -61,6 +59,19 @@ export const pageQuery = graphql`
             highlight
             buttonText
             body
+          }
+          # Collapse
+          collapseContent {
+            title
+            content
+          }
+          # Plan comparison
+          plansTable {
+            title
+            price
+            highlight
+            buttonText
+            content
           }
         }
       }

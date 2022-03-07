@@ -23,6 +23,7 @@ require('ts-node').register({
 });
 
 exports.createPages = require('./src/createPages').createPages;
+exports.createSchemaCustomization = require('./src/createPages/createSchema').createSchemaCustomization;
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;

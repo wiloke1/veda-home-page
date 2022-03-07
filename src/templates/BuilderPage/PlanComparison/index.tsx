@@ -7,18 +7,18 @@ import { Tooltip } from 'components/Tooltip';
 import { FC, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
-import { IPlanComparison, TableItem } from 'types/Pricing';
+import { SectionPlanComparison, TableItem } from 'types/Builder';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
 
-export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }) => {
+export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, plansTable }) => {
   const [_features] = features;
-  const [activeTitle, setActiveTitle] = useState(table[0].title);
+  const [activeTitle, setActiveTitle] = useState(plansTable[0].title);
   const { width } = useWindowSize();
 
   const renderTableItem = (item: TableItem, index: number) => {
-    const itemWidth = width <= MAX_WIDTH && item.title === activeTitle ? '100%' : `${100 / table.length}%`;
+    const itemWidth = width <= MAX_WIDTH && item.title === activeTitle ? '100%' : `${100 / plansTable.length}%`;
     if (width <= MAX_WIDTH && item.title !== activeTitle) {
       return null;
     }
@@ -26,7 +26,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
       <div key={item.title} className={styles.plan} style={{ width: itemWidth }}>
         <div
           className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight })}
-          style={table.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
+          style={plansTable.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
         >
           <h3 className={styles.planTitle}>{item.title}</h3>
           <div className={styles.planPrice} dangerouslySetInnerHTML={{ __html: item.price }} />
@@ -79,7 +79,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
         <Title title={heading} />
         {width <= MAX_WIDTH && (
           <div className={styles.tab}>
-            {table.map(item => {
+            {plansTable.map(item => {
               return (
                 <Button
                   key={item.title}
@@ -134,7 +134,7 @@ export const PlanComparison: FC<IPlanComparison> = ({ heading, features, table }
             </div>
           </div>
           <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '45%' : '70%' }}>
-            {table.map(renderTableItem)}
+            {plansTable.map(renderTableItem)}
           </div>
         </div>
       </div>

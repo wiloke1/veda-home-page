@@ -2,8 +2,10 @@ import { Section } from 'components/Section';
 import { ZigzagCard } from 'components/ZigzagCard';
 import { FC, Fragment } from 'react';
 import { BuilderPageFrontMaster, SmartSection } from 'types/Builder';
+import { CollapseSection } from './CollapseSection';
 import { Features } from './Features';
 import { Hero } from './Hero';
+import { PlanComparison } from './PlanComparison';
 import { Plans } from './Plans';
 import { Supports } from './Supports';
 import { Theme } from './Theme';
@@ -27,6 +29,10 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
         return <Supports {...section} />;
       case 'plans':
         return <Plans {...section} />;
+      case 'collapse':
+        return <CollapseSection {...section} />;
+      case 'planComparison':
+        return <PlanComparison {...section} />;
       default:
         return null;
     }

@@ -203,6 +203,39 @@ collections:
             ]
           },
           {
+            label: Collapse,
+            name: collapse,
+            widget: object,
+            collapsed: true,
+            fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text, required: false, default: "" },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                required: false,
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
+                label: Content,
+                name: collapseContent,
+                widget: list,
+                collapsed: true,
+                default: [],
+                fields: [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown }
+                ]
+              }
+            ]
+          },
+          {
             label: Plans,
             name: plans,
             widget: object,
@@ -238,6 +271,41 @@ collections:
                   { label: Highlight, name: highlight, widget: boolean, required: false },
                   { label: Button Text, name: buttonText, widget: string },
                   { label: List, name: body, widget: markdown },
+                ]
+              }
+            ]
+          },
+          {
+            label: Plan comparison,
+            name: planComparison,
+            widget: object,
+            collapsed: true,
+            fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text, required: false, default: "" },
+              {
+                label: Features,
+                name: features,
+                widget: list,
+                allow_add: false,
+                fields: [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown }
+                ]
+              },
+              {
+                label: Table,
+                name: plansTable,
+                widget: list,
+                collapsed: true,
+                default: [],
+                fields: [
+                  { label: Title, name: title, widget: string },
+                  { label: Price, name: price, widget: string },
+                  { label: Highlight, name: highlight, widget: boolean, required: false, default: false },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Content, name: content, widget: markdown }
                 ]
               }
             ]

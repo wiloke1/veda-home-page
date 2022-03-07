@@ -1,0 +1,34 @@
+{
+  label: Collapse,
+  name: collapse,
+  widget: object,
+  collapsed: true,
+  fields: [
+    { label: Enable, name: enable, widget: boolean, required: false, default: true },
+    { label: Heading, name: heading, widget: string },
+    { label: Description, name: description, widget: text, required: false, default: "" },
+    {
+      label: Decorate,
+      name: decorate,
+      widget: select,
+      required: false,
+      default: "",
+      options: [
+        { label: "None", value: "" },
+        { label: "Decorate 1", value: "type1" },
+        { label: "Decorate 2", value: "type2" }
+      ]
+    },
+    {
+      label: Content,
+      name: collapseContent,
+      widget: list,
+      collapsed: true,
+      default: [],
+      fields: [
+        { label: Title, name: title, widget: string },
+        { label: Content, name: content, widget: markdown }
+      ]
+    }
+  ]
+},

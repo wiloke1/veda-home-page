@@ -2,12 +2,12 @@ import { FC } from 'react';
 import Collapse from 'components/Collapse';
 import { Section } from 'components/Section';
 import ReactMarkdown from 'react-markdown';
-import { IFaqs } from 'types/Pricing';
+import { SectionCollapse } from 'types/Builder';
 import { Title } from 'components/Title';
 import { LinkButton } from 'components/LinkButton';
-import * as styles from './Faqs.module.scss';
+import * as styles from './CollapseSection.module.scss';
 
-export const Faqs: FC<IFaqs> = ({ heading, description, decorate, collapse }) => {
+export const CollapseSection: FC<SectionCollapse> = ({ heading, description, decorate, collapseContent }) => {
   return (
     <Section style={{ overflow: 'hidden' }} backgroundColor="var(--color-gray1)">
       <div className="container">
@@ -17,7 +17,7 @@ export const Faqs: FC<IFaqs> = ({ heading, description, decorate, collapse }) =>
             <LinkButton>Ask our agents</LinkButton>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-8">
-            {collapse.map((item, index) => {
+            {collapseContent.map((item, index) => {
               return (
                 <Collapse
                   key={index}

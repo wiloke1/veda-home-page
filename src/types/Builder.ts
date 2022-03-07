@@ -67,7 +67,46 @@ export interface SectionPlans extends Section {
   plansContent: Plans[];
 }
 
-export type SmartSection = SectionHero | SectionFeatures | SectionThemes | SectionSupports | SectionZigzag | SectionPlans;
+export interface PlanComparisonFeatures {
+  title: string;
+  content: string;
+}
+
+export interface TableItem {
+  title: string;
+  content: string;
+  price: string;
+  highlight?: boolean;
+  buttonText: string;
+}
+
+export interface SectionPlanComparison {
+  type: 'planComparison';
+  enable: boolean;
+  heading: string;
+  features: [PlanComparisonFeatures];
+  plansTable: TableItem[];
+}
+
+export interface Collapse {
+  title: string;
+  content: string;
+}
+
+export interface SectionCollapse extends Section {
+  type: 'collapse';
+  collapseContent: Collapse[];
+}
+
+export type SmartSection =
+  | SectionHero
+  | SectionFeatures
+  | SectionThemes
+  | SectionSupports
+  | SectionZigzag
+  | SectionPlans
+  | SectionPlanComparison
+  | SectionCollapse;
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;
