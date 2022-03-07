@@ -86,11 +86,13 @@ collections:
             fields: [
               { label: Disable, name: disable, widget: boolean },
               { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
+              { label: Description, name: description, widget: text, required: false, default: "" },
               {
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
+                default: "",
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -119,11 +121,13 @@ collections:
             fields: [
               { label: Disable, name: disable, widget: boolean },
               { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
+              { label: Description, name: description, widget: text, required: false, default: "" },
               {
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
+                default: "",
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -141,11 +145,13 @@ collections:
             fields: [
               { label: Disable, name: disable, widget: boolean },
               { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
+              { label: Description, name: description, widget: text, required: false, default: "" },
               {
                 label: Decorate,
                 name: decorate,
                 widget: select,
+                required: false,
+                default: "",
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -172,10 +178,9 @@ collections:
             name: zigzag,
             widget: object,
             collapsed: true,
-            summary: "Background color: {{fields.backgroundColor}}",
-            required: false,
+            summary: "{{fields.zigzagContent.title}}",
             fields: [
-              { label: Disable, name: disable, widget: boolean, required: false },
+              { label: Disable, name: disable, widget: boolean },
               { label: Background color, name: backgroundColor, widget: color, required: false },
               {
                 label: Content,
@@ -184,14 +189,51 @@ collections:
                 collapsed: true,
                 required: false,
                 fields: [
-                  { label: Image, name: image, widget: string, required: false },
-                  { label: Title, name: title, widget: string, required: false },
-                  { label: Description, name: description, widget: text, required: false },
-                  { label: Reverse, name: reverse, widget: boolean, required: false },
+                  { label: Image, name: image, widget: string },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Reverse, name: reverse, widget: boolean },
                 ]
               }
             ]
-          }
+          },
+          {
+            label: Plans,
+            name: plans,
+            widget: object,
+            collapsed: true,
+            fields: [
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text, required: false, default: "" },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                required: false,
+                default: "",
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
+                label: Body,
+                name: body,
+                widget: list,
+                collapsed: true,
+                default: [],
+                fields: [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Price, name: price, widget: string },
+                  { label: Highlight, name: highlight, widget: boolean, required: false },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: List, name: body, widget: markdown },
+                ]
+              }
+            ]
+          },
         ]
       }
   - name: "pages"
@@ -235,11 +277,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -268,11 +312,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -290,11 +336,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -321,10 +369,9 @@ collections:
                 name: zigzag,
                 widget: object,
                 collapsed: true,
-                summary: "Background color: {{fields.backgroundColor}}",
-                required: false,
+                summary: "{{fields.zigzagContent.title}}",
                 fields: [
-                  { label: Disable, name: disable, widget: boolean, required: false },
+                  { label: Disable, name: disable, widget: boolean },
                   { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Content,
@@ -333,14 +380,14 @@ collections:
                     collapsed: true,
                     required: false,
                     fields: [
-                      { label: Image, name: image, widget: string, required: false },
-                      { label: Title, name: title, widget: string, required: false },
-                      { label: Description, name: description, widget: text, required: false },
-                      { label: Reverse, name: reverse, widget: boolean, required: false },
+                      { label: Image, name: image, widget: string },
+                      { label: Title, name: title, widget: string },
+                      { label: Description, name: description, widget: text },
+                      { label: Reverse, name: reverse, widget: boolean },
                     ]
                   }
                 ]
-              }
+              },
             ]
           }
       - file: src/pages/pricing/index.md
@@ -352,63 +399,6 @@ collections:
             name: "templateKey",
             widget: "hidden",
             default: "pricing-page",
-          }
-          - {
-            label: "Builder",
-            name: "builder",
-            widget: "list",
-            types: [
-              {
-                label: "Header Image",
-                name: "header",
-                widget: "object",
-                fields: [
-                  {
-                    label: "Title",
-                    name: "title",
-                    widget: "string",
-                    required: true,
-                  },
-                  {
-                    label: "Background Image",
-                    name: "photo",
-                    widget: "image",
-                    required: true,
-                    media_library: { config: { multiple: false } },
-                  },
-                ],
-              },
-              {
-                label: "CTA Section",
-                name: "cta",
-                widget: "object",
-                fields: [
-                  {
-                    label: "Title",
-                    name: "title",
-                    widget: "string",
-                    required: true,
-                  },
-                  {
-                    label: "Link",
-                    name: "link",
-                    widget: "string",
-                  },
-                ],
-              },
-              {
-                label: "Content",
-                name: "content",
-                widget: "object",
-                fields: [
-                  {
-                    name: "Content",
-                    widget: "markdown",
-                    required: true,
-                  },
-                ],
-              },
-            ],
           }
           - {
             label: Plans,
@@ -549,11 +539,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -582,11 +574,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -604,11 +598,13 @@ collections:
                 fields: [
                   { label: Disable, name: disable, widget: boolean },
                   { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
+                  { label: Description, name: description, widget: text, required: false, default: "" },
                   {
                     label: Decorate,
                     name: decorate,
                     widget: select,
+                    required: false,
+                    default: "",
                     options: [
                       { label: "None", value: "" },
                       { label: "Decorate 1", value: "type1" },
@@ -635,10 +631,9 @@ collections:
                 name: zigzag,
                 widget: object,
                 collapsed: true,
-                summary: "Background color: {{fields.backgroundColor}}",
-                required: false,
+                summary: "{{fields.zigzagContent.title}}",
                 fields: [
-                  { label: Disable, name: disable, widget: boolean, required: false },
+                  { label: Disable, name: disable, widget: boolean },
                   { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Content,
@@ -647,14 +642,14 @@ collections:
                     collapsed: true,
                     required: false,
                     fields: [
-                      { label: Image, name: image, widget: string, required: false },
-                      { label: Title, name: title, widget: string, required: false },
-                      { label: Description, name: description, widget: text, required: false },
-                      { label: Reverse, name: reverse, widget: boolean, required: false },
+                      { label: Image, name: image, widget: string },
+                      { label: Title, name: title, widget: string },
+                      { label: Description, name: description, widget: text },
+                      { label: Reverse, name: reverse, widget: boolean },
                     ]
                   }
                 ]
-              }
+              },
             ]
           }
       - file: "src/pages/contact/index.md"

@@ -4,6 +4,7 @@ import { FC, Fragment } from 'react';
 import { BuilderPageFrontMaster, SmartSection } from 'types/Builder';
 import { Features } from './Features';
 import { Hero } from './Hero';
+import { Plans } from './Plans';
 import { Supports } from './Supports';
 import { Theme } from './Theme';
 
@@ -24,6 +25,8 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
         );
       case 'supports':
         return <Supports {...section} />;
+      case 'plans':
+        return <Plans {...section} />;
       default:
         return null;
     }

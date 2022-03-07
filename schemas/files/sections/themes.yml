@@ -4,14 +4,17 @@
   widget: object,
   collapsed: true,
   summary: "{{fields.heading}}",
+  default: {},
   fields: [
     { label: Disable, name: disable, widget: boolean },
     { label: Heading, name: heading, widget: string },
-    { label: Description, name: description, widget: text },
+    { label: Description, name: description, widget: text, required: false, default: "" },
     {
       label: Decorate,
       name: decorate,
       widget: select,
+      required: false,
+      default: "",
       options: [
         { label: "None", value: "" },
         { label: "Decorate 1", value: "type1" },

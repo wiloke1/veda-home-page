@@ -3,10 +3,10 @@
   name: zigzag,
   widget: object,
   collapsed: true,
-  summary: "Background color: {{fields.backgroundColor}}",
-  required: false,
+  summary: "{{fields.zigzagContent.title}}",
+  default: {},
   fields: [
-    { label: Disable, name: disable, widget: boolean, required: false },
+    { label: Disable, name: disable, widget: boolean },
     { label: Background color, name: backgroundColor, widget: color, required: false },
     {
       label: Content,
@@ -15,11 +15,11 @@
       collapsed: true,
       required: false,
       fields: [
-        { label: Image, name: image, widget: string, required: false },
-        { label: Title, name: title, widget: string, required: false },
-        { label: Description, name: description, widget: text, required: false },
-        { label: Reverse, name: reverse, widget: boolean, required: false },
+        { label: Image, name: image, widget: string },
+        { label: Title, name: title, widget: string },
+        { label: Description, name: description, widget: text },
+        { label: Reverse, name: reverse, widget: boolean },
       ]
     }
   ]
-}
+},

@@ -4,12 +4,10 @@ import { FC } from 'react';
 import { IPricingPage, PricingPageFrontMaster } from 'types/Pricing';
 import { Faqs } from './PricingPage/Faqs';
 import { PlanComparison } from './PricingPage/PlanComparison';
-import { Plans } from './PricingPage/Plans';
 
-export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ plans, planComparison, faqs }) => {
+export const PricingPageTemplate: FC<PricingPageFrontMaster> = ({ planComparison, faqs }) => {
   return (
     <>
-      <Plans {...plans} />
       <div className="container">
         <div
           style={{

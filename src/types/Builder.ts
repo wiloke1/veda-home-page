@@ -53,7 +53,21 @@ export interface SectionZigzag {
   zigzagContent: IZigzag;
 }
 
-export type SmartSection = SectionHero | SectionFeatures | SectionThemes | SectionSupports | SectionZigzag;
+export interface Plans {
+  title: string;
+  description: string;
+  price: string;
+  highlight: boolean;
+  buttonText: string;
+  body: string;
+}
+
+export interface SectionPlans extends Section {
+  type: 'plans';
+  plansContent: Plans[];
+}
+
+export type SmartSection = SectionHero | SectionFeatures | SectionThemes | SectionSupports | SectionZigzag | SectionPlans;
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;
