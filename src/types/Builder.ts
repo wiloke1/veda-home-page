@@ -14,7 +14,7 @@ export interface Theme {
 }
 
 export interface SectionFeatures extends Section {
-  body: Feature[];
+  body?: Feature[];
 }
 
 export interface SectionThemes extends Section {}
@@ -30,7 +30,7 @@ export interface ISupports {
 }
 
 export interface SectionSupports extends Section {
-  body: ISupports[];
+  body?: ISupports[];
 }
 
 export interface IZigzag {

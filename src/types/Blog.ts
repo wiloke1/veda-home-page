@@ -8,7 +8,7 @@ export interface Post {
   excerpt: string;
   frontmatter: {
     title: string;
-    featuredimage: GatsbyImage;
+    featuredimage?: GatsbyImage;
     date: string;
     templateKey: string;
   };
