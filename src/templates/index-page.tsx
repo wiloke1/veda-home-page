@@ -18,20 +18,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(
-      frontmatter: {
-        templateKey: { eq: "index-page" }
-        sections: {
-          elemMatch: {
-            hero: { disable: { eq: false } }
-            features: { disable: { eq: false } }
-            supports: { disable: { eq: false } }
-            themes: { disable: { eq: false } }
-            zigzag: { disable: { eq: false } }
-          }
-        }
-      }
-    ) {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         sections {
           hero {

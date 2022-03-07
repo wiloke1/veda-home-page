@@ -18,20 +18,7 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   query AboutPageTemplate {
-    markdownRemark(
-      frontmatter: {
-        templateKey: { eq: "about-page" }
-        sections: {
-          elemMatch: {
-            hero: { disable: { eq: false } }
-            features: { disable: { eq: false } }
-            supports: { disable: { eq: false } }
-            themes: { disable: { eq: false } }
-            zigzag: { disable: { eq: false } }
-          }
-        }
-      }
-    ) {
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         sections {
           hero {
