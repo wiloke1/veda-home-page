@@ -6,7 +6,7 @@ sections:
     enable: true
     heading: <span>The All In One</span>Store Design Solution
     description: Campaign-ready, fully-optimized Shopify stores built with half the
-      time and zero the code.1
+      time and zero the code.
     decorate: ""
   - type: features
     enable: true

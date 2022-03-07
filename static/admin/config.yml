@@ -71,8 +71,9 @@ collections:
             widget: object,
             collapsed: true,
             summary: "{{fields.heading}}",
+            default: {},
             fields: [
-              { label: Disable, name: disable, widget: boolean },
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text },
             ]
@@ -83,8 +84,9 @@ collections:
             widget: object,
             collapsed: true,
             summary: "{{fields.heading}}",
+            default: {},
             fields: [
-              { label: Disable, name: disable, widget: boolean },
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text, required: false, default: "" },
               {
@@ -118,8 +120,9 @@ collections:
             widget: object,
             collapsed: true,
             summary: "{{fields.heading}}",
+            default: {},
             fields: [
-              { label: Disable, name: disable, widget: boolean },
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text, required: false, default: "" },
               {
@@ -142,8 +145,9 @@ collections:
             widget: object,
             collapsed: true,
             summary: "{{fields.heading}}",
+            default: {},
             fields: [
-              { label: Disable, name: disable, widget: boolean },
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text, required: false, default: "" },
               {
@@ -179,8 +183,9 @@ collections:
             widget: object,
             collapsed: true,
             summary: "{{fields.zigzagContent.title}}",
+            default: {},
             fields: [
-              { label: Disable, name: disable, widget: boolean },
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Background color, name: backgroundColor, widget: color, required: false },
               {
                 label: Content,
@@ -202,7 +207,10 @@ collections:
             name: plans,
             widget: object,
             collapsed: true,
+            summary: "{{fields.heading}}",
+            default: {},
             fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text, required: false, default: "" },
               {
@@ -218,8 +226,8 @@ collections:
                 ]
               },
               {
-                label: Body,
-                name: body,
+                label: Content,
+                name: plansContent,
                 widget: list,
                 collapsed: true,
                 default: [],
@@ -262,8 +270,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text },
                 ]
@@ -274,8 +283,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -309,8 +319,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -333,8 +344,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -370,8 +382,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.zigzagContent.title}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Content,
@@ -524,8 +537,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text },
                 ]
@@ -536,8 +550,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -571,8 +586,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -595,8 +611,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.heading}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text, required: false, default: "" },
                   {
@@ -632,8 +649,9 @@ collections:
                 widget: object,
                 collapsed: true,
                 summary: "{{fields.zigzagContent.title}}",
+                default: {},
                 fields: [
-                  { label: Disable, name: disable, widget: boolean },
+                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
                   { label: Background color, name: backgroundColor, widget: color, required: false },
                   {
                     label: Content,

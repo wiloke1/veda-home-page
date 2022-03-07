@@ -7,6 +7,8 @@ import { BuilderPageTemplate } from './BuilderPage';
 const IndexPage: FC<BuilderPage> = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
+  console.log(frontmatter);
+
   return <Layout>{<BuilderPageTemplate {...frontmatter} />}</Layout>;
 };
 
