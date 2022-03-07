@@ -1,11 +1,11 @@
-*include ./files/backend
+*include files/backend
 collections:
-  *include ./files/blog
-  *include ./files/themes
+  *include files/blog
+  *include files/themes
   - name: "pages"
     label: "Pages"
     files:
-      *include ./files/home
-      *include ./files/pricing
-      *include ./files/about
-      *include ./files/contact
+      *include files/home
+      *include files/pricing
+      *include files/about
+      *include files/contact
