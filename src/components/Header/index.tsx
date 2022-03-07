@@ -14,8 +14,6 @@ export interface HeaderProps {
 export const Header: FC<HeaderProps> = ({ navigation }) => {
   const [active, setActive] = useState(false);
 
-  console.log(navigation);
-
   return (
     <header className={styles.container}>
       <Link to="/" title="Logo">
