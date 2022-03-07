@@ -1,0 +1,25 @@
+- name: "builder"
+  label: "Builder"
+  folder: "src/pages/builder"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {
+        label: "Template Key",
+        name: "templateKey",
+        widget: "hidden",
+        default: "index-page",
+      }
+    - { label: "Page Name", name: "title", widget: "string" }
+    - {
+      label: "Sections",
+      name: "sections",
+      widget: "list",
+      types: [
+        *include files/sections/hero
+        *include files/sections/features
+        *include files/sections/themes
+        *include files/sections/supports
+        *include files/sections/zigzag
+      ]
+    }

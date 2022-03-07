@@ -56,7 +56,7 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
   posts.forEach(edge => {
     const id = edge.node.id;
     createPage({
-      path: edge.node.fields.slug,
+      path: /\/builder\/(home|index)\//g.test(edge.node.fields.slug) ? '/' : edge.node.fields.slug.replace('/builder/', '/'),
       // @ts-ignore
       tags: edge.node.frontmatter.tags,
       component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`),

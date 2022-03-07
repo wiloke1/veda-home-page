@@ -3,15 +3,14 @@
   name: zigzag,
   widget: object,
   collapsed: true,
-  summary: "{{fields.sectionName}}",
+  summary: "Background color: {{fields.backgroundColor}}",
   required: false,
   fields: [
-    { label: Section name, name: sectionName, widget: string, required: false },
     { label: Disable, name: disable, widget: boolean, required: false },
     { label: Background color, name: backgroundColor, widget: color, required: false },
     {
-      label: Body,
-      name: body,
+      label: Content,
+      name: zigzagContent,
       widget: object,
       collapsed: true,
       required: false,

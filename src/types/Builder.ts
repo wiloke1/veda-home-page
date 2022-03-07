@@ -14,12 +14,17 @@ export interface Theme {
 }
 
 export interface SectionFeatures extends Section {
-  body?: Feature[];
+  type: 'features';
+  featuresContent: Feature[];
 }
 
-export interface SectionThemes extends Section {}
+export interface SectionThemes extends Section {
+  type: 'themes';
+}
 
-export interface SectionHero extends Section {}
+export interface SectionHero extends Section {
+  type: 'hero';
+}
 
 export interface ISupports {
   title: string;
@@ -30,7 +35,8 @@ export interface ISupports {
 }
 
 export interface SectionSupports extends Section {
-  body?: ISupports[];
+  type: 'supports';
+  supportsContent: ISupports[];
 }
 
 export interface IZigzag {
@@ -41,18 +47,13 @@ export interface IZigzag {
 }
 
 export interface SectionZigzag {
+  type: 'zigzag';
   disable?: boolean;
   backgroundColor?: string;
-  body: IZigzag;
+  zigzagContent: IZigzag;
 }
 
-export interface SmartSection {
-  hero?: SectionHero | null;
-  features?: SectionFeatures | null;
-  themes?: SectionThemes | null;
-  supports?: SectionSupports | null;
-  zigzag?: SectionZigzag | null;
-}
+export type SmartSection = SectionHero | SectionFeatures | SectionThemes | SectionSupports | SectionZigzag;
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;

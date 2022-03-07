@@ -3,12 +3,10 @@
   name: hero,
   widget: object,
   collapsed: true,
-  summary: "{{fields.sectionName}}",
-  required: false,
+  summary: "{{fields.heading}}",
   fields: [
-    { label: Section name, name: sectionName, widget: string, required: false },
-    { label: Disable, name: disable, widget: boolean, required: false },
-    { label: Heading, name: heading, widget: string, required: false },
-    { label: Description, name: description, widget: text, required: false },
+    { label: Disable, name: disable, widget: boolean },
+    { label: Heading, name: heading, widget: string },
+    { label: Description, name: description, widget: text },
   ]
 },

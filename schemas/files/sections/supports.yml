@@ -3,18 +3,15 @@
   name: supports,
   widget: object,
   collapsed: true,
-  summary: "{{fields.sectionName}}",
-  required: false,
+  summary: "{{fields.heading}}",
   fields: [
-    { label: Section name, name: sectionName, widget: string, required: false },
-    { label: Disable, name: disable, widget: boolean, required: false },
-    { label: Heading, name: heading, widget: string, required: false },
-    { label: Description, name: description, widget: text, required: false },
+    { label: Disable, name: disable, widget: boolean },
+    { label: Heading, name: heading, widget: string },
+    { label: Description, name: description, widget: text },
     {
       label: Decorate,
       name: decorate,
       widget: select,
-      required: false,
       options: [
         { label: "None", value: "" },
         { label: "Decorate 1", value: "type1" },
@@ -22,10 +19,10 @@
       ]
     },
     {
-      label: Body,
-      name: body,
+      label: Content,
+      name: supportsContent,
       widget: list,
-      required: false,
+      default: [],
       fields: [
         { label: Image, name: image, widget: image },
         { label: Title, name: title, widget: string },
