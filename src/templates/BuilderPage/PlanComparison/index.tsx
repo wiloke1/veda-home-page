@@ -4,24 +4,35 @@ import { GetStartedPopup } from 'components/GetStartedPopup';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { Tooltip } from 'components/Tooltip';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
+import { reactNodeToString } from 'utils/reactNodeToString';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
 
-export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, plansTable }) => {
-  const [_features] = features;
-  const [activeTitle, setActiveTitle] = useState(plansTable[0].title);
+export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeatures, plansTable }) => {
+  const [features] = planFeatures;
+  const [activeTitle, setActiveTitle] = useState(plansTable[0]?.title ?? '');
   const { width } = useWindowSize();
+  const featuresContent = features.content.trim();
+
+  useEffect(() => {
+    const vedaWrapperEl = document.getElementById('veda-wrapper');
+    if (!!vedaWrapperEl) {
+      vedaWrapperEl.style.removeProperty('overflow');
+    }
+  }, []);
 
   const renderTableItem = (item: TableItem, index: number) => {
     const itemWidth = width <= MAX_WIDTH && item.title === activeTitle ? '100%' : `${100 / plansTable.length}%`;
     if (width <= MAX_WIDTH && item.title !== activeTitle) {
       return null;
     }
+    const itemContent = item.content.trim();
+
     return (
       <div key={item.title} className={styles.plan} style={{ width: itemWidth }}>
         <div
@@ -41,15 +52,16 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
           <ReactMarkdown
             components={{
               li: ({ node: _, ...props }) => {
-                const textLast = props.children?.[0]?.toString()?.includes('[last]');
-                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'no') {
+                const liText = reactNodeToString(props.children).trim();
+                const textLast = liText.includes('[last]');
+                if (liText.replace('[last]', '') === 'no') {
                   return (
                     <li className={textLast ? styles.last : ''}>
                       <i className="far fa-minus" />
                     </li>
                   );
                 }
-                if (props.children?.[0]?.toString()?.replace('[last]', '') === 'yes') {
+                if (liText.replace('[last]', '') === 'yes') {
                   return (
                     <li className={textLast ? styles.last : ''}>
                       <i className="far fa-check" />
@@ -57,7 +69,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
                   );
                 }
                 if (textLast) {
-                  const text = props.children?.[0]?.toString()?.replace('[last]', '');
+                  const text = liText.replace('[last]', '');
                   return (
                     <li {...props} className={styles.last}>
                       {text}
@@ -67,7 +79,9 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
                 return <li {...props} />;
               },
             }}
-          >{`${item.content.trim()}[last]`}</ReactMarkdown>
+          >
+            {!!itemContent ? `${itemContent}[last]` : itemContent}
+          </ReactMarkdown>
         </div>
       </div>
     );
@@ -96,14 +110,15 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
         <div className={styles.table}>
           <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '55%' : '30%' }}>
             <div className={styles.featuresHeader}>
-              <h3 className={styles.featuresTitle}>{_features.title}</h3>
+              <h3 className={styles.featuresTitle}>{features.title}</h3>
             </div>
             <div className={styles.featuresContent}>
               <ReactMarkdown
                 components={{
                   li: ({ node: _, ...props }) => {
-                    if (/\(|\)/.test(props.children?.[0]?.toString() ?? '')) {
-                      const text = props.children?.[0]?.toString()?.replace(/\(.*\)/g, '');
+                    const liText = reactNodeToString(props.children).trim();
+                    if (/\(|\)/g.test(liText)) {
+                      const text = liText.replace(/\(.*\)/g, '');
                       const tooltip =
                         props.children?.[0]
                           ?.toString()
@@ -119,8 +134,8 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
                         </li>
                       );
                     }
-                    if (props.children?.[0]?.toString()?.includes('[last]')) {
-                      const text = props.children?.[0]?.toString()?.replace('[last]', '');
+                    if (liText.includes('[last]')) {
+                      const text = liText.replace('[last]', '');
                       return (
                         <li {...props} className={styles.last}>
                           {text}
@@ -130,7 +145,9 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, features, p
                     return <li {...props} />;
                   },
                 }}
-              >{`${_features.content.trim()}[last]}`}</ReactMarkdown>
+              >
+                {!!featuresContent ? `${featuresContent}[last]` : featuresContent}
+              </ReactMarkdown>
             </div>
           </div>
           <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '45%' : '70%' }}>

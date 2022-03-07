@@ -44,6 +44,11 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       content: String
     }
 
+    type PlanFeature {
+      title: String
+      content: String
+    }
+
     type MarkdownRemarkFrontmatterSections @infer {
       id: String
       type: String
@@ -58,6 +63,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       plansContent: [Plan]
       collapseContent: [Collapse]
       plansTable: [PlanTable]
+      planFeatures: [PlanFeature]
     }
   `);
 };

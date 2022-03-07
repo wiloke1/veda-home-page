@@ -56,11 +56,7 @@ sections:
     planFeatures:
       - title: Features
         content: >-
-          * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf
-          sd
-
-          f)
-
+          * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf sd f)
 
           * White Labelling
 

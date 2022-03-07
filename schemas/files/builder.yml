@@ -1,5 +1,5 @@
 - name: "builder"
-  label: "Builder"
+  label: "Builder Pages"
   folder: "src/pages/builder"
   create: true
   slug: "{{slug}}"
@@ -15,6 +15,7 @@
       label: "Sections",
       name: "sections",
       widget: "list",
+      default: [],
       types: [
         *include files/sections/hero
         *include files/sections/features

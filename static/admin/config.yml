@@ -48,7 +48,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Preview Link", name: "previewHref", widget: "string" }
   - name: "builder"
-    label: "Builder"
+    label: "Builder Pages"
     folder: "src/pages/builder"
     create: true
     slug: "{{slug}}"
@@ -64,6 +64,7 @@ collections:
         label: "Sections",
         name: "sections",
         widget: "list",
+        default: [],
         types: [
           {
             label: Hero,
@@ -207,6 +208,8 @@ collections:
             name: collapse,
             widget: object,
             collapsed: true,
+            summary: "{{fields.heading}}",
+            default: {},
             fields: [
               { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
@@ -216,6 +219,7 @@ collections:
                 name: decorate,
                 widget: select,
                 required: false,
+                default: "",
                 options: [
                   { label: "None", value: "" },
                   { label: "Decorate 1", value: "type1" },
@@ -280,15 +284,30 @@ collections:
             name: planComparison,
             widget: object,
             collapsed: true,
+            summary: "{{fields.heading}}",
+            default: {},
             fields: [
               { label: Enable, name: enable, widget: boolean, required: false, default: true },
               { label: Heading, name: heading, widget: string },
               { label: Description, name: description, widget: text, required: false, default: "" },
               {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                required: false,
+                default: "",
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
                 label: Features,
-                name: features,
+                name: planFeatures,
                 widget: list,
                 allow_add: false,
+                default: [ {title: '', content: ''} ],
                 fields: [
                   { label: Title, name: title, widget: string },
                   { label: Content, name: content, widget: markdown }
@@ -301,11 +320,11 @@ collections:
                 collapsed: true,
                 default: [],
                 fields: [
-                  { label: Title, name: title, widget: string },
-                  { label: Price, name: price, widget: string },
+                  { label: Title, name: title, widget: string, default: '' },
+                  { label: Price, name: price, widget: string, default: '' },
                   { label: Highlight, name: highlight, widget: boolean, required: false, default: false },
-                  { label: Button Text, name: buttonText, widget: string },
-                  { label: Content, name: content, widget: markdown }
+                  { label: Button Text, name: buttonText, widget: string, default: '' },
+                  { label: Content, name: content, widget: markdown, default: '' }
                 ]
               }
             ]

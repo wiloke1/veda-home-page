@@ -13,7 +13,7 @@ export interface LayoutProps {
 export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div style={{ overflow }}>
+    <div id="veda-wrapper" style={{ overflow }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

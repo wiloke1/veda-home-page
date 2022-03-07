@@ -66,6 +66,10 @@ export const pageQuery = graphql`
             content
           }
           # Plan comparison
+          planFeatures {
+            title
+            content
+          }
           plansTable {
             title
             price

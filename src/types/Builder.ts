@@ -84,7 +84,7 @@ export interface SectionPlanComparison {
   type: 'planComparison';
   enable: boolean;
   heading: string;
-  features: [PlanComparisonFeatures];
+  planFeatures: [PlanComparisonFeatures];
   plansTable: TableItem[];
 }
 

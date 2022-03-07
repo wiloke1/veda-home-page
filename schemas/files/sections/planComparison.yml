@@ -3,6 +3,8 @@
   name: planComparison,
   widget: object,
   collapsed: true,
+  summary: "{{fields.heading}}",
+  default: {},
   fields: [
     { label: Enable, name: enable, widget: boolean, required: false, default: true },
     { label: Heading, name: heading, widget: string },
@@ -21,9 +23,10 @@
     },
     {
       label: Features,
-      name: features,
+      name: planFeatures,
       widget: list,
       allow_add: false,
+      default: [ {title: '', content: ''} ],
       fields: [
         { label: Title, name: title, widget: string },
         { label: Content, name: content, widget: markdown }
@@ -36,11 +39,11 @@
       collapsed: true,
       default: [],
       fields: [
-        { label: Title, name: title, widget: string },
-        { label: Price, name: price, widget: string },
+        { label: Title, name: title, widget: string, default: '' },
+        { label: Price, name: price, widget: string, default: '' },
         { label: Highlight, name: highlight, widget: boolean, required: false, default: false },
-        { label: Button Text, name: buttonText, widget: string },
-        { label: Content, name: content, widget: markdown }
+        { label: Button Text, name: buttonText, widget: string, default: '' },
+        { label: Content, name: content, widget: markdown, default: '' }
       ]
     }
   ]

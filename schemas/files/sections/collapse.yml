@@ -3,6 +3,8 @@
   name: collapse,
   widget: object,
   collapsed: true,
+  summary: "{{fields.heading}}",
+  default: {},
   fields: [
     { label: Enable, name: enable, widget: boolean, required: false, default: true },
     { label: Heading, name: heading, widget: string },
