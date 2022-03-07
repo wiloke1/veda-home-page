@@ -1,6 +1,6 @@
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import { IndexPageTemplate } from 'templates/index-page';
+import { BuilderPageTemplate } from 'templates/BuilderPage';
 import { BuilderPageFrontMaster } from 'types/Builder';
 
 const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
@@ -9,7 +9,7 @@ const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   if (data) {
     return (
       <App overflow="hidden">
-        <IndexPageTemplate {...data} isNetlify />
+        <BuilderPageTemplate {...data} isNetlify />
       </App>
     );
   } else {

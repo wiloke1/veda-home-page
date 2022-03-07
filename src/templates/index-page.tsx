@@ -1,49 +1,15 @@
 import { Layout } from 'components/Layout';
-import { Section } from 'components/Section';
-import { ZigzagCard } from 'components/ZigzagCard';
 import { graphql } from 'gatsby';
-import { FC, Fragment } from 'react';
-import { BuilderPage, BuilderPageFrontMaster } from 'types/Builder';
-import { Features } from './BuilderPage/Features';
-import { Hero } from './BuilderPage/Hero';
-import { Supports } from './BuilderPage/Supports';
-import { Theme } from './BuilderPage/Theme';
-
-export const IndexPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetlify }) => {
-  return (
-    <>
-      {sections.map((section, index) => {
-        return (
-          <Fragment key={index}>
-            {!!section.hero && !section.hero.disable && <Hero {...section.hero} />}
-            {!!section.features && !section.features.disable && <Features {...section.features} />}
-            {!!section.themes && !section.themes.disable && (
-              <Theme
-                isNetlify={isNetlify}
-                heading={section.themes.heading}
-                description={section.themes.description}
-                decorate={section.themes.decorate}
-              />
-            )}
-            {!!section.supports && !section.supports.disable && <Supports {...section.supports} />}
-            {!!section.zigzag && !section.zigzag.disable && (
-              <Section backgroundColor={section.zigzag.backgroundColor}>
-                <ZigzagCard {...section.zigzag.body} />
-              </Section>
-            )}
-          </Fragment>
-        );
-      })}
-    </>
-  );
-};
+import { FC } from 'react';
+import { BuilderPage } from 'types/Builder';
+import { BuilderPageTemplate } from './BuilderPage';
 
 const IndexPage: FC<BuilderPage> = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <IndexPageTemplate {...frontmatter} />
+      <BuilderPageTemplate {...frontmatter} />
     </Layout>
   );
 };

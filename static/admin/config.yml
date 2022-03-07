@@ -11,7 +11,6 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
-
 collections:
   - name: "blog"
     label: "Blog"
@@ -31,7 +30,6 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-  
   - name: "themes"
     label: "Theme Template"
     folder: "src/pages/themes"
@@ -49,7 +47,6 @@ collections:
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Preview Link", name: "previewHref", widget: "string" }
-  
   - name: "pages"
     label: "Pages"
     files:
@@ -211,7 +208,6 @@ collections:
               }
             ]
           }
-      
       - file: src/pages/pricing/index.md
         label: Pricing
         name: pricing
@@ -323,7 +319,6 @@ collections:
               }
             ]
           }
-      
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -336,7 +331,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"
@@ -381,4 +375,3 @@ collections:
               { label: Button Text, name: buttonText, widget: string },
             ]
           }
-      

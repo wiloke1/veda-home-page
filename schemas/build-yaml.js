@@ -28,7 +28,7 @@ function getYaml(content) {
  */
 function compileYaml() {
   const inputFile = path.resolve(__dirname, 'config.yml');
-  const outputFile = path.resolve(__dirname, '../admin/config.yml');
+  const outputFile = path.resolve(__dirname, '../static/admin/config.yml');
   const inputContent = fs.readFileSync(inputFile, 'utf8');
 
   fs.writeFileSync(outputFile, getYaml(inputContent));
