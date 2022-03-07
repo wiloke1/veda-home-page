@@ -6,6 +6,7 @@
   summary: "{{fields.heading}}",
   default: {},
   fields: [
+    { label: Enable, name: enable, widget: boolean, required: false, default: true },
     { label: Heading, name: heading, widget: string },
     { label: Description, name: description, widget: text, required: false, default: "" },
     {

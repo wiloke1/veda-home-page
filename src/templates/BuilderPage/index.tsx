@@ -35,6 +35,9 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
   return (
     <>
       {sections.map((section, index) => {
+        if (!section.enable) {
+          return null;
+        }
         return <Fragment key={index}>{renderSection(section)}</Fragment>;
       })}
     </>

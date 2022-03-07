@@ -21,6 +21,7 @@ export const pageQuery = graphql`
           heading
           description
           decorate
+          enable
           # Supports
           supportsContent {
             image {

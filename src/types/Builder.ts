@@ -48,7 +48,7 @@ export interface IZigzag {
 
 export interface SectionZigzag {
   type: 'zigzag';
-  disable?: boolean;
+  enable: boolean;
   backgroundColor?: string;
   zigzagContent: IZigzag;
 }

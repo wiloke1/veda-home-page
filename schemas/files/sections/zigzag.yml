@@ -6,7 +6,7 @@
   summary: "{{fields.zigzagContent.title}}",
   default: {},
   fields: [
-    { label: Disable, name: disable, widget: boolean },
+    { label: Enable, name: enable, widget: boolean, required: false, default: true },
     { label: Background color, name: backgroundColor, widget: color, required: false },
     {
       label: Content,

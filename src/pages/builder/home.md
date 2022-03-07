@@ -3,10 +3,12 @@ templateKey: index-page
 title: Home
 sections:
   - type: hero
+    enable: true
     heading: <span>The All In One</span>Store Design Solution
     description: Campaign-ready, fully-optimized Shopify stores built with half the time and zero the code.
     decorate: ""
   - type: features
+    enable: true
     heading: Here's <span>How We Do It!</span>
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
       asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
@@ -37,12 +39,14 @@ sections:
         title: Lightning Page Speed
         description: Load your store in under 0.55s and never lose a customer.
   - type: themes
+    enable: true
     heading: <span>20+ Veda themes</span> available for your store.
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
       asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
       eos dolor, iure quas.
     decorate: ""
   - type: zigzag
+    enable: true
     zigzagContent:
       title: Drag, drop, done
       description: Create pixel-perfect designs for every purpose with more than 80
@@ -50,6 +54,7 @@ sections:
       image: https://ucarecdn.com/2e2454cb-a08c-4ed1-8d89-4949c7908c52/-/format/auto/-/preview/960x960/-/quality/lighter/drag.png
       reverse: true
   - type: zigzag
+    enable: true
     backgroundColor: "#fbedff"
     zigzagContent:
       title: Turn browsers to buyers
@@ -57,12 +62,14 @@ sections:
       image: https://ucarecdn.com/39504b18-0c7b-4005-9aad-f1dd0fdb2578/-/format/auto/-/preview/1024x1024/-/quality/lighter/turn.png
       reverse: false
   - type: zigzag
+    enable: true
     zigzagContent:
       title: Integrate with your favs
       description: Find yours, and find more with our list of 30+ top Shopify apps, seamlessly integrated to best display on your Veda
       image: https://ucarecdn.com/7b0fdee1-1ac7-407e-9dc0-659118e5670c/-/format/auto/-/preview/1024x1024/-/quality/lighter/integrate.png
       reverse: true
   - type: supports
+    enable: true
     heading: Get <span>help</span> whenever you need it
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
       asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
