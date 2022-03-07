@@ -1,4 +1,5 @@
 ---
+templateKey: navigation
 headerNavigation:
   - label: Home
     url: /

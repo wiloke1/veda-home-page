@@ -1,6 +1,5 @@
 import { GatsbyImage } from 'components/Image';
-import { PageProps } from 'gatsby';
-import { MarkdownRemark, Section } from './general';
+import { Section } from './general';
 
 export interface Feature {
   image: GatsbyImage;
@@ -132,9 +131,3 @@ export interface BuilderPageFrontMaster {
   isNetlify: boolean;
   sections: SmartSection[];
 }
-
-export interface BuilderPageData {
-  markdownRemark: MarkdownRemark<BuilderPageFrontMaster>;
-}
-
-export interface BuilderPage extends PageProps<BuilderPageData> {}

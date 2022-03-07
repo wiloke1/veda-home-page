@@ -4,12 +4,15 @@ import { GetStartedPopup } from 'components/GetStartedPopup';
 import { Link } from 'gatsby';
 import { FC, useState } from 'react';
 import { isBrowser } from 'utils/isBrowser';
-import { data } from './data';
 import * as styles from './Header.module.scss';
+import { useHeaderNavigationStatic } from './useHeaderNavigationStatic';
 
 /* It's a simple component that renders a header with a logo, a navigation and a button. */
 export const Header: FC = () => {
   const [active, setActive] = useState(false);
+  const navigation = useHeaderNavigationStatic();
+
+  // console.log(navigation);
 
   return (
     <header className={styles.container}>
@@ -21,16 +24,17 @@ export const Header: FC = () => {
           <div className={styles.close} onClick={() => setActive(false)}>
             <i className="fal fa-times" />
           </div>
-          {data.map(item => {
+          {navigation.map(item => {
+            const url = item.url.replace(/^\.\./g, '');
             const active = isBrowser
-              ? item.path === '/'
-                ? window.location.pathname === item.path
-                : new RegExp(`^/${item.path.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
+              ? url === '/'
+                ? window.location.pathname === url
+                : new RegExp(`^/${url.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
               : false;
             return (
               <Link
-                key={item.name}
-                to={item.path}
+                key={item.label}
+                to={url}
                 className={classNames(
                   {
                     [styles.navItemActive]: active,
@@ -38,7 +42,7 @@ export const Header: FC = () => {
                   styles.navItem,
                 )}
               >
-                {item.name}
+                {item.label}
               </Link>
             );
           })}

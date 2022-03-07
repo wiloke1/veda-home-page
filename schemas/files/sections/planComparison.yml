@@ -1,5 +1,5 @@
 {
-  label: Plan comparison,
+  label: Plan Comparison,
   name: planComparison,
   widget: object,
   collapsed: true,
