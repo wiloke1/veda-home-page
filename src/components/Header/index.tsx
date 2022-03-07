@@ -3,16 +3,18 @@ import classNames from 'classnames';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { Link } from 'gatsby';
 import { FC, useState } from 'react';
+import { HeaderNavigationItem } from 'types/Navigation';
 import { isBrowser } from 'utils/isBrowser';
 import * as styles from './Header.module.scss';
-import { useHeaderNavigationStatic } from './useHeaderNavigationStatic';
 
-/* It's a simple component that renders a header with a logo, a navigation and a button. */
-export const Header: FC = () => {
+export interface HeaderProps {
+  navigation: HeaderNavigationItem[];
+}
+
+export const Header: FC<HeaderProps> = ({ navigation }) => {
   const [active, setActive] = useState(false);
-  const navigation = useHeaderNavigationStatic();
 
-  // console.log(navigation);
+  console.log(navigation);
 
   return (
     <header className={styles.container}>

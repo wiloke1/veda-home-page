@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import Sticky from 'wil-react-sticky';
 import { Footer } from 'components/Footer';
 import useSiteMetadata from './useSiteMetadata';
+import { useHeaderNavigationStatic } from './useHeaderNavigationStatic';
 
 export interface LayoutProps {
   overflow?: CSSProperties['overflow'];
@@ -12,6 +13,8 @@ export interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   const { title, description } = useSiteMetadata();
+  const navigation = useHeaderNavigationStatic();
+
   return (
     <div id="veda-wrapper" style={{ overflow }}>
       <Helmet>
@@ -38,7 +41,7 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
       </Helmet>
       <Sticky>
-        <Header />
+        <Header navigation={navigation} />
       </Sticky>
       <main>{children}</main>
       <Footer />
