@@ -1,7 +1,9 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
 title: About Test
+sections:
+  - {}
 ---
 ### Shade-grown coffee
 
