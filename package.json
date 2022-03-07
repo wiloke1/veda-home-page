@@ -62,7 +62,8 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-yaml": "node ./static/_config/merge-yaml.js"
   },
   "devDependencies": {
     "@types/elasticlunr": "^0.9.4",

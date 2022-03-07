@@ -1,0 +1,17 @@
+- name: "themes"
+  label: "Theme Template"
+  folder: "src/pages/themes"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields:
+    - {
+        label: "Template Key",
+        name: "templateKey",
+        widget: "hidden",
+        default: "theme",
+      }
+    - { label: "Image", name: "image", widget: "image" }
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Category", name: "category", widget: "string" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - { label: "Preview Link", name: "previewHref", widget: "string" }
