@@ -52,7 +52,20 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(
+      frontmatter: {
+        templateKey: { eq: "index-page" }
+        sections: {
+          elemMatch: {
+            hero: { disable: { eq: false } }
+            features: { disable: { eq: false } }
+            supports: { disable: { eq: false } }
+            themes: { disable: { eq: false } }
+            zigzag: { disable: { eq: false } }
+          }
+        }
+      }
+    ) {
       frontmatter {
         sections {
           hero {
@@ -100,13 +113,13 @@ export const pageQuery = graphql`
           }
           zigzag {
             disable
-            backgroundColor
             body {
               title
               description
               image
               reverse
             }
+            backgroundColor
           }
         }
       }
