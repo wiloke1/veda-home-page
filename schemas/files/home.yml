@@ -1,5 +1,5 @@
 - file: "src/pages/index.md"
-  label: "Home Page"
+  label: "Home"
   name: "index"
   fields:
     - {

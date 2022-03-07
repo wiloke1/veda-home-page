@@ -1,52 +1,93 @@
-// @ts-nocheck
-import { Section } from 'components/Section';
+import { Layout } from 'components/Layout';
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Layout } from '../components/Layout';
+import { FC } from 'react';
+import { BuilderPage } from 'types/Builder';
+import { BuilderPageTemplate } from './BuilderPage';
 
-// eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content }) => {
-  return (
-    <Section>
-      <div className="container">
-        <div style={{ maxWidth: 600, margin: 'auto' }}>
-          <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{title}</h2>
-          {typeof content === 'string' ? <div dangerouslySetInnerHTML={{ __html: content }} /> : content}
-        </div>
-      </div>
-    </Section>
-  );
-};
-
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-};
-
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+const AboutPage: FC<BuilderPage> = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <AboutPageTemplate title={post.frontmatter.title} content={post.html} />
+      <BuilderPageTemplate {...frontmatter} />
     </Layout>
   );
 };
 
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
 export default AboutPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+export const pageQuery = graphql`
+  query AboutPageTemplate {
+    markdownRemark(
+      frontmatter: {
+        templateKey: { eq: "about-page" }
+        sections: {
+          elemMatch: {
+            hero: { disable: { eq: false } }
+            features: { disable: { eq: false } }
+            supports: { disable: { eq: false } }
+            themes: { disable: { eq: false } }
+            zigzag: { disable: { eq: false } }
+          }
+        }
+      }
+    ) {
       frontmatter {
-        title
+        sections {
+          hero {
+            disable
+            heading
+            description
+          }
+          features {
+            disable
+            heading
+            description
+            decorate
+            body {
+              image {
+                childImageSharp {
+                  gatsbyImageData(width: 120, quality: 100, layout: CONSTRAINED)
+                }
+              }
+              title
+              description
+            }
+          }
+          themes {
+            disable
+            heading
+            description
+            decorate
+          }
+          supports {
+            disable
+            heading
+            description
+            decorate
+            body {
+              image {
+                childImageSharp {
+                  gatsbyImageData(width: 180, quality: 100, layout: CONSTRAINED)
+                }
+              }
+              title
+              description
+              buttonText
+              link
+            }
+          }
+          zigzag {
+            disable
+            body {
+              title
+              description
+              image
+              reverse
+            }
+            backgroundColor
+          }
+        }
       }
     }
   }
