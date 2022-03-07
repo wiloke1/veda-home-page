@@ -57,14 +57,14 @@
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
-    "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "start": "yarn develop",
+    "build": "yarn clean && gatsby build",
+    "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-yaml": "node ./static/_config/merge-yaml.js"
-  },
+    "build-yaml": "node ./static/_config/merge-yaml.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
   "devDependencies": {
     "@types/elasticlunr": "^0.9.4",
     "@types/react-dom": "^17.0.11",
