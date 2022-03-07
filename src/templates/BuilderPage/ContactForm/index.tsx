@@ -1,6 +1,8 @@
 import { Button } from 'components/Button';
+import { Section } from 'components/Section';
+import { Title } from 'components/Title';
 import { ChangeEventHandler, FC, FormEventHandler, useState } from 'react';
-import { IContactForm } from 'types/Contact';
+import { IContactForm, ISectionContactForm } from 'types/Builder';
 import * as styles from './ContactForm.module.scss';
 
 interface Result {
@@ -11,7 +13,7 @@ interface Result {
   option: string;
 }
 
-export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, websiteLabel, optionsLabel, buttonText, options }) => {
+const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, websiteLabel, optionsLabel, buttonText, options }) => {
   const [result, setResult] = useState<Result>({
     name: '',
     email: '',
@@ -105,5 +107,14 @@ export const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLa
       </div>
       <Button>{buttonText}</Button>
     </form>
+  );
+};
+
+export const SectionContactForm: FC<ISectionContactForm> = ({ heading, description, decorate, contactFormContent }) => {
+  return (
+    <Section backgroundColor="var(--color-gray1)">
+      <Title title={heading} text={description} decorate={decorate} />
+      <ContactForm {...contactFormContent} />
+    </Section>
   );
 };

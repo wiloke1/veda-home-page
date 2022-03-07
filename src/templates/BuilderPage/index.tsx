@@ -3,6 +3,7 @@ import { ZigzagCard } from 'components/ZigzagCard';
 import { FC, Fragment } from 'react';
 import { BuilderPageFrontMaster, SmartSection } from 'types/Builder';
 import { CollapseSection } from './CollapseSection';
+import { SectionContactForm } from './ContactForm';
 import { Features } from './Features';
 import { Hero } from './Hero';
 import { PlanComparison } from './PlanComparison';
@@ -33,6 +34,8 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
         return <CollapseSection {...section} />;
       case 'planComparison':
         return <PlanComparison {...section} />;
+      case 'contactForm':
+        return <SectionContactForm {...section} />;
       default:
         return null;
     }

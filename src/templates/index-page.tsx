@@ -22,6 +22,7 @@ export const pageQuery = graphql`
           description
           decorate
           enable
+          backgroundColor
           # Supports
           supportsContent {
             image {
@@ -76,6 +77,18 @@ export const pageQuery = graphql`
             highlight
             buttonText
             content
+          }
+          # Contact form
+          contactFormContent {
+            nameLabel
+            emailLabel
+            websiteLabel
+            optionsLabel
+            options {
+              value
+            }
+            messageLabel
+            buttonText
           }
         }
       }

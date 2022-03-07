@@ -25,5 +25,6 @@
         *include files/sections/collapse
         *include files/sections/plans
         *include files/sections/planComparison
+        *include files/sections/contactForm
       ]
     }

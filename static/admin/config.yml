@@ -329,475 +329,53 @@ collections:
               }
             ]
           },
+          {
+            label: Contact Form,
+            name: contactForm,
+            widget: object,
+            collapsed: true,
+            summary: "{{fields.heading}}",
+            default: {},
+            fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text, required: false, default: "" },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                required: false,
+                default: "",
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              {
+                label: Form,
+                name: contactFormContent,
+                widget: object,
+                default: {},
+                fields: [
+                  { label: Name Label, name: nameLabel, widget: string, default: 'Your name' },
+                  { label: Email Label, name: emailLabel, widget: string, default: 'Your email' },
+                  { label: Website Label, name: websiteLabel, widget: string, default: 'Your website' },
+                  { label: Options Label, name: optionsLabel, widget: string, default: 'Choose an option' },
+                  {
+                    label: Option,
+                    name: "options",
+                    widget: list,
+                    default: [{ value: '' }],
+                    fields: [
+                      { label: Value, name: value, widget: string, default: '' }
+                    ]
+                  },
+                  { label: Message Label, name: messageLabel, widget: string, default: Message },
+                  { label: Button Text, name: buttonText, widget: string, default: Contact Us },
+                ]
+              }
+            ]
+          },
         ]
       }
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/index.md"
-        label: "Home"
-        name: "index"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "index-page",
-            }
-          - {
-            label: Sections,
-            name: sections,
-            widget: list,
-            collapsed: true,
-            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}{{fields.themes.sectionName}}{{fields.supports.sectionName}}{{fields.zigzag.sectionName}}",
-            fields: [
-              {
-                label: Hero,
-                name: hero,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ]
-              },
-              {
-                label: Features,
-                name: features,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  },
-                  {
-                    label: Content,
-                    name: featuresContent,
-                    widget: list,
-                    default: [],
-                    fields: [
-                      { label: Image, name: image, widget: image },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Themes,
-                name: themes,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Supports,
-                name: supports,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  },
-                  {
-                    label: Content,
-                    name: supportsContent,
-                    widget: list,
-                    default: [],
-                    fields: [
-                      { label: Image, name: image, widget: image },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                      { label: Button Text, name: buttonText, widget: string },
-                      { label: Link, name: link, widget: string },
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Zigzag,
-                name: zigzag,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.zigzagContent.title}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Background color, name: backgroundColor, widget: color, required: false },
-                  {
-                    label: Content,
-                    name: zigzagContent,
-                    widget: object,
-                    collapsed: true,
-                    required: false,
-                    fields: [
-                      { label: Image, name: image, widget: string },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                      { label: Reverse, name: reverse, widget: boolean },
-                    ]
-                  }
-                ]
-              },
-            ]
-          }
-      - file: src/pages/pricing/index.md
-        label: Pricing
-        name: pricing
-        fields:
-          - {
-            label: "Template Key",
-            name: "templateKey",
-            widget: "hidden",
-            default: "pricing-page",
-          }
-          - {
-            label: Plans,
-            name: plans,
-            widget: object,
-            collapsed: true,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Decorate,
-                name: decorate,
-                widget: select,
-                required: false,
-                options: [
-                  { label: "None", value: "" },
-                  { label: "Decorate 1", value: "type1" },
-                  { label: "Decorate 2", value: "type2" }
-                ]
-              },
-              {
-                label: Body,
-                name: body,
-                widget: list,
-                collapsed: true,
-                default: [],
-                fields: [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
-                  { label: Price, name: price, widget: string },
-                  { label: Highlight, name: highlight, widget: boolean, required: false },
-                  { label: Button Text, name: buttonText, widget: string },
-                  { label: List, name: body, widget: markdown },
-                ]
-              }
-            ]
-          }
-          - {
-            label: Plan comparison,
-            name: planComparison,
-            widget: object,
-            collapsed: true,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              {
-                label: Features,
-                name: features,
-                widget: list,
-                allow_add: false,
-                fields: [
-                  { label: Title, name: title, widget: string },
-                  { label: Content, name: content, widget: markdown }
-                ]
-              },
-              {
-                label: Table,
-                name: table,
-                widget: list,
-                collapsed: true,
-                default: [],
-                fields: [
-                  { label: Title, name: title, widget: string },
-                  { label: Price, name: price, widget: string },
-                  { label: Highlight, name: highlight, widget: boolean, required: false },
-                  { label: Button Text, name: buttonText, widget: string },
-                  { label: Content, name: content, widget: markdown }
-                ]
-              }
-            ]
-          }
-          - {
-            label: FAQs,
-            name: faqs,
-            widget: object,
-            collapsed: true,
-            fields: [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Decorate,
-                name: decorate,
-                widget: select,
-                required: false,
-                options: [
-                  { label: "None", value: "" },
-                  { label: "Decorate 1", value: "type1" },
-                  { label: "Decorate 2", value: "type2" }
-                ]
-              },
-              {
-                label: Collapse,
-                name: collapse,
-                widget: list,
-                collapsed: true,
-                default: [],
-                fields: [
-                  { label: Title, name: title, widget: string },
-                  { label: Content, name: content, widget: markdown }
-                ]
-              }
-            ]
-          }
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
-          - {
-            label: Sections,
-            name: sections,
-            widget: list,
-            collapsed: true,
-            summary: "{{fields.hero.sectionName}}{{fields.features.sectionName}}{{fields.themes.sectionName}}{{fields.supports.sectionName}}{{fields.zigzag.sectionName}}",
-            fields: [
-              {
-                label: Hero,
-                name: hero,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                ]
-              },
-              {
-                label: Features,
-                name: features,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  },
-                  {
-                    label: Content,
-                    name: featuresContent,
-                    widget: list,
-                    default: [],
-                    fields: [
-                      { label: Image, name: image, widget: image },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Themes,
-                name: themes,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Supports,
-                name: supports,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.heading}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text, required: false, default: "" },
-                  {
-                    label: Decorate,
-                    name: decorate,
-                    widget: select,
-                    required: false,
-                    default: "",
-                    options: [
-                      { label: "None", value: "" },
-                      { label: "Decorate 1", value: "type1" },
-                      { label: "Decorate 2", value: "type2" }
-                    ]
-                  },
-                  {
-                    label: Content,
-                    name: supportsContent,
-                    widget: list,
-                    default: [],
-                    fields: [
-                      { label: Image, name: image, widget: image },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                      { label: Button Text, name: buttonText, widget: string },
-                      { label: Link, name: link, widget: string },
-                    ]
-                  }
-                ]
-              },
-              {
-                label: Zigzag,
-                name: zigzag,
-                widget: object,
-                collapsed: true,
-                summary: "{{fields.zigzagContent.title}}",
-                default: {},
-                fields: [
-                  { label: Enable, name: enable, widget: boolean, required: false, default: true },
-                  { label: Background color, name: backgroundColor, widget: color, required: false },
-                  {
-                    label: Content,
-                    name: zigzagContent,
-                    widget: object,
-                    collapsed: true,
-                    required: false,
-                    fields: [
-                      { label: Image, name: image, widget: string },
-                      { label: Title, name: title, widget: string },
-                      { label: Description, name: description, widget: text },
-                      { label: Reverse, name: reverse, widget: boolean },
-                    ]
-                  }
-                ]
-              },
-            ]
-          }
-      - file: "src/pages/contact/index.md"
-        label: "Contact"
-        name: "contact"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "contact-page",
-            }
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - {
-            label: Decorate,
-            name: decorate,
-            widget: select,
-            required: false,
-            options: [
-              { label: "None", value: "" },
-              { label: "Decorate 1", value: "type1" },
-              { label: "Decorate 2", value: "type2" }
-            ]
-          }
-          - {
-            label: Form,
-            name: form,
-            widget: object,
-            fields: [
-              { label: Name Label, name: nameLabel, widget: string },
-              { label: Email Label, name: emailLabel, widget: string },
-              { label: Website Label, name: websiteLabel, widget: string },
-              { label: Options Label, name: optionsLabel, widget: string },
-              {
-                label: Option,
-                name: "options",
-                widget: list,
-                fields: [
-                  { label: Value, name: value, widget: string }
-                ]
-              },
-              { label: Message Label, name: messageLabel, widget: string },
-              { label: Button Text, name: buttonText, widget: string },
-            ]
-          }

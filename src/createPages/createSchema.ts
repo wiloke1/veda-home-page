@@ -49,6 +49,20 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       content: String
     }
 
+    type Option {
+      value: String
+    }
+
+    type ContactForm {
+      nameLabel: String
+      emailLabel: String
+      websiteLabel: String
+      optionsLabel: String
+      options: [Option]
+      messageLabel: String
+      buttonText: String
+    }
+
     type MarkdownRemarkFrontmatterSections @infer {
       id: String
       type: String
@@ -64,6 +78,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       collapseContent: [Collapse]
       plansTable: [PlanTable]
       planFeatures: [PlanFeature]
+      contactFormContent: ContactForm
     }
   `);
 };

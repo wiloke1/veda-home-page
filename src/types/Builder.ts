@@ -98,6 +98,25 @@ export interface SectionCollapse extends Section {
   collapseContent: Collapse[];
 }
 
+export interface IContactOption {
+  value: string;
+}
+
+export interface IContactForm {
+  nameLabel: string;
+  emailLabel: string;
+  websiteLabel: string;
+  optionsLabel: string;
+  options: IContactOption[];
+  messageLabel: string;
+  buttonText: string;
+}
+
+export interface ISectionContactForm extends Section {
+  type: 'contactForm';
+  contactFormContent: IContactForm;
+}
+
 export type SmartSection =
   | SectionHero
   | SectionFeatures
@@ -106,7 +125,8 @@ export type SmartSection =
   | SectionZigzag
   | SectionPlans
   | SectionPlanComparison
-  | SectionCollapse;
+  | SectionCollapse
+  | ISectionContactForm;
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;

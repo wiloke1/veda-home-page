@@ -1,0 +1,48 @@
+{
+  label: Contact Form,
+  name: contactForm,
+  widget: object,
+  collapsed: true,
+  summary: "{{fields.heading}}",
+  default: {},
+  fields: [
+    { label: Enable, name: enable, widget: boolean, required: false, default: true },
+    { label: Heading, name: heading, widget: string },
+    { label: Description, name: description, widget: text, required: false, default: "" },
+    {
+      label: Decorate,
+      name: decorate,
+      widget: select,
+      required: false,
+      default: "",
+      options: [
+        { label: "None", value: "" },
+        { label: "Decorate 1", value: "type1" },
+        { label: "Decorate 2", value: "type2" }
+      ]
+    },
+    {
+      label: Form,
+      name: contactFormContent,
+      widget: object,
+      default: {},
+      fields: [
+        { label: Name Label, name: nameLabel, widget: string, default: 'Your name' },
+        { label: Email Label, name: emailLabel, widget: string, default: 'Your email' },
+        { label: Website Label, name: websiteLabel, widget: string, default: 'Your website' },
+        { label: Options Label, name: optionsLabel, widget: string, default: 'Choose an option' },
+        {
+          label: Option,
+          name: "options",
+          widget: list,
+          default: [{ value: '' }],
+          fields: [
+            { label: Value, name: value, widget: string, default: '' }
+          ]
+        },
+        { label: Message Label, name: messageLabel, widget: string, default: Message },
+        { label: Button Text, name: buttonText, widget: string, default: Contact Us },
+      ]
+    }
+  ]
+},

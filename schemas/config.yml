@@ -3,10 +3,3 @@ collections:
   *include files/blog
   *include files/themes
   *include files/builder
-  - name: "pages"
-    label: "Pages"
-    files:
-      *include files/home
-      *include files/pricing
-      *include files/about
-      *include files/contact

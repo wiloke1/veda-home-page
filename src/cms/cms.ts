@@ -1,14 +1,11 @@
 import CMS from 'netlify-cms-app';
 // @ts-ignore
-import uploadcare from 'netlify-cms-media-library-uploadcare';
-// @ts-ignore
 import cloudinary from 'netlify-cms-media-library-cloudinary';
-
-import AboutPagePreview from './preview-templates/AboutPagePreview';
+// @ts-ignore
+import uploadcare from 'netlify-cms-media-library-uploadcare';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
-import ContactPagePreview from './preview-templates/ContactPagePreview';
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -17,7 +14,5 @@ CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Lexend+Deca:w
 CMS.registerPreviewStyle('https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css');
 
 CMS.registerPreviewTemplate('builder', IndexPagePreview);
-CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('themes', ThemePagePreview);
-CMS.registerPreviewTemplate('contact', ContactPagePreview);
