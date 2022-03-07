@@ -5,14 +5,15 @@ sections:
   - type: hero
     enable: true
     heading: <span>The All In One</span>Store Design Solution
-    description: Campaign-ready, fully-optimized Shopify stores built with half the time and zero the code.
+    description: Campaign-ready, fully-optimized Shopify stores built with half the
+      time and zero the code.1
     decorate: ""
   - type: features
     enable: true
     heading: Here's <span>How We Do It!</span>
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
-      eos dolor, iure quas.
+      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos
+      dolor, iure quas.
     decorate: type1
     featuresContent:
       - image: /img/meeting-space.png
@@ -42,8 +43,8 @@ sections:
     enable: true
     heading: <span>20+ Veda themes</span> available for your store.
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
-      eos dolor, iure quas.
+      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos
+      dolor, iure quas.
     decorate: ""
   - type: zigzag
     enable: true
@@ -58,22 +59,24 @@ sections:
     backgroundColor: "#fbedff"
     zigzagContent:
       title: Turn browsers to buyers
-      description: Make your offers irresistible with promotions, upsell & cross-sell techniques, cart modifications, and alerts
+      description: Make your offers irresistible with promotions, upsell & cross-sell
+        techniques, cart modifications, and alerts
       image: https://ucarecdn.com/39504b18-0c7b-4005-9aad-f1dd0fdb2578/-/format/auto/-/preview/1024x1024/-/quality/lighter/turn.png
       reverse: false
   - type: zigzag
     enable: true
     zigzagContent:
       title: Integrate with your favs
-      description: Find yours, and find more with our list of 30+ top Shopify apps, seamlessly integrated to best display on your Veda
+      description: Find yours, and find more with our list of 30+ top Shopify apps,
+        seamlessly integrated to best display on your Veda
       image: https://ucarecdn.com/7b0fdee1-1ac7-407e-9dc0-659118e5670c/-/format/auto/-/preview/1024x1024/-/quality/lighter/integrate.png
       reverse: true
   - type: supports
     enable: true
     heading: Get <span>help</span> whenever you need it
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis,
-      eos dolor, iure quas.
+      asperiores, dignissimos excepturi eum maxime iusto accusamus facilis, eos
+      dolor, iure quas.
     decorate: ""
     supportsContent:
       - image: /img/support1.png
