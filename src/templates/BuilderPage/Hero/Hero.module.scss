@@ -2,8 +2,11 @@
 
 .container {
   padding: 0;
-  top: -85px;
   overflow: hidden;
+  top: -75px;
+  @media (min-width: 920px) {
+    top: -85px;
+  }
 }
 
 .heading {
