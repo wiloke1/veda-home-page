@@ -15,6 +15,15 @@ const getUrl = (url: string) => {
   return url.replace(/^\.\./g, '');
 };
 
+const isActive = (url: string) => {
+  const active = isBrowser
+    ? url === '/'
+      ? window.location.pathname === url
+      : new RegExp(`^/${url.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
+    : false;
+  return active;
+};
+
 export const Header: FC<HeaderProps> = ({ navigation }) => {
   const [active, setActive] = useState(false);
 
@@ -30,13 +39,10 @@ export const Header: FC<HeaderProps> = ({ navigation }) => {
           </div>
           {navigation.map(item => {
             const url = getUrl(item.url);
-            const active = isBrowser
-              ? url === '/'
-                ? window.location.pathname === url
-                : new RegExp(`^/${url.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
-              : false;
+            const active = isActive(url);
             return (
               <div
+                key={item.label}
                 className={classNames(
                   {
                     [styles.navItemActive]: active,
@@ -45,7 +51,7 @@ export const Header: FC<HeaderProps> = ({ navigation }) => {
                   styles.navItem,
                 )}
               >
-                <Link key={item.label} to={url}>
+                <Link to={url}>
                   {item.label}
                   {!!item.subMenu && <i className={classNames('far fa-angle-down', styles.arrow)} />}
                 </Link>
@@ -53,8 +59,10 @@ export const Header: FC<HeaderProps> = ({ navigation }) => {
                   <div className={styles.subMenu}>
                     {item.subMenu.map(item => {
                       const url = getUrl(item.url);
+                      const active = isActive(url);
                       return (
                         <div
+                          key={item.label}
                           className={classNames(
                             {
                               [styles.navItemActive]: active,
@@ -62,9 +70,7 @@ export const Header: FC<HeaderProps> = ({ navigation }) => {
                             styles.subMenuItem,
                           )}
                         >
-                          <Link key={item.label} to={url}>
-                            {item.label}
-                          </Link>
+                          <Link to={url}>{item.label}</Link>
                         </div>
                       );
                     })}

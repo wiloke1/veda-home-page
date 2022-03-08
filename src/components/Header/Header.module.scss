@@ -74,6 +74,10 @@
     text-decoration: none;
     cursor: pointer;
     vertical-align: middle;
+    transition: all 0.3s;
+    &:hover {
+      color: var(--color-gray6);
+    }
   }
   &:hover {
     .subMenu {
@@ -85,7 +89,9 @@
 }
 
 .navItemActive {
-  color: var(--color-primary);
+  > a {
+    color: var(--color-primary);
+  }
 }
 
 .navItemHasSubMenu {

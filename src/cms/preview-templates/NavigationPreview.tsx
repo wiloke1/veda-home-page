@@ -1,15 +1,17 @@
 import App from 'App';
 import { Header } from 'components/Header';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import { NavigationFrontMaster } from 'types/Navigation';
+import { HeaderNavigationItem } from 'types/Navigation';
 
 const NavigationPreview = ({ entry }: PreviewTemplateComponentProps) => {
-  const data = entry.getIn(['data']).toJS() as NavigationFrontMaster;
+  const headerNavigation = entry.getIn(['data', 'headerNavigation']).toJS() as HeaderNavigationItem[];
 
-  if (data) {
+  if (headerNavigation) {
     return (
       <App overflow="hidden">
-        <Header navigation={data.headerNavigation} />
+        <div style={{ height: '100vh' }}>
+          <Header navigation={headerNavigation} />
+        </div>
       </App>
     );
   } else {
