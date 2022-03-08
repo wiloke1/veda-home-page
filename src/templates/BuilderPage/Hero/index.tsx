@@ -1,7 +1,7 @@
 import { GetStartedForm } from 'components/GetStartedForm';
 import { Image } from 'components/Image';
 import { Section } from 'components/Section';
-import { FC, useRef } from 'react';
+import { CSSProperties, FC, useRef } from 'react';
 import { SectionHero } from 'types/Builder';
 import classNames from 'classnames';
 import { MouseMove } from 'components/MouseMove';
@@ -16,9 +16,12 @@ export interface HeroProps extends SectionHero {}
 
 export const Hero: FC<HeroProps> = ({ heading, description, heroImage, backgroundColor, backgroundImage }) => {
   const rightRef = useRef<HTMLDivElement | null>(null);
+  const styleVariables = {
+    ...(backgroundColor ? { '--section-background-color': backgroundColor } : {}),
+  } as CSSProperties;
 
   return (
-    <Section className={styles.container} backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
+    <Section className={styles.container} backgroundImage={backgroundImage}>
       <div className="container-2">
         <div className={styles.content}>
           <div className={styles.left}>
@@ -58,12 +61,7 @@ export const Hero: FC<HeroProps> = ({ heading, description, heroImage, backgroun
               </div>
             </div>
           </div>
-          <div
-            className={styles.background}
-            style={{
-              backgroundColor: '#D3EFFF',
-            }}
-          />
+          <div className={styles.background} style={styleVariables} />
         </div>
       </div>
     </Section>

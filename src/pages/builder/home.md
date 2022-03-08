@@ -8,6 +8,7 @@ sections:
     description: Campaign-ready, fully-optimized Shopify stores built with half the
       time and zero the code.
     decorate: ""
+    backgroundColor: "#D3EFFF"
     heroImage: /img/2.jpg
   - type: features
     enable: true
