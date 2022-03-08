@@ -165,4 +165,5 @@ sections:
           invoice. Please refer to Shopify's App Billing Cycles for more
           information.
     heading: Frequently Asked <span>Questions.</span>
+    backgroundColor: var(--color-gray1)
 ---
