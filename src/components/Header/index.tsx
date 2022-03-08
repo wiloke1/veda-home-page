@@ -30,7 +30,7 @@ export const Header: FC<HeaderProps> = ({ navigation, containerStyle }) => {
 
   return (
     <header className={styles.container} style={containerStyle}>
-      <div className="container-2">
+      <div className="container">
         <div className={styles.inner}>
           <Link to="/" title="Logo">
             <img src={logo} alt="Veda" style={{ height: 44 }} />

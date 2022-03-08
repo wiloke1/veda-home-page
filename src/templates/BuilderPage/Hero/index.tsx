@@ -22,7 +22,7 @@ export const Hero: FC<HeroProps> = ({ heading, description, heroImage, backgroun
 
   return (
     <Section className={styles.container} backgroundImage={backgroundImage}>
-      <div className="container-2">
+      <div className="container">
         <div className={styles.content}>
           <div className={styles.left}>
             <h1 className={styles.heading} dangerouslySetInnerHTML={{ __html: heading }} />
