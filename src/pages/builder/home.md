@@ -4,7 +4,7 @@ title: Home
 sections:
   - type: hero
     enable: true
-    heading: <span>The All In One</span>Store Design Solution
+    heading: <span>The All In One</span> Store Design Solution
     description: Campaign-ready, fully-optimized Shopify stores built with half the
       time and zero the code.
     decorate: ""

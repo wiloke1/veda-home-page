@@ -40,8 +40,9 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
         />
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
       </Helmet>
+      <div style={{ height: 5 }} />
       <Sticky>
-        <Header navigation={navigation} />
+        {active => <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />}
       </Sticky>
       <main>{children}</main>
       <Footer />

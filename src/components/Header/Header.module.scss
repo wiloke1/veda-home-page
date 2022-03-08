@@ -1,15 +1,16 @@
 .container {
   position: relative;
   z-index: 999;
+  transition: all 0.3s;
+}
+
+.inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-light);
   height: 70px;
-  padding: 0 15px;
   @media (min-width: 920px) {
     height: 80px;
-    padding: 0 40px;
   }
 }
 

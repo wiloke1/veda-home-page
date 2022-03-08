@@ -72,6 +72,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       backgroundImage: File @fileByRelativePath
       decorate: String
       enable: Boolean
+      heroImage: File @fileByRelativePath
       supportsContent: [Support]
       featuresContent: [Feature]
       zigzagContent: Zigzag

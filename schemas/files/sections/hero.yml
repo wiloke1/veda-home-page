@@ -9,6 +9,7 @@
     { label: Enable, name: enable, widget: boolean, required: false, default: true },
     { label: Heading, name: heading, widget: string },
     { label: Description, name: description, widget: text },
+    { label: Image, name: heroImage, widget: image, required: false },
     { label: Background Color, name: backgroundColor, widget: color, allowInput: true, required: false },
     { label: Background Image, name: backgroundImage, widget: image, required: false },
   ]

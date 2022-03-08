@@ -3,11 +3,17 @@
   margin: auto;
 }
 
+.container-2 {
+  max-width: 1300px;
+  margin: auto;
+}
+
 .container-fluid {
   width: 100%;
 }
 
 .container,
+.container-2,
 .container-fluid {
   padding-left: 15px;
   padding-right: 15px;

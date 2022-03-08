@@ -28,6 +28,12 @@ export const pageQuery = graphql`
               gatsbyImageData(width: 1500, quality: 100, layout: CONSTRAINED)
             }
           }
+          # Hero
+          heroImage {
+            childImageSharp {
+              gatsbyImageData(width: 500, quality: 100, layout: CONSTRAINED)
+            }
+          }
           # Supports
           supportsContent {
             image {

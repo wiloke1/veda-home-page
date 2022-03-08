@@ -24,6 +24,7 @@ export interface SectionThemes extends Section {
 
 export interface SectionHero extends Section {
   type: 'hero';
+  heroImage?: GatsbyImage;
 }
 
 export interface ISupports {
