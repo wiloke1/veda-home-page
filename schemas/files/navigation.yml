@@ -20,6 +20,16 @@
           default: [],
           fields: [
             { label: Label, name: label, widget: string, default: '' },
-            { label: Url, name: url, widget: string, default: '' }
+            { label: Url, name: url, widget: string, default: '' },
+            {
+              label: Sub Menu,
+              name: subMenu,
+              widget: list,
+              required: false,
+              fields: [
+                { label: Label, name: label, widget: string, default: '' },
+                { label: Url, name: url, widget: string, default: '' }
+              ]
+            }
           ]
         }

@@ -9,6 +9,10 @@ export const useHeaderNavigationStatic = () => {
           headerNavigation {
             label
             url
+            subMenu {
+              label
+              url
+            }
           }
         }
       }

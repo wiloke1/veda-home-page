@@ -4,6 +4,7 @@ import { MarkdownRemark } from './general';
 export interface HeaderNavigationItem {
   label: string;
   url: string;
+  subMenu?: HeaderNavigationItem[];
 }
 
 export interface NavigationFrontMaster {

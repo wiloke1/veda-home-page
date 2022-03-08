@@ -11,6 +11,10 @@ export interface HeaderProps {
   navigation: HeaderNavigationItem[];
 }
 
+const getUrl = (url: string) => {
+  return url.replace(/^\.\./g, '');
+};
+
 export const Header: FC<HeaderProps> = ({ navigation }) => {
   const [active, setActive] = useState(false);
 
@@ -25,25 +29,48 @@ export const Header: FC<HeaderProps> = ({ navigation }) => {
             <i className="fal fa-times" />
           </div>
           {navigation.map(item => {
-            const url = item.url.replace(/^\.\./g, '');
+            const url = getUrl(item.url);
             const active = isBrowser
               ? url === '/'
                 ? window.location.pathname === url
                 : new RegExp(`^/${url.replace(/^\//g, '').replace(/\/.*/g, '')}`, 'g').test(window.location.pathname)
               : false;
             return (
-              <Link
-                key={item.label}
-                to={url}
+              <div
                 className={classNames(
                   {
                     [styles.navItemActive]: active,
+                    [styles.navItemHasSubMenu]: !!item.subMenu,
                   },
                   styles.navItem,
                 )}
               >
-                {item.label}
-              </Link>
+                <Link key={item.label} to={url}>
+                  {item.label}
+                  {!!item.subMenu && <i className={classNames('far fa-angle-down', styles.arrow)} />}
+                </Link>
+                {!!item.subMenu && (
+                  <div className={styles.subMenu}>
+                    {item.subMenu.map(item => {
+                      const url = getUrl(item.url);
+                      return (
+                        <div
+                          className={classNames(
+                            {
+                              [styles.navItemActive]: active,
+                            },
+                            styles.subMenuItem,
+                          )}
+                        >
+                          <Link key={item.label} to={url}>
+                            {item.label}
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             );
           })}
           <div className={styles.getStartedInNav}>
