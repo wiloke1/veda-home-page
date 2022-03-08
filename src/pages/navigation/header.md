@@ -13,4 +13,9 @@ headerNavigation:
     url: /blog
   - label: Contact
     url: /contact
+  - label: Page test
+    url: "#"
+    subMenu:
+      - label: Pricing
+        url: /pricing
 ---
