@@ -3,7 +3,7 @@ import { PageProps } from 'gatsby';
 import { MarkdownRemark, Section } from './general';
 
 export interface Feature {
-  image: GatsbyImage;
+  image?: GatsbyImage;
   title: string;
   description: string;
 }
@@ -29,7 +29,7 @@ export interface SectionHero extends Section {
 export interface ISupports {
   title: string;
   description: string;
-  image: GatsbyImage;
+  image?: GatsbyImage;
   buttonText: string;
   link: string;
 }

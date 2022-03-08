@@ -5,7 +5,7 @@ import { CSSProperties, FC } from 'react';
 import * as styles from './ImageTextBox.module.scss';
 
 export interface ImageTextBoxProps {
-  image: GatsbyImage;
+  image?: GatsbyImage;
   title: string;
   description: string;
   buttonText?: string;
@@ -17,7 +17,7 @@ export interface ImageTextBoxProps {
 export const ImageTextBox: FC<ImageTextBoxProps> = ({ image, title, description, buttonText, onButtonClick, type = 'default', containerStyle }) => {
   return (
     <div className={classNames(styles.container, { [styles.boxed]: type === 'boxed' })} style={containerStyle}>
-      <Image src={image} alt={title} />
+      {!!image && <Image src={image} alt={title} className={classNames(styles.image, { [styles.imageBoxed]: type === 'boxed' })} />}
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       {!!buttonText && (

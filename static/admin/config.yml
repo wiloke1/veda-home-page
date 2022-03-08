@@ -112,7 +112,7 @@ collections:
                 widget: list,
                 default: [],
                 fields: [
-                  { label: Image, name: image, widget: image },
+                  { label: Image, name: image, widget: image, required: false },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: text },
                 ]
@@ -177,7 +177,7 @@ collections:
                 widget: list,
                 default: [],
                 fields: [
-                  { label: Image, name: image, widget: image },
+                  { label: Image, name: image, widget: image, required: false },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: text },
                   { label: Button Text, name: buttonText, widget: string },
