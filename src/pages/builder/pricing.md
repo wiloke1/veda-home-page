@@ -55,31 +55,16 @@ sections:
     decorate: ""
     planFeatures:
       - title: Features
-        content: >-
+        content: |-
           * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf
           sd f)
-
           * White Labelling
-
-
           ### Theme builder
-
-
           * ThemesPage Types
-
-
           * 10 Page Types (Lorem ipsum dolor sit amet 2)
-
-
           * 6 Templates
-
-
           ### Page builder
-
-
           * Pages
-
-
           * 5 Page Types
     plansTable:
       - title: Starter

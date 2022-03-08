@@ -118,7 +118,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                   li: ({ node: _, ...props }) => {
                     const liText = reactNodeToString(props.children).trim();
                     if (/\(|\)/g.test(liText)) {
-                      const text = liText.replace(/\(.*\)/g, '');
+                      const text = liText.replace(/\(.*([\s\S]*?).*\)/g, '').replace('[last]', '');
                       const tooltip =
                         props.children?.[0]
                           ?.toString()
