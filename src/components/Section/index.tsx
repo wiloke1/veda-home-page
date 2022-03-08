@@ -16,7 +16,7 @@ export const Section: FC<SectionProps> = ({ children, backgroundColor, backgroun
   return (
     <section {...rest} style={styleVariables} className={classNames(styles.container, rest.className)}>
       {children}
-      {!!backgroundImage && <Image src={backgroundImage} alt="" />}
+      {!!backgroundImage && <Image src={backgroundImage} alt="" className={styles.bgImage} objectFit="cover" />}
     </section>
   );
 };
