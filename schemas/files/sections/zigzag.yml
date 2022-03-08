@@ -7,7 +7,8 @@
   default: {},
   fields: [
     { label: Enable, name: enable, widget: boolean, required: false, default: true },
-    { label: Background color, name: backgroundColor, widget: color, required: false },
+    { label: Background Color, name: backgroundColor, widget: color, allowInput: true, required: false },
+    { label: Background Image, name: backgroundImage, widget: image, required: false },
     {
       label: Content,
       name: zigzagContent,

@@ -1,3 +1,5 @@
+import { GatsbyImage } from 'components/Image';
+
 export interface MarkdownRemarkEdges<T = any> {
   node: T;
 }
@@ -16,6 +18,8 @@ export interface Section {
   description: string;
   decorate?: 'type1' | 'type2' | '';
   enable: boolean;
+  backgroundColor?: string;
+  backgroundImage?: GatsbyImage;
 }
 
 export interface PaginationContext {

@@ -23,6 +23,11 @@ export const pageQuery = graphql`
           decorate
           enable
           backgroundColor
+          backgroundImage {
+            childImageSharp {
+              gatsbyImageData(width: 1500, quality: 100, layout: CONSTRAINED)
+            }
+          }
           # Supports
           supportsContent {
             image {

@@ -13,7 +13,7 @@ import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
 
-export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeatures, plansTable }) => {
+export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeatures, plansTable, backgroundImage, backgroundColor }) => {
   const [features] = planFeatures;
   const [activeTitle, setActiveTitle] = useState(plansTable[0]?.title ?? '');
   const { width } = useWindowSize();
@@ -88,7 +88,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   };
 
   return (
-    <Section id="plan-comparison">
+    <Section id="plan-comparison" backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <Title title={heading} />
         {width <= MAX_WIDTH && (

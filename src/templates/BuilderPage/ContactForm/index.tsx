@@ -110,9 +110,16 @@ const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, we
   );
 };
 
-export const SectionContactForm: FC<ISectionContactForm> = ({ heading, description, decorate, contactFormContent }) => {
+export const SectionContactForm: FC<ISectionContactForm> = ({
+  heading,
+  description,
+  decorate,
+  contactFormContent,
+  backgroundColor,
+  backgroundImage,
+}) => {
   return (
-    <Section backgroundColor="var(--color-gray1)">
+    <Section backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <Title title={heading} text={description} decorate={decorate} />
       <ContactForm {...contactFormContent} />
     </Section>

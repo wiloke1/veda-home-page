@@ -5,9 +5,9 @@ import { navigate } from 'gatsby';
 import { FC } from 'react';
 import { SectionSupports } from 'types/Builder';
 
-export const Supports: FC<SectionSupports> = ({ heading, description, decorate, supportsContent }) => {
+export const Supports: FC<SectionSupports> = ({ heading, description, decorate, supportsContent, backgroundColor, backgroundImage }) => {
   return (
-    <Section>
+    <Section backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <Title title={heading} text={description} decorate={decorate} />
         <div className="row">

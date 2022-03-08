@@ -50,6 +50,7 @@ export interface SectionZigzag {
   type: 'zigzag';
   enable: boolean;
   backgroundColor?: string;
+  backgroundImage?: GatsbyImage;
   zigzagContent: IZigzag;
 }
 
@@ -86,6 +87,8 @@ export interface SectionPlanComparison {
   heading: string;
   planFeatures: [PlanComparisonFeatures];
   plansTable: TableItem[];
+  backgroundColor?: string;
+  backgroundImage?: GatsbyImage;
 }
 
 export interface Collapse {

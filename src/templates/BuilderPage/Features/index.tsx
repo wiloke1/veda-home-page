@@ -4,9 +4,9 @@ import { Title } from 'components/Title';
 import { FC } from 'react';
 import { SectionFeatures } from 'types/Builder';
 
-export const Features: FC<SectionFeatures> = ({ heading, description, decorate, featuresContent }) => {
+export const Features: FC<SectionFeatures> = ({ heading, description, decorate, featuresContent, backgroundColor, backgroundImage }) => {
   return (
-    <Section>
+    <Section backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <Title title={heading} text={description} decorate={decorate} />
         <div className="row">

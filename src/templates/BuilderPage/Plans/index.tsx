@@ -4,9 +4,9 @@ import { Title } from 'components/Title';
 import { FC } from 'react';
 import { SectionPlans } from 'types/Builder';
 
-export const Plans: FC<SectionPlans> = ({ heading, description, decorate, plansContent }) => {
+export const Plans: FC<SectionPlans> = ({ heading, description, decorate, plansContent, backgroundImage, backgroundColor }) => {
   return (
-    <Section style={{ overflow: 'hidden' }}>
+    <Section style={{ overflow: 'hidden' }} backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <Title title={heading} text={description} decorate={decorate} />
         <div className="row">

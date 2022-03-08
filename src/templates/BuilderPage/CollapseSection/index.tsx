@@ -7,9 +7,9 @@ import { Title } from 'components/Title';
 import { LinkButton } from 'components/LinkButton';
 import * as styles from './CollapseSection.module.scss';
 
-export const CollapseSection: FC<SectionCollapse> = ({ heading, description, decorate, collapseContent }) => {
+export const CollapseSection: FC<SectionCollapse> = ({ heading, description, decorate, collapseContent, backgroundColor, backgroundImage }) => {
   return (
-    <Section style={{ overflow: 'hidden' }} backgroundColor="var(--color-gray1)">
+    <Section style={{ overflow: 'hidden' }} backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">

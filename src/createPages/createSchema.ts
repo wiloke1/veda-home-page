@@ -69,6 +69,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       heading: String
       description: String
       backgroundColor: String
+      backgroundImage: File @fileByRelativePath
       decorate: String
       enable: Boolean
       supportsContent: [Support]

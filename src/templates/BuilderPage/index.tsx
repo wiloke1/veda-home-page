@@ -22,7 +22,7 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
         return <Theme isNetlify={isNetlify} {...section} />;
       case 'zigzag':
         return (
-          <Section backgroundColor={section.backgroundColor}>
+          <Section backgroundColor={section.backgroundColor} backgroundImage={section.backgroundImage}>
             <ZigzagCard {...section.zigzagContent} />
           </Section>
         );

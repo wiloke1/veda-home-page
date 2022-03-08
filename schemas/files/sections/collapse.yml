@@ -21,6 +21,8 @@
         { label: "Decorate 2", value: "type2" }
       ]
     },
+    { label: Background Color, name: backgroundColor, widget: color, allowInput: true, required: false },
+    { label: Background Image, name: backgroundImage, widget: image, required: false },
     {
       label: Content,
       name: collapseContent,

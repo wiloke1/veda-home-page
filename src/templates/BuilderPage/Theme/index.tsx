@@ -9,9 +9,9 @@ export interface ThemeProps extends SectionThemes {
   isNetlify?: boolean;
 }
 
-export const Theme: FC<ThemeProps> = ({ heading, description, decorate, isNetlify = false }) => {
+export const Theme: FC<ThemeProps> = ({ heading, description, decorate, isNetlify = false, backgroundImage, backgroundColor }) => {
   return (
-    <Section>
+    <Section backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <Title title={heading} text={description} decorate={decorate} />
       {isNetlify ? <NetlifyWarning pageName="theme" /> : <Content />}
     </Section>
