@@ -20,4 +20,5 @@ sections:
       messageLabel: Message
       buttonText: Contact Us
     heading: Still have questions <br/>about <span>Veda?</span>
+    backgroundColor: var(--color-gray1)
 ---
