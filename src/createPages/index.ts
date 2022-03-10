@@ -30,7 +30,7 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
   const { createPage } = actions;
   const result = await graphql<Query>(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: 10000) {
         edges {
           node {
             id
