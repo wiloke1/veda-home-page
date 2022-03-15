@@ -1,5 +1,5 @@
 - name: "builder"
-  label: "Pages"
+  label: "📚 Pages"
   folder: "src/pages/builder"
   create: true
   slug: "{{slug}}"

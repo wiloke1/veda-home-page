@@ -1,7 +1,7 @@
 
 
 - name: "settings"
-  label: "Settings"
+  label: "⚙️ Settings"
   files:
     - file: "src/pages/settings/header.md"
       label: "Header Navigation"

@@ -1,5 +1,5 @@
 - name: "themes"
-  label: "Themes"
+  label: "🔮 Themes"
   folder: "src/pages/themes"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
