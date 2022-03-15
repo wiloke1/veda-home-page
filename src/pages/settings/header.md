@@ -1,0 +1,5 @@
+---
+headerNavigation:
+  - label: Test
+    url: /
+---
