@@ -6,15 +6,14 @@ import { BuilderPageFrontMaster } from 'types/Builder';
 const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as BuilderPageFrontMaster;
 
-  if (data) {
-    return (
-      <App overflow="hidden">
-        <BuilderPageTemplate {...data} isNetlify />
-      </App>
-    );
-  } else {
+  if (!data) {
     return <div>Loading...</div>;
   }
+  return (
+    <App overflow="hidden">
+      <BuilderPageTemplate {...data} isNetlify />
+    </App>
+  );
 };
 
 export default IndexPagePreview;

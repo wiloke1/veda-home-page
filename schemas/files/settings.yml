@@ -1,17 +1,17 @@
 
 
-- name: "navigation"
-  label: "Navigation"
+- name: "settings"
+  label: "Settings"
   files:
-    - file: "src/pages/navigation/header.md"
+    - file: "src/pages/settings/header.md"
       label: "Header Navigation"
-      name: "navigation"
+      name: "header-navigation"
       fields:
         - {
             label: "Template Key",
             name: "templateKey",
             widget: "hidden",
-            default: "navigation",
+            default: "headerNavigation",
           }
         - {
           label: "Header Navigation",

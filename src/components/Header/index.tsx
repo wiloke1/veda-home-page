@@ -9,7 +9,7 @@ import * as styles from './Header.module.scss';
 
 export interface HeaderProps {
   navigation: HeaderNavigationItem[];
-  containerStyle: CSSProperties;
+  containerStyle?: CSSProperties;
 }
 
 const getUrl = (url: string) => {

@@ -55,7 +55,7 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
 
   posts.forEach(edge => {
     const id = edge.node.id;
-    if (edge.node.fields.slug.includes('/navigation/')) {
+    if (edge.node.fields.slug.includes('/settings/')) {
       return;
     }
     createPage({
