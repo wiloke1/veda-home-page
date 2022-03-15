@@ -1,0 +1,30 @@
+a[data-testid] > span svg {
+  display: none;
+}
+
+a[data-testid] > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a[data-testid] > span:before {
+  font-size: 15px;
+  font-family: "Font Awesome 5 Pro";
+}
+
+a[data-testid="blog"] > span:before {
+  content: "\f305";
+}
+
+a[data-testid="themes"] > span:before {
+  content: "\f521";
+}
+
+a[data-testid="builder"] > span:before {
+  content: "\f02d";
+}
+
+a[data-testid="settings"] > span:before {
+  content: "\f013";
+}

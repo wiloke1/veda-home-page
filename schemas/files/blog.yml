@@ -1,5 +1,5 @@
 - name: "blog"
-  label: "✏️ Blog"
+  label: "Blog"
   folder: "src/pages/blog"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

@@ -7,6 +7,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
 import HeaderNavigationPreview from './preview-templates/HeaderNavigationPreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
+import './utils';
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);

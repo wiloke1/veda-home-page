@@ -13,7 +13,7 @@ media_folder: static/img
 public_folder: /img
 collections:
   - name: "blog"
-    label: "✏️ Blog"
+    label: "Blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -31,7 +31,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "themes"
-    label: "🔮 Themes"
+    label: "Themes"
     folder: "src/pages/themes"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -48,7 +48,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Preview Link", name: "previewHref", widget: "string" }
   - name: "builder"
-    label: "📚 Pages"
+    label: "Pages"
     folder: "src/pages/builder"
     create: true
     slug: "{{slug}}"
@@ -398,7 +398,7 @@ collections:
         ]
       }
   - name: "settings"
-    label: "⚙️ Settings"
+    label: "Settings"
     files:
       - file: "src/pages/settings/header.md"
         label: "Header Navigation"
