@@ -9,6 +9,7 @@ export const useLoginFormStatic = () => {
           login {
             action
             method
+            inputName
             placeholder
             buttonText
           }
