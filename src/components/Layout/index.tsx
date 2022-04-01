@@ -32,7 +32,7 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
+        <meta property="og:image" content={`${withPrefix('/')}img/og-image.png`} />
 
         <link
           href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
