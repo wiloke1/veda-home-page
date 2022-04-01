@@ -51,6 +51,7 @@
           fields: [
             { label: Action, name: action, widget: string, default: '' },
             { label: Method, name: method, widget: string, default: '' },
+            { label: Input Name, name: inputName, widget: string, default: '' },
             { label: Placeholder, name: placeholder, widget: string, default: '' },
             { label: Button text, name: buttonText, widget: string, default: '' },
           ]

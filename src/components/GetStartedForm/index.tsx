@@ -9,11 +9,11 @@ export interface GetStartedFormProps {
 }
 
 export const GetStartedForm: FC<GetStartedFormProps> = ({ containerClassName }) => {
-  const { action, method, placeholder, buttonText } = useLoginFormStatic();
+  const { action, method, placeholder, buttonText, inputName } = useLoginFormStatic();
 
   return (
     <form action={action} method={method} className={classNames(styles.container, containerClassName)}>
-      <input className={styles.input} type="text" placeholder={placeholder} />
+      <input className={styles.input} name={inputName} type="text" placeholder={placeholder} />
       <Button className={styles.button} type="submit">
         {buttonText}
       </Button>
