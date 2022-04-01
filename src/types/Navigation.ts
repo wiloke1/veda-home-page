@@ -11,6 +11,7 @@ export interface LoginForm {
   action: string;
   method: string;
   inputName: string;
+  inputHiddenAction: string;
   placeholder: string;
   buttonText: string;
 }

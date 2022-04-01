@@ -10,6 +10,7 @@ export const useLoginFormStatic = () => {
             action
             method
             inputName
+            inputHiddenAction
             placeholder
             buttonText
           }
