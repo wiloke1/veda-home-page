@@ -6,6 +6,7 @@ import uploadcare from 'netlify-cms-media-library-uploadcare';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
 import HeaderNavigationPreview from './preview-templates/HeaderNavigationPreview';
+import FormLoginPreview from './preview-templates/FormLoginPreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
 import './utils';
 
@@ -19,3 +20,4 @@ CMS.registerPreviewTemplate('builder', IndexPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('themes', ThemePagePreview);
 CMS.registerPreviewTemplate('header-navigation', HeaderNavigationPreview);
+CMS.registerPreviewTemplate('login', FormLoginPreview);
