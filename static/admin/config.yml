@@ -430,3 +430,25 @@ collections:
               }
             ]
           }
+      - file: "src/pages/settings/login.md"
+        label: "Login"
+        name: "login"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "login",
+            }
+          - {
+            label: "Login",
+            name: "login",
+            widget: "object",
+            default: [],
+            fields: [
+              { label: Action, name: action, widget: string, default: '' },
+              { label: Method, name: method, widget: string, default: '' },
+              { label: Placeholder, name: placeholder, widget: string, default: '' },
+              { label: Button text, name: buttonText, widget: string, default: '' },
+            ]
+          }

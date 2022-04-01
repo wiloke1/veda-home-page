@@ -1,4 +1,5 @@
 ---
+templateKey: login
 login:
   action: /action
   method: post

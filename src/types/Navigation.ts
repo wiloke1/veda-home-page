@@ -7,8 +7,16 @@ export interface HeaderNavigationItem {
   subMenu?: HeaderNavigationItem[];
 }
 
+export interface LoginForm {
+  action: string;
+  method: string;
+  placeholder: string;
+  buttonText: string;
+}
+
 export interface NavigationFrontMaster {
   headerNavigation: HeaderNavigationItem[];
+  login: LoginForm;
 }
 
 export interface NavigationData {
