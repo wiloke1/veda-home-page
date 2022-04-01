@@ -1,8 +1,8 @@
 ---
 templateKey: login
 login:
-  action: /action
-  method: post
+  action: https://api.vedabuilder.com/?action=requestShopifyCode
+  method: GET
   inputName: shop
   inputHiddenAction: action
   placeholder: Enter your Shopify Domain
