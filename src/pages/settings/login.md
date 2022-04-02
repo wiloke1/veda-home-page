@@ -5,6 +5,6 @@ login:
   method: GET
   inputName: shop
   inputHiddenAction: requestShopifyCode
-  placeholder: Enter your Shopify Domain
+  placeholder: "EG: vedabuilder.myshopify.com"
   buttonText: Try for free
 ---
