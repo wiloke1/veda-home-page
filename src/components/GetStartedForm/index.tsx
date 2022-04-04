@@ -14,7 +14,7 @@ export const GetStartedFormUI: FC<GetStartedFormProps & { data: LoginForm }> = (
   return (
     <form action={action} method={method} className={classNames(styles.container, containerClassName)}>
       <input className={styles.input} name={inputName} type="text" placeholder={placeholder} />
-      <input type="hidden" name={inputHiddenAction} />
+      <input type="hidden" name="action" value={inputHiddenAction} />
       <Button className={styles.button} type="submit">
         {buttonText}
       </Button>
