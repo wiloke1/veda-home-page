@@ -2,8 +2,9 @@ import { BlogPostTemplate } from 'templates/blog-post';
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import { PostDetail } from 'types/Blog';
+import { builderMode } from 'utils/builderMode';
 
-window.builderMode = true;
+builderMode.set(true);
 
 const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as PostDetail['frontmatter'];

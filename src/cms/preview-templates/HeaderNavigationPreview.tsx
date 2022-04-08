@@ -2,8 +2,9 @@ import App from 'App';
 import { Header } from 'components/Header';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import { HeaderNavigationItem } from 'types/Navigation';
+import { builderMode } from 'utils/builderMode';
 
-window.builderMode = true;
+builderMode.set(true);
 
 const HeaderNavigationPreview = ({ entry }: PreviewTemplateComponentProps) => {
   const headerNavigation = entry.getIn(['data', 'headerNavigation']).toJS() as HeaderNavigationItem[];

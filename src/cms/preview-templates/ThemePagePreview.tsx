@@ -1,7 +1,8 @@
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
+import { builderMode } from 'utils/builderMode';
 
-window.builderMode = true;
+builderMode.set(true);
 
 const ThemePagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   const _tags = entry.getIn(['data', 'tags']);

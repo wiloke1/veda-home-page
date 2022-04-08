@@ -2,8 +2,9 @@ import App from 'App';
 import { GetStartedFormUI } from 'components/GetStartedForm';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import { LoginForm } from 'types/Navigation';
+import { builderMode } from 'utils/builderMode';
 
-window.builderMode = true;
+builderMode.set(true);
 
 const HeaderNavigationPreview = ({ entry }: PreviewTemplateComponentProps) => {
   const login = entry.getIn(['data', 'login']).toJS() as LoginForm;

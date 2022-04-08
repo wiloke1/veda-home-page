@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { FC } from 'react';
 import { LoginForm } from 'types/Navigation';
-import { isBrowser } from 'utils/isBrowser';
+import { builderMode } from 'utils/builderMode';
 import * as styles from './GetStartedForm.module.scss';
 import { useLoginFormStatic } from './useLoginFormStatic';
 
@@ -30,7 +30,7 @@ export const GetStaredFormPrivate: FC<GetStartedFormProps> = ({ containerClassNa
 };
 
 export const GetStartedForm: FC<GetStartedFormProps> = ({ containerClassName }) => {
-  if (isBrowser && window.builderMode) {
+  if (builderMode.get()) {
     return (
       <GetStartedFormUI
         containerClassName={containerClassName}

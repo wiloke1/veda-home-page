@@ -2,8 +2,9 @@ import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import { BuilderPageTemplate } from 'templates/BuilderPage';
 import { BuilderPageFrontMaster } from 'types/Builder';
+import { builderMode } from 'utils/builderMode';
 
-window.builderMode = true;
+builderMode.set(true);
 
 const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as BuilderPageFrontMaster;
