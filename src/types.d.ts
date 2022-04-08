@@ -8,3 +8,7 @@ declare namespace NodeJS {
     readonly GATSBY_FACEBOOK_APP_ID: string;
   }
 }
+
+declare interface Window {
+  builderMode: boolean;
+}

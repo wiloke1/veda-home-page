@@ -11,7 +11,7 @@ import { Plans } from './Plans';
 import { Supports } from './Supports';
 import { Theme } from './Theme';
 
-export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNetlify }) => {
+export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections }) => {
   const renderSection = (section: SmartSection) => {
     switch (section.type) {
       case 'hero':
@@ -19,7 +19,7 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections, isNe
       case 'features':
         return <Features {...section} />;
       case 'themes':
-        return <Theme isNetlify={isNetlify} {...section} />;
+        return <Theme {...section} />;
       case 'zigzag':
         return (
           <Section backgroundColor={section.backgroundColor} backgroundImage={section.backgroundImage}>

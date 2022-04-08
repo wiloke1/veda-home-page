@@ -22,8 +22,28 @@ export const GetStartedFormUI: FC<GetStartedFormProps & { data: LoginForm }> = (
   );
 };
 
-export const GetStartedForm: FC<GetStartedFormProps> = ({ containerClassName }) => {
+export const GetStaredFormPrivate: FC<GetStartedFormProps> = ({ containerClassName }) => {
   const data = useLoginFormStatic();
 
   return <GetStartedFormUI containerClassName={containerClassName} data={data} />;
+};
+
+export const GetStartedForm: FC<GetStartedFormProps> = ({ containerClassName }) => {
+  if (window.builderMode) {
+    return (
+      <GetStartedFormUI
+        containerClassName={containerClassName}
+        data={{
+          action: '',
+          method: 'GET',
+          inputName: 'shop',
+          inputHiddenAction: 'requestShopifyCode',
+          placeholder: '/collections/settings/entries/login',
+          buttonText: 'Try for free',
+        }}
+      />
+    );
+  }
+
+  return <GetStaredFormPrivate containerClassName={containerClassName} />;
 };

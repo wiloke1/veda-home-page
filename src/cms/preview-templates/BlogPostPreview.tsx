@@ -3,8 +3,11 @@ import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import { PostDetail } from 'types/Blog';
 
+window.builderMode = true;
+
 const BlogPostPreview = ({ entry, widgetFor }: PreviewTemplateComponentProps) => {
   const data = entry.getIn(['data']).toJS() as PostDetail['frontmatter'];
+
   return (
     <App overflow="hidden">
       <BlogPostTemplate

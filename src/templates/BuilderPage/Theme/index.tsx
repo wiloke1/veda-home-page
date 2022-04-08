@@ -5,15 +5,13 @@ import { FC } from 'react';
 import { SectionThemes } from 'types/Builder';
 import { Content } from './Content';
 
-export interface ThemeProps extends SectionThemes {
-  isNetlify?: boolean;
-}
+export interface ThemeProps extends SectionThemes {}
 
-export const Theme: FC<ThemeProps> = ({ heading, description, decorate, isNetlify = false, backgroundImage, backgroundColor }) => {
+export const Theme: FC<ThemeProps> = ({ heading, description, decorate, backgroundImage, backgroundColor }) => {
   return (
     <Section backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <Title title={heading} text={description} decorate={decorate} />
-      {isNetlify ? <NetlifyWarning pageName="theme" /> : <Content />}
+      {window.builderMode ? <NetlifyWarning pageName="theme" /> : <Content />}
     </Section>
   );
 };
