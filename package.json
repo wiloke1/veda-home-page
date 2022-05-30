@@ -61,6 +61,7 @@
     "build": "yarn mota-css && yarn clean && gatsby build",
     "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
+    "tsc": "tsc --noEmit",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "build-yaml": "node ./schemas/build-yaml.js",
     "test": "echo \"Error: no test specified\" && exit 1",
