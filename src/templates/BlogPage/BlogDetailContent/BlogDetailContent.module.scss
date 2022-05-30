@@ -1,29 +1,6 @@
 @import "../../../styles/abstracts/pfs.scss";
 
-.container {
-  max-width: 1200px;
-  margin: 80px auto 100px;
-}
-
-.body {
-  max-width: 765px;
-  margin: auto;
-}
-
-.title {
-  font-size: pfs(30px, 40px);
-  margin-top: 30px;
-}
-
-.date {
-  font-size: 14px;
-  font-family: var(--font-secondary);
-}
-
 .content {
-  margin-top: 20px;
-  font-size: 17px;
-  color: var(--color-gray8);
   img {
     margin-bottom: 10px;
   }
@@ -62,16 +39,4 @@
     border-left: 2px solid var(--color-gray3);
     padding-left: 10px;
   }
-}
-
-.tags {
-  margin-top: 40px;
-}
-
-.tagTitle {
-  margin-bottom: 10px;
-}
-
-.facebookComment {
-  margin-top: 30px;
 }

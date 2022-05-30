@@ -1,16 +1,15 @@
 import { Search } from 'components/Search';
 import { FC } from 'react';
-import * as styles from './BlogSearch.module.scss';
 import bgSearch from './bg.jpg';
 
 export const BlogSearch: FC = () => {
   return (
-    <div className={styles.container} style={{ backgroundImage: `url('${bgSearch}')` }}>
+    <div className="pos:relative z:10 p:50px_0 bgc:color-gray2 bgz:cover bgp:center" style={{ backgroundImage: `url('${bgSearch}')` }}>
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-            <h2 className={styles.title}>Blog</h2>
-            <p className={styles.text}>Get the knowledge you need to build a successful eCommerce store</p>
+            <h2 className="fz:pfs(24px,40px) c:color-gray9">Blog</h2>
+            <p className="fz:16px c:color-gray7">Get the knowledge you need to build a successful eCommerce store</p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-4">
             <Search templateKey="blog-post" />

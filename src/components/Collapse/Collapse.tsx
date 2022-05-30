@@ -1,6 +1,5 @@
 import { FC, ReactNode, useEffect } from 'react';
 import { createGlobalState } from 'react-use';
-import * as styles from './Collapse.module.scss';
 import { CollapseHeader } from './CollapseHeader';
 
 export interface CollapseProps {
@@ -122,7 +121,7 @@ const Collapse: CollapseFC = ({ groupName = DEFAULT_GROUP_NAME, name, active = f
   };
 
   return (
-    <div className={styles.container}>
+    <div className="bgc:color-light bd:1px_solid_color-gray3 bdrs:6px mb:10px">
       {renderHeader(handleClick, state[groupName]?.[name])}
       {state[groupName]?.[name] && children}
       {state[groupName]?.[name] && renderFooter?.(handleClick)}

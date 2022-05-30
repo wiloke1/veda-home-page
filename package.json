@@ -58,12 +58,14 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "yarn develop",
-    "build": "yarn clean && gatsby build",
+    "build": "yarn mota-css && yarn clean && gatsby build",
     "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "build-yaml": "node ./schemas/build-yaml.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mota-css": "mota-css --port 4321",
+    "mota-css:watch": "yarn mota-css --watch"
   },
   "devDependencies": {
     "@types/elasticlunr": "^0.9.4",
@@ -87,6 +89,7 @@
     "eslint-webpack-plugin": "^3.1.1",
     "gatsby-plugin-eslint": "^4.0.2",
     "gatsby-plugin-root-import": "^2.0.8",
+    "mota-css": "^0.16.4",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5",
     "typescript-plugin-css-modules": "^3.4.0"

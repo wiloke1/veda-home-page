@@ -1,20 +1,19 @@
 import { FC } from 'react';
 import { GetStartedForm } from 'components/GetStartedForm';
-import * as styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
   return (
-    <footer className={styles.container}>
+    <footer className="pos:relative z:9 ov:hidden c:color-gray1 bgc:color-gray9 pt:80px">
       <div className="container-fluid">
-        <div className={styles.content}>
-          <h2 className={styles.name}>Veda builder</h2>
-          <div className={styles.text}>
+        <div className="pb:80px ta:center maw:580px m:auto">
+          <h2 className="c:color-light fz:pfs(40px,50px) mb:10px">Veda builder</h2>
+          <div className="fz:16px mb:30px">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repudiandae. Quae deleniti dolore consequuntur, velit corporis
           </div>
           <GetStartedForm />
         </div>
       </div>
-      <div className={styles.copyright}>Copyright © 2022.All Rights Reserved By Veda Builder</div>
+      <div className="p:30px_0 bdt:1px_solid_rgba(255,255,255,0.1) ta:center">Copyright © 2022.All Rights Reserved By Veda Builder</div>
     </footer>
   );
 };

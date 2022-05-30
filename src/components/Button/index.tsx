@@ -37,7 +37,9 @@ export const Button: FC<ButtonProps> = ({
     ...style,
   } as CSSProperties;
 
-  const classes = classNames(styles.container, styles[size], { [styles.border]: border }, className);
+  const containerClassName =
+    'd:inline-block bxsh:none bd:0 p:14px_30px bgc:var(--btn-background-color) bdrs:6px c:var(--btn-color) fz:14px ff:var(--font-secondary) fw:500 ta:center td:none cur:pointer trs:0.2s';
+  const classes = classNames(containerClassName, styles[size], { [styles.border]: border }, className);
 
   if (!!href || type === 'link') {
     return (

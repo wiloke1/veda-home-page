@@ -5,11 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import { SectionCollapse } from 'types/Builder';
 import { Title } from 'components/Title';
 import { LinkButton } from 'components/LinkButton';
-import * as styles from './CollapseSection.module.scss';
 
 export const CollapseSection: FC<SectionCollapse> = ({ heading, description, decorate, collapseContent, backgroundColor, backgroundImage }) => {
   return (
-    <Section style={{ overflow: 'hidden' }} backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
+    <Section className="ov:hidden" backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
@@ -30,7 +29,7 @@ export const CollapseSection: FC<SectionCollapse> = ({ heading, description, dec
                   name={`item${index}`}
                   accordion
                 >
-                  <div className={styles.content}>
+                  <div className="p:20px fz:16px">
                     <ReactMarkdown>{item.content}</ReactMarkdown>
                   </div>
                 </Collapse>

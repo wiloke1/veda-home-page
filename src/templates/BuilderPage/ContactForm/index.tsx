@@ -37,22 +37,22 @@ const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, we
 
   return (
     <form
-      className={styles.container}
+      className="maw:500px m:auto p:30px bdrs:6px bgc:color-light d:flex fld:column"
       onSubmit={event => {
         event.preventDefault();
         alert(`Chưa có API, Result: ${JSON.stringify(result)}`);
       }}
     >
-      <div className={styles.formItem}>
-        <label className={styles.label} htmlFor="name">
-          {nameLabel} <span>*</span>
+      <div className="mb:15px">
+        <label className="ff:font-secondary fz:14px c:color-gray8" htmlFor="name">
+          {nameLabel} <span className="c:color-quaternary">*</span>
         </label>
         <input name="name" value={result.name} className={styles.input} type="text" required onChange={handleInputChange} onInvalid={handleInvalid} />
         <span className={styles.notify}>Please enter a valid name</span>
       </div>
-      <div className={styles.formItem}>
-        <label className={styles.label} htmlFor="email">
-          {emailLabel} <span>*</span>
+      <div className="mb:15px">
+        <label className="ff:font-secondary fz:14px c:color-gray8" htmlFor="email">
+          {emailLabel} <span className="c:color-quaternary">*</span>
         </label>
         <input
           name="email"
@@ -65,9 +65,9 @@ const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, we
         />
         <span className={styles.notify}>Please enter a valid email</span>
       </div>
-      <div className={styles.formItem}>
-        <label className={styles.label} htmlFor="website">
-          {websiteLabel} <span>*</span>
+      <div className="mb:15px">
+        <label className="ff:font-secondary fz:14px c:color-gray8" htmlFor="website">
+          {websiteLabel} <span className="c:color-quaternary">*</span>
         </label>
         <input
           name="website"
@@ -81,8 +81,8 @@ const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, we
         />
         <span className={styles.notify}>Please enter a valid website</span>
       </div>
-      <div className={styles.formItem}>
-        <label className={styles.label} htmlFor="options">
+      <div className="mb:15px">
+        <label className="ff:font-secondary fz:14px c:color-gray8" htmlFor="options">
           {optionsLabel}
         </label>
         <select
@@ -98,9 +98,9 @@ const ContactForm: FC<IContactForm> = ({ emailLabel, nameLabel, messageLabel, we
           })}
         </select>
       </div>
-      <div className={styles.formItem}>
-        <label className={styles.label} htmlFor="message">
-          {messageLabel} <span>*</span>
+      <div className="mb:15px">
+        <label className="ff:font-secondary fz:14px c:color-gray8" htmlFor="message">
+          {messageLabel} <span className="c:color-quaternary">*</span>
         </label>
         <textarea name="message" value={result.message} className={styles.input} required onChange={handleInputChange} onInvalid={handleInvalid} />
         <span className={styles.notify}>Please enter a valid message</span>
