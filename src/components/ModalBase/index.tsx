@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import { Portal } from 'components/Portal';
 import { FC } from 'react';
-import * as styles from './ModalBase.module.scss';
 
 export type ModalAnimationType = 'none' | 'zoom' | 'fadeUp';
 
@@ -20,9 +19,9 @@ export const ModalBase: FC<ModalBaseProps> = ({ visible = false, onClose, overla
   return (
     <Portal
       visible={visible}
-      overlay={<div className={styles.overlay} style={{ backgroundColor: overlayColor }} onClick={onClose} />}
-      containerClassName={styles.container}
-      bodyClassName={classNames(styles.body, bodyClassName)}
+      overlay={<div className="pos:absolute ins:0 z:-1 bgc:color-gray9 op:0.4" style={{ backgroundColor: overlayColor }} onClick={onClose} />}
+      containerClassName="pos:fixed ins:0 z:9999 d:flex jc:center ai:center"
+      bodyClassName={classNames('pos:relative', bodyClassName)}
     >
       {children}
     </Portal>

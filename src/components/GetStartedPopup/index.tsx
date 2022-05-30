@@ -3,7 +3,6 @@ import { Button, ButtonProps } from 'components/Button';
 import { GetStartedForm } from 'components/GetStartedForm';
 import { ModalBase } from 'components/ModalBase';
 import { Title } from 'components/Title';
-import * as styles from './GetStartedPopup.module.scss';
 
 export interface GetStartedPopupProps {
   buttonHighlight?: boolean;
@@ -23,7 +22,7 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({ buttonHighlight, but
           setIsModalVisible(false);
         }}
       >
-        <div className={styles.content}>
+        <div className="bgc:color-light maw:600px w:100vw p:30px bdrs:6px">
           <Title title="Veda builder" />
           <GetStartedForm />
         </div>

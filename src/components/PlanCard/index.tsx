@@ -3,7 +3,7 @@ import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
 import { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Plans } from 'types/Pricing';
+import { Plans } from 'types/Builder';
 import * as styles from './PlanCard.module.scss';
 
 export interface PlanCardProps extends Plans {

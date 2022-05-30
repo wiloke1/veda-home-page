@@ -3,7 +3,6 @@ import { Button } from 'components/Button';
 import { FC } from 'react';
 import { LoginForm } from 'types/Navigation';
 import { builderMode } from 'utils/builderMode';
-import * as styles from './GetStartedForm.module.scss';
 import { useLoginFormStatic } from './useLoginFormStatic';
 
 export interface GetStartedFormProps {
@@ -13,10 +12,18 @@ export interface GetStartedFormProps {
 export const GetStartedFormUI: FC<GetStartedFormProps & { data: LoginForm }> = ({ containerClassName, data }) => {
   const { action, method, placeholder, buttonText, inputName, inputHiddenAction } = data;
   return (
-    <form action={action} method={method} className={classNames(styles.container, containerClassName)}>
-      <input className={styles.input} name={inputName} type="text" placeholder={placeholder} />
+    <form action={action} method={method} className={classNames('pos:relative', containerClassName)}>
+      <input
+        className="h:80px! bd:0 p:0_20px! fz:20px! w:100% mb:10px bdrs:10px!@600px mb:0@600px"
+        name={inputName}
+        type="text"
+        placeholder={placeholder}
+      />
       <input type="hidden" name="action" value={inputHiddenAction} />
-      <Button className={styles.button} type="submit">
+      <Button
+        className="h:80px fz:20px p:0_36px bgc:color-primary w:100% pos:absolute@600px t:5px@600px r:5px@600px bdrs:8px!@600px w:auto@600px h:70px@600px"
+        type="submit"
+      >
         {buttonText}
       </Button>
     </form>
