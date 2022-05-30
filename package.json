@@ -91,7 +91,8 @@
     "gatsby-plugin-root-import": "^2.0.8",
     "mota-css": "^0.16.4",
     "prettier": "^2.5.1",
-    "typescript": "^4.5.5",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2",
     "typescript-plugin-css-modules": "^3.4.0"
   },
   "engines": {
