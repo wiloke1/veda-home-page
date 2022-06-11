@@ -5,6 +5,9 @@ date: 2022-06-11T09:18:20.943Z
 description: "A quick guide on how to change Shopify store name in minutes.
   Shopify store name can make or break the company so change it if necessary. "
 featuredimage: /img/how-to-change-shopify-store-name-1-.png
+tags:
+  - howtochangeshopifystorename
+  - shopifytips
 ---
 <!--StartFragment-->
 
