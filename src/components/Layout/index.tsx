@@ -39,6 +39,16 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" />
+
+        {`<!-- Global site tag (gtag.js) - Google Analytics -->`}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG1X3313ZB"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-WG1X3313ZB');`}
+        </script>
       </Helmet>
       <div style={{ height: 5 }} />
       <Sticky>
