@@ -6,8 +6,8 @@ description: "A quick guide on how to change Shopify store name in minutes.
   Shopify store name can make or break the company so change it if necessary. "
 featuredimage: /img/how-to-change-shopify-store-name-1-.png
 tags:
-  - howtochangeshopifystorename
-  - shopifytips
+  - how to change shopify store name
+  - shopify tips
 ---
 <!--StartFragment-->
 
