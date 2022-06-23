@@ -6,6 +6,9 @@ description: 4 easy steps - **how to pause Shopify store** is the topic of this
   blog. One of the most important aspects of running a successful online store
   is to pause your shop if you are not able to sell your products.
 featuredimage: /img/how-to-pause-shopify-store-in-4-easy-steps.png
+tags:
+  - How to Pause Shopify Store
+  - Shopify tips
 ---
 <!--StartFragment-->
 
