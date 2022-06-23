@@ -7,8 +7,8 @@ description: A simple and complete guide on **how to edit meta tags in
   rank your store higher on search results.
 featuredimage: /img/how-to-edit-meta-tags-in-shopify.png
 tags:
-  - howtoeditmetatagsinshopify
-  - shopifytips
+  - how to edit meta tags in Shopify
+  - Shopify tips
 ---
 <!--StartFragment-->
 
