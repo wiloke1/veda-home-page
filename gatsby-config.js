@@ -6,16 +6,30 @@ require('dotenv').config({
 // https://github.com/gatsbyjs/gatsby/tree/fbfe3f63dec23d279a27b54b4057dd611dce74bb/packages/
 // gatsby/src/utils/eslint-rules
 const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', 'dist', 'utils', 'eslint-rules');
+const siteUrl = 'https://vedabuilder.com';
 
 module.exports = {
   siteMetadata: {
     title: 'Veda builder',
     description: 'The All In One Store Design Solution',
+    siteUrl,
+    author: '@wiloke',
   },
   plugins: [
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
