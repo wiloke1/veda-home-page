@@ -9,4 +9,7 @@
   from = "https://veda-builder.netlify.app/*"
   to = "https://vedabuilder.com/:splat"
   status = 301
-
+[[redirects]]
+  from = "https://veda-builder.netlify.app/*"
+  to = "https://vedabuilder.com/:splat"
+  status = 200
