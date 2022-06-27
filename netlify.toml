@@ -5,5 +5,8 @@
   NODE_VERSION = "14.15.0"
   YARN_VERSION = "1.22.4"
   YARN_FLAGS = "--no-ignore-optional"
-
+[[redirects]]
+  from = "https://veda-builder.netlify.app/*"
+  to = "https://vedabuilder.com/:splat"
+  status = 301
 
