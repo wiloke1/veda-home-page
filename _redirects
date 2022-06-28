@@ -1,5 +1,0 @@
-# http and https need separate rules if you don’t force_ssl!
-https://veda-builder.netlify.app/* https://vedabuilder.com/:splat 301!
-
-# other URLS might proxy or redirect offsite
-https://veda-builder.netlify.app/* https://vedabuilder.com/:splat 200
