@@ -1,7 +1,7 @@
 ---
 templateKey: login
 login:
-  action: https://api.vedabuilder.com?action=requestShopifyCode
+  action: https://login.vedabuilder.com?action=requestShopifyCode
   method: GET
   inputName: shop
   inputHiddenAction: requestShopifyCode
