@@ -139,3 +139,10 @@ img {
   border: 0;
   vertical-align: middle;
 }
+
+.gatsby-highlight {
+  font-size: 14px;
+  code[class*=language-], pre[class*=language-] {
+    line-height: 1.7;
+  }
+}
