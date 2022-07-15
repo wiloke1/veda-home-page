@@ -63,7 +63,7 @@ Follow these steps below to display Afterpay logo on your Shopify store
 
   ![](/img/theme.liquid-bottom.png)
 * Copy the below code and paste it at the end of the "theme.liquid" file
-* ```
+* ```html
   <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
   <script type="text/javascript">
   // Overrides:
@@ -88,7 +88,6 @@ Follow these steps below to display Afterpay logo on your Shopify store
   </script>
   <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
   <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.12) -->
-
   ```
 * Press Save
 
