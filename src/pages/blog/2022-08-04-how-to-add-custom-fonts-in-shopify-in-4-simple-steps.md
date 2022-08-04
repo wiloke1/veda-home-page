@@ -31,11 +31,15 @@ How to add custom fonts in Shopify guide is provided below. No coding knowledge 
 
 Before adding custom fonts in Shopify, be sure to download the theme file so that you can simply roll back if any problems arise.
 
+![](/img/download-theme-file-to-back-up.png)
+
 ### How to add custom fonts in Shopify
 
 The very first step is to import the fonts into your shop. You can then use it in your theme by referencing it in code.
 
 Go to Settings > Files in your Shopify Administration panel.
+
+![](/img/files-under-the-settings-section.png)
 
 Upload all of your font files by clicking on upload files at the top right. Web font files are those with these extensions: woff, woff2, ttf, eot, svg, or rotf.
 
@@ -57,11 +61,15 @@ As a result, make absolutely sure you upload all of the font files in a zip file
 
 Once you've submitted your font files, you can link them to the theme.
 
+![](/img/upload-the-right-fomat-and-copy-url-link.png)
+
 ### Set up the font
 
 Go to Online Store -> Themes -> Actions -> Edit Code.
 
-Click "Add a new snippet" under snippets and name your sample custom-fonts.
+Click "Add a new snippet" under snippets and name your sample *custom-fonts*.
+
+![](/img/add-a-new-snippet.png)
 
 This is the code example we'll use.
 
@@ -79,10 +87,9 @@ h1,h2,h3,h4,h5,h6,html,body,*,[id] *{
   font-family: "fontname" !important;
 }
  </style>
-
 ```
 
-Note: The code above should be changed corresponding to your chosen font.
+**Note: The code above should be changed corresponding to your chosen font.**
 
 \- "fontname" = the full name of the font you've added.
 
@@ -94,16 +101,15 @@ In our situation, it would be as follows:
 <style>
       @font-face {
       font-family: "Precious";
-  src: url('https://cdn.shopify.com/s/files/1/0439/1577/2000/files/Precious.ttf?v=1618926445') format("truetype");
+  src: url('https://cdn.shopify.com/s/files/1/0619/6386/2179/files/precious.regular.ttf?v=1659583813') format("truetype");
    }
 h1,h2,h3,h4,h5,h6,html,body,*,[id] *{
   font-family: "Precious" !important;
 }
   </style>
-
 ```
 
-
+![](/img/add-code.png)
 
 I removed the other lines of code as I have only the .tff file. Remember to end the last URL line with a semicolon.
 
@@ -111,11 +117,15 @@ I removed the other lines of code as I have only the .tff file. Remember to end 
 
 Go to the theme. liquid file
 
-Locate the </body>
+Locate the < /body>
 
 Insert the following code: {% include 'custom-fonts' %}
 
+![](/img/add-code-line-before-body-closing.png)
+
 And you're all set!
+
+![](/img/add-custom-font-successfully.png)
 
 ## How to add custom fonts in Shopify: Conclusion
 
@@ -123,7 +133,5 @@ I’m sure that you knew how to add custom fonts in Shopify. You might also like
 
 * [How to edit favicon in Shopify in 8 easy steps](https://vedabuilder.com/blog/2022-07-15-how-to-edit-favicon-shopify-in-8-easy-steps/)
 * [Step-to-step guide on setting up Afterpay on Shopify](https://vedabuilder.com/blog/2022-07-05-step-to-step-guide-on-set-up-afterpay-shopify/)
-
-
 
 <!--EndFragment-->
