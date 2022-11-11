@@ -4,6 +4,7 @@
 [build.environment]
   NODE_VERSION = "16.13.1"
   YARN_VERSION = "1.22.4"
+  NPM_FLAGS = "--legacy-peer-deps"
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
   from = "https://veda-builder.netlify.app/*"
