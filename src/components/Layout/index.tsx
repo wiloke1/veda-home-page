@@ -1,19 +1,25 @@
+import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 import { withPrefix } from 'gatsby';
 import { CSSProperties, FC } from 'react';
 import { Helmet } from 'react-helmet';
 import Sticky from 'wil-react-sticky';
-import { Footer } from 'components/Footer';
-import useSiteMetadata from './useSiteMetadata';
 import { useHeaderNavigationStatic } from './useHeaderNavigationStatic';
+import useSiteMetadata from './useSiteMetadata';
 
 export interface LayoutProps {
   overflow?: CSSProperties['overflow'];
+  headerFooterDisabled?: boolean;
 }
 
-export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
+let _headerFooterDisabled = false;
+
+export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden', headerFooterDisabled = false }) => {
   const { title, description } = useSiteMetadata();
   const navigation = useHeaderNavigationStatic();
+  if (!_headerFooterDisabled) {
+    _headerFooterDisabled = headerFooterDisabled;
+  }
 
   return (
     <div id="veda-wrapper" style={{ overflow }}>
@@ -51,11 +57,13 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
         </script>
       </Helmet>
       <div style={{ height: 5 }} />
-      <Sticky>
-        {active => <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />}
-      </Sticky>
+      {!_headerFooterDisabled && (
+        <Sticky>
+          {active => <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />}
+        </Sticky>
+      )}
       <main>{children}</main>
-      <Footer />
+      {!_headerFooterDisabled && <Footer />}
     </div>
   );
 };
