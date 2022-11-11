@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "veda",
+  "description": "Veda Builder",
   "version": "1.1.3",
-  "author": "Austin Green",
+  "author": "Wiloke",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "bulma": "^0.9.0",
