@@ -140,4 +140,11 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
     component: 'src/templates/theme-list.tsx',
     postsPerPage: 12,
   });
+
+  createListPages({
+    templateKey: 'notification',
+    path: '/notifications/',
+    component: 'src/templates/notifications.tsx',
+    postsPerPage: 12,
+  });
 };
