@@ -29,7 +29,7 @@ export const Header: FC<HeaderProps> = ({ navigation, containerStyle }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <header className={styles.container} style={containerStyle}>
+    <header className="pos:relative z:999 trs:0.3s" style={containerStyle}>
       <div className="container">
         <div className={styles.inner}>
           <Link to="/" title="Logo">

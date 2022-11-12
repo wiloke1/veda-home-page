@@ -2,7 +2,7 @@ import { Layout } from 'components/Layout';
 import { NotifyCard } from 'components/NotifyCard';
 import { Pagination } from 'components/Pagination';
 import { Section } from 'components/Section';
-import { graphql, Link, navigate } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import { FC } from 'react';
 import { MarkdownRemarkEdges } from 'types/general';
 import { NotificationItem, NotificationList } from 'types/Notifications';
@@ -13,13 +13,12 @@ const NotificationsIndexPage: FC<NotificationList> = ({ data, pageContext }) => 
   const renderNotification = ({ node }: MarkdownRemarkEdges<NotificationItem>) => {
     return (
       <div key={node.id}>
-        {node.frontmatter.href ? (
-          <Link to={node.frontmatter.href} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-            <NotifyCard title={node.frontmatter.title} description={node.frontmatter.description} date={node.frontmatter.date} />
-          </Link>
-        ) : (
-          <NotifyCard title={node.frontmatter.title} description={node.frontmatter.description} date={node.frontmatter.date} />
-        )}
+        <NotifyCard
+          title={node.frontmatter.title}
+          description={node.frontmatter.description}
+          date={node.frontmatter.date}
+          href={node.frontmatter.href}
+        />
       </div>
     );
   };

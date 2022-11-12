@@ -29,6 +29,10 @@ a[data-testid="settings"] > span:before {
   content: "\f013";
 }
 
+a[data-testid="notifications"] > span:before {
+  content: "\f0f3";
+}
+
 ul[class*="DropdownList-dropdownList-DropdownList"] {
   top: 38px;
 }
