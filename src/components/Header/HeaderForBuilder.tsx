@@ -1,16 +1,11 @@
 import { Link } from 'gatsby';
 import { CSSProperties, FC } from 'react';
-import { isBrowser } from 'utils/isBrowser';
 
 export interface HeaderForBuilderProps {
   containerStyle?: CSSProperties;
 }
 
 export const HeaderForBuilder: FC<HeaderForBuilderProps> = ({ containerStyle }) => {
-  if (isBrowser && window.location.pathname === '/notifications') {
-    return null;
-  }
-
   return (
     <header className="pos:relative z:999 trs:0.3s" style={containerStyle}>
       <div className="container">

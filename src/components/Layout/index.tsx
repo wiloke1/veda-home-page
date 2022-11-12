@@ -10,16 +10,17 @@ import useSiteMetadata from './useSiteMetadata';
 
 export interface LayoutProps {
   overflow?: CSSProperties['overflow'];
-  headerFooterDisabled?: boolean;
+  forBuilder?: boolean;
+  headerDisabled?: boolean;
 }
 
-let _headerFooterDisabled = false;
+let _forBuilder = false;
 
-export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden', headerFooterDisabled = false }) => {
+export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden', forBuilder = false, headerDisabled = false }) => {
   const { title, description } = useSiteMetadata();
   const navigation = useHeaderNavigationStatic();
-  if (!_headerFooterDisabled) {
-    _headerFooterDisabled = headerFooterDisabled;
+  if (!_forBuilder) {
+    _forBuilder = forBuilder;
   }
 
   return (
@@ -60,14 +61,17 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden', headerF
       <div style={{ height: 5 }} />
       <Sticky>
         {active => {
-          if (_headerFooterDisabled) {
+          if (_forBuilder) {
+            if (headerDisabled) {
+              return <div />;
+            }
             return <HeaderForBuilder containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
           }
           return <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
         }}
       </Sticky>
       <main>{children}</main>
-      {!_headerFooterDisabled && <Footer />}
+      {!_forBuilder && <Footer />}
     </div>
   );
 };
