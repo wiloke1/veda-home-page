@@ -12,14 +12,13 @@ const NotificationsIndexPage: FC<NotificationList> = ({ data, pageContext, locat
 
   const renderNotification = ({ node }: MarkdownRemarkEdges<NotificationItem>) => {
     return (
-      <div key={node.id}>
-        <NotifyCard
-          title={node.frontmatter.title}
-          description={node.frontmatter.description}
-          date={node.frontmatter.date}
-          href={node.frontmatter.href}
-        />
-      </div>
+      <NotifyCard
+        key={node.id}
+        title={node.frontmatter.title}
+        description={node.frontmatter.description}
+        date={node.frontmatter.date}
+        href={node.frontmatter.href}
+      />
     );
   };
 
