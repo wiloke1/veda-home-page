@@ -8,6 +8,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview';
 import HeaderNavigationPreview from './preview-templates/HeaderNavigationPreview';
 import FormLoginPreview from './preview-templates/FormLoginPreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
+import NotificationsPagePreview from './preview-templates/NotificationsPagePreview';
 import './utils';
 
 CMS.registerMediaLibrary(uploadcare);
@@ -19,5 +20,6 @@ CMS.registerPreviewStyle('https://kit-pro.fontawesome.com/releases/v5.15.4/css/p
 CMS.registerPreviewTemplate('builder', IndexPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
 CMS.registerPreviewTemplate('themes', ThemePagePreview);
+CMS.registerPreviewTemplate('notifications', NotificationsPagePreview);
 CMS.registerPreviewTemplate('header-navigation', HeaderNavigationPreview);
 CMS.registerPreviewTemplate('login', FormLoginPreview);

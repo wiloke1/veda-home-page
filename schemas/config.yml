@@ -3,4 +3,5 @@ collections:
   *include files/blog
   *include files/themes
   *include files/builder
+  *include files/notifications
   *include files/settings

@@ -1,5 +1,6 @@
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
+import { HeaderForBuilder } from 'components/Header/HeaderForBuilder';
 import { withPrefix } from 'gatsby';
 import { CSSProperties, FC } from 'react';
 import { Helmet } from 'react-helmet';
@@ -57,11 +58,14 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden', headerF
         </script>
       </Helmet>
       <div style={{ height: 5 }} />
-      {!_headerFooterDisabled && (
-        <Sticky>
-          {active => <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />}
-        </Sticky>
-      )}
+      <Sticky>
+        {active => {
+          if (_headerFooterDisabled) {
+            return <HeaderForBuilder containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
+          }
+          return <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
+        }}
+      </Sticky>
       <main>{children}</main>
       {!_headerFooterDisabled && <Footer />}
     </div>
