@@ -285,7 +285,9 @@ collections:
                 fields: [
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: text },
-                  { label: Price, name: price, widget: string },
+                  { label: Handle, name: handle, widget: text },
+                  { label: Price Per Month, name: pricePerMonth, widget: string },
+                  { label: Price Per Year, name: pricePerYear, widget: string },
                   { label: Highlight, name: highlight, widget: boolean, required: false },
                   { label: Button Text, name: buttonText, widget: string },
                   { label: List, name: body, widget: markdown },
@@ -337,7 +339,9 @@ collections:
                 default: [],
                 fields: [
                   { label: Title, name: title, widget: string, default: '' },
-                  { label: Price, name: price, widget: string, default: '' },
+                  { label: Handle, name: handle, widget: text },
+                  { label: Price Per Month, name: pricePerMonth, widget: string, default: '' },
+                  { label: Price Per Year, name: pricePerYear, widget: string, default: '' },
                   { label: Highlight, name: highlight, widget: boolean, required: false, default: false },
                   { label: Button Text, name: buttonText, widget: string, default: '' },
                   { label: Content, name: content, widget: markdown, default: '' }
