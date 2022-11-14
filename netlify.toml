@@ -17,6 +17,11 @@
   to = "https://vedabuilder.com/:splat"
   status = 200
   force = true
-[headers.values]
-  X-Frame-Options = "DENY"
-  X-XSS-Protection = "1; mode = block"
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors https://dashboard.vedabuilder.com/"
