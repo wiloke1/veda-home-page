@@ -7,7 +7,7 @@ import { FC } from 'react';
 import { MarkdownRemarkEdges } from 'types/general';
 import { NotificationItem, NotificationList } from 'types/Notifications';
 
-const NotificationsIndexPage: FC<NotificationList> = ({ data, pageContext, location }) => {
+const NotificationsIndexPage: FC<NotificationList> = ({ data, pageContext }) => {
   const notifications = data.allMarkdownRemark.edges;
 
   const renderNotification = ({ node }: MarkdownRemarkEdges<NotificationItem>) => {
@@ -23,7 +23,7 @@ const NotificationsIndexPage: FC<NotificationList> = ({ data, pageContext, locat
   };
 
   return (
-    <Layout forBuilder headerDisabled={location.pathname === '/notifications'}>
+    <Layout>
       <Section backgroundColor="var(--color-gray1)" className="mih:100vh">
         <div className="container">
           <div className="maw:800px m:auto">{notifications.map(renderNotification)}</div>

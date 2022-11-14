@@ -1,0 +1,9 @@
+.loadingItem {
+  display: none;
+}
+
+:global(.loading) {
+  .loadingItem {
+    display: inline-block;
+  }
+}
