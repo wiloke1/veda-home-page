@@ -24,8 +24,6 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const location = useLocation();
   const planToggleState = usePlanToggleState();
 
-  console.log(123, planToggleState);
-
   if (!_forBuilder && location?.search) {
     _forBuilder = location.search.includes('forbuilder=1');
   }
