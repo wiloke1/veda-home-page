@@ -22,6 +22,4 @@
   for = "/*"
 
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "frame-ancestors https://dashboard.vedabuilder.com/ https://app.vedabuilder.com/ http://localhost:3000"
+    Access-Control-Allow-Origin = "*"
