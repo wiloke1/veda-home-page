@@ -9,7 +9,9 @@ sections:
     plansContent:
       - title: Starter
         description: Starter description
-        price: Free
+        handle: starter
+        pricePerMonth: Free
+        pricePerYear: Free
         buttonText: Get started
         body: |-
           * 1 theme
@@ -23,7 +25,9 @@ sections:
           * Email & Live Chat
       - title: Business
         description: Bussiness description
-        price: $20<span>/mo</span>
+        handle: business
+        pricePerMonth: $20<span>/month</span>
+        pricePerYear: $100<span>/year</span>
         highlight: true
         buttonText: Try for free
         body: |-
@@ -38,7 +42,9 @@ sections:
           * Save & Transfer Content
       - title: Advanced
         description: Advanced description
-        price: $40<span>/mo</span>
+        handle: advanced
+        pricePerMonth: $40<span>/month</span>
+        pricePerYear: $200<span>/year</span>
         buttonText: Start advancing
         body: |-
           #### Everything in Business, plus:
@@ -68,7 +74,9 @@ sections:
           * 5 Page Types
     plansTable:
       - title: Starter
-        price: Free
+        handle: starter
+        pricePerMonth: Free
+        pricePerYear: Free
         highlight: false
         buttonText: Get started
         content: |-
@@ -82,7 +90,9 @@ sections:
           * 5
           * yes
       - title: Business
-        price: $20<span>/mo</span>
+        handle: business
+        pricePerMonth: $20<span>/month</span>
+        pricePerYear: $100<span>/year</span>
         highlight: true
         buttonText: Try for free
         content: |-
@@ -96,7 +106,9 @@ sections:
           * 20
           * yes
       - title: Advanded
-        price: $40<span>/mo</span>
+        handle: advanded
+        pricePerMonth: $40<span>/month</span>
+        pricePerYear: $200<span>/year</span>
         highlight: false
         buttonText: Start advancing
         content: |-

@@ -25,7 +25,9 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
     type Plan {
       title: String
       description: String
-      price: String
+      handle: String
+      pricePerMonth: String
+      pricePerYear: String
       highlight: Boolean
       buttonText: String
       body: String
@@ -38,7 +40,9 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
 
     type PlanTable {
       title: String
-      price: String
+      handle: String
+      pricePerMonth: String
+      pricePerYear: String
       highlight: Boolean
       buttonText: String
       content: String

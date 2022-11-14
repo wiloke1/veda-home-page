@@ -67,7 +67,9 @@ export const pageQuery = graphql`
           plansContent {
             title
             description
-            price
+            handle
+            pricePerMonth
+            pricePerYear
             highlight
             buttonText
             body
@@ -84,7 +86,9 @@ export const pageQuery = graphql`
           }
           plansTable {
             title
-            price
+            handle
+            pricePerMonth
+            pricePerYear
             highlight
             buttonText
             content

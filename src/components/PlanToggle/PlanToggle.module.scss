@@ -1,0 +1,7 @@
+.container {
+  &[data-type="yearly"] {
+    .item {
+      transform: translateX(100%);
+    }
+  }
+}

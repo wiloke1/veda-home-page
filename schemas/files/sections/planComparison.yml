@@ -42,7 +42,9 @@
       default: [],
       fields: [
         { label: Title, name: title, widget: string, default: '' },
-        { label: Price, name: price, widget: string, default: '' },
+        { label: Handle, name: handle, widget: text },
+        { label: Price Per Month, name: pricePerMonth, widget: string, default: '' },
+        { label: Price Per Year, name: pricePerYear, widget: string, default: '' },
         { label: Highlight, name: highlight, widget: boolean, required: false, default: false },
         { label: Button Text, name: buttonText, widget: string, default: '' },
         { label: Content, name: content, widget: markdown, default: '' }

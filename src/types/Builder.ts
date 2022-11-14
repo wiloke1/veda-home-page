@@ -58,7 +58,9 @@ export interface SectionZigzag {
 export interface Plans {
   title: string;
   description: string;
-  price: string;
+  handle: string;
+  pricePerMonth: string;
+  pricePerYear: string;
   highlight: boolean;
   buttonText: string;
   body: string;
@@ -76,8 +78,10 @@ export interface PlanComparisonFeatures {
 
 export interface TableItem {
   title: string;
+  handle: string;
   content: string;
-  price: string;
+  pricePerMonth: string;
+  pricePerYear: string;
   highlight?: boolean;
   buttonText: string;
 }

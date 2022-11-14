@@ -9,15 +9,26 @@ import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { reactNodeToString } from 'utils/reactNodeToString';
+import { useLocation } from '@reach/router';
+import { usePlanToggleState } from 'components/PlanToggle';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
+let _forBuilder = false;
 
 export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeatures, plansTable, backgroundImage, backgroundColor }) => {
   const [features] = planFeatures;
   const [activeTitle, setActiveTitle] = useState(plansTable[0]?.title ?? '');
   const { width } = useWindowSize();
   const featuresContent = features.content.trim();
+  const location = useLocation();
+  const planToggleState = usePlanToggleState();
+
+  console.log(123, planToggleState);
+
+  if (!_forBuilder && location?.search) {
+    _forBuilder = location.search.includes('forbuilder=1');
+  }
 
   useEffect(() => {
     const vedaWrapperEl = document.getElementById('veda-wrapper');
@@ -34,14 +45,18 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
     const itemContent = item.content.trim();
 
     return (
-      <div key={item.title} className={styles.plan} style={{ width: itemWidth }}>
+      <div key={item.title} className={styles.plan} style={{ width: itemWidth }} data-json={JSON.stringify(item)}>
         <div
-          className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight })}
+          className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight, 't:0!': _forBuilder })}
           style={plansTable.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
         >
           <h3 className={styles.planTitle}>{item.title}</h3>
-          <div className={styles.planPrice} dangerouslySetInnerHTML={{ __html: item.price }} />
+          <div
+            className={styles.planPrice}
+            dangerouslySetInnerHTML={{ __html: planToggleState === 'monthly' ? item.pricePerMonth : item.pricePerYear }}
+          />
           <GetStartedPopup
+            type={planToggleState}
             buttonSize="medium"
             buttonHighlight={item.highlight}
             buttonText={item.buttonText}
@@ -109,7 +124,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
         )}
         <div className={styles.table}>
           <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '55%' : '30%' }}>
-            <div className={styles.featuresHeader}>
+            <div className={classNames(styles.featuresHeader, _forBuilder ? 't:0!' : '')}>
               <h3 className={styles.featuresTitle}>{features.title}</h3>
             </div>
             <div className={styles.featuresContent}>
