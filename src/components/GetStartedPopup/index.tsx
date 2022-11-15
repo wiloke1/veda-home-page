@@ -1,9 +1,9 @@
-import { useLocation } from '@reach/router';
 import { Button, ButtonProps } from 'components/Button';
 import { GetStartedForm } from 'components/GetStartedForm';
 import { ModalBase } from 'components/ModalBase';
 import { Spinner } from 'components/Spinner';
 import { Title } from 'components/Title';
+import { useQueryParams } from 'hooks/useQueryParams';
 import { CSSProperties, FC, useState } from 'react';
 
 export interface GetStartedPopupProps {
@@ -28,10 +28,10 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({
   onClickForBuilder,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const location = useLocation();
+  const queryParams = useQueryParams();
 
-  if (!_forBuilder && location?.search) {
-    _forBuilder = location.search.includes('forbuilder=1');
+  if (!_forBuilder) {
+    _forBuilder = queryParams('forbuilder') === '1';
   }
 
   return (

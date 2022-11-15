@@ -4,7 +4,7 @@ import { HeaderForBuilder } from 'components/Header/HeaderForBuilder';
 import { CSSProperties, FC } from 'react';
 import Sticky from 'wil-react-sticky';
 import { useLocation } from '@reach/router';
-import { isBrowser } from 'utils/isBrowser';
+import { useQueryParams } from 'hooks/useQueryParams';
 import { Head } from './Head';
 import { useHeaderNavigationStatic } from './useHeaderNavigationStatic';
 
@@ -14,21 +14,14 @@ export interface LayoutProps {
 
 let _forBuilder = false;
 let _pathname = '';
-let _loaded = false;
-
-if (isBrowser && !_loaded) {
-  window.addEventListener('load', () => {
-    window.postMessage({ type: 'loaded' }, '*');
-    _loaded = true;
-  });
-}
 
 export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   const navigation = useHeaderNavigationStatic();
   const location = useLocation();
+  const queryParams = useQueryParams();
 
-  if (!_forBuilder && location?.search) {
-    _forBuilder = location.search.includes('forbuilder=1');
+  if (!_forBuilder) {
+    _forBuilder = queryParams('forbuilder') === '1';
   }
 
   if (!_pathname) {

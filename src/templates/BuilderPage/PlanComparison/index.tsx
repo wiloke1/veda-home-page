@@ -1,17 +1,17 @@
 import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
+import { usePlanToggleState } from 'components/PlanToggle';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { Tooltip } from 'components/Tooltip';
+import { useQueryParams } from 'hooks/useQueryParams';
 import { FC, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
-import { reactNodeToString } from 'utils/reactNodeToString';
-import { useLocation } from '@reach/router';
-import { usePlanToggleState } from 'components/PlanToggle';
 import { pmChildren } from 'utils/postMessage';
+import { reactNodeToString } from 'utils/reactNodeToString';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
@@ -22,9 +22,9 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const [activeTitle, setActiveTitle] = useState(plansTable[0]?.title ?? '');
   const { width } = useWindowSize();
   const featuresContent = features.content.trim();
-  const location = useLocation();
   const planToggleState = usePlanToggleState();
   const [idLoading, setIdLoading] = useState('');
+  const queryParams = useQueryParams();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
@@ -39,8 +39,8 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
     };
   }, []);
 
-  if (!_forBuilder && location?.search) {
-    _forBuilder = location.search.includes('forbuilder=1');
+  if (!_forBuilder) {
+    _forBuilder = queryParams('forbuilder') === '1';
   }
 
   useEffect(() => {
@@ -68,6 +68,11 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             className={styles.planPrice}
             dangerouslySetInnerHTML={{ __html: planToggleState === 'monthly' ? item.pricePerMonth : item.pricePerYear }}
           />
+          {queryParams('planactivate') === item.handle && (
+            <div className="pos:absolute t:10px r:10px w:30px h:30px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:16px">
+              <i className="far fa-check" />
+            </div>
+          )}
           <GetStartedPopup
             buttonSize="medium"
             buttonHighlight={item.highlight}
