@@ -14,7 +14,7 @@ const usePlanToggleStatePrivate = createGlobalState<PlanToggleType>('monthly');
 
 export const usePlanToggleState = () => {
   const [state] = usePlanToggleStatePrivate();
-  return state;
+  return state ?? 'monthly';
 };
 
 export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
