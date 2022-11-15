@@ -45,12 +45,12 @@ export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
       <div
         className="pos:relative w:54px h:30px bgc:color-primary bdrs:30px p:3px cur:pointer"
         onClick={() => {
-          if (type === 'monthly') {
-            onChange?.('yearly');
-            setPlanToggleState('yearly');
-          } else {
+          if (type === 'yearly') {
             onChange?.('monthly');
             setPlanToggleState('monthly');
+          } else {
+            onChange?.('yearly');
+            setPlanToggleState('yearly');
           }
         }}
       >
