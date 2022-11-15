@@ -24,6 +24,20 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const featuresContent = features.content.trim();
   const location = useLocation();
   const planToggleState = usePlanToggleState();
+  const [idLoading, setIdLoading] = useState('');
+
+  useEffect(() => {
+    const off1 = pmChildren.on('@landing/plan/success', () => {
+      setIdLoading('');
+    });
+    const off2 = pmChildren.on('@landing/plan/failure', () => {
+      setIdLoading('');
+    });
+    return () => {
+      off1();
+      off2();
+    };
+  }, []);
 
   if (!_forBuilder && location?.search) {
     _forBuilder = location.search.includes('forbuilder=1');
@@ -59,11 +73,15 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             buttonHighlight={item.highlight}
             buttonText={item.buttonText}
             buttonStyle={{ width: '100%', maxWidth: 200 }}
+            isLoading={idLoading === item.handle}
             onClickForBuilder={() => {
-              pmChildren.emit('@landing/plan/request', {
-                handle: item.handle,
-                type: planToggleState,
-              });
+              if (!idLoading) {
+                pmChildren.emit('@landing/plan/request', {
+                  handle: item.handle,
+                  type: planToggleState,
+                });
+                setIdLoading(item.handle);
+              }
             }}
           />
         </div>

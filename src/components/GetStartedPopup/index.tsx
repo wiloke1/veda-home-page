@@ -1,11 +1,10 @@
-import { CSSProperties, FC, useEffect, useState } from 'react';
+import { useLocation } from '@reach/router';
 import { Button, ButtonProps } from 'components/Button';
 import { GetStartedForm } from 'components/GetStartedForm';
 import { ModalBase } from 'components/ModalBase';
-import { Title } from 'components/Title';
-import { useLocation } from '@reach/router';
 import { Spinner } from 'components/Spinner';
-import { pmChildren } from 'utils/postMessage';
+import { Title } from 'components/Title';
+import { CSSProperties, FC, useState } from 'react';
 
 export interface GetStartedPopupProps {
   buttonHighlight?: boolean;
@@ -14,6 +13,7 @@ export interface GetStartedPopupProps {
   buttonSize?: ButtonProps['size'];
   buttonBackground?: ButtonProps['backgroundColor'];
   onClickForBuilder?: () => void;
+  isLoading?: boolean;
 }
 
 let _forBuilder = false;
@@ -24,24 +24,11 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({
   buttonStyle,
   buttonSize,
   buttonBackground,
+  isLoading = false,
   onClickForBuilder,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const off1 = pmChildren.on('@landing/plan/success', () => {
-      setIsLoading(false);
-    });
-    const off2 = pmChildren.on('@landing/plan/failure', () => {
-      setIsLoading(false);
-    });
-    return () => {
-      off1();
-      off2();
-    };
-  }, []);
 
   if (!_forBuilder && location?.search) {
     _forBuilder = location.search.includes('forbuilder=1');

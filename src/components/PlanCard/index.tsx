@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
 import { PlanToggleType } from 'components/PlanToggle';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Plans } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
@@ -25,6 +25,21 @@ export const PlanCard: FC<PlanCardProps> = ({
   planType,
   handle,
 }) => {
+  const [idLoading, setIdLoading] = useState('');
+
+  useEffect(() => {
+    const off1 = pmChildren.on('@landing/plan/success', () => {
+      setIdLoading('');
+    });
+    const off2 = pmChildren.on('@landing/plan/failure', () => {
+      setIdLoading('');
+    });
+    return () => {
+      off1();
+      off2();
+    };
+  }, []);
+
   return (
     <div
       className={classNames(styles.container, {
@@ -44,11 +59,15 @@ export const PlanCard: FC<PlanCardProps> = ({
             buttonHighlight={highlight}
             buttonText={buttonText}
             buttonStyle={{ width: '100%', maxWidth: 246 }}
+            isLoading={idLoading === handle}
             onClickForBuilder={() => {
-              pmChildren.emit('@landing/plan/request', {
-                handle,
-                type: planType,
-              });
+              if (!idLoading) {
+                pmChildren.emit('@landing/plan/request', {
+                  handle,
+                  type: planType,
+                });
+                setIdLoading(handle);
+              }
             }}
           />
         </div>
