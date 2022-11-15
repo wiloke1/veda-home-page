@@ -1,5 +1,6 @@
 import { useLocation } from '@reach/router';
 import classNames from 'classnames';
+import { useQueryParams } from 'hooks/useQueryParams';
 import { FC, useEffect } from 'react';
 import { createGlobalState } from 'react-use';
 import { isBrowser } from 'utils/isBrowser';
@@ -20,12 +21,12 @@ export const usePlanToggleState = () => {
 export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
   const [type, setPlanToggleState] = usePlanToggleStatePrivate();
   const location = useLocation();
+  const queryParams = useQueryParams();
 
   useEffect(() => {
     if (isBrowser) {
-      const queryParam = new URLSearchParams(location.search);
-      onChange?.(queryParam.get('plantype') as PlanToggleType);
-      setPlanToggleState(queryParam.get('plantype') as PlanToggleType);
+      onChange?.(queryParams('plantype') as PlanToggleType);
+      setPlanToggleState(queryParams('plantype') as PlanToggleType);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

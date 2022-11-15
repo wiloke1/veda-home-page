@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
 import { PlanToggleType } from 'components/PlanToggle';
+import { useQueryParams } from 'hooks/useQueryParams';
 import { FC, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { createGlobalState } from 'react-use';
@@ -29,6 +30,7 @@ export const PlanCard: FC<PlanCardProps> = ({
   handle,
 }) => {
   const [idLoading, setIdLoading] = useIdLoading();
+  const queryParams = useQueryParams();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
@@ -54,6 +56,11 @@ export const PlanCard: FC<PlanCardProps> = ({
         <div className={styles.header}>
           <h3 className={styles.title}>{title}</h3>
           <div className={styles.price} dangerouslySetInnerHTML={{ __html: planType === 'monthly' ? pricePerMonth : pricePerYear }} />
+          {queryParams('planactivate') === handle && (
+            <div className="pos:absolute t:0 r:0 w:40px h:40px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:18px">
+              <i className="far fa-check" />
+            </div>
+          )}
         </div>
         <div>{description}</div>
         <div className={styles.divider} />
