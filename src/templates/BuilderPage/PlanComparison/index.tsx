@@ -11,6 +11,7 @@ import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { reactNodeToString } from 'utils/reactNodeToString';
 import { useLocation } from '@reach/router';
 import { usePlanToggleState } from 'components/PlanToggle';
+import { pmChildren } from 'utils/postMessage';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
@@ -54,11 +55,16 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             dangerouslySetInnerHTML={{ __html: planToggleState === 'monthly' ? item.pricePerMonth : item.pricePerYear }}
           />
           <GetStartedPopup
-            type={planToggleState}
             buttonSize="medium"
             buttonHighlight={item.highlight}
             buttonText={item.buttonText}
             buttonStyle={{ width: '100%', maxWidth: 200 }}
+            onClickForBuilder={() => {
+              pmChildren.emit('@landing/plan/request', {
+                handle: item.handle,
+                type: planToggleState,
+              });
+            }}
           />
         </div>
         <div className={styles.planBody}>

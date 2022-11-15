@@ -1,7 +1,8 @@
+import { useLocation } from '@reach/router';
 import classNames from 'classnames';
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect } from 'react';
 import { createGlobalState } from 'react-use';
-import * as styles from './PlanToggle.module.scss';
+import { isBrowser } from 'utils/isBrowser';
 
 export type PlanToggleType = 'monthly' | 'yearly';
 
@@ -17,44 +18,45 @@ export const usePlanToggleState = () => {
 };
 
 export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [, setPlanToggleState] = usePlanToggleStatePrivate();
+  const [type, setPlanToggleState] = usePlanToggleStatePrivate();
+  const location = useLocation();
 
   useEffect(() => {
-    if (containerRef.current) {
-      const observer = new MutationObserver(() => {
-        if (containerRef.current?.getAttribute('data-type') === 'monthly') {
-          onChange?.('monthly');
-          setPlanToggleState('monthly');
-        } else {
-          onChange?.('yearly');
-          setPlanToggleState('yearly');
-        }
-      });
-      observer.observe(containerRef.current, {
-        attributes: true,
-      });
-      return () => {
-        observer.disconnect();
-      };
+    if (isBrowser) {
+      const queryParam = new URLSearchParams(location.search);
+      onChange?.(queryParam.get('plantype') as PlanToggleType);
+      setPlanToggleState(queryParam.get('plantype') as PlanToggleType);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (isBrowser) {
+      const url = new URL(location.href);
+      url.searchParams.set('plantype', type);
+      window.history.pushState({}, '', url.toString());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [type]);
+
   return (
-    <div ref={containerRef} className={classNames(styles.container, 'd:flex ai:center pricing-toggle')}>
+    <div className="d:flex ai:center">
       <div className="mr:10px ff:font-secondary fw:500 c:color-gray9">Monthly</div>
       <div
         className="pos:relative w:54px h:30px bgc:color-primary bdrs:30px p:3px cur:pointer"
         onClick={() => {
-          if (!containerRef.current?.getAttribute('data-type') || containerRef.current?.getAttribute('data-type') === 'monthly') {
-            containerRef.current?.setAttribute('data-type', 'yearly');
+          if (type === 'monthly') {
+            onChange?.('yearly');
+            setPlanToggleState('yearly');
           } else {
-            containerRef.current?.setAttribute('data-type', 'monthly');
+            onChange?.('monthly');
+            setPlanToggleState('monthly');
           }
         }}
       >
-        <div className={classNames(styles.item, 'pos:absolute w:24px h:24px bgc:color-light bdrs:50% trs:0.2s')}></div>
+        <div
+          className={classNames('pos:absolute w:24px h:24px bgc:color-light bdrs:50% trs:0.2s', type === 'yearly' ? 'trf:translateX(100%)' : '')}
+        ></div>
       </div>
       <div className="ml:10px ff:font-secondary fw:500 c:color-gray9">Yearly</div>
     </div>

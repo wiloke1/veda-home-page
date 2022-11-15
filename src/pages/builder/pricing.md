@@ -5,7 +5,7 @@ sections:
   - type: plans
     enable: true
     description: Campaign-ready, fully-optimized Shopify stores built with half the
-    decorate: type2
+    decorate: type1
     plansContent:
       - title: Starter
         description: Starter description

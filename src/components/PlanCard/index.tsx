@@ -5,6 +5,7 @@ import { PlanToggleType } from 'components/PlanToggle';
 import { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Plans } from 'types/Builder';
+import { pmChildren } from 'utils/postMessage';
 import * as styles from './PlanCard.module.scss';
 
 export interface PlanCardProps extends Plans {
@@ -22,6 +23,7 @@ export const PlanCard: FC<PlanCardProps> = ({
   title,
   onMoreClick,
   planType,
+  handle,
 }) => {
   return (
     <div
@@ -38,11 +40,16 @@ export const PlanCard: FC<PlanCardProps> = ({
         <div className={styles.divider} />
         <div className={styles.btn}>
           <GetStartedPopup
-            type={planType}
             buttonSize="large"
             buttonHighlight={highlight}
             buttonText={buttonText}
             buttonStyle={{ width: '100%', maxWidth: 246 }}
+            onClickForBuilder={() => {
+              pmChildren.emit('@landing/plan/request', {
+                handle,
+                type: planType,
+              });
+            }}
           />
         </div>
         <div className={styles.body}>
