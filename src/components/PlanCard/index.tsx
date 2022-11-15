@@ -2,8 +2,9 @@ import classNames from 'classnames';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
 import { PlanToggleType } from 'components/PlanToggle';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { createGlobalState } from 'react-use';
 import { Plans } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import * as styles from './PlanCard.module.scss';
@@ -12,6 +13,8 @@ export interface PlanCardProps extends Plans {
   onMoreClick?: () => void;
   planType: PlanToggleType;
 }
+
+const useIdLoading = createGlobalState('');
 
 export const PlanCard: FC<PlanCardProps> = ({
   description,
@@ -25,7 +28,7 @@ export const PlanCard: FC<PlanCardProps> = ({
   planType,
   handle,
 }) => {
-  const [idLoading, setIdLoading] = useState('');
+  const [idLoading, setIdLoading] = useIdLoading();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
@@ -38,6 +41,7 @@ export const PlanCard: FC<PlanCardProps> = ({
       off1();
       off2();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
