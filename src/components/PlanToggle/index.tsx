@@ -31,7 +31,7 @@ export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
   }, []);
 
   useEffect(() => {
-    if (isBrowser) {
+    if (isBrowser && type) {
       const url = new URL(location.href);
       url.searchParams.set('plantype', type);
       window.history.pushState({}, '', url.toString());
