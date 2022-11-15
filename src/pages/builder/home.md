@@ -9,7 +9,7 @@ sections:
       time and zero the code.
     decorate: ""
     backgroundColor: "#D3EFFF"
-    heroImage: /img/screen-shot-2022-11-15-at-2.24.18-pm.png
+    heroImage: /img/hero.png
   - type: features
     enable: true
     heading: Here's <span>How We Do It!</span>
