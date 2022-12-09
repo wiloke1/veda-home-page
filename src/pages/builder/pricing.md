@@ -4,7 +4,7 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: Campaign-ready, fully-optimized Shopify stores built with half the
+    description: Choose the most advantageous pricing plan for your enterprise.
     decorate: type1
     plansContent:
       - title: Starter
@@ -54,7 +54,7 @@ sections:
           * Advanced Page Settings
           * Design Services
           * Priority Support
-    heading: Plan for every <span>creator.</span>
+    heading: Plan for every <span>store owner</span>
   - type: planComparison
     enable: true
     description: ""
