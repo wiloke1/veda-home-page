@@ -31,16 +31,16 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   return (
     <div id="veda-wrapper" style={{ overflow }}>
       <Head />
-      <div style={{ height: 5 }} />
+      {!_forBuilder && <div style={{ height: 5 }} />}
       <Sticky>
         {active => {
           if (_forBuilder) {
-            if (/\/(notifications|pricing)/g.test(location.pathname)) {
+            if (/\/(notifications|pricing|install)/g.test(location.pathname)) {
               return <div />;
             }
-            return <HeaderForBuilder pathname={_pathname} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
+            return <HeaderForBuilder pathname={_pathname} containerStyle={active ? { backgroundColor: 'var(--color-light)' } : {}} />;
           }
-          return <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)', height: 70 } : {}} />;
+          return <Header navigation={navigation} containerStyle={active ? { backgroundColor: 'var(--color-light)' } : {}} />;
         }}
       </Sticky>
       <main>{children}</main>

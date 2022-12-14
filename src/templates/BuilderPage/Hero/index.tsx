@@ -19,9 +19,10 @@ export const Hero: FC<HeroProps> = ({ heading, description, heroImage, backgroun
   const styleVariables = {
     ...(backgroundColor ? { '--section-background-color': backgroundColor } : {}),
   } as CSSProperties;
+  const isInstallPage = /\/install/g.test(window?.location?.pathname);
 
   return (
-    <Section className="p:0 ov:hidden t:-75px t:-85px@920px" backgroundImage={backgroundImage}>
+    <Section className={classNames('p:0! ov:hidden', isInstallPage ? '' : 't:-75px t:-85px@920px')} backgroundImage={backgroundImage}>
       <div className="container">
         <div className="d:flex fxw:wrap h:100vh">
           <div className="w:50% pr:pfs(30px,80px) d:flex fld:column jc:center w:100%@+md pr:0@+md w:100%@+1100px maw:600px@+1100px m:auto@+1100px pr:0@+1100px">
