@@ -5,6 +5,7 @@ import { CSSProperties, FC, useRef } from 'react';
 import { SectionHero } from 'types/Builder';
 import classNames from 'classnames';
 import { MouseMove } from 'components/MouseMove';
+import { useLocation } from '@reach/router';
 import * as styles from './Hero.module.scss';
 import imac from './imgs/imac.png';
 import img0 from './imgs/0.png';
@@ -15,11 +16,12 @@ import img3 from './imgs/3.png';
 export interface HeroProps extends SectionHero {}
 
 export const Hero: FC<HeroProps> = ({ heading, description, heroImage, backgroundColor, backgroundImage }) => {
+  const location = useLocation();
   const rightRef = useRef<HTMLDivElement | null>(null);
   const styleVariables = {
     ...(backgroundColor ? { '--section-background-color': backgroundColor } : {}),
   } as CSSProperties;
-  const isInstallPage = /\/install/g.test(window?.location?.pathname);
+  const isInstallPage = /\/install/g.test(location.pathname);
 
   return (
     <Section className={classNames('p:0! ov:hidden', isInstallPage ? '' : 't:-75px t:-85px@920px')} backgroundImage={backgroundImage}>
