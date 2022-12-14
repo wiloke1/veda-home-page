@@ -1,6 +1,6 @@
 import { CSSProperties, FC } from 'react';
 import classNames from 'classnames';
-import * as styles from './styles.module.css';
+import * as styles from './styles.module.scss';
 
 export interface ActivityIndicatorProps {
   /** Kích thước của component */
