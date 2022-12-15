@@ -12,10 +12,10 @@ import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import { reactNodeToString } from 'utils/reactNodeToString';
+import { useLocation } from '@reach/router';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
-let _forBuilder = false;
 
 export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeatures, plansTable, backgroundImage, backgroundColor }) => {
   const [features] = planFeatures;
@@ -25,6 +25,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const planToggleState = usePlanToggleState();
   const [idLoading, setIdLoading] = useState('');
   const queryParams = useQueryParams();
+  const location = useLocation();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
@@ -38,10 +39,6 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
       off2();
     };
   }, []);
-
-  if (!_forBuilder) {
-    _forBuilder = queryParams('forbuilder') === '1';
-  }
 
   useEffect(() => {
     const vedaWrapperEl = document.getElementById('veda-wrapper');
@@ -60,7 +57,11 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
     return (
       <div key={item.title} className={styles.plan} style={{ width: itemWidth }} data-json={JSON.stringify(item)}>
         <div
-          className={classNames(styles.planHeader, { [styles.planHeaderHighlight]: item.highlight, 't:0!': _forBuilder })}
+          className={classNames(
+            styles.planHeader,
+            item.highlight ? styles.planHeaderHighlight : '',
+            location.pathname === '/pricing-for-veda-builder' ? 't:0!' : '',
+          )}
           style={plansTable.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
         >
           <h3 className={styles.planTitle}>{item.title}</h3>
@@ -151,7 +152,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
         )}
         <div className={styles.table}>
           <div className={styles.features} style={{ width: width <= MAX_WIDTH ? '55%' : '30%' }}>
-            <div className={classNames(styles.featuresHeader, _forBuilder ? 't:0!' : '')}>
+            <div className={classNames(styles.featuresHeader, location.pathname === '/pricing-for-veda-builder' ? 't:0!' : '')}>
               <h3 className={styles.featuresTitle}>{features.title}</h3>
             </div>
             <div className={styles.featuresContent}>
