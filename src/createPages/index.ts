@@ -60,16 +60,6 @@ export const createPages = async ({ actions, graphql }: CreatePagesArgs): Promis
     }
     if (edge.node.fields.slug === '/builder/pricing/') {
       createPage({
-        path: '/pricing/',
-        // @ts-ignore
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      });
-      createPage({
         path: '/pricing-for-veda-builder/',
         // @ts-ignore
         tags: edge.node.frontmatter.tags,
