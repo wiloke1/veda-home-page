@@ -25,7 +25,7 @@ export const Layout: FC<LayoutProps> = ({ children, overflow = 'hidden' }) => {
   return (
     <div id="veda-wrapper" style={{ overflow }}>
       <Head />
-      {headerFooterDisabled && <div style={{ height: 5 }} />}
+      {!headerFooterDisabled && <div style={{ height: 5 }} />}
       <Sticky>
         {active => {
           if (headerFooterDisabled) {
