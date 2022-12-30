@@ -86,5 +86,14 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       planFeatures: [PlanFeature]
       contactFormContent: ContactForm
     }
+
+    type MarkdownRemarkFrontmatterHeaderNavigation @infer {
+      label: String
+      url: String
+      subMenu {
+        label: String
+        url: String
+      }
+    }
   `);
 };
