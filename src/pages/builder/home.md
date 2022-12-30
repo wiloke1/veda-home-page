@@ -84,9 +84,9 @@ sections:
   - type: supports
     enable: true
     heading: Get <span>help</span> whenever you need it
-    description: At Veda Builder, we're on a mission to make the building process
-      easy for you. We offer professional support so you'll always know what's
-      ahead, and we do this for an affordable price.
+    description: At Veda Builder, we're on a mission to make the page building
+      process easy for you. We offer professional support so you'll always know
+      what's ahead, and we do this for an affordable price.
     decorate: ""
     supportsContent:
       - image: /img/support1.png
@@ -107,7 +107,7 @@ sections:
         title: Enthusiastic Community
         description: We've created a like-minded community to inspire you, and we want
           to help you create a more beautiful store! We're "the community for
-          shoppers, by shoppers."
+          Shopify entrepreneurs, by entrepreneurs."
         buttonText: Join us
         link: /pricing
 ---
