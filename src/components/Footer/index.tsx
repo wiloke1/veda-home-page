@@ -8,7 +8,8 @@ export const Footer: FC = () => {
         <div className="pb:80px ta:center maw:580px m:auto">
           <h2 className="c:color-light fz:pfs(40px,50px) mb:10px">Veda builder</h2>
           <div className="fz:16px mb:30px">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repudiandae. Quae deleniti dolore consequuntur, velit corporis
+            Veda Builder, an all-in-one Shopify Page Builder, lets you build amazing, responsive stores in no time. No need to worry about theme
+            compatibility or other technicalities.
           </div>
           <GetStartedForm />
         </div>
