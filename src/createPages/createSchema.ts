@@ -90,7 +90,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
     type MarkdownRemarkFrontmatterHeaderNavigation @infer {
       label: String
       url: String
-      subMenu {
+      subMenu: {
         label: String
         url: String
       }
