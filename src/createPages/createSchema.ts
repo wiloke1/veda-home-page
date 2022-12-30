@@ -87,13 +87,15 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       contactFormContent: ContactForm
     }
 
+    type SubMenu {
+      label: String
+      url: String
+    }
+
     type MarkdownRemarkFrontmatterHeaderNavigation @infer {
       label: String
       url: String
-      subMenu: {
-        label: String
-        url: String
-      }
+      subMenu: SubMenu
     }
   `);
 };
