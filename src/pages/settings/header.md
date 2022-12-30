@@ -3,8 +3,6 @@ templateKey: headerNavigation
 headerNavigation:
   - label: Home
     url: /
-  - label: About
-    url: /about
   - label: Pricing
     url: /pricing
   - label: Themes
@@ -13,11 +11,4 @@ headerNavigation:
     url: /blog
   - label: Contact
     url: /contact
-  - label: Page test
-    url: "#"
-    subMenu:
-      - label: Pricing
-        url: /pricing
-      - label: Themes
-        url: /themes
 ---
