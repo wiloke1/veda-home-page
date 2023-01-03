@@ -95,7 +95,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
     type MarkdownRemarkFrontmatterHeaderNavigation @infer {
       label: String
       url: String
-      subMenu: SubMenu
+      subMenu: [SubMenu]
     }
   `);
 };
