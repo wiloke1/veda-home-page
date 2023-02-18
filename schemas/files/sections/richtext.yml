@@ -1,0 +1,12 @@
+{
+  label: Rich Text,
+  name: richtext,
+  widget: object,
+  collapsed: true,
+  summary: "",
+  default: {},
+  fields: [
+    { label: Enable, name: enable, widget: boolean, required: false, default: true },
+    { label: Rich Text, name: richtextContent, widget: text, required: false, default: "" },
+  ]
+},

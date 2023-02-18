@@ -34,6 +34,20 @@ export const pageQuery = graphql`
               gatsbyImageData(width: 500, quality: 100, layout: CONSTRAINED)
             }
           }
+          # Rich Text
+          richtextContent
+          # Features Grid
+          featuresGridContent {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 300, quality: 100, layout: CONSTRAINED)
+              }
+            }
+            title
+            description
+            buttonText
+            link
+          }
           # Supports
           supportsContent {
             image {

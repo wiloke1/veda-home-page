@@ -32,13 +32,16 @@ export const Head: FC = () => {
 
       {`<!-- Global site tag (gtag.js) - Google Analytics -->`}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG1X3313ZB"></script>
-      <script>
+      <script type="text/javascript">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-WG1X3313ZB');`}
       </script>
+      <script type="text/javascript">{`
+        window.$crisp=[];window.CRISP_WEBSITE_ID="92a4593d-e4db-40bd-b5cf-474d9d99e996";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+      `}</script>
     </Helmet>
   );
 };
