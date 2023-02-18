@@ -44,7 +44,7 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections }) =>
         return (
           section.enable && (
             <Section>
-              <div className="container">
+              <div className="maw:700px m:auto">
                 <ReactMarkdown>{section.richtextContent}</ReactMarkdown>
               </div>
             </Section>
