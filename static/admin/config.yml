@@ -188,6 +188,46 @@ collections:
             ]
           },
           {
+            label: Features Grid,
+            name: featuresGrid,
+            widget: object,
+            collapsed: true,
+            summary: "{{fields.heading}}",
+            default: {},
+            fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
+              { label: Heading, name: heading, widget: string },
+              { label: Description, name: description, widget: text, required: false, default: "" },
+              {
+                label: Decorate,
+                name: decorate,
+                widget: select,
+                required: false,
+                default: "",
+                options: [
+                  { label: "None", value: "" },
+                  { label: "Decorate 1", value: "type1" },
+                  { label: "Decorate 2", value: "type2" }
+                ]
+              },
+              { label: Background Color, name: backgroundColor, widget: color, allowInput: true, required: false },
+              { label: Background Image, name: backgroundImage, widget: image, required: false },
+              {
+                label: Content,
+                name: featuresGridContent,
+                widget: list,
+                default: [],
+                fields: [
+                  { label: Image, name: image, widget: image, required: false },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Button Text, name: buttonText, widget: string },
+                  { label: Link, name: link, widget: string },
+                ]
+              }
+            ]
+          },
+          {
             label: Zigzag,
             name: zigzag,
             widget: object,
@@ -397,6 +437,18 @@ collections:
                   { label: Button Text, name: buttonText, widget: string, default: Contact Us },
                 ]
               }
+            ]
+          },
+          {
+            label: Rich Text,
+            name: richtext,
+            widget: object,
+            collapsed: true,
+            summary: "",
+            default: {},
+            fields: [
+              { label: Enable, name: enable, widget: boolean, required: false, default: true },
+              { label: Rich Text, name: richtextContent, widget: text, required: false, default: "" },
             ]
           },
         ]

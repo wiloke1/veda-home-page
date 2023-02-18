@@ -5,6 +5,7 @@ import { BuilderPageFrontMaster, SmartSection } from 'types/Builder';
 import { CollapseSection } from './CollapseSection';
 import { SectionContactForm } from './ContactForm';
 import { Features } from './Features';
+import { FeaturesGrid } from './FeaturesGrid';
 import { Hero } from './Hero';
 import { PlanComparison } from './PlanComparison';
 import { Plans } from './Plans';
@@ -36,6 +37,16 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections }) =>
         return <PlanComparison {...section} />;
       case 'contactForm':
         return <SectionContactForm {...section} />;
+      case 'featuresGrid':
+        return <FeaturesGrid {...section} />;
+      case 'richtext':
+        return (
+          section.enable && (
+            <Section>
+              <div className="container">{section.richtextContent}</div>
+            </Section>
+          )
+        );
       default:
         return null;
     }

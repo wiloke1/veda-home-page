@@ -40,6 +40,13 @@ export interface SectionSupports extends Section {
   supportsContent: ISupports[];
 }
 
+export interface IFeatured extends ISupports {}
+
+export interface ISectionFeaturesGrid extends Section {
+  type: 'featuresGrid';
+  featuresGridContent: IFeatured[];
+}
+
 export interface IZigzag {
   title: string;
   description: string;
@@ -125,6 +132,12 @@ export interface ISectionContactForm extends Section {
   contactFormContent: IContactForm;
 }
 
+export interface ISectionRichText {
+  type: 'richtext';
+  enable: boolean;
+  richtextContent: string;
+}
+
 export type SmartSection =
   | SectionHero
   | SectionFeatures
@@ -134,7 +147,9 @@ export type SmartSection =
   | SectionPlans
   | SectionPlanComparison
   | SectionCollapse
-  | ISectionContactForm;
+  | ISectionContactForm
+  | ISectionFeaturesGrid
+  | ISectionRichText;
 
 export interface BuilderPageFrontMaster {
   isNetlify: boolean;

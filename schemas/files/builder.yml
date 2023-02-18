@@ -21,10 +21,12 @@
         *include files/sections/features
         *include files/sections/themes
         *include files/sections/supports
+        *include files/sections/featuresGrid
         *include files/sections/zigzag
         *include files/sections/collapse
         *include files/sections/plans
         *include files/sections/planComparison
         *include files/sections/contactForm
+        *include files/sections/richtext
       ]
     }

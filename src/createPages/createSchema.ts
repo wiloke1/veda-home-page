@@ -10,6 +10,14 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       link: String
     }
 
+    type FeatureGridItem {
+      image: File @fileByRelativePath
+      title: String
+      description: String
+      buttonText: String
+      link: String
+    }
+
     type Feature {
       image: File @fileByRelativePath
       title: String
@@ -79,12 +87,14 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       heroImage: File @fileByRelativePath
       supportsContent: [Support]
       featuresContent: [Feature]
+      featuresGridContent: [FeatureGridItem]
       zigzagContent: Zigzag
       plansContent: [Plan]
       collapseContent: [Collapse]
       plansTable: [PlanTable]
       planFeatures: [PlanFeature]
       contactFormContent: ContactForm
+      richtextContent: String
     }
 
     type SubMenu {
