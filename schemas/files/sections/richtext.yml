@@ -7,6 +7,6 @@
   default: {},
   fields: [
     { label: Enable, name: enable, widget: boolean, required: false, default: true },
-    { label: Rich Text, name: richtextContent, widget: text, required: false, default: "" },
+    { label: Rich Text, name: richtextContent, widget: markdown, required: false, default: "" },
   ]
 },
