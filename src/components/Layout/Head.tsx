@@ -1,10 +1,13 @@
 import { withPrefix } from 'gatsby';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from '@reach/router';
 import useSiteMetadata from './useSiteMetadata';
 
 export const Head: FC = () => {
   const { title, description } = useSiteMetadata();
+  const location = useLocation();
+  const chatEnabled = !['/notifications', '/pricing-for-veda-builder'].includes(location.pathname);
 
   return (
     <Helmet>
@@ -39,9 +42,11 @@ export const Head: FC = () => {
 
           gtag('config', 'G-WG1X3313ZB');`}
       </script>
-      <script type="text/javascript">{`
+      {chatEnabled && (
+        <script type="text/javascript">{`
         window.$crisp=[];window.CRISP_WEBSITE_ID="92a4593d-e4db-40bd-b5cf-474d9d99e996";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-      `}</script>
+        `}</script>
+      )}
     </Helmet>
   );
 };
