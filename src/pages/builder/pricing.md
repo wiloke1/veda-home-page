@@ -15,10 +15,9 @@ sections:
         buttonText: Get started
         body: |-
           * 1 theme
-          * 5 pages
+          * 2 pages
           * All Page Types
-          * 150+ Layouts
-          * Basic Addons
+          * Unlimited Layouts
           * Global Style
           * Responsive Design
           * SEO Controls
@@ -26,31 +25,28 @@ sections:
       - title: Business
         description: Bussiness description
         handle: business
-        pricePerMonth: $20<span>/month</span>
-        pricePerYear: $100<span>/year</span>
+        pricePerMonth: $19<span>/month</span>
+        pricePerYear: $190<span>/year</span>
         highlight: true
         buttonText: Try for free
         body: |-
           #### Everything in Starter, plus:
 
-          * 5 theme
+          * 1 theme
           * 15 pages
-          * 6 Theme Templates
-          * Pro Addons
-          * Custom Code Editor
-          * Page Settings
+          * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
         description: Advanced description
         handle: advanced
-        pricePerMonth: $40<span>/month</span>
-        pricePerYear: $200<span>/year</span>
+        pricePerMonth: $39<span>/month</span>
+        pricePerYear: $390<span>/year</span>
         buttonText: Start advancing
         body: |-
           #### Everything in Business, plus:
 
-          * 10 theme
-          * 30 pages
+          * 1 theme
+          * 50 pages
           * Advanced Page Settings
           * Design Services
           * Priority Support
@@ -62,16 +58,17 @@ sections:
     planFeatures:
       - title: Features
         content: |-
-          * Visual Editor (Lorem ipsum dolor sit amet 1 sd sdf sdf sdf sdf sdf
-          sd f)
-          * White Labelling
+          * Visual Editor 
+          * Veda Label
+
           ### Theme builder
-          * ThemesPage Types
-          * 10 Page Types (Lorem ipsum dolor sit amet 2)
-          * 6 Templates
+
+          * T﻿heme
+          * Addon
+
           ### Page builder
+
           * Pages
-          * 5 Page Types
     plansTable:
       - title: Starter
         handle: starter
@@ -81,46 +78,52 @@ sections:
         buttonText: Get started
         content: |-
           * yes
-          * no
+          * yes
+
           ###
+
           * 1
-          * yes
           * no
+
           ###
-          * 5
-          * yes
+
+          * 2
       - title: Business
         handle: business
-        pricePerMonth: $20<span>/month</span>
-        pricePerYear: $100<span>/year</span>
+        pricePerMonth: $19<span>/month</span>
+        pricePerYear: $190<span>/year</span>
         highlight: true
         buttonText: Try for free
         content: |-
           * yes
-          * yes
-          ###
-          * 6
-          * yes
           * no
+
           ###
-          * 20
+
+          * 1
           * yes
+
+          ###
+
+          * 15
       - title: Advanded
         handle: advanded
-        pricePerMonth: $40<span>/month</span>
-        pricePerYear: $200<span>/year</span>
+        pricePerMonth: $39<span>/month</span>
+        pricePerYear: $390<span>/year</span>
         highlight: false
         buttonText: Start advancing
         content: |-
           * yes
-          * yes
+          * no
+
           ###
-          * 20
+
+          * 10
           * yes
-          * yes
+
           ###
-          * 40
-          * yes
+
+          * 50
     heading: Plan comparison
   - type: collapse
     enable: true
