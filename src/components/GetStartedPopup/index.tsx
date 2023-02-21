@@ -1,9 +1,9 @@
+import { useLocation } from '@reach/router';
 import { Button, ButtonProps } from 'components/Button';
 import { GetStartedForm } from 'components/GetStartedForm';
 import { ModalBase } from 'components/ModalBase';
 import { Spinner } from 'components/Spinner';
 import { Title } from 'components/Title';
-import { useQueryParams } from 'hooks/useQueryParams';
 import { CSSProperties, FC, useState } from 'react';
 
 export interface GetStartedPopupProps {
@@ -16,8 +16,6 @@ export interface GetStartedPopupProps {
   isLoading?: boolean;
 }
 
-let _forBuilder = false;
-
 export const GetStartedPopup: FC<GetStartedPopupProps> = ({
   buttonHighlight,
   buttonText,
@@ -28,15 +26,12 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({
   onClickForBuilder,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const queryParams = useQueryParams();
-
-  if (!_forBuilder) {
-    _forBuilder = queryParams('forbuilder') === '1';
-  }
+  const location = useLocation();
+  const isPricingForBuilder = ['/pricing-for-veda-builder'].includes(location.pathname);
 
   return (
     <>
-      {!_forBuilder && (
+      {!isPricingForBuilder && (
         <ModalBase
           visible={isModalVisible}
           onClose={() => {
@@ -55,7 +50,7 @@ export const GetStartedPopup: FC<GetStartedPopupProps> = ({
         backgroundColor={!!buttonBackground ? buttonBackground : buttonHighlight ? 'var(--color-tertiary)' : 'var(--color-primary)'}
         color={buttonHighlight ? 'var(--color-gray9)' : 'var(--color-light)'}
         onClick={() => {
-          if (_forBuilder) {
+          if (isPricingForBuilder) {
             onClickForBuilder?.();
           } else {
             setIsModalVisible(true);
