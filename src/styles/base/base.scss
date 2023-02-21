@@ -84,26 +84,25 @@ p {
   margin: 0;
 }
 
-.veda-rich-text {
-  h1 {
-    margin-bottom: 20px;
-  }
-  h2 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-  h3 {
-    margin-top: 12px;
-    margin-bottom: 8px;
-  }
-  h4 {
-    margin-top: 12px;
-    margin-bottom: 8px;
-  }
-  h5, h6 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
+.veda-rich-text h1 {
+  margin-bottom: 20px;
+}
+.veda-rich-text h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.veda-rich-text h3 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.veda-rich-text h4 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.veda-rich-text h5,
+.veda-rich-text h6 {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 input[type="search"],
