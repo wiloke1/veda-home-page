@@ -108,7 +108,7 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       subMenu: [SubMenu]
     }
 
-    type MarkdownRemarkFrontmatterNotifications {
+    type MarkdownRemarkFrontmatterNotifications @infer {
       title: String
       description: String
       date: String
