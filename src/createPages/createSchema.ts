@@ -107,5 +107,12 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       url: String
       subMenu: [SubMenu]
     }
+
+    type MarkdownRemarkFrontmatterNotifications {
+      title: String
+      description: String
+      date: String
+      href: String
+    }
   `);
 };
