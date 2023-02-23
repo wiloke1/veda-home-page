@@ -1,3 +1,4 @@
+import { useLocation } from '@reach/router';
 import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
@@ -5,14 +6,12 @@ import { usePlanToggleState } from 'components/PlanToggle';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { Tooltip } from 'components/Tooltip';
-import { useQueryParams } from 'hooks/useQueryParams';
 import { FC, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import { reactNodeToString } from 'utils/reactNodeToString';
-import { useLocation } from '@reach/router';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
@@ -24,8 +23,8 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const featuresContent = features.content.trim();
   const planToggleState = usePlanToggleState();
   const [idLoading, setIdLoading] = useState('');
-  const queryParams = useQueryParams();
   const location = useLocation();
+  const [currentPlan, setCurrentPlan] = useState('');
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
@@ -34,9 +33,13 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
     const off2 = pmChildren.on('@landing/plan/failure', () => {
       setIdLoading('');
     });
+    const off3 = pmChildren.on('@landing/currentPlan', ({ plan }) => {
+      setCurrentPlan(plan);
+    });
     return () => {
       off1();
       off2();
+      off3();
     };
   }, []);
 
@@ -69,27 +72,33 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             className={styles.planPrice}
             dangerouslySetInnerHTML={{ __html: planToggleState === 'monthly' ? item.pricePerMonth : item.pricePerYear }}
           />
-          {queryParams('planactivate') === item.handle && (
+          {currentPlan === item.handle && (
             <div className="pos:absolute t:10px r:10px w:30px h:30px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:16px">
               <i className="far fa-check" />
             </div>
           )}
-          <GetStartedPopup
-            buttonSize="medium"
-            buttonHighlight={item.highlight}
-            buttonText={item.buttonText}
-            buttonStyle={{ width: '100%', maxWidth: 200 }}
-            isLoading={idLoading === item.handle}
-            onClickForBuilder={() => {
-              if (!idLoading) {
-                pmChildren.emit('@landing/plan/request', {
-                  handle: item.handle,
-                  type: planToggleState,
-                });
-                setIdLoading(item.handle);
-              }
-            }}
-          />
+          {currentPlan === item.handle ? (
+            <Button size="medium" style={{ width: '100%', maxWidth: 200 }} backgroundColor="var(--color-gray2)" color="var(--color-gray9)">
+              Current Plan
+            </Button>
+          ) : (
+            <GetStartedPopup
+              buttonSize="medium"
+              buttonHighlight={item.highlight}
+              buttonText={item.buttonText}
+              buttonStyle={{ width: '100%', maxWidth: 200 }}
+              isLoading={idLoading === item.handle}
+              onClickForBuilder={() => {
+                if (!idLoading) {
+                  pmChildren.emit('@landing/plan/request', {
+                    handle: item.handle,
+                    type: planToggleState,
+                  });
+                  setIdLoading(item.handle);
+                }
+              }}
+            />
+          )}
         </div>
         <div className={styles.planBody}>
           <ReactMarkdown

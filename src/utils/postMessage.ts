@@ -12,6 +12,9 @@ export interface ChildrenEmitMessage {
 export interface ChildrenOnMessage {
   '@landing/plan/success': undefined;
   '@landing/plan/failure': undefined;
+  '@landing/currentPlan': {
+    plan: string;
+  };
 }
 
 export const pmChildren = createPostMessage<ChildrenEmitMessage, ChildrenOnMessage>({
