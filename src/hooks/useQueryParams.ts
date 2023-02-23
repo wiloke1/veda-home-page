@@ -1,7 +1,7 @@
 import { useLocation } from '@reach/router';
 import { isBrowser } from 'utils/isBrowser';
 
-export type UseQueryParamsName = 'forbuilder' | 'plantype' | 'planactivate';
+export type UseQueryParamsName = 'forbuilder' | 'plantype';
 export type UseQueryParamsReturn = (name: UseQueryParamsName) => string | null;
 
 export const useQueryParams = (): UseQueryParamsReturn => {
