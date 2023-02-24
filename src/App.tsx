@@ -8,7 +8,7 @@ if (isBrowser) {
     const id = setTimeout(() => {
       pmChildren.emit('@landing/ready');
       clearTimeout(id);
-    }, 200);
+    }, 500);
   });
 }
 
