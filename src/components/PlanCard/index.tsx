@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
-import { PlanToggleType } from 'components/PlanToggle';
+import { usePlanToggleState } from 'components/PlanToggle';
 import { FC, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { createGlobalState } from 'react-use';
@@ -12,7 +12,6 @@ import * as styles from './PlanCard.module.scss';
 
 export interface PlanCardProps extends Plans {
   onMoreClick?: () => void;
-  planType: PlanToggleType;
 }
 
 const useIdLoading = createGlobalState('');
@@ -26,15 +25,16 @@ export const PlanCard: FC<PlanCardProps> = ({
   pricePerMonth,
   title,
   onMoreClick,
-  planType,
   handle,
 }) => {
   const [idLoading, setIdLoading] = useIdLoading();
   const [currentPlan, setCurrentPlan] = useState('');
+  const { nextType, currentType } = usePlanToggleState();
 
   useEffect(() => {
-    const off1 = pmChildren.on('@landing/plan/success', () => {
+    const off1 = pmChildren.on('@landing/plan/success', ({ plan }) => {
       setIdLoading('');
+      setCurrentPlan(plan);
     });
     const off2 = pmChildren.on('@landing/plan/failure', () => {
       setIdLoading('');
@@ -59,8 +59,8 @@ export const PlanCard: FC<PlanCardProps> = ({
       <div>
         <div className={styles.header}>
           <h3 className={styles.title}>{title}</h3>
-          <div className={styles.price} dangerouslySetInnerHTML={{ __html: planType === 'monthly' ? pricePerMonth : pricePerYear }} />
-          {currentPlan === handle && (
+          <div className={styles.price} dangerouslySetInnerHTML={{ __html: nextType === 'monthly' ? pricePerMonth : pricePerYear }} />
+          {currentPlan === handle && nextType === currentType && (
             <div className="pos:absolute t:0 r:0 w:40px h:40px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:18px">
               <i className="far fa-check" />
             </div>
@@ -69,7 +69,7 @@ export const PlanCard: FC<PlanCardProps> = ({
         <div>{description}</div>
         <div className={styles.divider} />
         <div className={styles.btn}>
-          {currentPlan === handle ? (
+          {currentPlan === handle && nextType === currentType ? (
             <Button size="large" style={{ width: '100%', maxWidth: 246 }} backgroundColor="var(--color-gray2)" color="var(--color-gray9)">
               Current Plan
             </Button>
@@ -84,7 +84,7 @@ export const PlanCard: FC<PlanCardProps> = ({
                 if (!idLoading) {
                   pmChildren.emit('@landing/plan/request', {
                     handle,
-                    type: planType,
+                    type: nextType,
                   });
                   setIdLoading(handle);
                 }

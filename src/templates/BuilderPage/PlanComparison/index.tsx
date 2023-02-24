@@ -21,14 +21,15 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const [activeTitle, setActiveTitle] = useState(plansTable[0]?.title ?? '');
   const { width } = useWindowSize();
   const featuresContent = features.content.trim();
-  const planToggleState = usePlanToggleState();
+  const { nextType, currentType } = usePlanToggleState();
   const [idLoading, setIdLoading] = useState('');
   const location = useLocation();
   const [currentPlan, setCurrentPlan] = useState('');
 
   useEffect(() => {
-    const off1 = pmChildren.on('@landing/plan/success', () => {
+    const off1 = pmChildren.on('@landing/plan/success', ({ plan }) => {
       setIdLoading('');
+      setCurrentPlan(plan);
     });
     const off2 = pmChildren.on('@landing/plan/failure', () => {
       setIdLoading('');
@@ -68,16 +69,13 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
           style={plansTable.length - 1 === index ? { borderRadius: '0 10px 0 0' } : {}}
         >
           <h3 className={styles.planTitle}>{item.title}</h3>
-          <div
-            className={styles.planPrice}
-            dangerouslySetInnerHTML={{ __html: planToggleState === 'monthly' ? item.pricePerMonth : item.pricePerYear }}
-          />
-          {currentPlan === item.handle && (
+          <div className={styles.planPrice} dangerouslySetInnerHTML={{ __html: nextType === 'monthly' ? item.pricePerMonth : item.pricePerYear }} />
+          {currentPlan === item.handle && nextType === currentType && (
             <div className="pos:absolute t:10px r:10px w:30px h:30px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:16px">
               <i className="far fa-check" />
             </div>
           )}
-          {currentPlan === item.handle ? (
+          {currentPlan === item.handle && nextType === currentType ? (
             <Button size="medium" style={{ width: '100%', maxWidth: 200 }} backgroundColor="var(--color-gray2)" color="var(--color-gray9)">
               Current Plan
             </Button>
@@ -92,7 +90,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                 if (!idLoading) {
                   pmChildren.emit('@landing/plan/request', {
                     handle: item.handle,
-                    type: planToggleState,
+                    type: nextType,
                   });
                   setIdLoading(item.handle);
                 }

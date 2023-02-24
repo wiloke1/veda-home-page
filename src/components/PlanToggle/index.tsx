@@ -1,9 +1,7 @@
-import { useLocation } from '@reach/router';
 import classNames from 'classnames';
-import { useQueryParams } from 'hooks/useQueryParams';
 import { FC, useEffect } from 'react';
 import { createGlobalState } from 'react-use';
-import { isBrowser } from 'utils/isBrowser';
+import { pmChildren } from 'utils/postMessage';
 
 export type PlanToggleType = 'monthly' | 'yearly';
 
@@ -12,33 +10,38 @@ export interface PlanToggleProps {
 }
 
 const usePlanToggleStatePrivate = createGlobalState<PlanToggleType>('monthly');
+const useCurrentType = createGlobalState<PlanToggleType | null>(null);
 
 export const usePlanToggleState = () => {
   const [state] = usePlanToggleStatePrivate();
-  return state ?? 'monthly';
+  const [currentType] = useCurrentType();
+  return {
+    currentType,
+    nextType: state ?? 'monthly',
+  };
 };
 
 export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
   const [type, setPlanToggleState] = usePlanToggleStatePrivate();
-  const location = useLocation();
-  const queryParams = useQueryParams();
+  const [currentType, setCurrentType] = useCurrentType();
 
   useEffect(() => {
-    if (isBrowser) {
-      onChange?.(queryParams('plantype') as PlanToggleType);
-      setPlanToggleState(queryParams('plantype') as PlanToggleType);
-    }
+    const off = pmChildren.on('@landing/currentPlan', ({ type }) => {
+      setPlanToggleState(type);
+      if (currentType === null) {
+        setCurrentType(type);
+      }
+      onChange?.(type);
+    });
+    const off2 = pmChildren.on('@landing/plan/success', ({ type }) => {
+      setCurrentType(type);
+    });
+    return () => {
+      off();
+      off2();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  useEffect(() => {
-    if (isBrowser && type) {
-      const url = new URL(location.href);
-      url.searchParams.set('plantype', type);
-      window.history.pushState({}, '', url.toString());
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [type]);
 
   return (
     <div className="d:flex ai:center">
