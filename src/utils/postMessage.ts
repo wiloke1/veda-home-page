@@ -10,10 +10,14 @@ export interface ChildrenEmitMessage {
 }
 
 export interface ChildrenOnMessage {
-  '@landing/plan/success': undefined;
+  '@landing/plan/success': {
+    plan: string;
+    type: 'monthly' | 'yearly';
+  };
   '@landing/plan/failure': undefined;
   '@landing/currentPlan': {
     plan: string;
+    type: 'monthly' | 'yearly';
   };
 }
 

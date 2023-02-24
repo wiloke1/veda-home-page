@@ -5,7 +5,10 @@ import { pmChildren } from 'utils/postMessage';
 
 if (isBrowser) {
   window.addEventListener('load', () => {
-    pmChildren.emit('@landing/ready');
+    const id = setTimeout(() => {
+      pmChildren.emit('@landing/ready');
+      clearTimeout(id);
+    }, 200);
   });
 }
 
