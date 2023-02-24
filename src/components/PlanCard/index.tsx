@@ -34,12 +34,15 @@ export const PlanCard: FC<PlanCardProps> = ({
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', () => {
+      console.log('success');
       setIdLoading('');
     });
     const off2 = pmChildren.on('@landing/plan/failure', () => {
+      console.log('failure');
       setIdLoading('');
     });
     const off3 = pmChildren.on('@landing/currentPlan', ({ plan }) => {
+      console.log('plan', plan);
       setCurrentPlan(plan);
     });
     return () => {
