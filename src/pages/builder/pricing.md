@@ -106,8 +106,8 @@ sections:
           ###
 
           * 15
-      - title: Advanded
-        handle: advanded
+      - title: Advanced
+        handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
         highlight: false
