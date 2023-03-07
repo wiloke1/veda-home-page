@@ -14,7 +14,6 @@ sections:
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          * 1 theme
           * 2 pages
           * All Page Types
           * Unlimited Layouts
@@ -32,7 +31,6 @@ sections:
         body: |-
           #### Everything in Starter, plus:
 
-          * 1 theme
           * 15 pages
           * A﻿ll supported addons
           * Save & Transfer Content
@@ -45,7 +43,6 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 1 theme
           * 50 pages
           * Advanced Page Settings
           * Design Services
@@ -63,7 +60,6 @@ sections:
 
           ### Theme builder
 
-          * T﻿heme
           * Addon
 
           ### Page builder
@@ -82,7 +78,6 @@ sections:
 
           ###
 
-          * 1
           * no
 
           ###
@@ -100,7 +95,6 @@ sections:
 
           ###
 
-          * 1
           * yes
 
           ###
@@ -118,7 +112,6 @@ sections:
 
           ###
 
-          * 10
           * yes
 
           ###
