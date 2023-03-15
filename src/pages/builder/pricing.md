@@ -7,9 +7,9 @@ sections:
     description: Choose the most advantageous pricing plan for your enterprise.
     decorate: type1
     plansContent:
-      - title: Starter
+      - title: Free
         description: Starter description
-        handle: starter
+        handle: free
         pricePerMonth: Free
         pricePerYear: Free
         buttonText: Get started
