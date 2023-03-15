@@ -22,7 +22,7 @@ sections:
           * SEO Controls
           * Email & Live Chat
       - title: Business
-        description: Most popular
+        description: 7 days trial for free
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
@@ -35,7 +35,7 @@ sections:
           * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
-        description: Unlock all features
+        description: 7 days trial for free
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
