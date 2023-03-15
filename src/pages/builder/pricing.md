@@ -4,7 +4,7 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: Choose the most advantageous pricing plan for your enterprise.
+    description: 7-DAY FREE TRIAL!
     decorate: type1
     plansContent:
       - title: Free
@@ -22,7 +22,7 @@ sections:
           * SEO Controls
           * Email & Live Chat
       - title: Business
-        description: 7 days trial for free
+        description: "or $190/year and save 17%. "
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
@@ -35,7 +35,7 @@ sections:
           * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
-        description: 7 days trial for free
+        description: or $390/year and save 17%
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
