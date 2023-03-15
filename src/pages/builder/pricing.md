@@ -31,7 +31,8 @@ sections:
         body: |-
           #### Everything in Starter, plus:
 
-          * 15 pages
+          * 7 days trial for free
+          * 15 pages 
           * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
@@ -43,7 +44,8 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 50 pages
+          * 7 days trial for free
+          * 50 pages 
           * Advanced Page Settings
           * Design Services
           * Priority Support
