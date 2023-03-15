@@ -8,7 +8,7 @@ sections:
     decorate: type1
     plansContent:
       - title: Free
-        description: Starter description
+        description: Free forever
         handle: free
         pricePerMonth: Free
         pricePerYear: Free
@@ -22,7 +22,7 @@ sections:
           * SEO Controls
           * Email & Live Chat
       - title: Business
-        description: Bussiness description
+        description: Most popular
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
@@ -35,7 +35,7 @@ sections:
           * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
-        description: Advanced description
+        description: Unlock all features
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
