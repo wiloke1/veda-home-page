@@ -42,7 +42,7 @@ sections:
         description: Your store will load quickly, keeping your visitors engaged and
           coming back for more.
   - type: themes
-    enable: true
+    enable: false
     heading: <span>20+ Veda themes</span> available for your store.
     description: "Take advantage of our multitude of customizable templates to
       create your own unique store. "
