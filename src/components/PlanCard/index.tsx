@@ -9,9 +9,16 @@ import { createGlobalState } from 'react-use';
 import { Plans } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import * as styles from './PlanCard.module.scss';
+import { calculatePricing, getPrice, replacePricing } from './utils';
 
 export interface PlanCardProps extends Plans {
   onMoreClick?: () => void;
+}
+
+export interface CouponInfo {
+  coupon: string;
+  discount: number;
+  type: 'FIXED' | 'PERCENTAGE';
 }
 
 const useIdLoading = createGlobalState('');
@@ -31,6 +38,9 @@ export const PlanCard: FC<PlanCardProps> = ({
   const [currentPlan, setCurrentPlan] = useState('');
   const { nextType, currentType } = usePlanToggleState();
 
+  const [priceMonth, setPriceMonth] = useState(pricePerMonth);
+  const [priceYear, setPriceYear] = useState(pricePerYear);
+
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', ({ plan }) => {
       setIdLoading('');
@@ -42,6 +52,7 @@ export const PlanCard: FC<PlanCardProps> = ({
     const off3 = pmChildren.on('@landing/currentPlan', ({ plan }) => {
       setCurrentPlan(plan);
     });
+
     return () => {
       off1();
       off2();
@@ -49,6 +60,36 @@ export const PlanCard: FC<PlanCardProps> = ({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    const off4 = pmChildren.on('@landing/sendCoupon', ({ discount, type }) => {
+      setPriceYear(
+        replacePricing(
+          pricePerYear,
+          calculatePricing({
+            type: type,
+            discount,
+            currentPrice: getPrice(pricePerYear),
+          }),
+        ),
+      );
+
+      setPriceMonth(
+        replacePricing(
+          pricePerMonth,
+          calculatePricing({
+            type: type,
+            discount,
+            currentPrice: getPrice(pricePerMonth),
+          }),
+        ),
+      );
+    });
+
+    return () => {
+      off4();
+    };
+  }, [pricePerMonth, pricePerYear]);
 
   return (
     <div
@@ -59,7 +100,7 @@ export const PlanCard: FC<PlanCardProps> = ({
       <div>
         <div className={styles.header}>
           <h3 className={styles.title}>{title}</h3>
-          <div className={styles.price} dangerouslySetInnerHTML={{ __html: nextType === 'monthly' ? pricePerMonth : pricePerYear }} />
+          <div className={styles.price} dangerouslySetInnerHTML={{ __html: nextType === 'monthly' ? priceMonth : priceYear }} />
           {currentPlan === handle && nextType === currentType && (
             <div className="pos:absolute t:0 r:0 w:40px h:40px bgc:color-secondary c:color-light bdrs:50% d:flex ai:center jc:center fz:18px">
               <i className="far fa-check" />

@@ -36,6 +36,7 @@ export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
     const off2 = pmChildren.on('@landing/plan/success', ({ type }) => {
       setCurrentType(type);
     });
+
     return () => {
       off();
       off2();

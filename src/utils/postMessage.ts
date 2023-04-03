@@ -1,3 +1,4 @@
+import { CouponInfo } from 'components/PlanCard';
 import { PlanToggleType } from 'components/PlanToggle';
 import { createPostMessage } from './createPostMessage';
 
@@ -7,6 +8,7 @@ export interface ChildrenEmitMessage {
     handle: string;
     type: PlanToggleType;
   };
+  '@landing/openModalCoupon'?: undefined;
 }
 
 export interface ChildrenOnMessage {
@@ -19,6 +21,7 @@ export interface ChildrenOnMessage {
     plan: string;
     type: 'monthly' | 'yearly';
   };
+  '@landing/sendCoupon': CouponInfo;
 }
 
 export const pmChildren = createPostMessage<ChildrenEmitMessage, ChildrenOnMessage>({
