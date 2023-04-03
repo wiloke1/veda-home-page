@@ -1,6 +1,5 @@
 import { PlanCard } from 'components/PlanCard';
 import { PlanToggle } from 'components/PlanToggle';
-import { RedeemCoupon } from 'components/RedeemCoupon';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { FC } from 'react';
@@ -13,7 +12,6 @@ export const Plans: FC<SectionPlans> = ({ heading, description, decorate, plansC
         <Title title={heading} text={description} decorate={decorate} />
         <div className="d:flex fld:column ai:center mt:40px mb:20px pos:relative">
           <PlanToggle />
-          <RedeemCoupon />
         </div>
         <div className="row">
           {plansContent.map((item, index) => {
