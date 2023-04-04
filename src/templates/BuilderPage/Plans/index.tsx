@@ -10,7 +10,7 @@ export const Plans: FC<SectionPlans> = ({ heading, description, decorate, plansC
     <Section style={{ overflow: 'hidden' }} backgroundColor={backgroundColor} backgroundImage={backgroundImage}>
       <div className="container">
         <Title title={heading} text={description} decorate={decorate} />
-        <div className="d:flex fld:column ai:center mt:40px mb:20px">
+        <div className="d:flex fld:column ai:center mt:40px mb:20px pos:relative">
           <PlanToggle />
         </div>
         <div className="row">

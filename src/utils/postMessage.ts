@@ -6,6 +6,9 @@ export interface ChildrenEmitMessage {
   '@landing/plan/request': {
     handle: string;
     type: PlanToggleType;
+    pricePerMonth: string;
+    pricePerYear: string;
+    title: string;
   };
 }
 

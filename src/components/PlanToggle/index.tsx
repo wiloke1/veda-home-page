@@ -36,6 +36,7 @@ export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
     const off2 = pmChildren.on('@landing/plan/success', ({ type }) => {
       setCurrentType(type);
     });
+
     return () => {
       off();
       off2();
@@ -62,7 +63,7 @@ export const PlanToggle: FC<PlanToggleProps> = ({ onChange }) => {
           className={classNames('pos:absolute w:24px h:24px bgc:color-light bdrs:50% trs:0.2s', type === 'yearly' ? 'trf:translateX(100%)' : '')}
         ></div>
       </div>
-      <div className="ml:10px ff:font-secondary fw:500 c:color-gray9">Yearly</div>
+      <div className="ml:10px ff:font-secondary fw:500 c:color-gray9">Annual (save 2 months)</div>
     </div>
   );
 };

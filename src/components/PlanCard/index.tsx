@@ -14,6 +14,12 @@ export interface PlanCardProps extends Plans {
   onMoreClick?: () => void;
 }
 
+export interface CouponInfo {
+  coupon: string;
+  discount: number;
+  type: 'FIXED' | 'PERCENTAGE';
+}
+
 const useIdLoading = createGlobalState('');
 
 export const PlanCard: FC<PlanCardProps> = ({
@@ -42,6 +48,7 @@ export const PlanCard: FC<PlanCardProps> = ({
     const off3 = pmChildren.on('@landing/currentPlan', ({ plan }) => {
       setCurrentPlan(plan);
     });
+
     return () => {
       off1();
       off2();
@@ -85,6 +92,9 @@ export const PlanCard: FC<PlanCardProps> = ({
                   pmChildren.emit('@landing/plan/request', {
                     handle,
                     type: nextType,
+                    pricePerMonth,
+                    pricePerYear,
+                    title,
                   });
                   setIdLoading(handle);
                 }
