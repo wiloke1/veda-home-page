@@ -14,7 +14,9 @@ sections:
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          * 2 pages
+          
+
+          * 2 pages 
           * All Page Types
           * Unlimited Layouts
           * Global Style
@@ -32,7 +34,8 @@ sections:
           #### Everything in Starter, plus:
 
           * 7 days trial for free
-          * 15 pages 
+          * 2 Veda themes
+          * 15 pages  
           * A﻿ll supported addons
           * Save & Transfer Content
       - title: Advanced
@@ -45,7 +48,8 @@ sections:
           #### Everything in Business, plus:
 
           * 7 days trial for free
-          * 50 pages 
+          * 5 Veda themes
+          * 50 pages  
           * Advanced Page Settings
           * Design Services
           * Priority Support
@@ -63,6 +67,7 @@ sections:
           ### Theme builder
 
           * Addon
+          * Veda Theme 
 
           ### Page builder
 
@@ -81,6 +86,7 @@ sections:
           ###
 
           * no
+          * no
 
           ###
 
@@ -98,6 +104,7 @@ sections:
           ###
 
           * yes
+          * 2
 
           ###
 
@@ -115,6 +122,7 @@ sections:
           ###
 
           * yes
+          * 5
 
           ###
 
