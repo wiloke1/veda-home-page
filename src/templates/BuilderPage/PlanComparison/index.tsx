@@ -91,6 +91,9 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                   pmChildren.emit('@landing/plan/request', {
                     handle: item.handle,
                     type: nextType,
+                    pricePerMonth: item.pricePerMonth,
+                    pricePerYear: item.pricePerYear,
+                    title: item.handle,
                   });
                   setIdLoading(item.handle);
                 }
