@@ -17,6 +17,7 @@ sections:
           
 
           * 2 pages 
+          *﻿ 3 Veda themes
           * All Page Types
           * Unlimited Layouts
           * Global Style
@@ -33,8 +34,7 @@ sections:
         body: |-
           #### Everything in Starter, plus:
 
-          * 7 days trial for free
-          * 2 Veda themes
+          * 3 Veda themes
           * 15 pages  
           * A﻿ll supported addons
           * Save & Transfer Content
@@ -47,8 +47,7 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 7 days trial for free
-          * 5 Veda themes
+          * 3 Veda themes
           * 50 pages  
           * Advanced Page Settings
           * Design Services
@@ -86,7 +85,7 @@ sections:
           ###
 
           * no
-          * no
+          * 3
 
           ###
 
@@ -104,7 +103,7 @@ sections:
           ###
 
           * yes
-          * 2
+          * 3
 
           ###
 
@@ -122,7 +121,7 @@ sections:
           ###
 
           * yes
-          * 5
+          * 3
 
           ###
 
