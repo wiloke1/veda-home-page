@@ -4,7 +4,7 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: 7-DAY FREE TRIAL!
+    description: ""
     decorate: type1
     plansContent:
       - title: Free
