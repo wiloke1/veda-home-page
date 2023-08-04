@@ -77,7 +77,7 @@ sections:
         pricePerMonth: Free
         pricePerYear: Free
         highlight: false
-        buttonText: Get started
+        buttonText: Select
         content: |-
           * yes
           * yes
@@ -85,7 +85,7 @@ sections:
           ###
 
           * no
-          * 3
+          * 4
 
           ###
 
@@ -95,7 +95,7 @@ sections:
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
         highlight: true
-        buttonText: Try for free
+        buttonText: Select
         content: |-
           * yes
           * no
@@ -103,7 +103,7 @@ sections:
           ###
 
           * yes
-          * 3
+          * 4
 
           ###
 
@@ -113,7 +113,7 @@ sections:
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
         highlight: false
-        buttonText: Start advancing
+        buttonText: Select
         content: |-
           * yes
           * no
