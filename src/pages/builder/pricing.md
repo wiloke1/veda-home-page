@@ -30,7 +30,7 @@ sections:
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
         highlight: true
-        buttonText: Try for free
+        buttonText: Select
         body: |-
           #### Everything in Starter, plus:
 
@@ -43,7 +43,7 @@ sections:
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
-        buttonText: Start advancing
+        buttonText: Select
         body: |-
           #### Everything in Business, plus:
 
