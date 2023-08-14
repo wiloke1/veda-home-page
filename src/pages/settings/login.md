@@ -7,4 +7,5 @@ login:
   inputHiddenAction: requestShopifyCode
   placeholder: "EG: vedabuilder.myshopify.com"
   buttonText: Try for free
+  note: ""
 ---

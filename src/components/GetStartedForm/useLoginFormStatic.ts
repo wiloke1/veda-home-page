@@ -13,6 +13,7 @@ export const useLoginFormStatic = () => {
             inputHiddenAction
             placeholder
             buttonText
+            note
           }
         }
       }

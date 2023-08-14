@@ -55,5 +55,6 @@
             { label: Input Hidden Action, name: inputHiddenAction, widget: string, default: '' },
             { label: Placeholder, name: placeholder, widget: string, default: '' },
             { label: Button text, name: buttonText, widget: string, default: '' },
+            { label: Note, name: note, widget: markdown, default: '' },
           ]
         }

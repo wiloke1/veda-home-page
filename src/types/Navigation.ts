@@ -14,6 +14,7 @@ export interface LoginForm {
   inputHiddenAction: string;
   placeholder: string;
   buttonText: string;
+  note: string;
 }
 
 export interface NavigationFrontMaster {
