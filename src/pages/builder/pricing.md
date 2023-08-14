@@ -14,10 +14,8 @@ sections:
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          
-
-          * 2 pages 
-          *﻿ 3 Veda themes
+          * 2 pages
+          * 3 Veda themes
           * All Page Types
           * Unlimited Layouts
           * Global Style
@@ -35,8 +33,9 @@ sections:
           #### Everything in Starter, plus:
 
           * 3 Veda themes
+          * All VIP Sections
           * 15 pages  
-          * A﻿ll supported addons
+          * A﻿ll Business Addons
           * Save & Transfer Content
       - title: Advanced
         description: or $390/year and save 17%
@@ -47,8 +46,10 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 3 Veda themes
-          * 50 pages  
+          * 4 Veda themes
+          * 50 pages
+          * Import / export page & sections
+          * All Advanced Addons
           * Advanced Page Settings
           * Design Services
           * Priority Support
