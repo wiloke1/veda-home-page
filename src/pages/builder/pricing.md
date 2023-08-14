@@ -53,6 +53,7 @@ sections:
           * Advanced Page Settings
           * Design Services
           * Priority Support
+          * Support setup Heatmaps & Session Recordings
     heading: Plan for every <span>store owner</span>
   - type: planComparison
     enable: true
@@ -63,15 +64,11 @@ sections:
         content: |-
           * Visual Editor 
           * Veda Label
-
-          ### Theme builder
-
-          * Addon
-          * Veda Theme 
-
-          ### Page builder
-
-          * Pages
+          * V﻿eda Live Themes
+          * Veda Live Pages
+          * Business Addons 
+          * A﻿dvanced Addons
+          * I﻿mport & Export pages
     plansTable:
       - title: Starter
         handle: starter
@@ -82,15 +79,11 @@ sections:
         content: |-
           * yes
           * yes
-
-          ###
-
-          * no
-          * 4
-
-          ###
-
+          * 3
           * 2
+          * no
+          * no
+          * no
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
@@ -100,15 +93,11 @@ sections:
         content: |-
           * yes
           * no
-
-          ###
-
+          * 1﻿5
+          * 3
           * yes
-          * 4
-
-          ###
-
-          * 15
+          * no
+          * no
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -118,15 +107,11 @@ sections:
         content: |-
           * yes
           * no
-
-          ###
-
-          * yes
-          * 3
-
-          ###
-
+          * 4
           * 50
+          * yes
+          * yes
+          * yes
     heading: Plan comparison
   - type: collapse
     enable: true
