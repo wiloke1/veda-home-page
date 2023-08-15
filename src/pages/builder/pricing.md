@@ -37,6 +37,7 @@ sections:
           * 15 pages  
           * A﻿ll Business Addons
           * Save & Transfer Content
+          * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
         description: or $390/year and save 17%
         handle: advanced
@@ -53,7 +54,7 @@ sections:
           * Advanced Page Settings
           * Design Services
           * Priority Support
-          * Support setup Heatmaps & Session Recordings
+          * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
   - type: planComparison
     enable: true
@@ -69,6 +70,7 @@ sections:
           * Business Addons 
           * A﻿dvanced Addons
           * I﻿mport & Export pages
+          * Set up Heatmap & Visitor Session Recordings Unlimited
     plansTable:
       - title: Starter
         handle: starter
@@ -81,6 +83,7 @@ sections:
           * yes
           * 3
           * 2
+          * no
           * no
           * no
           * no
@@ -98,6 +101,7 @@ sections:
           * yes
           * no
           * no
+          * yes
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -109,6 +113,7 @@ sections:
           * no
           * 4
           * 50
+          * yes
           * yes
           * yes
           * yes
