@@ -53,12 +53,14 @@
   }
   li {
     margin-bottom: 12px;
+    width: fit-content;
     &:before {
       content: '\f00c';
       font-family: "Font Awesome 5 Pro";
       font-size: 16px;
       margin-right: 10px;
       color: var(--color-secondary);
+      display:inline-block;
     }
     &:last-child {
       margin-bottom: 0;
@@ -111,4 +113,10 @@
   li {
     color: var(--color-gray3);
   }
+}
+
+.link {
+  cursor: pointer;
+  color: var(--color-primary);
+  text-decoration: underline;
 }

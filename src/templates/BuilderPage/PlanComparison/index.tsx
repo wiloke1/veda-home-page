@@ -12,6 +12,7 @@ import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import { reactNodeToString } from 'utils/reactNodeToString';
+import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
@@ -25,6 +26,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
   const [idLoading, setIdLoading] = useState('');
   const location = useLocation();
   const [currentPlan, setCurrentPlan] = useState('');
+  const { contentRef, getLiProps } = usePricingPopupSupport();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', ({ plan }) => {
@@ -165,7 +167,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             <div className={classNames(styles.featuresHeader, location.pathname === '/pricing-for-veda-builder' ? 't:0!' : '')}>
               <h3 className={styles.featuresTitle}>{features.title}</h3>
             </div>
-            <div className={styles.featuresContent}>
+            <div ref={contentRef} className={styles.featuresContent}>
               <ReactMarkdown
                 components={{
                   li: ({ node: _, ...props }) => {
@@ -179,7 +181,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                           ?.replace(/\).*/g, '')
                           ?.replace(/\(.*\)/g, '') ?? '';
                       return (
-                        <li {...props}>
+                        <li {...getLiProps(props)}>
                           {text}
                           <Tooltip title={tooltip}>
                             <i className={classNames(styles.tooltip, 'far fa-info-circle')} />
@@ -189,13 +191,9 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                     }
                     if (liText.includes('[last]')) {
                       const text = liText.replace('[last]', '');
-                      return (
-                        <li {...props} className={styles.last}>
-                          {text}
-                        </li>
-                      );
+                      return <li {...getLiProps({ ...props, className: styles.last })}>{text}</li>;
                     }
-                    return <li {...props} />;
+                    return <li {...getLiProps(props)} />;
                   },
                 }}
               >
@@ -208,6 +206,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
           </div>
         </div>
       </div>
+      <PricingPopupSupport />
     </Section>
   );
 };

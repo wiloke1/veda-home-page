@@ -31,11 +31,11 @@ sections:
         buttonText: Select
         body: |-
           #### Everything in Starter, plus:
-
+          
           * 3 Veda themes
           * All VIP Sections
           * 15 pages  
-          * A﻿ll Business Addons
+          * All Business Addons
           * Save & Transfer Content
           * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
@@ -65,7 +65,7 @@ sections:
         content: |-
           * Visual Editor 
           * Veda Label
-          * V﻿eda Live Themes
+          * Veda Live Themes
           * Veda Live Pages
           * Business Addons 
           * A﻿dvanced Addons
@@ -96,7 +96,7 @@ sections:
         content: |-
           * yes
           * no
-          * 1﻿5
+          * 15
           * 3
           * yes
           * no

@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import { createGlobalState } from 'react-use';
 import { Plans } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
+import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import * as styles from './PlanCard.module.scss';
 
 export interface PlanCardProps extends Plans {
@@ -36,6 +37,7 @@ export const PlanCard: FC<PlanCardProps> = ({
   const [idLoading, setIdLoading] = useIdLoading();
   const [currentPlan, setCurrentPlan] = useState('');
   const { nextType, currentType } = usePlanToggleState();
+  const { contentRef, getLiProps } = usePricingPopupSupport();
 
   useEffect(() => {
     const off1 = pmChildren.on('@landing/plan/success', ({ plan }) => {
@@ -102,13 +104,22 @@ export const PlanCard: FC<PlanCardProps> = ({
             />
           )}
         </div>
-        <div className={styles.body}>
-          <ReactMarkdown>{body}</ReactMarkdown>
+        <div ref={contentRef} className={styles.body}>
+          <ReactMarkdown
+            components={{
+              li: ({ node: _, ...props }) => {
+                return <li {...getLiProps(props)} />;
+              },
+            }}
+          >
+            {body}
+          </ReactMarkdown>
         </div>
       </div>
       <LinkButton className={styles.learnMore} onClick={onMoreClick}>
         Learn more
       </LinkButton>
+      <PricingPopupSupport />
     </div>
   );
 };

@@ -107,5 +107,11 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       url: String
       subMenu: [SubMenu]
     }
+
+    type MarkdownRemarkFrontmatterPricingPopup @infer {
+      listTitle: String
+      content: String
+      align: String
+    }
   `);
 };
