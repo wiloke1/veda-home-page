@@ -2,17 +2,17 @@ import { useLocation } from '@reach/router';
 import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
+import { Markdown } from 'components/Markdown/Markdown';
 import { usePlanToggleState } from 'components/PlanToggle';
+import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import { Section } from 'components/Section';
 import { Title } from 'components/Title';
 import { Tooltip } from 'components/Tooltip';
 import { FC, useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { useWindowSize } from 'react-use';
 import { SectionPlanComparison, TableItem } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
 import { reactNodeToString } from 'utils/reactNodeToString';
-import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import * as styles from './PlanComparison.module.scss';
 
 const MAX_WIDTH = 950;
@@ -104,7 +104,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
           )}
         </div>
         <div className={styles.planBody}>
-          <ReactMarkdown
+          <Markdown
             components={{
               li: ({ node: _, ...props }) => {
                 const liText = reactNodeToString(props.children).trim();
@@ -136,7 +136,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
             }}
           >
             {!!itemContent ? `${itemContent}[last]` : itemContent}
-          </ReactMarkdown>
+          </Markdown>
         </div>
       </div>
     );
@@ -168,7 +168,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
               <h3 className={styles.featuresTitle}>{features.title}</h3>
             </div>
             <div ref={contentRef} className={styles.featuresContent}>
-              <ReactMarkdown
+              <Markdown
                 components={{
                   li: ({ node: _, ...props }) => {
                     const liText = reactNodeToString(props.children).trim();
@@ -198,7 +198,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
                 }}
               >
                 {!!featuresContent ? `${featuresContent}[last]` : featuresContent}
-              </ReactMarkdown>
+              </Markdown>
             </div>
           </div>
           <div className={styles.plans} style={{ width: width <= MAX_WIDTH ? '45%' : '70%' }}>

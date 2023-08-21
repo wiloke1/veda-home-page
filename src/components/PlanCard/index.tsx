@@ -2,13 +2,13 @@ import classNames from 'classnames';
 import { Button } from 'components/Button';
 import { GetStartedPopup } from 'components/GetStartedPopup';
 import { LinkButton } from 'components/LinkButton';
+import { Markdown } from 'components/Markdown/Markdown';
 import { usePlanToggleState } from 'components/PlanToggle';
+import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import { FC, useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { createGlobalState } from 'react-use';
 import { Plans } from 'types/Builder';
 import { pmChildren } from 'utils/postMessage';
-import { PricingPopupSupport, usePricingPopupSupport } from 'components/PricingPopupSupport/PricingPopupSupport';
 import * as styles from './PlanCard.module.scss';
 
 export interface PlanCardProps extends Plans {
@@ -105,7 +105,7 @@ export const PlanCard: FC<PlanCardProps> = ({
           )}
         </div>
         <div ref={contentRef} className={styles.body}>
-          <ReactMarkdown
+          <Markdown
             components={{
               li: ({ node: _, ...props }) => {
                 return <li {...getLiProps(props)} />;
@@ -113,7 +113,7 @@ export const PlanCard: FC<PlanCardProps> = ({
             }}
           >
             {body}
-          </ReactMarkdown>
+          </Markdown>
         </div>
       </div>
       <LinkButton className={styles.learnMore} onClick={onMoreClick}>

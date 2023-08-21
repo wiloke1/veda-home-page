@@ -11,6 +11,9 @@ tags:
 ---
 <!--StartFragment-->
 
+`youtube: https://www.youtube.com/embed/2Xc9gXyf2G4`
+
+
 Step-by-step guide on **how to remove shipping calculated at checkout Shopify**. 
 
 If your business offers free shipping, you might need to delete the "shipping calculated at checkout" text. Otherwise, it leads buyers to believe that there may be extra shipping costs, causing them hesitant to complete the purchase, and lowering the conversion rate.

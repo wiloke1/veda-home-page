@@ -1,9 +1,9 @@
-import { useRef } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { PricingPopupData } from 'types/PricingPopup';
-import { createGlobalState } from 'react-use';
+import { Markdown } from 'components/Markdown/Markdown';
 import { ModalBase } from 'components/ModalBase';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import { graphql, useStaticQuery } from 'gatsby';
+import { useRef } from 'react';
+import { createGlobalState } from 'react-use';
+import { PricingPopupData } from 'types/PricingPopup';
 
 export const usePricingPopupStatic = () => {
   const { markdownRemark } = useStaticQuery<PricingPopupData>(graphql`
@@ -72,7 +72,7 @@ export const PricingPopupSupport = () => {
         className="bgc:color-light p:30px bdrs:6px w:calc(100vw_-_20px) maw:1000px mah:80vh ovx:hidden ovy:auto"
         style={{ textAlign: popupContent.align }}
       >
-        <ReactMarkdown>{popupContent.content}</ReactMarkdown>
+        <Markdown>{popupContent.content}</Markdown>
       </div>
       <div
         className="pos:absolute t:0 r:10px fz:30px lh:normal cur:pointer"

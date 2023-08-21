@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import { Button } from 'components/Button';
+import { Markdown } from 'components/Markdown/Markdown';
 import { FC } from 'react';
 import { LoginForm } from 'types/Navigation';
 import { builderMode } from 'utils/builderMode';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { useLoginFormStatic } from './useLoginFormStatic';
 
 export interface GetStartedFormProps {
@@ -31,7 +31,7 @@ export const GetStartedFormUI: FC<GetStartedFormProps & { data: LoginForm }> = (
       </form>
       {!!note && (
         <div className="mt:20px fz:16px c:color-primary*a">
-          <ReactMarkdown linkTarget="_blank">{note}</ReactMarkdown>
+          <Markdown>{note}</Markdown>
         </div>
       )}
     </div>
