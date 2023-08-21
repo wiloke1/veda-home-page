@@ -34,7 +34,7 @@ sections:
 
           * 1 theme
           * 15 pages
-          * A﻿ll supported addons
+          * All supported addons
           * Save & Transfer Content
       - title: Advanced
         description: Advanced description

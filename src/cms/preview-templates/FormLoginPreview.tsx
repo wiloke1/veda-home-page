@@ -6,7 +6,7 @@ import { builderMode } from 'utils/builderMode';
 
 builderMode.set(true);
 
-const HeaderNavigationPreview = ({ entry }: PreviewTemplateComponentProps) => {
+const FormLoginPreview = ({ entry }: PreviewTemplateComponentProps) => {
   const login = entry.getIn(['data', 'login']).toJS() as LoginForm;
 
   if (!login) {
@@ -21,4 +21,4 @@ const HeaderNavigationPreview = ({ entry }: PreviewTemplateComponentProps) => {
   );
 };
 
-export default HeaderNavigationPreview;
+export default FormLoginPreview;

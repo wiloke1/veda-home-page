@@ -58,3 +58,35 @@
             { label: Note, name: note, widget: markdown, default: '' },
           ]
         }
+    - file: "src/pages/settings/pricing-popup.md"
+      label: "Pricing Popup"
+      name: "pricing-popup"
+      fields:
+        - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "pricingPopup",
+          }
+        - {
+          label: "Popup",
+          name: "pricingPopup",
+          widget: "list",
+          default: [],
+          fields: [
+            { label: List Title, name: listTitle, widget: string, default: '' },
+            {
+              label: Align,
+              name: align,
+              widget: select,
+              required: false,
+              default: "left",
+              options: [
+                { label: "Left", value: "left" },
+                { label: "Center", value: "center" },
+                { label: "Right", value: "right" }
+              ]
+            },
+            { label: Content, name: content, widget: markdown, default: '' }
+          ]
+        }
