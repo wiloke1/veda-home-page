@@ -55,7 +55,7 @@ export const PricingPopupSupportForBuilder = ({ data, document }: { data: Popup[
         {popupContent.content}
       </div>
       <div
-        className="pos:absolute t:0 r:10px fz:30px lh:normal cur:pointer"
+        className="pos:absolute t:0 r:10px fz:32px lh:normal cur:pointer"
         onClick={() => {
           setListContentActive('');
         }}
