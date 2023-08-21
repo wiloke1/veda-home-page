@@ -32,7 +32,7 @@ export const usePricingPopupSupport = () => {
 
   const getLiProps = <T extends { children: any; className?: string }>(props: T) => {
     const children = Array.isArray(props.children) ? props.children[0] : '';
-    const cond = typeof children === 'string' && data.some(popup => popup.listTitle.trim() === children.trim());
+    const cond = typeof children === 'string' && data.some(popup => popup.listTitle.replace(/﻿/g, '').trim() === children.replace(/﻿/g, '').trim());
 
     return {
       ...props,
@@ -55,7 +55,7 @@ export const PricingPopupSupport = () => {
   const data = usePricingPopupStatic();
   const [listContentActive, setListContentActive] = useListContentActive();
   const isModalVisibie = !!listContentActive;
-  const popupContent = data.find(popup => popup.listTitle.trim() === listContentActive.trim());
+  const popupContent = data.find(popup => popup.listTitle.replace(/﻿/g, '').trim() === listContentActive.replace(/﻿/g, '').trim());
 
   if (!popupContent) {
     return null;
