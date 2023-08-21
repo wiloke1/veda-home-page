@@ -11,7 +11,7 @@ sections:
     backgroundColor: "#D3EFFF"
     heroImage: /img/hero.png
   - type: features
-    enable: true
+    enable: false
     heading: Make your Shopify store look <span>way better than ever!</span>
     description: For the first time, we've created Veda Builder with a focus on ease
       of use, customization, and limitless possibilities.
@@ -42,13 +42,13 @@ sections:
         description: Your store will load quickly, keeping your visitors engaged and
           coming back for more.
   - type: themes
-    enable: true
+    enable: false
     heading: <span>20+ Veda themes</span> available for your store.
     description: "Take advantage of our multitude of customizable templates to
       create your own unique store. "
     decorate: ""
   - type: zigzag
-    enable: true
+    enable: false
     zigzagContent:
       title: Take over your Shopify Store with Veda Builder
       description: Veda Builder is a 100% customized page builder that lets you take
@@ -59,7 +59,7 @@ sections:
       image: https://ucarecdn.com/2e2454cb-a08c-4ed1-8d89-4949c7908c52/-/format/auto/-/preview/960x960/-/quality/lighter/drag.png
       reverse: true
   - type: zigzag
-    enable: true
+    enable: false
     backgroundColor: "#fbedff"
     zigzagContent:
       title: Powerful and easy to use
@@ -71,7 +71,7 @@ sections:
       image: https://ucarecdn.com/39504b18-0c7b-4005-9aad-f1dd0fdb2578/-/format/auto/-/preview/1024x1024/-/quality/lighter/turn.png
       reverse: false
   - type: zigzag
-    enable: true
+    enable: false
     zigzagContent:
       title: Compatible with best-selling 3rd-party add-ons
       description: You can effectively promote your products, upsell customers on
