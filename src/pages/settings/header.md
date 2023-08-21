@@ -5,8 +5,8 @@ headerNavigation:
     url: /
   - label: Pricing
     url: /pricing
-  - label: Themes
-    url: /themes
+  - label: Documentation
+    url: https://help.vedabuilder.com/en/
   - label: Blog
     url: /blog
   - label: Contact

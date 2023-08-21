@@ -4,18 +4,18 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: Choose the most advantageous pricing plan for your enterprise.
+    description: ""
     decorate: type1
     plansContent:
-      - title: Starter
-        description: Starter description
-        handle: starter
+      - title: Free
+        description: Free forever
+        handle: free
         pricePerMonth: Free
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          * 1 theme
           * 2 pages
+          * 3 Veda themes
           * All Page Types
           * Unlimited Layouts
           * Global Style
@@ -23,33 +23,38 @@ sections:
           * SEO Controls
           * Email & Live Chat
       - title: Business
-        description: Bussiness description
+        description: "or $190/year and save 17%. "
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
         highlight: true
-        buttonText: Try for free
+        buttonText: Select
         body: |-
           #### Everything in Starter, plus:
-
-          * 1 theme
-          * 15 pages
-          * All supported addons
+          
+          * 3 Veda themes
+          * All VIP Sections
+          * 15 pages  
+          * All Business Addons
           * Save & Transfer Content
+          * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
-        description: Advanced description
+        description: or $390/year and save 17%
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
-        buttonText: Start advancing
+        buttonText: Select
         body: |-
           #### Everything in Business, plus:
 
-          * 1 theme
+          * 4 Veda themes
           * 50 pages
+          * Import / export page & sections
+          * All Advanced Addons
           * Advanced Page Settings
           * Design Services
           * Priority Support
+          * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
   - type: planComparison
     enable: true
@@ -60,70 +65,58 @@ sections:
         content: |-
           * Visual Editor 
           * Veda Label
-
-          ### Theme builder
-
-          * T﻿heme
-          * Addon
-
-          ### Page builder
-
-          * Pages
+          * Veda Live Themes
+          * Veda Live Pages
+          * Business Addons 
+          * A﻿dvanced Addons
+          * I﻿mport & Export pages
+          * Set up Heatmap & Visitor Session Recordings Unlimited
     plansTable:
       - title: Starter
         handle: starter
         pricePerMonth: Free
         pricePerYear: Free
         highlight: false
-        buttonText: Get started
+        buttonText: Select
         content: |-
           * yes
           * yes
-
-          ###
-
-          * 1
-          * no
-
-          ###
-
+          * 3
           * 2
+          * no
+          * no
+          * no
+          * no
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
         highlight: true
-        buttonText: Try for free
+        buttonText: Select
         content: |-
           * yes
           * no
-
-          ###
-
-          * 1
-          * yes
-
-          ###
-
           * 15
+          * 3
+          * yes
+          * no
+          * no
+          * yes
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
         highlight: false
-        buttonText: Start advancing
+        buttonText: Select
         content: |-
           * yes
           * no
-
-          ###
-
-          * 10
-          * yes
-
-          ###
-
+          * 4
           * 50
+          * yes
+          * yes
+          * yes
+          * yes
     heading: Plan comparison
   - type: collapse
     enable: true
