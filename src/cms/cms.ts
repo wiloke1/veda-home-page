@@ -9,6 +9,7 @@ import HeaderNavigationPreview from './preview-templates/HeaderNavigationPreview
 import FormLoginPreview from './preview-templates/FormLoginPreview';
 import ThemePagePreview from './preview-templates/ThemePagePreview';
 import NotificationsPagePreview from './preview-templates/NotificationsPagePreview';
+import PricingPopupPreview from './preview-templates/PricingPopupPreview';
 import './utils';
 
 CMS.registerMediaLibrary(uploadcare);
@@ -23,3 +24,4 @@ CMS.registerPreviewTemplate('themes', ThemePagePreview);
 CMS.registerPreviewTemplate('notifications', NotificationsPagePreview);
 CMS.registerPreviewTemplate('header-navigation', HeaderNavigationPreview);
 CMS.registerPreviewTemplate('login', FormLoginPreview);
+CMS.registerPreviewTemplate('pricing-popup', PricingPopupPreview);

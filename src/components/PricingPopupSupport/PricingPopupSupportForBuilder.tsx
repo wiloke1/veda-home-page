@@ -1,36 +1,17 @@
-import { useRef } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { PricingPopupData } from 'types/PricingPopup';
-import { createGlobalState } from 'react-use';
 import { ModalBase } from 'components/ModalBase';
-
-export const usePricingPopupStatic = () => {
-  const { markdownRemark } = useStaticQuery<PricingPopupData>(graphql`
-    query PricingPopupQuery {
-      markdownRemark(frontmatter: { templateKey: { eq: "pricingPopup" } }) {
-        frontmatter {
-          pricingPopup {
-            listTitle
-            content
-            align
-          }
-        }
-      }
-    }
-  `);
-
-  return markdownRemark.frontmatter.pricingPopup;
-};
+import { useRef } from 'react';
+import { createGlobalState } from 'react-use';
+import { Popup, PricingPopupFrontMaster } from 'types/PricingPopup';
 
 const useListContentActive = createGlobalState('');
 
-export const usePricingPopupSupport = () => {
-  const data = usePricingPopupStatic();
+export const usePricingPopupSupportForBuilder = (value: PricingPopupFrontMaster) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [_, setListContentActive] = useListContentActive();
+  const data = value.pricingPopup ?? [];
 
   const getLiProps = <T extends { children: any; className?: string }>(props: T) => {
-    const children = Array.isArray(props.children) ? props.children[0] : '';
+    const children = typeof props.children === 'string' ? props.children : Array.isArray(props.children) ? props.children[0] : '';
     const cond = typeof children === 'string' && data.some(popup => popup.listTitle.trim() === children.trim());
 
     return {
@@ -50,8 +31,7 @@ export const usePricingPopupSupport = () => {
   };
 };
 
-export const PricingPopupSupport = () => {
-  const data = usePricingPopupStatic();
+export const PricingPopupSupportForBuilder = ({ data, document }: { data: Popup[]; document: Document }) => {
   const [listContentActive, setListContentActive] = useListContentActive();
   const isModalVisibie = !!listContentActive;
   const popupContent = data.find(popup => popup.listTitle.trim() === listContentActive.trim());
@@ -66,6 +46,7 @@ export const PricingPopupSupport = () => {
       onClose={() => {
         setListContentActive('');
       }}
+      document={document}
     >
       <div
         className="bgc:color-light p:30px bdrs:6px w:calc(100vw_-_20px) maw:1000px mah:80vh ovx:hidden ovy:auto"
@@ -74,7 +55,7 @@ export const PricingPopupSupport = () => {
         {popupContent.content}
       </div>
       <div
-        className="pos:absolute t:0 r:10px fz:30px lh:normal cur:pointer"
+        className="pos:absolute t:0 r:10px fz:32px lh:normal cur:pointer"
         onClick={() => {
           setListContentActive('');
         }}

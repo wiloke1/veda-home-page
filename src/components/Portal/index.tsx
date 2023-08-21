@@ -14,11 +14,16 @@ export interface PortalProps {
   bodyClassName?: string;
   /** Style cho body */
   bodyStyle?: CSSProperties;
+  /** Hỗ trợ netlify cms */
+  doc?: Document;
 }
 
-const portalRoot = typeof document !== `undefined` ? document.getElementById('portal') : null;
+export const Portal: FC<PortalProps> = ({ visible, overlay, children, containerClassName, containerStyle, bodyClassName, bodyStyle, doc }) => {
+  const _document = doc || document;
+  const portalRoot = typeof _document !== `undefined` ? _document.getElementById('portal') : null;
 
-export const Portal: FC<PortalProps> = ({ visible, overlay, children, containerClassName, containerStyle, bodyClassName, bodyStyle }) => {
+  console.log(doc);
+
   const renderContent = (
     <div className={containerClassName} style={containerStyle}>
       {overlay}
