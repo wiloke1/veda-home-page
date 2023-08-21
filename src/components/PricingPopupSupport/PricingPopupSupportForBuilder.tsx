@@ -1,3 +1,4 @@
+import { Markdown } from 'components/Markdown/Markdown';
 import { ModalBase } from 'components/ModalBase';
 import { useRef } from 'react';
 import { createGlobalState } from 'react-use';
@@ -52,7 +53,7 @@ export const PricingPopupSupportForBuilder = ({ data, document }: { data: Popup[
         className="bgc:color-light p:30px bdrs:6px w:calc(100vw_-_20px) maw:1000px mah:80vh ovx:hidden ovy:auto"
         style={{ textAlign: popupContent.align }}
       >
-        {popupContent.content}
+        <Markdown>{popupContent.content}</Markdown>
       </div>
       <div
         className="pos:absolute t:0 r:10px fz:32px lh:normal cur:pointer"

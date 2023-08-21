@@ -1,10 +1,10 @@
-import { FC } from 'react';
 import Collapse from 'components/Collapse';
-import { Section } from 'components/Section';
-import ReactMarkdown from 'react-markdown';
-import { SectionCollapse } from 'types/Builder';
-import { Title } from 'components/Title';
 import { LinkButton } from 'components/LinkButton';
+import { Markdown } from 'components/Markdown/Markdown';
+import { Section } from 'components/Section';
+import { Title } from 'components/Title';
+import { FC } from 'react';
+import { SectionCollapse } from 'types/Builder';
 
 export const CollapseSection: FC<SectionCollapse> = ({ heading, description, decorate, collapseContent, backgroundColor, backgroundImage }) => {
   return (
@@ -30,7 +30,7 @@ export const CollapseSection: FC<SectionCollapse> = ({ heading, description, dec
                   accordion
                 >
                   <div className="p:20px fz:16px">
-                    <ReactMarkdown>{item.content}</ReactMarkdown>
+                    <Markdown>{item.content}</Markdown>
                   </div>
                 </Collapse>
               );

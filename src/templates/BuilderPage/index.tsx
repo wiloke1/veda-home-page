@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown';
+import { Markdown } from 'components/Markdown/Markdown';
 import { Section } from 'components/Section';
 import { ZigzagCard } from 'components/ZigzagCard';
 import { FC, Fragment } from 'react';
@@ -45,7 +45,7 @@ export const BuilderPageTemplate: FC<BuilderPageFrontMaster> = ({ sections }) =>
           section.enable && (
             <Section>
               <div className="maw:700px m:auto veda-rich-text">
-                <ReactMarkdown>{section.richtextContent}</ReactMarkdown>
+                <Markdown>{section.richtextContent}</Markdown>
               </div>
             </Section>
           )
