@@ -19,7 +19,7 @@ export interface PortalProps {
 }
 
 export const Portal: FC<PortalProps> = ({ visible, overlay, children, containerClassName, containerStyle, bodyClassName, bodyStyle, doc }) => {
-  const _document = doc || typeof document !== 'undefined' ? document : null;
+  const _document = doc || (typeof document !== 'undefined' ? document : null);
   const portalRoot = _document ? _document.getElementById('portal') : null;
 
   const renderContent = (
