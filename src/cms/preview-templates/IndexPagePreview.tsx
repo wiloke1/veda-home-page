@@ -1,9 +1,9 @@
 import App from 'App';
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import { BuilderPageTemplate } from 'templates/BuilderPage';
 import { BuilderPageFrontMaster } from 'types/Builder';
 import { builderMode } from 'utils/builderMode';
 import { LocationProvider, createHistory } from '@reach/router';
+import { BuilderPageTemplateForBuilder } from 'templates/BuilderPage/BuilderPageTemplateForBuilder';
 
 builderMode.set(true);
 const history = createHistory(window as any);
@@ -18,7 +18,7 @@ const IndexPagePreview = ({ entry }: PreviewTemplateComponentProps) => {
     <App overflow="hidden">
       {/* Thêm LocationProvider để sử dụng useLocation trong các component không vấn đề gì */}
       <LocationProvider history={history}>
-        <BuilderPageTemplate {...data} isNetlify />
+        <BuilderPageTemplateForBuilder {...data} isNetlify />
       </LocationProvider>
     </App>
   );
