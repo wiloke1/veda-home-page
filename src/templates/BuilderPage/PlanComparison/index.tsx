@@ -147,7 +147,7 @@ export const PlanComparison: FC<SectionPlanComparison> = ({ heading, planFeature
       <div className="container">
         <Title title={heading} />
         {width <= MAX_WIDTH && (
-          <div className={styles.tab}>
+          <div className={styles.buttonGroup}>
             {plansTable.map(item => {
               return (
                 <Button
