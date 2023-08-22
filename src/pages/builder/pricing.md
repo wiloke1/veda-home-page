@@ -4,7 +4,7 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: ""
+    description: Description
     decorate: type1
     plansContent:
       - title: Free
@@ -31,7 +31,7 @@ sections:
         buttonText: Select
         body: |-
           #### Everything in Starter, plus:
-          
+
           * 3 Veda themes
           * All VIP Sections
           * 15 pages  
@@ -56,6 +56,7 @@ sections:
           * Priority Support
           * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
+    backgroundColor: "#e10c0c"
   - type: planComparison
     enable: true
     description: ""
