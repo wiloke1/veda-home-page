@@ -1,12 +1,9 @@
 ---
 templateKey: pricingPopup
 pricingPopup:
-  - listTitle: 1 theme
+  - listTitle: Email & Live Chat
     align: left
-    content: 1 theme
-  - listTitle: All supported addons
-    align: left
-    content: All supported addons
+    content: Description
   - listTitle: Veda Label
     align: left
     content: Veda Label
