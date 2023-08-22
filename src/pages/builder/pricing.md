@@ -4,7 +4,7 @@ title: Pricing
 sections:
   - type: plans
     enable: true
-    description: Description
+    description: ""
     decorate: type1
     plansContent:
       - title: Free
@@ -56,7 +56,7 @@ sections:
           * Priority Support
           * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
-    backgroundColor: "#e10c0c"
+    backgroundColor: "#ffffff"
   - type: planComparison
     enable: true
     description: ""
