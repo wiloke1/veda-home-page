@@ -74,7 +74,7 @@ sections:
           * Set up Heatmap & Visitor Session Recordings Unlimited
     plansTable:
       - title: Starter
-        handle: starter
+        handle: free
         pricePerMonth: Free
         pricePerYear: Free
         highlight: false
