@@ -1,3 +1,4 @@
+import { Button } from 'components/Button';
 import { Markdown } from 'components/Markdown/Markdown';
 import { ModalBase } from 'components/ModalBase';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -14,6 +15,10 @@ export const usePricingPopupStatic = () => {
             listTitle
             content
             align
+            buttonPrimaryLabel
+            buttonPrimaryLink
+            buttonSecondaryLabel
+            buttonSecondaryLink
           }
         }
       }
@@ -73,6 +78,16 @@ export const PricingPopupSupport = () => {
         style={{ textAlign: popupContent.align }}
       >
         <Markdown>{popupContent.content}</Markdown>
+        {!!popupContent.buttonPrimaryLink && !!popupContent.buttonSecondaryLink && (
+          <div className="d:flex ai:center jc:center gp:12px mt:20px">
+            <Button size="medium" className="bgc:color-gray2 c:color-gray9" target="blank" href={popupContent.buttonPrimaryLink}>
+              {popupContent.buttonPrimaryLabel}
+            </Button>
+            <Button size="medium" className="bgc:color-primary" target="blank" href={popupContent.buttonSecondaryLink}>
+              {popupContent.buttonSecondaryLabel}
+            </Button>
+          </div>
+        )}
       </div>
       <div
         className="pos:absolute t:0 r:10px fz:30px lh:normal cur:pointer"
