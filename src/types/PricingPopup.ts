@@ -5,6 +5,10 @@ export interface Popup {
   listTitle: string;
   content: string;
   align: 'left' | 'center' | 'right';
+  buttonPrimaryLabel?: string;
+  buttonPrimaryLink?: string;
+  buttonSecondaryLabel?: string;
+  buttonSecondaryLink?: string;
 }
 
 export interface PricingPopupFrontMaster {

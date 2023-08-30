@@ -556,6 +556,34 @@ collections:
                   { label: "Right", value: "right" }
                 ]
               },
-              { label: Content, name: content, widget: markdown, default: '' }
+              { label: Content, name: content, widget: markdown, default: '' },
+              {
+                label: Button Primary Label,
+                name: buttonPrimaryLabel,
+                widget: string,
+                required: false,
+                default: "",
+              },
+              {
+                label: Button Primary Link,
+                name: buttonPrimaryLink,
+                widget: string,
+                required: false,
+                default: "",
+              },
+              {
+                label: Button Secondary Label,
+                name: buttonSecondaryLabel,
+                widget: string,
+                required: false,
+                default: "",
+              },
+              {
+                label: Button Secondary Link,
+                name: buttonSecondaryLink,
+                widget: string,
+                required: false,
+                default: "",
+              },
             ]
           }

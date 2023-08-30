@@ -112,6 +112,10 @@ export const createSchemaCustomization = ({ actions }: CreatePagesArgs) => {
       listTitle: String
       content: String
       align: String
+      buttonPrimaryLabel: String
+      buttonPrimaryLink: String
+      buttonSecondaryLabel: String
+      buttonSecondaryLink: String
     }
   `);
 };
