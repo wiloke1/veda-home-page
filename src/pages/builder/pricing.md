@@ -14,8 +14,7 @@ sections:
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          * 2 pages
-          * 3 Veda themes
+          * 1 free template for each page type
           * All Page Types
           * Unlimited Layouts
           * Global Style
@@ -32,7 +31,6 @@ sections:
         body: |-
           #### Everything in Starter, plus:
 
-          * 3 Veda themes
           * All VIP Sections
           * 15 pages  
           * All Business Addons
@@ -47,13 +45,25 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 4 Veda themes
           * 50 pages
           * Import / export page & sections
           * All Advanced Addons
           * Advanced Page Settings
           * Design Services
           * Priority Support
+          * Set up Heatmap & Visitor Session Recordings Unlimited
+      - title: Ultimate
+        description: or $1490/year and save 17%
+        handle: ultimate
+        pricePerMonth: $149<span>/month</span>
+        pricePerYear: $1490<span>/month</span>
+        buttonText: Select
+        body: |-
+          #### EVERYTHING in Advanced, plus:
+
+          * Unlimited publish
+          * All advanced features
+          * High Priority support
           * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
     backgroundColor: "#ffffff"
@@ -66,12 +76,12 @@ sections:
         content: |-
           * Visual Editor 
           * Veda Label
-          * Veda Live Themes
           * Veda Live Pages
           * Business Addons 
           * A﻿dvanced Addons
           * I﻿mport & Export pages
           * Set up Heatmap & Visitor Session Recordings Unlimited
+          * High Priority support
     plansTable:
       - title: Starter
         handle: free
@@ -82,12 +92,12 @@ sections:
         content: |-
           * yes
           * yes
-          * 3
-          * 2
+          * 1﻿
           * no
           * no
           * no
           * no
+          * n﻿o
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
@@ -98,11 +108,11 @@ sections:
           * yes
           * no
           * 15
-          * 3
           * yes
           * no
           * no
           * yes
+          * n﻿o
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -112,12 +122,27 @@ sections:
         content: |-
           * yes
           * no
-          * 4
           * 50
           * yes
           * yes
           * yes
           * yes
+          * n﻿o
+      - title: Ultimate
+        pricePerMonth: $149<span>/month</span>
+        pricePerYear: $1490<span>/month</span>
+        highlight: false
+        buttonText: Select
+        content: |-
+          * yes
+          * no
+          * unlimited
+          * yes
+          * yes
+          * yes
+          * yes
+          * y﻿es
+        handle: ultimate
     heading: Plan comparison
   - type: collapse
     enable: true
