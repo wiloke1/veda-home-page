@@ -16,7 +16,7 @@ export const PlansForBuilder: FC<SectionPlans> = ({ heading, description, decora
         <div className="row">
           {plansContent.map((item, index) => {
             return (
-              <div key={index} className="col-xs-12 col-sm-6 col-md-4" data-json={JSON.stringify(item)}>
+              <div key={index} className="col-xs-12 col-sm-6 col-md-3" data-json={JSON.stringify(item)}>
                 <PlanCardForBuilder
                   {...item}
                   onMoreClick={() => {
