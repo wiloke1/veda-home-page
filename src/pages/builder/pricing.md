@@ -14,8 +14,8 @@ sections:
         pricePerYear: Free
         buttonText: Get started
         body: |-
-          * 1 free template for each page type
-          * All Page Types
+          * 17 Published Pages (1 per page type except cart page)
+          * All Free sections & addons
           * Unlimited Layouts
           * Global Style
           * Responsive Design
@@ -32,9 +32,9 @@ sections:
           #### Everything in Starter, plus:
 
           * All VIP Sections
-          * 15 pages  
+          * 15 additional live pages
           * All Business Addons
-          * Save & Transfer Content
+          * Color scheme
           * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
         description: or $390/year and save 17%
@@ -45,13 +45,11 @@ sections:
         body: |-
           #### Everything in Business, plus:
 
-          * 50 pages
-          * Import / export page & sections
-          * All Advanced Addons
-          * Advanced Page Settings
-          * Design Services
-          * Priority Support
-          * Set up Heatmap & Visitor Session Recordings Unlimited
+          * 50 additional pages
+          * Save & transfer content
+          * Advanced addons & sections 
+          *﻿ Advanced templates
+          * Cart page
       - title: Ultimate
         description: or $1490/year and save 17%
         handle: ultimate
@@ -62,9 +60,7 @@ sections:
           #### EVERYTHING in Advanced, plus:
 
           * Unlimited publish
-          * All advanced features
           * High Priority support
-          * Set up Heatmap & Visitor Session Recordings Unlimited
     heading: Plan for every <span>store owner</span>
     backgroundColor: "#ffffff"
   - type: planComparison
