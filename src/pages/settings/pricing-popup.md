@@ -49,4 +49,53 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Fake View Counter
+    align: left
+    content: |-
+      Create a sense of popularity and urgency for your products.
+
+      ![](/img/ảnh.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Quick View
+    align: left
+    content: >-
+      Customers can quickly view product details and add products to their cart
+      without leaving the current page.
+
+
+      ![](/img/screen-shot-2023-08-31-at-11.37.19.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Wishlist
+    align: left
+    content: |-
+      Customers can save their favorite products to make a purchase later.
+
+      ![](/img/screen-shot-2023-08-31-at-11.39.29.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Advanced Filter for Collection Page
+    align: left
+    content: |-
+      Customers easily sort products, improving their shopping experience.
+
+      ![](/img/screen-shot-2023-08-31-at-11.41.33.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Information Collapse On Product Page
+    align: left
+    content: "![](/img/download-8-.png)"
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
