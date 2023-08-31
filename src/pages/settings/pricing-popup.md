@@ -541,4 +541,22 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/
+  - listTitle: Sales-boosting Page Templates
+    align: left
+    content: >-
+      🌟 How It Elevates Your Store:
+
+
+      * Unlock ready-to-use templates designed to boost sales.
+
+      * Empower your store with expertly optimized designs.
+
+      * Effortless setup means you're enhancing your success in no time.
+
+
+      Elevate your sales game with skillfully designed templates, meticulously crafted by Veda experts to optimize your store for driving sales. 🌟🛍️
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
