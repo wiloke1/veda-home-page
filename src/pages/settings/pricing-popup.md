@@ -457,4 +457,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/?_ab=0&_fd=0&_sc=1
+  - listTitle: Sticky Add To Cart
+    align: left
+    content: >-
+      🌟 How It Speeds Up Shopping:
+
+
+      * Keep the "Add To Cart" button visible as shoppers scroll.
+
+      * Accelerate checkout for quick and seamless purchases.
+
+      * Effortless setup means you're boosting sales in no time.
+
+
+      Boost your sales and enhance the shopping experience by making the "Add To Cart" button sticky – allowing shoppers to click and purchase in a flash. 🌟🚀
+
+
+      ![](/img/featured-image-sticky1.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/sticky-add-to-cart?variant=46718318575917
 ---
