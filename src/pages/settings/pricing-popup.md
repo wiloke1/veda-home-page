@@ -478,4 +478,46 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/sticky-add-to-cart?variant=46718318575917
+  - listTitle: Buy in Bundle
+    align: left
+    content: >-
+      🌟 How It Unlocks Savings:
+
+
+      * Offer bundled products for enticing discounts.
+
+      * Simplify the shopping process with easy add to cart button.
+
+      * Witness larger orders and increased revenue.
+
+
+      Empower your store with the magic of savvy shopping. Activate the feature today and watch your sales and customer satisfaction soar to new heights! 🌐🛒
+
+
+      ![](/img/untitled.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Combo Discount
+    align: left
+    content: >-
+      🌟 How It Boosts Your Shopping Experience:
+
+
+      * Get discounts when buying related products in a combo.
+
+      * Enhance customer convenience by offering complete sets.
+
+      * Effortless setup means you're maximizing sales in no time.
+
+
+      Unlock amazing savings by bundling related products together, encouraging cross-sell and making the checkout process a breeze. 🌟🚀
+
+
+      ![](/img/ocqfcbybum.webp)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/combo-discount
 ---
