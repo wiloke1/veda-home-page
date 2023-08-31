@@ -122,12 +122,48 @@ sections:
         content: |-
           * yes
           * yes
-          * 1﻿
+          * 15
           * no
           * no
           * no
           * no
-          * n﻿o
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
