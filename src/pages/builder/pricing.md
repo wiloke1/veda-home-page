@@ -320,6 +320,7 @@ sections:
           * no
           * no
           * no
+          * yes
         handle: ultimate
     heading: Plan comparison
   - type: collapse
