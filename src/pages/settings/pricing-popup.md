@@ -37,4 +37,16 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Product Recommendation
+    align: left
+    content: >-
+      Increase sales by displaying personalized product recommendations based on
+      customers' browsing and purchase history.
+
+
+      ![](/img/screen_shot_20221216_at_3.35.10_pm-bjosyyuwuv.webp)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
