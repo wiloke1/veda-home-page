@@ -392,4 +392,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/showcase-product-benefits
+  - listTitle: Before/After Compare
+    align: left
+    content: >-
+      🌟 How It Inspires Your Shoppers:
+
+
+      * Visualize amazing transformations through side-by-side comparisons.
+
+      * Ignite customer imagination and aspiration.
+
+      * Effortless setup means you're showcasing dream results in no time.
+
+
+      Show your customers the incredible journey your products offer, inspiring them to envision their dream life and make their purchase decision right away. 💥🌈
+
+
+      ![](/img/untitled4131.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/before-after-section
 ---
