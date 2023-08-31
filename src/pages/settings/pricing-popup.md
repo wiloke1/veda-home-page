@@ -13,4 +13,16 @@ pricingPopup:
     buttonPrimaryLink: "#"
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: "#"
+  - listTitle: Product Tabs
+    align: left
+    content: >-
+      Organize your product information using tabs that separate features,
+      reviews, and other information.
+
+
+      ![](/img/xkgmvuggml.webp)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
