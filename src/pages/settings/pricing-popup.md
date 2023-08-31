@@ -436,4 +436,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-fake-sale-notification-popup.myshopify.com/
+  - listTitle: Mini Cart Drawer
+    align: left
+    content: >-
+      🌟 How It Boosts Your Sales and Streamlines Checkout:
+
+
+      * Engage shoppers with a Free Shipping progress bar.
+
+      * Enable quicker checkout for seamless shopping.
+
+      * Custom notes, shipping calculation & coupon code application.
+
+
+      Empower your store with the magic of smoother shopping experiences. Activate the feature today and watch your sales and customer satisfaction soar to new heights! 🌐🛍️
+
+
+      ![](/img/minicart.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/?_ab=0&_fd=0&_sc=1
 ---
