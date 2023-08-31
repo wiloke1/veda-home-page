@@ -164,6 +164,7 @@ sections:
           * no
           * no
           * no
+          *﻿ no
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
@@ -215,6 +216,7 @@ sections:
           * no
           * no
           * no
+          *﻿ no
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -223,49 +225,50 @@ sections:
         buttonText: Select
         content: |-
           * yes
+          * yes
+          * 22
           * no
-          * 50
+          * no
+          * no
+          * yes
+          * no
           * yes
           * yes
           * yes
           * yes
-          * n﻿o
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * no
           * no
+          * yes
           * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
       - title: Ultimate
         pricePerMonth: $149<span>/month</span>
         pricePerYear: $1490<span>/month</span>
