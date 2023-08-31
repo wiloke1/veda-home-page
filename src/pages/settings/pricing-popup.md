@@ -290,4 +290,25 @@ pricingPopup:
     buttonPrimaryLink: https://veda-cookie-consent-password-1.myshopify.com/products/veda-cookie-consent-add-on
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-cookie-consent-password-1.myshopify.com/products/veda-cookie-consent-add-on
+  - listTitle: Custom Code JavaScript & CSS
+    align: left
+    content: >-
+      🌟 How It Empowers You:
+
+
+      * Customize your store's look and functionality with ease.
+
+      * Add unique features and effects to stand out from the crowd.
+
+      * Effortless setup means you're crafting your dream store in no time.
+
+
+      Empower your store with the magic of custom coding. Activate the feature today and turn your vision into a reality that's uniquely yours! 🌐🎨
+
+
+      ![](/img/screenshot-2023-08-27-at-10.15.26.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
