@@ -332,4 +332,27 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Setup Heatmap & Session Recordings Unlimited
+    align: left
+    content: >-
+      
+
+      🌟 How It Boosts Your Store:
+
+
+      * Gain insights into shopper interactions with detailed heatmaps.
+
+      * Understand customer journeys through session recordings.
+
+      * Effortless setup means you're optimizing your store in no time.
+
+
+      Empower your store with actionable data. Activate the feature today and watch your sales soar as you optimize your setup based on real shopper behaviors! 🌐📊
+
+
+      * Image/video link
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
