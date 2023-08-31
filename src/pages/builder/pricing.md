@@ -76,6 +76,42 @@ sections:
           * I﻿mport & Export pages
           * Set up Heatmap & Visitor Session Recordings Unlimited
           * High Priority support
+          * Product Compare
+          * Product Tabs
+          * Product Grid
+          * Product Recommendation
+          * Color Scheme
+          * Fake View Counter
+          * Quick View
+          * Advanced Filter for Collection Page
+          * Information Collapse On Product Page
+          * Predictive Search
+          * Preset Global Style
+          * Wishlist
+          * Product Variation Swatches
+          * Global Style
+          * Mobile-Friendly
+          * Responsive Design
+          * Lightning Speed
+          * Right-To-Left Support
+          * Buy More Save More
+          * Fake Reviews
+          * Recommended Product Popup
+          * Subscribe Popup
+          * Size Chart & Image Uploader
+          * FAQs with Image & Autoplay Video
+          * Custom Code JavaScript & CSS
+          * Cookie Consent
+          * Step-by-Step Guide
+          * Showcase Product Benefits
+          * Fake Sale Popup
+          * Mini Cart Drawer
+          * Sticky Add To Cart
+          * Buy in Bundle
+          * Combo Discount
+          * Sales-boosting Page Templates
+          * Edit code
+          * Multi-level Mega Menu
     plansTable:
       - title: Starter
         handle: free
