@@ -71,8 +71,8 @@ sections:
           * Visual Editor 
           * Veda Label
           * Veda Live Pages
-          * Business Addons 
-          * A﻿dvanced Addons
+          * Business Add-ons 
+          * A﻿dvanced Add-ons
           * I﻿mport & Export pages
           * Set up Heatmap & Visitor Session Recordings Unlimited
           * High Priority support
