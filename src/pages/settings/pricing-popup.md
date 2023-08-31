@@ -181,8 +181,8 @@ pricingPopup:
 
 
       ![](/img/review_slider_.png)
-    buttonPrimaryLabel: Document
-    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/fake-reviews-6615/
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/fake-review-slider-layout
   - listTitle: Recommended Product Popup
