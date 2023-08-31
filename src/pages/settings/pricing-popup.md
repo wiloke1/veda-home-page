@@ -495,8 +495,8 @@ pricingPopup:
 
 
       ![](/img/untitled.png)
-    buttonPrimaryLabel: ""
-    buttonPrimaryLink: ""
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-sections/product-bundle-sale/
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
   - listTitle: Combo Discount
