@@ -141,8 +141,7 @@ sections:
           * yes
           * yes
           * yes
-          * no
-          * no
+          * yes
           * yes
           * no
           * yes
@@ -176,25 +175,24 @@ sections:
           * yes
           * yes
           * 22
-          * no
-          * no
-          * no
-          * yes
-          * no
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
           * yes
           * no
           * no
+          * yes
+          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * yes
           * no
           * yes
@@ -228,25 +226,24 @@ sections:
           * yes
           * yes
           * 72
-          * no
-          * no
-          * no
-          * yes
-          * no
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
-          * yes
           * yes
           * yes
           * yes
           * yes
           * no
-          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * yes
           * no
           * yes
@@ -279,9 +276,6 @@ sections:
           * yes
           * yes
           * Unlimited
-          * no
-          * no
-          * no
           * yes
           * yes
           * yes
@@ -296,8 +290,10 @@ sections:
           * yes
           * yes
           * yes
-          * no
-          * no
+          * yes
+          * yes
+          * yes
+          * yes
           * yes
           * no
           * yes
