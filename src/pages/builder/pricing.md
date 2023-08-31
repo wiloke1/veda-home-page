@@ -73,7 +73,16 @@ sections:
           * 50 additional pages
           * Save & transfer content
           * Advanced addons & sections 
-          *﻿ Advanced templates
+          * Step-by-Step Guide
+          * Showcase Product Benefits
+          * Fake Sale Popup
+          * Mini Cart Drawer
+          * Sticky Add To Cart
+          * Buy in Bundle
+          * Combo Discount
+          * Sales-boosting Page Templates
+          * Edit code
+          * Multi-level Mega Menu
           * Cart page
       - title: Ultimate
         description: or $1490/year and save 17%
