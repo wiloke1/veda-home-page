@@ -69,7 +69,6 @@ sections:
       - title: Features
         content: |-
           * Visual Editor 
-          * Veda Label
           * Veda Live Pages
           * Business Add-ons 
           * A﻿dvanced Add-ons
@@ -122,7 +121,6 @@ sections:
         buttonText: Select
         content: |-
           * yes
-          * yes
           * 17
           * no
           * no
@@ -173,7 +171,6 @@ sections:
         buttonText: Select
         content: |-
           * yes
-          * yes
           * 22
           * yes
           * no
@@ -215,7 +212,7 @@ sections:
           * no
           * no
           * no
-          *﻿ no
+          *
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -223,7 +220,6 @@ sections:
         highlight: false
         buttonText: Select
         content: |-
-          * yes
           * yes
           * 72
           * yes
@@ -273,7 +269,6 @@ sections:
         highlight: false
         buttonText: Select
         content: |-
-          * yes
           * yes
           * Unlimited
           * yes
