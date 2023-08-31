@@ -29,7 +29,7 @@ sections:
           * Predictive Search
           * Preset Global Style
           * Wishlist
-          * Product Variation Switches
+          * Product Variation Swatches
           * Global Style
           * Mobile-Friendly
           * Responsive Design
