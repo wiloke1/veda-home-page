@@ -264,7 +264,7 @@ pricingPopup:
       Empower your store with interactive and informative FAQs. Activate the feature today and watch your customer engagement and satisfaction soar to new heights! 🌐🛒
 
 
-      ![](/img/untitled.png)
+      ![](/img/untitled112312312312.png)
     buttonPrimaryLabel: Document
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-sections/faqs-with-images-and-autoplay-videos/
     buttonSecondaryLabel: Demo
