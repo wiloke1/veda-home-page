@@ -49,8 +49,16 @@ sections:
           #### Everything in Starter, plus:
 
           * All VIP Sections
+          * A﻿ll Business Add-ons
           * 15 additional live pages
-          * All Business Addons
+          * Buy More Save More
+          * Fake Reviews
+          * Recommended Product Popup
+          * Subscribe Popup
+          * Size Chart & Image Uploader
+          * FAQs with Image & Autoplay Video
+          * Custom Code JavaScript & CSS
+          * Cookie Consent
           * Color scheme
           * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
