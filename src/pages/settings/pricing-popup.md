@@ -311,4 +311,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Color Scheme
+    align: left
+    content: >-
+      🌟 How It Speeds Up Your Design:
+
+
+      * Instantly apply harmonious color palettes to your store.
+
+      * Elevate your brand aesthetics effortlessly.
+
+      * Effortless setup means you're designing your unique store in no time.
+
+
+      Empower your store with the magic of seamless design. Activate the Color Schema feature today and watch your storefront come to life with captivating colors! 🎨🖌️
+
+
+      `y﻿outube: https://youtu.be/oBAbB1b1o5M`
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
