@@ -122,4 +122,20 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Mobile-Friendly
+    align: left
+    content: Mobile shopping is the trend; Modiva has got you covered with smooth
+      mobile responsiveness
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Lightning Speed
+    align: left
+    content: Build lightning-fast stores that will have you selling before your
+      competitors even finish loading their pages
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
