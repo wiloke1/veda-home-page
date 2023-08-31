@@ -335,8 +335,6 @@ pricingPopup:
   - listTitle: Setup Heatmap & Session Recordings Unlimited
     align: left
     content: >-
-      
-
       🌟 How It Boosts Your Store:
 
 
@@ -348,9 +346,6 @@ pricingPopup:
 
 
       Empower your store with actionable data. Activate the feature today and watch your sales soar as you optimize your setup based on real shopper behaviors! 🌐📊
-
-
-      * Image/video link
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
