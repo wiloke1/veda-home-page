@@ -283,7 +283,7 @@ sections:
           * no
           * no
           * yes
-          * no
+          * yes
           * yes
           * yes
           * yes
