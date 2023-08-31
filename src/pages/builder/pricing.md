@@ -277,49 +277,49 @@ sections:
         buttonText: Select
         content: |-
           * yes
+          * yes
+          * Unlimited
           * no
-          * unlimited
+          * no
+          * no
+          * yes
+          * no
           * yes
           * yes
           * yes
           * yes
-          * y﻿es
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * no
           * no
+          * yes
           * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * yes
         handle: ultimate
     heading: Plan comparison
