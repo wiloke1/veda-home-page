@@ -176,6 +176,11 @@ pricingPopup:
 
 
       Empower your store with the persuasive power of real customer experiences. Activate the Fake Review Widget today and watch your sales flourish with heightened social proof! 💥👥
+
+
+
+
+      ![](/img/review_slider_.png)
     buttonPrimaryLabel: Document
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/fake-reviews-6615/
     buttonSecondaryLabel: Demo
@@ -194,8 +199,74 @@ pricingPopup:
 
 
       Empower your store with the art of smart recommendations. Activate the Recommended Product Popup today and unleash a new era of upselling and cross-selling success! 🌐🛒
+
+
+      ![](/img/group-39848.png)
     buttonPrimaryLabel: Document
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/product-popup-6786/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-product-popup.myshopify.com/
+  - listTitle: Subscribe Popup
+    align: left
+    content: >-
+      🌟 How It Powers Your Success:
+
+
+      * Build a robust email list effortlessly for targeted marketing.
+
+      * Strengthen customer loyalty with exclusive updates and offers.
+
+      * Effortless setup means you're growing your audience in no time.
+
+
+      Empower your store with the magic of direct communication. Activate the Subscribe Popup today and watch your email list and customer loyalty reach new heights! 🌐💌
+
+
+      ![](/img/group-39849.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
+  - listTitle: Size Chart & Image Uploader
+    align: left
+    content: >-
+      🌟 How It Elevates Your Listings:
+
+
+      * Display size charts to guide shoppers on fashion items.
+
+      * Showcase multiple images for a comprehensive view.
+
+      * Effortless setup means you're enhancing your product displays in no time.
+
+
+      Empower your store with visually appealing product insights. Activate the Size Chart & Image Uploader today and watch your fashion items and products shine brighter than ever! 🌐🛍️
+
+
+      ![](/img/covercircle.png)
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/size-chart/
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/size-chart-image-uploader?_pos=1&_psq=size&_ss=e&_v=1.0
+  - listTitle: FAQs with Image & Autoplay Video
+    align: left
+    content: >-
+      🌟 How It Enhances Your Customer Experience:
+
+
+      * Grab shoppers' attention with eye-catching images.
+
+      * Make answers come to life with autoplay videos.
+
+      * Effortless setup means you're creating captivating FAQs in no time.
+
+
+      Empower your store with interactive and informative FAQs. Activate the feature today and watch your customer engagement and satisfaction soar to new heights! 🌐🛒
+
+
+      ![](/img/untitled.png)
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-sections/faqs-with-images-and-autoplay-videos/
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/faqs-with-autoplay-videos-images
 ---
