@@ -269,4 +269,25 @@ pricingPopup:
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-sections/faqs-with-images-and-autoplay-videos/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/faqs-with-autoplay-videos-images
+  - listTitle: Cookie Consent
+    align: left
+    content: >-
+      🌟 How It Builds Trust:
+
+
+      * Comply with data protection regulations effortlessly.
+
+      * Show respect for customers' privacy choices.
+
+      * Effortless setup means you're safeguarding data and trust in no time.
+
+
+      Empower your store with responsible data practices. Activate the Cookie Consent feature today and watch your customer trust and loyalty grow stronger than ever! 🌐🔐
+
+
+      ![](/img/cookie-consent-1.webp)
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://veda-cookie-consent-password-1.myshopify.com/products/veda-cookie-consent-add-on
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-cookie-consent-password-1.myshopify.com/products/veda-cookie-consent-add-on
 ---
