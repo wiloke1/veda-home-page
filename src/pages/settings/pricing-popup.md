@@ -413,4 +413,27 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/before-after-section
+  - listTitle: Fake Sale Popup
+    align: left
+    content: >-
+      🌟 How It Supercharges Your Sales:
+
+
+      * Show real-time "purchases" to inspire urgency.
+
+      * Leverage social proof to build trust and credibility.
+
+      * Effortless setup means you're igniting sales in no time.
+
+
+      Boost your conversions by creating a sense of urgency and trust – let shoppers know that others are snatching up your products, driving FOMO and enhancing social proof. 🌟🛍️
+
+
+
+
+      ![](/img/group-39850.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-fake-sale-notification-popup.myshopify.com/
 ---
