@@ -17,24 +17,6 @@ sections:
           * 17 Published Pages (1 per page type except cart page)
           * All Free sections & addons
           * Unlimited Layouts
-          * Product Compare
-          * Product Tabs
-          * Product Grid
-          * Product Recommendation
-          * Color Scheme
-          * Fake View Counter
-          * Quick View
-          * Advanced Filter for Collection Page
-          * Information Collapse On Product Page
-          * Predictive Search
-          * Preset Global Style
-          * Wishlist
-          * Product Variation Swatches
-          * Global Style
-          * Mobile-Friendly
-          * Responsive Design
-          * Lightning Speed
-          * Right-To-Left Support
           * SEO Controls
           * Email & Live Chat
           * Compatible with Third-party Addons
@@ -51,14 +33,6 @@ sections:
           * 15 additional live pages
           * All VIP Sections
           * A﻿ll Business Add-ons
-          * Buy More Save More
-          * Fake Reviews
-          * Recommended Product Popup
-          * Subscribe Popup
-          * Size Chart & Image Uploader
-          * FAQs with Image & Autoplay Video
-          * Custom Code JavaScript & CSS
-          * Cookie Consent
           * Color scheme
           * Set up Heatmap & Visitor Session Recordings Unlimited
       - title: Advanced
@@ -73,16 +47,6 @@ sections:
           * 50 additional pages
           * Save & transfer content
           * Advanced addons & sections 
-          * Step-by-Step Guide
-          * Showcase Product Benefits
-          * Fake Sale Popup
-          * Mini Cart Drawer
-          * Sticky Add To Cart
-          * Buy in Bundle
-          * Combo Discount
-          * Sales-boosting Page Templates
-          * Edit code
-          * Multi-level Mega Menu
           * Cart page
       - title: Ultimate
         description: or $1490/year and save 17%
