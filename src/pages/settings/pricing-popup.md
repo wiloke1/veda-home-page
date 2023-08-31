@@ -520,4 +520,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/combo-discount
+  - listTitle: Multi-level Mega Menu
+    align: left
+    content: >-
+      🌟 How It Elevates Your Navigation:
+
+
+      * Craft multi-level mega menus with stunning images.
+
+      * Simplify shopper experience with intuitive navigation.
+
+      * Effortless setup means you're enhancing your store's journey in no time.
+
+
+      Elevate your store's navigation with visually captivating image menus that offer seamless multi-level options, ensuring a delightful shopping journey. 🚀🛍️
+
+
+      ![](/img/screenshot-2023-08-28-at-18.10.58.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/
 ---
