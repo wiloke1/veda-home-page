@@ -1,9 +1,9 @@
 ---
 templateKey: pricingPopup
 pricingPopup:
-  - listTitle: Test
+  - listTitle: Product Compare
     align: left
-    content: L﻿orem ipsum
+    content: This is a test
     buttonPrimaryLabel: Document
     buttonPrimaryLink: "#"
     buttonSecondaryLabel: Demo
