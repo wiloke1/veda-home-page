@@ -25,4 +25,16 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Product Grid
+    align: left
+    content: >-
+      Displays products from a collection in a grid format for customers to
+      quickly browse and compare items.
+
+
+      ![](/img/ccywgyobak.webp)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
