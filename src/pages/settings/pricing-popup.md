@@ -9,10 +9,10 @@ pricingPopup:
 
 
       ![](/img/screen-shot-2023-08-31-at-11.07.57.png)
-    buttonPrimaryLabel: Document
-    buttonPrimaryLink: "#"
-    buttonSecondaryLabel: Demo
-    buttonSecondaryLink: "#"
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
   - listTitle: Product Tabs
     align: left
     content: >-
@@ -138,4 +138,28 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Buy More Save More
+    align: left
+    content: >-
+      🌟 How It Amps Up Your Sales:
+
+
+      * Incentivize customers to buy more with escalating discounts.
+
+      * Witness larger orders and increased revenue.
+
+      * Elevate customer satisfaction with irresistible deals.
+
+      * Effortless setup for immediate impact.
+
+
+      Empower your store with the magic of Buy More Save More and watch your sales soar to new heights. Activate now and supercharge your Shopify success! 💥👏
+
+
+
+      `youtube: https://youtu.be/OIxDqVo2rTY?si=cfN0ekWLXglvLeEK`
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/buy-more-save-more/
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/anon-wren-helmet-2016-womens
 ---
