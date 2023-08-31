@@ -17,10 +17,27 @@ sections:
           * 17 Published Pages (1 per page type except cart page)
           * All Free sections & addons
           * Unlimited Layouts
+          * Product Compare
+          * Product Tabs
+          * Product Grid
+          * Product Recommendation
+          * Color Scheme
+          * Fake View Counter
+          * Quick View
+          * Advanced Filter for Collection Page
+          * Information Collapse On Product Page
+          * Predictive Search
+          * Preset Global Style
+          * Wishlist
+          * Product Variation Switches
           * Global Style
+          * Mobile-Friendly
           * Responsive Design
+          * Lightning Speed
+          * Right-To-Left Support
           * SEO Controls
           * Email & Live Chat
+          * Compatible with Third-party Addons
       - title: Business
         description: "or $190/year and save 17%. "
         handle: business
