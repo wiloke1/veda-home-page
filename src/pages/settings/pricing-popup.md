@@ -162,4 +162,22 @@ pricingPopup:
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/buy-more-save-more/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/anon-wren-helmet-2016-womens
+  - listTitle: Fake Reviews
+    align: left
+    content: >-
+      🌟 How It Amplifies Your Success:
+
+
+      * Display authentic reviews, building trust with customers.
+
+      * Increase social proof, driving more conversions.
+
+      * Effortless setup means you're boosting sales in no time.
+
+
+      Empower your store with the persuasive power of real customer experiences. Activate the Fake Review Widget today and watch your sales flourish with heightened social proof! 💥👥
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/fake-reviews-6615/
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/fake-review-slider-layout
 ---
