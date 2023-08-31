@@ -180,4 +180,22 @@ pricingPopup:
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/fake-reviews-6615/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/fake-review-slider-layout
+  - listTitle: Recommended Product Popup
+    align: left
+    content: >-
+      🌟 How It Amps Up Your Profits:
+
+
+      * Show personalized product recommendations to upsell and cross-sell.
+
+      * Increase average order value with strategic suggestions.
+
+      * Effortless setup means you're boosting sales in no time.
+
+
+      Empower your store with the art of smart recommendations. Activate the Recommended Product Popup today and unleash a new era of upselling and cross-selling success! 🌐🛒
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/product-popup-6786/
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-product-popup.myshopify.com/
 ---
