@@ -432,8 +432,8 @@ pricingPopup:
 
 
       ![](/img/group-39850.png)
-    buttonPrimaryLabel: ""
-    buttonPrimaryLink: ""
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/fake-sales-notification-popup/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-fake-sale-notification-popup.myshopify.com/
   - listTitle: Mini Cart Drawer
@@ -453,8 +453,8 @@ pricingPopup:
 
 
       ![](/img/minicart.png)
-    buttonPrimaryLabel: ""
-    buttonPrimaryLink: ""
+    buttonPrimaryLabel: Document
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/mini-cart-drawer/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/?_ab=0&_fd=0&_sc=1
   - listTitle: Sticky Add To Cart
