@@ -172,39 +172,39 @@ sections:
         buttonText: Select
         content: |-
           * yes
+          * yes
+          * 22
           * no
-          * 15
+          * no
+          * no
+          * yes
+          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * yes
           * no
           * no
           * yes
-          * n﻿o
           * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
-          * no
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
+          * yes
           * no
           * no
           * no
