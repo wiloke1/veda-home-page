@@ -110,4 +110,16 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Product Variation Swatches
+    align: left
+    content: >-
+      Shows different product options (e.g. color or size) as clickable
+      swatches; customers can easily select their preferred choice.
+
+
+      ![](/img/download-9-.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
