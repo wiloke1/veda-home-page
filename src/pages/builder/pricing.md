@@ -227,7 +227,7 @@ sections:
         content: |-
           * yes
           * yes
-          * 22
+          * 72
           * no
           * no
           * no
