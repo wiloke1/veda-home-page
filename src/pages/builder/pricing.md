@@ -74,7 +74,7 @@ sections:
           * Business Add-ons 
           * A﻿dvanced Add-ons
           * I﻿mport & Export pages
-          * Set up Heatmap & Visitor Session Recordings Unlimited
+          * Unlimited Heatmap & Visitor Session Recordings 
           * High Priority support
           * Product Compare
           * Product Tabs
