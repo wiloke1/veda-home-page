@@ -112,6 +112,7 @@ sections:
           * Sales-boosting Page Templates
           * Edit code
           * Multi-level Mega Menu
+          * Before/After Compare
     plansTable:
       - title: Starter
         handle: free
