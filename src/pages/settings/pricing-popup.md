@@ -332,7 +332,7 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
-  - listTitle: Setup Heatmap & Session Recordings Unlimited
+  - listTitle: Unlimited Heatmap & Visitor Session Recordings
     align: left
     content: >-
       🌟 How It Boosts Your Store:
