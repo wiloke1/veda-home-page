@@ -48,9 +48,9 @@ sections:
         body: |-
           #### Everything in Starter, plus:
 
+          * 15 additional live pages
           * All VIP Sections
           * A﻿ll Business Add-ons
-          * 15 additional live pages
           * Buy More Save More
           * Fake Reviews
           * Recommended Product Popup
