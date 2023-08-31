@@ -350,4 +350,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Step-by-Step Guide
+    align: left
+    content: >-
+      🌟 How It Elevates Your Products:
+
+
+      * Present crystal-clear instructions through eye-catching visuals and informative images.
+
+      * Enhance customer understanding and satisfaction.
+
+      * Step-by-step video guides ensure you're guiding shoppers in no time.
+
+
+      Empower your store with the magic of seamless guidance. Activate the feature today and watch your product engagement and customer loyalty soar to new heights! 🌐🛍️
+
+
+      ![](/img/untitled1231231.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/step-by-step-guide
 ---
