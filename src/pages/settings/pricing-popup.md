@@ -98,4 +98,16 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
     buttonSecondaryLink: ""
+  - listTitle: Predictive Search
+    align: left
+    content: >-
+      Help customers find what they're looking for faster by suggesting products
+      as they type.
+
+
+      ![](/img/screen-shot-2023-08-31-at-11.55.50.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: ""
+    buttonSecondaryLink: ""
 ---
