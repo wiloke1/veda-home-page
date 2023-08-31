@@ -516,8 +516,8 @@ pricingPopup:
 
 
       ![](/img/ocqfcbybum.webp)
-    buttonPrimaryLabel: ""
-    buttonPrimaryLink: ""
+    buttonPrimaryLabel: Documentation
+    buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-sections/combo-discount/
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/combo-discount
   - listTitle: Multi-level Mega Menu
