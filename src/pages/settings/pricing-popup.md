@@ -371,4 +371,25 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/step-by-step-guide
+  - listTitle: Showcase Product Benefits
+    align: left
+    content: >-
+      🌟 How It Supercharges Your Sales:
+
+
+      * Showcase product benefits with eye-catching visuals and compelling descriptions.
+
+      * Persuade customers with clear and impactful value propositions.
+
+      * Effortless setup means you're boosting sales in no time.
+
+
+      Empower your store with the magic of persuasive product displays. Activate the feature today and watch your conversion rates and customer satisfaction soar to new heights! 🌐📈
+
+
+      ![](/img/untitled123334421.png)
+    buttonPrimaryLabel: ""
+    buttonPrimaryLink: ""
+    buttonSecondaryLabel: Demo
+    buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/showcase-product-benefits
 ---
