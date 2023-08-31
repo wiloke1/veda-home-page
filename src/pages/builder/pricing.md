@@ -179,6 +179,42 @@ sections:
           * no
           * yes
           * n﻿o
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
@@ -194,6 +230,42 @@ sections:
           * yes
           * yes
           * n﻿o
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
       - title: Ultimate
         pricePerMonth: $149<span>/month</span>
         pricePerYear: $1490<span>/month</span>
@@ -208,6 +280,42 @@ sections:
           * yes
           * yes
           * y﻿es
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
+          * no
         handle: ultimate
     heading: Plan comparison
   - type: collapse
