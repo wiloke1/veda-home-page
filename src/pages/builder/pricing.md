@@ -47,7 +47,7 @@ sections:
           * 50 additional pages
           * Save & transfer content
           * Advanced addons & sections 
-          * Cart page
+          * Cart page PRO
       - title: Ultimate
         description: or $1490/year and save 17%
         handle: ultimate
@@ -57,8 +57,8 @@ sections:
         body: |-
           #### EVERYTHING in Advanced, plus:
 
-          * Unlimited publish
-          * High Priority support
+          * Unlimited Publish
+          * High Priority Support
     heading: Plan for every <span>store owner</span>
     backgroundColor: "#ffffff"
   - type: planComparison
@@ -131,7 +131,7 @@ sections:
           * yes
           * yes
           * yes
-          * no
+          * 2﻿
           * yes
           * yes
           * yes
@@ -141,9 +141,11 @@ sections:
           * yes
           * yes
           * yes
-          * no
           * yes
           * yes
+          * yes
+          * no
+          * y﻿es
           * no
           * no
           * no
@@ -162,12 +164,11 @@ sections:
           * no
           * no
           * no
-          *﻿ no
       - title: Business
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
-        highlight: true
+        highlight: false
         buttonText: Select
         content: |-
           * yes
@@ -191,7 +192,7 @@ sections:
           * yes
           * yes
           * yes
-          * no
+          * y﻿es
           * yes
           * yes
           * yes
@@ -212,12 +213,13 @@ sections:
           * no
           * no
           * no
-          *
+          * n﻿o
+          * n﻿o
       - title: Advanced
         handle: advanced
         pricePerMonth: $39<span>/month</span>
         pricePerYear: $390<span>/year</span>
-        highlight: false
+        highlight: true
         buttonText: Select
         content: |-
           * yes
@@ -241,7 +243,7 @@ sections:
           * yes
           * yes
           * yes
-          * no
+          * y﻿es
           * yes
           * yes
           * yes
@@ -263,6 +265,7 @@ sections:
           * yes
           * yes
           * yes
+          * y﻿es
       - title: Ultimate
         pricePerMonth: $149<span>/month</span>
         pricePerYear: $1490<span>/month</span>
@@ -290,7 +293,7 @@ sections:
           * yes
           * yes
           * yes
-          * no
+          * y﻿es
           * yes
           * yes
           * yes
@@ -312,6 +315,7 @@ sections:
           * yes
           * yes
           * yes
+          * y﻿es
         handle: ultimate
     heading: Plan comparison
   - type: collapse
