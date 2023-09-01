@@ -25,7 +25,7 @@ sections:
         handle: business
         pricePerMonth: $19<span>/month</span>
         pricePerYear: $190<span>/year</span>
-        highlight: true
+        highlight: false
         buttonText: Select
         body: |-
           #### Everything in Starter, plus:
@@ -48,6 +48,7 @@ sections:
           * Save & transfer content
           * Advanced addons & sections 
           * Cart page PRO
+        highlight: true
       - title: Ultimate
         description: or $1490/year and save 17%
         handle: ultimate
