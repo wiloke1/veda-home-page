@@ -145,8 +145,8 @@ sections:
           * yes
           * yes
           * yes
-          * no
-          * y﻿es
+          * yes
+          * n﻿o
           * no
           * no
           * no
