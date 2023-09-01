@@ -19,6 +19,7 @@ sections:
           * Unlimited Layouts
           * SEO Controls
           * Email & Live Chat
+          * G﻿lobal Style
           * Compatible with Third-party Addons
       - title: Business
         description: "or $190/year and save 17%. "
@@ -28,10 +29,10 @@ sections:
         highlight: false
         buttonText: Select
         body: |-
-          #### Everything in Starter, plus:
+          #### Everything in Free, plus:
 
           * 15 additional live pages
-          * All VIP Sections
+          * All Business Sections
           * A﻿ll Business Add-ons
           * Color scheme
           * Set up Heatmap & Visitor Session Recordings Unlimited
