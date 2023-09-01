@@ -124,8 +124,8 @@ pricingPopup:
     buttonSecondaryLink: ""
   - listTitle: Mobile-Friendly
     align: left
-    content: Mobile shopping is the trend; Modiva has got you covered with smooth
-      mobile responsiveness
+    content: Mobile shopping is the trend; Veda Builder has got you covered with
+      smooth mobile responsiveness
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
@@ -222,7 +222,7 @@ pricingPopup:
       Empower your store with the magic of direct communication. Activate the Subscribe Popup today and watch your email list and customer loyalty reach new heights! 🌐💌
 
 
-      ![](/img/group-39849.png)
+      ![](/img/subscribe-popup.png)
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
@@ -387,7 +387,7 @@ pricingPopup:
       Empower your store with the magic of persuasive product displays. Activate the feature today and watch your conversion rates and customer satisfaction soar to new heights! 🌐📈
 
 
-      ![](/img/untitled123334421.png)
+      ![](/img/showcase-benefits.png)
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
