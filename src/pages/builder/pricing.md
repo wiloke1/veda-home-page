@@ -343,11 +343,18 @@ sections:
 
           * Live Chat
 
-          * [Support Email](mailto:support@wiloke.com)
+          * [Support Email](mailto:help@myshopkit.app)
       - title: How does Veda billing work?
         content: Our monthly subscription is handled by Shopify along with its 30-day
           invoice. Please refer to Shopify's App Billing Cycles for more
           information.
+      - title: Can I use one page style for all products/collections/blogs/articles?
+        content: >-
+          Y﻿es, you can totally do so. When creating a new page, simply select
+          "All" button.
+
+
+          ![](/img/all-product-page.png)
     heading: Frequently Asked <span>Questions.</span>
     backgroundColor: var(--color-gray1)
 ---
