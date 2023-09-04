@@ -156,8 +156,7 @@ pricingPopup:
       Empower your store with the magic of Buy More Save More and watch your sales soar to new heights. Activate now and supercharge your Shopify success! 💥👏
 
 
-
-      `youtube: https://youtu.be/OIxDqVo2rTY?si=cfN0ekWLXglvLeEK`
+      ![](/img/buy-more-save-more.jpg)
     buttonPrimaryLabel: Document
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/buy-more-save-more/
     buttonSecondaryLabel: Demo
