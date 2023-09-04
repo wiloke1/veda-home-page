@@ -326,6 +326,11 @@ sections:
       what you're looking for?
     decorate: type1
     collapseContent:
+      - title: Why pick Veda Builder over other apps?
+        content: Veda Builder offers sales-boosting features like Buy More, Save More,
+          Combo Sales, Bundle Sales, Sticky Add to Cart, Mini Cart Drawer, and
+          Before/After Compare—all built-in. Unlike competitors, Veda saves you
+          money by eliminating the need for third-party app integrations.
       - title: Does Veda work with my theme?
         content: Veda is compatible with all Shopify themes. Feel free to switch between
           themes as the VedaEditor can work with any selected theme.
@@ -334,20 +339,11 @@ sections:
           Choose a channel of your favorite:
 
 
-          * [Help Center](https://veda-builder.netlify.com)
+          * [Help Center](https://help.myshopkit.app/en/docs/veda-landing-page-builder)
 
-          * [Live Chat](https://veda-builder.netlify.com)
-
-          * [Video Tutorials](https://veda-builder.netlify.com)
+          * Live Chat
 
           * [Support Email](mailto:support@wiloke.com)
-
-
-          In-app walk-through and extra materials can be found in the “Help Center” section of the [Veda dashboard](http://app.veda.com) once you have our app installed!
-      - title: What can I expect in terms of new features and templates?
-        content: Veda is known for frequent updates and improvements. We are working
-          hard every day to deliver new and dynamic features & templates every
-          month.
       - title: How does Veda billing work?
         content: Our monthly subscription is handled by Shopify along with its 30-day
           invoice. Please refer to Shopify's App Billing Cycles for more
