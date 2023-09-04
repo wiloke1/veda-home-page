@@ -392,7 +392,7 @@ pricingPopup:
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
     buttonSecondaryLink: https://veda-buy-more-get-more.myshopify.com/products/showcase-product-benefits
-  - listTitle: Before/After Compare
+  - listTitle: Before-After Compare
     align: left
     content: >-
       🌟 How It Inspires Your Shoppers:
