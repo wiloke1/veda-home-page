@@ -326,7 +326,7 @@ pricingPopup:
       Empower your store with the magic of seamless design. Activate the Color Schema feature today and watch your storefront come to life with captivating colors! 🎨🖌️
 
 
-      `y﻿outube: https://youtu.be/oBAbB1b1o5M`
+      `y﻿outube: https://www.youtube.com/watch?v=UmdvTm-LHpE`
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
@@ -350,7 +350,7 @@ pricingPopup:
       ![](/img/heatmap.png)
 
 
-      y﻿outube: https://www.youtube.com/watch?v=j6DIMWsmDKI
+      `y﻿outube: https://www.youtube.com/watch?v=j6DIMWsmDKI`
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
@@ -479,6 +479,9 @@ pricingPopup:
 
 
       ![](/img/featured-image-sticky1.png)
+
+
+      `y﻿outube: https://www.youtube.com/watch?v=12LkYRE_Kko`
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
