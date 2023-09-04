@@ -345,6 +345,12 @@ pricingPopup:
 
 
       Empower your store with actionable data. Activate the feature today and watch your sales soar as you optimize your setup based on real shopper behaviors! 🌐📊
+
+
+      ![](/img/heatmap.png)
+
+
+      y﻿outube: https://www.youtube.com/watch?v=j6DIMWsmDKI
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: ""
