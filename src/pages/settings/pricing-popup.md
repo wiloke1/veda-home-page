@@ -156,7 +156,19 @@ pricingPopup:
       Empower your store with the magic of Buy More Save More and watch your sales soar to new heights. Activate now and supercharge your Shopify success! 💥👏
 
 
-      ![](/img/buy-more-save-more.jpg)
+      ![](/img/buy-more-save-more1.png)
+
+
+      ![](/img/buy-more-save-more2.png)
+
+
+      ![](/img/buy-more-save-more3.png)
+
+
+      ![](/img/buy-more-save-more4.png)
+
+
+      ![](/img/buy-more-save-more5.png)
     buttonPrimaryLabel: Document
     buttonPrimaryLink: https://help.myshopkit.app/en/docs/veda-landing-page-builder/veda-addons/buy-more-save-more/
     buttonSecondaryLabel: Demo
@@ -177,9 +189,19 @@ pricingPopup:
       Empower your store with the persuasive power of real customer experiences. Activate the Fake Review Widget today and watch your sales flourish with heightened social proof! 💥👥
 
 
-
-
       ![](/img/review_slider_.png)
+
+
+      ![](/img/review-1.png)
+
+
+      ![](/img/review-2.png)
+
+
+      ![](/img/review-3.png)
+
+
+      ![](/img/review-4.png)
     buttonPrimaryLabel: ""
     buttonPrimaryLink: ""
     buttonSecondaryLabel: Demo
@@ -323,7 +345,7 @@ pricingPopup:
       * Effortless setup means you're designing your unique store in no time.
 
 
-      Empower your store with the magic of seamless design. Activate the Color Schema feature today and watch your storefront come to life with captivating colors! 🎨🖌️
+      Empower your store with the magic of seamless design. Activate the Color Schema feature today and watch your storefront come to life with captivating colors! 🎨
 
 
       `y﻿outube: https://www.youtube.com/watch?v=UmdvTm-LHpE`
