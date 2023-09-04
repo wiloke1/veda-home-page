@@ -13,7 +13,7 @@ export const Markdown: FC<MarkdownProps> = ({ children, ...rest }) => {
   return (
     <ReactMarkdown {...rest} rehypePlugins={[rehypeRaw]} linkTarget="_blank">
       {children.replace(/﻿/g, '').replace(/`youtube:\s+https[:/.\w?=-]*`/g, val => {
-        const id = val.replace(/(^.*(embed\/|(\?|&)v=))(\w*)(.*$)/g, '$4');
+        const id = val.replace(/(^.*(embed\/|(\?|&)v=))([\w-]*)(.*$)/g, '$4');
         const html = `<div class="${styles.videoResponsive}"><iframe src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 
         return html;
